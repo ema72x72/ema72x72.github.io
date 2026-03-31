@@ -362,6 +362,85 @@
       .nav-links { gap: 14px; }
       .nav-links a { font-size: 10px; }
     }
+
+.research-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.research-main {
+  min-width: 0;
+}
+
+.research-side {
+  min-width: 0;
+}
+
+.topic-cluster {
+  margin-bottom: 42px;
+}
+
+.topic-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.side-block {
+  margin-bottom: 40px;
+}
+
+.side-block-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.side-list {
+  font-size: 14.5px;
+  color: #3c3c3c;
+  line-height: 1.8;
+}
+
+.side-list p + p {
+  margin-top: 12px;
+}
+
+.side-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.side-list a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.full-record {
+  margin-top: 24px;
+}
+
+@media (max-width: 980px) {
+  .research-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -426,74 +505,174 @@
       <strong>Research interests:</strong>&ensp;IPOs &amp; Capital Markets &nbsp;·&nbsp; Household Finance &amp; Financial Literacy &nbsp;·&nbsp; Behavioral Finance &nbsp;·&nbsp; Corporate Risk Management &amp; Derivatives &nbsp;·&nbsp; Social Networks in Finance &nbsp;·&nbsp; Media and Financial Markets
     </div>
 
-    <div class="research-intro current-projects">
-      <strong>Current projects:</strong>&ensp;Finance and AI (Visual Recognition) &nbsp;·&nbsp; Digital Trading Platforms &nbsp;·&nbsp; Remote Work and Firm Performance &nbsp;·&nbsp; Research Evaluation
+    <div class="research-layout">
+
+      <div class="research-main">
+
+        <div class="topic-cluster">
+          <div class="topic-title">IPOs, Capital Markets and Information</div>
+
+          <div class="pub-item">
+            <div class="pub-year">2016</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1630126X" target="_blank" rel="noopener noreferrer">Underwriter Networks, Investor Attention, and Initial Public Offerings</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Financial Economics</span>, 122, 376–408 &nbsp;·&nbsp; Chemmanur, Bajo, Simonyan, Tehranian</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2017</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1016/j.jcorpfin.2017.06.003" target="_blank" rel="noopener noreferrer">Media Sentiment and IPO Underpricing</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Corporate Finance</span>, 46, 139–153 &nbsp;·&nbsp; Bajo, Raimondo</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2010</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1111/j.1468-5957.2010.02193.x" target="_blank" rel="noopener noreferrer">The Information Content of Abnormal Trading Volume</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Business Finance &amp; Accounting</span>, 37(7–8), 950–978 &nbsp;·&nbsp; Bajo</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2006</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.emerald.com/insight/content/doi/10.1108/10867370610706537/full/html" target="_blank" rel="noopener noreferrer">Do What Insiders Do: Abnormal Performance After the Release of Insider's Transaction</a></div>
+              <div class="pub-meta"><span class="pub-journal">Studies in Economics and Finance</span>, 23(2), 94–118 &nbsp;·&nbsp; Bajo, Petracci</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-cluster">
+          <div class="topic-title">Household Finance and Behavioral Finance</div>
+
+          <div class="pub-item">
+            <div class="pub-year">2018</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0378426618301687" target="_blank" rel="noopener noreferrer">Financial Illiteracy and Mortgage Refinancing Decisions</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Banking &amp; Finance</span>, 94, 279–286 &nbsp;·&nbsp; Bajo, Barbi</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1111/eufm.12472" target="_blank" rel="noopener noreferrer">I'll Trade, Just Not Today: Individual Investor Trading Activity Around Birthdays</a></div>
+              <div class="pub-meta"><span class="pub-journal">European Financial Management</span>, 30, 2164–2194 &nbsp;·&nbsp; Bajo, Randl, Simion</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1016/j.frl.2023.104245" target="_blank" rel="noopener noreferrer">Psychological Profile and Investment Decisions</a></div>
+              <div class="pub-meta"><span class="pub-journal">Finance Research Letters</span>, 58, 1–13 &nbsp;·&nbsp; Bajo, Cecchini, Oliver</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2019</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/15427560.2018.1492579" target="_blank" rel="noopener noreferrer">Individual Differences in Disposition Effect</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Behavioral Finance</span>, 20(1), 107–126 &nbsp;·&nbsp; Bajo, Cecchini, Sobrero, Russo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-cluster">
+          <div class="topic-title">Corporate Finance, Governance and Risk Management</div>
+
+          <div class="pub-item">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1111/eufm.70006" target="_blank" rel="noopener noreferrer">Back From the Brink: State-Guaranteed Loans and Financial Recovery</a></div>
+              <div class="pub-meta"><span class="pub-journal">European Financial Management</span> (forthcoming) &nbsp;·&nbsp; Bajo, Barbi, Bigelli</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2022</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1111/eufm.12328" target="_blank" rel="noopener noreferrer">My, Myself and I: CEO Narcissism and Selective Hedging</a></div>
+              <div class="pub-meta"><span class="pub-journal">European Financial Management</span>, 28, 809–833 &nbsp;·&nbsp; Bajo, Jankensgård, Marinelli</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2020</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0929119920301991" target="_blank" rel="noopener noreferrer">Bolstering Family Control: Evidence from Loyalty Shares</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Corporate Finance</span>, 65 &nbsp;·&nbsp; Bajo, Barbi, Bigelli, Croci</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2015</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/1351847X.2013.875050" target="_blank" rel="noopener noreferrer">A Generalized Approach to Optimal Hedging with Option Contracts</a></div>
+              <div class="pub-meta"><span class="pub-journal">European Journal of Finance</span>, 21(9), 714–733 &nbsp;·&nbsp; Bajo, Barbi, Romagnoli</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-cluster">
+          <div class="topic-title">Networks, Institutions and Financial Markets</div>
+
+          <div class="pub-item">
+            <div class="pub-year">2020</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://doi.org/10.1016/j.jbusres.2020.02.041" target="_blank" rel="noopener noreferrer">Institutional Investor Connectedness and Firm Value</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Business Research</span>, 112, 65–80 &nbsp;·&nbsp; Bajo, Croci, Marinelli</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2020</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/eufm.12237" target="_blank" rel="noopener noreferrer">Ownership Ties, Conflict of Interest, and the Tone of News</a></div>
+              <div class="pub-meta"><span class="pub-journal">European Financial Management</span>, 26(3), 560–578 &nbsp;·&nbsp; Bajo, Bigelli, Raimondo</div>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-year">2013</div>
+            <div class="pub-body">
+              <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0378426613002744" target="_blank" rel="noopener noreferrer">The Role of Institutional Investors in Controlling Shareholder Public-to-Private Transactions</a></div>
+              <div class="pub-meta"><span class="pub-journal">Journal of Banking &amp; Finance</span>, 37(11), 4327–4336 &nbsp;·&nbsp; Bajo, Barbi, Bigelli, Hillier</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="research-side">
+
+        <div class="side-block">
+          <div class="side-block-title">Current Projects</div>
+          <div class="side-list">
+            <p>Finance and AI (Visual Recognition)</p>
+            <p>Digital Trading Platforms</p>
+            <p>Remote Work and Firm Performance</p>
+            <p>Research Evaluation</p>
+          </div>
+        </div>
+
+        <div class="side-block">
+          <div class="side-block-title">Working Papers</div>
+          <div class="side-list">
+            <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040923" target="_blank" rel="noopener noreferrer">Beyond the Ticker: Female Brands and Fund Manager Investment Decisions</a><br>Bajo, Marinelli, Randl, Simion</p>
+            <p>Migration and International Lending<br>Bajo, Arzu, Dahya</p>
+          </div>
+        </div>
+
+      </aside>
+
     </div>
-    
-    <div class="pub-group">
-      <div class="pub-group-title">Selected Publications</div>
 
-      <div class="pub-item">
-        <div class="pub-year">2016</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0304405X1630126X" target="_blank" rel="noopener noreferrer">Underwriter Networks, Investor Attention, and Initial Public Offerings</a></div>
-          <div class="pub-meta"><span class="pub-journal">Journal of Financial Economics</span>, 122, 376–408 &nbsp;·&nbsp; Chemmanur, Bajo, Simonyan, Tehranian</div>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2017</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://doi.org/10.1016/j.jcorpfin.2017.06.003" target="_blank" rel="noopener noreferrer">Media Sentiment and IPO Underpricing</a></div>
-          <div class="pub-meta"><span class="pub-journal">Journal of Corporate Finance</span>, 46, 139–153 &nbsp;·&nbsp; Bajo, Raimondo</div>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2018</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0378426618301687" target="_blank" rel="noopener noreferrer">Financial Illiteracy and Mortgage Refinancing Decisions</a></div>
-          <div class="pub-meta"><span class="pub-journal">Journal of Banking &amp; Finance</span>, 94, 279–286 &nbsp;·&nbsp; Bajo, Barbi</div>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2020</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0929119920301991" target="_blank" rel="noopener noreferrer">Bolstering Family Control: Evidence from Loyalty Shares</a></div>
-          <div class="pub-meta"><span class="pub-journal">Journal of Corporate Finance</span>, 65 &nbsp;·&nbsp; Bajo, Barbi, Bigelli, Croci</div>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2025</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://doi.org/10.1111/eufm.70006" target="_blank" rel="noopener noreferrer">Back From the Brink: State-Guaranteed Loans and Financial Recovery</a></div>
-          <div class="pub-meta"><span class="pub-journal">European Financial Management</span> (forthcoming) &nbsp;·&nbsp; Bajo, Barbi, Bigelli</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-group">
-      <div class="pub-group-title">Working Papers</div>
-      <div class="pub-item">
-        <div class="pub-year">WP</div>
-        <div class="pub-body">
-          <div class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040923" target="_blank" rel="noopener noreferrer">Beyond the Ticker: Female Brands and Fund Manager Investment Decisions</a></div>
-          <div class="pub-meta">Bajo, Marinelli, Randl, Simion</div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-year">WP</div>
-        <div class="pub-body">
-          <div class="pub-title">Migration and International Lending</div>
-          <div class="pub-meta">Bajo, Arzu, Dahya</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-group">
-      <div class="pub-group-title">Journal Articles — Finance</div>
+    <div class="pub-group full-record">
+      <div class="pub-group-title">Full Publication List</div>
 
       <div class="pub-item"><div class="pub-year">2025</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1111/eufm.70006" target="_blank" rel="noopener noreferrer">Back From the Brink: State-Guaranteed Loans and Financial Recovery</a></div><div class="pub-meta"><span class="pub-journal">European Financial Management</span> (forthcoming) &nbsp;·&nbsp; Bajo, Barbi, Bigelli</div></div></div>
 
@@ -547,37 +726,15 @@
     </div>
 
     <div class="pub-group">
-      <div class="pub-group-title">Books</div>
+      <div class="pub-group-title">Books and Other Publications</div>
+
       <div class="pub-item"><div class="pub-year">2012</div><div class="pub-body"><div class="pub-title">Rischi finanziari delle imprese. Politiche di copertura, modelli ed evidenze empiriche</div><div class="pub-meta">Franco Angeli, Milano</div></div></div>
       <div class="pub-item"><div class="pub-year">2003</div><div class="pub-body"><div class="pub-title">Le Obbligazioni Convertibili</div><div class="pub-meta">Carocci, Roma</div></div></div>
-    </div>
 
-    <div class="pub-group">
-      <div class="pub-group-title">Book Chapters</div>
       <div class="pub-item"><div class="pub-year">2026</div><div class="pub-body"><div class="pub-title">Risk Management</div><div class="pub-meta"><em>Topics in Corporate Finance: Challenges, Opportunities, Debates, and Trends</em>, Springer Nature, pp. 3–20</div></div></div>
       <div class="pub-item"><div class="pub-year">2013</div><div class="pub-body"><div class="pub-title">Enel, Ten Years of Extraordinary Financial Performance</div><div class="pub-meta"><em>National Monopoly to Successful Multinational: The Case of Enel</em>, Palgrave Macmillan &nbsp;·&nbsp; Bajo, Barbi</div></div></div>
       <div class="pub-item"><div class="pub-year">2007</div><div class="pub-body"><div class="pub-title">L'Internal dealing: una prima verifica empirica sul mercato italiano</div><div class="pub-meta"><em>Finanza e Industria in Italia</em>, Il Mulino &nbsp;·&nbsp; Bajo, Bigelli, Petracci</div></div></div>
       <div class="pub-item"><div class="pub-year">2001</div><div class="pub-body"><div class="pub-title">Il Venture Capital</div><div class="pub-meta"><em>Le fonti di finanziamento non bancarie</em>, Clueb</div></div></div>
-    </div>
-
-    <div class="pub-group">
-      <div class="pub-group-title">Other Publications (Italian)</div>
-      <div class="pub-item"><div class="pub-year">2005</div><div class="pub-body"><div class="pub-title">Weather derivatives come strumento per la copertura del rischio climatico: un'applicazione empirica su dati italiani</div><div class="pub-meta"><span class="pub-journal">Analisi Finanziaria</span>, 58, 110–128 &nbsp;·&nbsp; Bajo, Righetti</div></div></div>
-      <div class="pub-item"><div class="pub-year">2004</div><div class="pub-body"><div class="pub-title">Variazioni della quota azionaria da parte degli Insider: quale segnale per il mercato?</div><div class="pub-meta"><span class="pub-journal">Banca Impresa Società</span>, 2, 309–338 &nbsp;·&nbsp; Bajo, Petracci</div></div></div>
-      <div class="pub-item"><div class="pub-year">2004</div><div class="pub-body"><div class="pub-title">Il contenuto informativo dei volumi anomali</div><div class="pub-meta"><span class="pub-journal">Banca Impresa Società</span>, 1, 177–204 &nbsp;·&nbsp; Bajo</div></div></div>
-      <div class="pub-item"><div class="pub-year">2003</div><div class="pub-body"><div class="pub-title">La valutazione delle growth company: un confronto tra opzioni reali e discounted cash flow</div><div class="pub-meta"><span class="pub-journal">La Valutazione delle Aziende</span>, 30, 71–82 &nbsp;·&nbsp; Bajo, Di Simone</div></div></div>
-      <div class="pub-item"><div class="pub-year">2003</div><div class="pub-body"><div class="pub-title">Opzioni Reali: la valutazione della società Tiscali SPA attraverso il modello Schwartz-Moon</div><div class="pub-meta"><span class="pub-journal">Analisi Finanziaria</span>, 49, 101–115 &nbsp;·&nbsp; Bajo, Di Simone</div></div></div>
-      <div class="pub-item"><div class="pub-year">2002</div><div class="pub-body"><div class="pub-title">Il pricing dei titoli di debito nell'accesso delle imprese al mercato dei capitali</div><div class="pub-meta"><span class="pub-journal">Collana Newfin</span>, 85, 269–285 &nbsp;·&nbsp; Bajo</div></div></div>
-      <div class="pub-item"><div class="pub-year">1999</div><div class="pub-body"><div class="pub-title">Pricing e principali problematiche delle obbligazioni convertibili e delle obbligazioni cum warrant</div><div class="pub-meta"><span class="pub-journal">Analisi Finanziaria</span>, 32, 71–88 &nbsp;·&nbsp; Bajo</div></div></div>
-    </div>
-
-    <div class="pub-group">
-      <div class="pub-group-title">Journal Articles — Cost-Effectiveness in Psychiatry</div>
-      <div class="pub-item"><div class="pub-year">2014</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1002/hup.2433" target="_blank" rel="noopener noreferrer">Benefit of Slow Titration of Paroxetine to Treat Depression in the Elderly</a></div><div class="pub-meta"><span class="pub-journal">Human Psychopharmacology</span>, 29(6), 544–551 &nbsp;·&nbsp; Olgiati, Bajo, Serretti</div></div></div>
-      <div class="pub-item"><div class="pub-year">2013</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1016/j.euroneuro.2013.08.008" target="_blank" rel="noopener noreferrer">Challenging Sequential Approach to Treatment-Resistant Depression: Cost-Utility Analysis Based on the STAR*D Trial</a></div><div class="pub-meta"><span class="pub-journal">European Neuropsychopharmacology</span>, 23(12), 1739–1746 &nbsp;·&nbsp; Olgiati, Bajo, Bigelli, Montgomery, Serretti</div></div></div>
-      <div class="pub-item"><div class="pub-year">2012</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1016/j.pnpbp.2011.09.006" target="_blank" rel="noopener noreferrer">Should Pharmacogenetics Be Incorporated in Major Depression Treatment? Economic Evaluation in High- and Middle-Income European Countries</a></div><div class="pub-meta"><span class="pub-journal">Progress in Neuro-Psychopharmacology &amp; Biological Psychiatry</span>, 36(1), 147–154 &nbsp;·&nbsp; Olgiati, Bajo, Bigelli, De Ronchi, Serretti</div></div></div>
-      <div class="pub-item"><div class="pub-year">2011</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.3109/15622975.2010.545809" target="_blank" rel="noopener noreferrer">A Model to Incorporate Genetic Testing (5-HTTLPR) in Pharmacological Treatment of Major Depressive Disorders</a></div><div class="pub-meta"><span class="pub-journal">The World Journal of Biological Psychiatry</span>, 12(7), 501–515 &nbsp;·&nbsp; Serretti, Olgiati, Bigelli, De Ronchi</div></div></div>
-      <div class="pub-item"><div class="pub-year">2009</div><div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1016/j.eurpsy.2008.07.009" target="_blank" rel="noopener noreferrer">The Socio-Economical Burden of Schizophrenia: A Simulation of Cost-Offset of Early Intervention Program in Italy</a></div><div class="pub-meta"><span class="pub-journal">European Psychiatry</span>, 24(1), 11–16 &nbsp;·&nbsp; Serretti, Mandelli, Bajo et al.</div></div></div>
     </div>
 
   </div>
