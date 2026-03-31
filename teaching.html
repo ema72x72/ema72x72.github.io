@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching — Emanuele Bajo</title>
+  <meta name="description" content="Teaching activities of Emanuele Bajo in finance at undergraduate, graduate, MBA, executive, and PhD level.">
+  <link rel="canonical" href="https://emanuelebajo.cv/teaching.html">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --nav-bg: #1c1c1c;
+      --text: #2a2a2a;
+      --text-light: #777777;
+      --accent: #b89a5a;
+      --border: #ddd8cf;
+      --nav-height: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: var(--nav-bg);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #2e2e2e;
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 48px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: #f0ece4;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .nav-links { list-style: none; display: flex; gap: 36px; }
+
+    .nav-links a {
+      color: #999;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-bottom: 3px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .section {
+      padding-top: calc(var(--nav-height) + 72px);
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 54px;
+      font-weight: 300;
+      line-height: 1.0;
+      margin-bottom: 24px;
+    }
+
+    .teaching-intro {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #3c3c3c;
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+
+    .teaching-list {
+      padding-left: 20px;
+      max-width: 820px;
+    }
+
+    .teaching-list li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #3c3c3c;
+    }
+
+    footer {
+      background: var(--nav-bg);
+      color: #555;
+      text-align: center;
+      padding: 28px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 860px) {
+      .nav-inner, .container { padding: 0 24px; }
+      h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name" onclick="window.location.href='index.html'">Emanuele Bajo</div>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html" class="active">Teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">Teaching</div>
+    <h1>Teaching</h1>
+
+    <div class="teaching-intro">
+      I have taught undergraduate, graduate, MBA, Executive and PhD courses in finance at the University of Bologna, Bologna Business School, the University of Queensland and Johns Hopkins University.
+    </div>
+
+    <ul class="teaching-list">
+      <li>Corporate Finance</li>
+      <li>Investments</li>
+      <li>Risk Management</li>
+      <li>Derivatives</li>
+      <li>Fintech</li>
+      <li>Entrepreneurial Finance</li>
+      <li>Valuation</li>
+      <li>International Finance</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Emanuele Bajo · University of Bologna</div>
+</footer>
+
+</body>
+</html>
