@@ -364,16 +364,16 @@
         "mainFindings": null
       },
       "snapshot": {
-        "stage": "Data Collection",
-        "status": "At Risk of Stalling",
-        "progress": "Proposta di campione con un genitore e due siblings per studiare risk preferences e behavioral biases.",
-        "issue": "Non risultano nuove statistiche sul campione familiare; disegno a 18 anni ancora da validare.",
-        "nextAction": "Chiedere numerosità, fattibilità e stato del dataset parent + two siblings.",
-        "owner": "Lorenzo",
-        "milestone": "Prossimo catch-up Lorenzo · data da confermare",
+        "stage": "Data Analyses",
+        "status": "Decision Pending",
+        "progress": "Nella riunione del 3 novembre Lorenzo conferma di avere svolto durante l'estate alcune analisi esplorative sui conti dei minori, con dati e risultati preliminari, ma senza aver ancora individuato un framing scientifico convincente. Il progetto è meno avanzato del lavoro sul disposition effect; è stata proposta una ricognizione delle evidenze esistenti, non la scelta definitiva di procedere.",
+        "issue": "Il contributo scientifico e il posizionamento del lavoro sono ancora indefiniti. Serve valutare se le analisi disponibili consentano un paper coerente e se dedicarvi risorse rispetto ad alternative come payment for order flow, nel quadro dei progetti da concordare con Claudia e il gruppo.",
+        "nextAction": "Lorenzo riprende le analisi esistenti e raccoglie le principali figure e tabelle per discutere la fattibilità e la storyline del paper. Confronto nella call dell'11 novembre, anche in preparazione del planning del 16 novembre con Claudia.",
+        "owner": "Lorenzo (ricognizione); Emanuele e Lorenzo (valutazione)",
+        "milestone": "Call con Lorenzo mercoledì 11 novembre 2026 alle 12:00–12:30; planning con Claudia previsto per il 16 novembre 2026.",
         "dueDate": null,
-        "updatedAt": "2026-07-21",
-        "source": "Call con Lorenzo del 21 luglio"
+        "updatedAt": "2026-11-03",
+        "source": "Transcript della riunione con Lorenzo del 3 novembre 2026 (Pasted text(8).txt, minuti 14:10–18:20 e 22:15–29:49)"
       },
       "actions": [
         {
@@ -389,6 +389,27 @@
           "owner": "Team",
           "status": "unverified",
           "dueDate": null
+        },
+        {
+          "id": "minor-a3",
+          "text": "Riprendere e sintetizzare le analisi svolte in estate sul progetto minori",
+          "owner": "Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "minor-a4",
+          "text": "Organizzare le figure e le tabelle già disponibili per verificare se emerge una storyline e un contributo pubblicabile",
+          "owner": "Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "minor-a5",
+          "text": "Discutere fattibilità, priorità e allocazione del tempo rispetto agli altri progetti alla call dell'11 novembre",
+          "owner": "Emanuele e Lorenzo",
+          "status": "unverified",
+          "dueDate": "2026-11-11"
         }
       ],
       "events": [
@@ -398,6 +419,22 @@
           "type": "documented_update",
           "label": "Ultimo aggiornamento documentato",
           "source": "Call con Lorenzo del 21 luglio"
+        },
+        {
+          "id": "minor-e2",
+          "date": "2026-11-03",
+          "type": "meeting",
+          "label": "Con Lorenzo si discute il possibile riavvio del progetto sui minori: esistono analisi estive preliminari, ma manca una storyline. Concordata la necessità di organizzare risultati, figure e tabelle e valutare il progetto insieme alle altre opportunità, senza decidere ancora di procedere.",
+          "source": "Transcript riunione del 3 novembre 2026, minuti 14:10–18:20 e 22:15–24:47"
+        },
+        {
+          "id": "minor-e3",
+          "date": "2026-11-03",
+          "type": "stage_transition",
+          "label": "Riclassificazione gestionale da Data Collection a Data Analyses alla luce delle analisi estive già svolte; non è una decisione definitiva di proseguire con il paper.",
+          "before": "Data Collection",
+          "after": "Data Analyses",
+          "source": "Transcript riunione 3 novembre 2026, minuti 14:10–17:10"
         }
       ]
     },
@@ -405,7 +442,7 @@
       "id": "journal-networks-raju",
       "title": "Author Journal Networks",
       "subtitle": "Journal proximity, latent targeting demand and the economics of scholarly publishing",
-      "coauthors": "Raju V. Chinthalapati",
+      "coauthors": "Raju V. Chinthalapati · V. Miryala",
       "priority": 8,
       "trello": {
         "id": "662902b3277e1364135dd4f2",
@@ -468,6 +505,13 @@
           "type": "draft_received",
           "label": "Raju invia un primo draft dopo gli esperimenti e richiede feedback su literature review, contributo e posizionamento per una rivista Q1",
           "source": "Email 'Author Journal Networks', Raju Chinthalapati, 5 novembre 2026"
+        },
+        {
+          "id": "journal-networks-raju-e4",
+          "date": "2026-11-05",
+          "type": "metadata_correction",
+          "label": "Elenco coautori integrato con V. Miryala su indicazione dell'autore.",
+          "source": "Correzione comunicata dall'utente il 5 novembre 2026"
         }
       ]
     }
