@@ -1,0 +1,48 @@
+/* Research Portfolio Manager - Active Projects, v1 */
+#projects .rp-header{display:flex;justify-content:space-between;align-items:start;gap:15px;flex-wrap:wrap}
+#projects .rp-count{color:#647489;font-size:12px}
+#projects .rp-table-wrap{overflow:auto;width:100%;margin-top:16px}
+#projects .rp-table{width:100%;border-collapse:collapse;text-align:left;min-width:670px}
+#projects .rp-table th{padding:11px 12px;color:#647489;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border-bottom:1px solid #dde5ee}
+#projects .rp-table td{padding:13px 12px;border-bottom:1px solid #e4eaf1;vertical-align:middle}
+#projects .rp-table tr:last-child td{border-bottom:0}
+#projects .rp-table tr.rp-selected{background:#eef5fa}
+#projects .rp-project{border:0;background:transparent;color:#245b83;font-size:14px;font-weight:700;text-align:left;padding:0;cursor:pointer}
+#projects .rp-project:hover{text-decoration:underline}
+#projects .rp-subtitle{color:#647489;font-size:11px;display:block;margin-top:3px}
+#projects .rp-stage{font-size:12px}
+#projects .rp-date{font-size:12px;color:#647489;white-space:nowrap}
+#projects .rp-pill{display:inline-block;font-size:11px;font-weight:700;color:#214f6c;background:#e6f0f8;padding:4px 8px;border-radius:20px}
+#projects .rp-pill.rp-alert{background:#fff1e1;color:#8b5e15}
+#projects .rp-pill.rp-wait{background:#f0eafa;color:#694589}
+#projects .rp-detail{margin-top:16px;scroll-margin-top:12px}
+#projects .rp-heading{display:flex;align-items:start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+#projects .rp-heading h3{font-size:23px;letter-spacing:-.02em;margin:3px 0}
+#projects .rp-heading p{margin:0}
+#projects .rp-heading-tags{display:flex;gap:6px;flex-wrap:wrap}
+#projects .rp-overline{font-size:10px;letter-spacing:.13em;color:#63829e;font-weight:700;text-transform:uppercase}
+#projects .rp-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:20px 0}
+#projects .rp-info>div{background:#f4f7fa;border-radius:9px;padding:12px}
+#projects .rp-info small{display:block;color:#647489;font-size:11px;margin-bottom:5px}
+#projects .rp-info strong{display:block;font-size:13px}
+#projects .rp-next{background:#edf4fa;border:1px solid #dbe9f3;border-radius:10px;padding:16px 18px}
+#projects .rp-next strong{display:block;margin-bottom:5px}
+#projects .rp-next small{display:block;color:#647489;margin-top:7px}
+#projects .rp-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:21px 0 18px}
+#projects .rp-tabs button{border:1px solid #d2e0ea;border-radius:8px;background:#fff;color:#355d79;padding:9px 12px;font:inherit;cursor:pointer}
+#projects .rp-tabs button[aria-selected=true]{background:#244a69;color:#fff;border-color:#244a69}
+#projects .rp-body h4{font-size:13px;margin:0 0 7px}
+#projects .rp-body p{margin:0;color:#465d71;line-height:1.65}
+#projects .rp-two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+#projects .rp-field{padding-bottom:14px}
+#projects .rp-field+.rp-field{border-top:1px solid #e2e8f0;padding-top:13px}
+#projects .rp-todo>div{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid #e2e8f0}
+#projects .rp-todo>div:last-child{border-bottom:0}
+#projects .rp-circle{display:block;width:15px;height:15px;border:2px solid #91a8b9;border-radius:50%;margin-top:4px;flex-shrink:0}
+#projects .rp-todo small{display:block;color:#647489;margin-top:4px}
+#projects .rp-history{border-left:3px solid #8caac3;padding:6px 0 8px 14px;margin:10px 0}
+#projects .rp-history p{font-size:13px}
+#projects .rp-source{font-size:11px;color:#647489;border-top:1px solid #dde5ee;padding-top:13px;margin-top:20px}
+#projects .rp-muted{font-size:12px;color:#647489!important;margin-top:15px!important}
+#projects .rp-error{color:#9a4538;background:#fff2f0;border:1px solid #f4d4cf;border-radius:9px;padding:12px;margin-top:12px}
+@media(max-width:700px){#projects .rp-info{grid-template-columns:1fr}#projects .rp-two{grid-template-columns:1fr;gap:0}#projects .rp-heading h3{font-size:21px}}
