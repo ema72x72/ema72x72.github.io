@@ -57,34 +57,41 @@
     }).join('');
     section.querySelectorAll('button[data-rp-open]').forEach(button=>button.addEventListener('click',()=>renderDetail(button.dataset.rpOpen,'snapshot',true)));
     renderDetail(projects[0].id,'snapshot',false);
-    // Keep the existing Overview unchanged while making its cards navigate to updated project profiles.
-    const oldNames={'Sherry / Investor Days':'sherry','Beyond the Ticker':'brand'};
+    // Keep the approved Overview layout, but synchronize its card data with the same live JSON.
     const overview=document.getElementById('overview-cards');
     if(overview){
+      overview.innerHTML=projects.map(p=>{
+        const s=p.snapshot||{};
+        return '<div class="card" role="button" tabindex="0" data-project-id="'+escapeHTML(p.id)+'"><b>'+escapeHTML(p.title)+'</b><div class="meta">'+display(p.coauthors)+'</div><span class="pill">'+display(s.stage)+'</span>'+statusPill(s.status)+'</div>';
+      }).join('');
       const openFromCard=(e,keyboard=false)=>{
         if(keyboard&&e.key!=='Enter'&&e.key!==' ')return;
-        const card=e.target.closest('.card');if(!card||!overview.contains(card))return;
-        const name=card.querySelector('b')?.textContent.trim();
-        const id=oldNames[name]||projects.find(p=>p.title===name)?.id;
-        if(!id)return;
-        e.preventDefault();e.stopImmediatePropagation();
+        const card=e.target.closest('[data-project-id]');
+        if(!card||!overview.contains(card))return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
         if(typeof show==='function')show('projects');
-        renderDetail(id,'snapshot',true);
+        renderDetail(card.dataset.projectId,'snapshot',true);
       };
       overview.addEventListener('click',e=>openFromCard(e,false),true);
       overview.addEventListener('keydown',e=>openFromCard(e,true),true);
     }
+    if(window.location.hash==='#projects'&&typeof show==='function')show('projects');
   }
 
-  fetch('./data/projects.json',{cache:'no-store'})
+  fetch('./data/projects.json?refresh='+Date.now(),{cache:'no-store'})
     .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
     .then(payload=>{
       if(payload.schemaVersion!==1||!Array.isArray(payload.projects)||!payload.projects.length)throw Error('Schema non valido');
       for(const p of payload.projects){if(!p.id||!p.title||!p.snapshot||!p.snapshot.stage)throw Error('Record di progetto incompleto')}
       projects=payload.projects;
       buildApp();
+      const stamp=document.querySelector('#overview .top p');
+      if(stamp)stamp.textContent=projects.length+' progetti monitorati · dati aggiornati da GitHub';
     })
     .catch(error=>{
       section.innerHTML=oldContent+'<div class="rp-error" role="alert">I dati aggiornati di GitHub non sono disponibili. Ricarica la pagina tra poco. Dettaglio tecnico: '+escapeHTML(error.message)+'</div>';
+      const overview=document.getElementById('overview');
+      if(overview)overview.insertAdjacentHTML('afterbegin','<p class="rp-error" role="alert">Attenzione: impossibile aggiornare i progetti da GitHub. Le schede seguenti sono una vecchia copia.</p>');
     });
 })();
