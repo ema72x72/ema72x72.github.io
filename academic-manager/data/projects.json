@@ -75,35 +75,56 @@
       "coauthors": "Lorenzo Danieli",
       "priority": 2,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Confrontare il disposition effect e i comportamenti di vendita per posizioni in guadagno/perdita fra i canali digitali e tradizionali utilizzati dallo stesso investitore, considerando separatamente chi migra e chi continua a usare entrambi.",
+        "contribution": "Evidenza descrittiva within-investor sui comportamenti degli investitori multihoming e sui cambiamenti associati allo switching. La riunione non ha stabilito un'identificazione causale dell'effetto piattaforma.",
+        "methodology": "Analisi proposta a livello investor-stock-bank-month per multihomers; confronto switchers vs stayers, con stayers attivi su entrambi i canali nei 12 mesi successivi allo switch del gruppo di confronto. Disegno e specificazioni ancora da consolidare.",
+        "mainFindings": "Lorenzo riferisce evidenze preliminari più coerenti con una riduzione del disposition effect dopo lo switch. Il risultato resta descrittivo e soggetto a selezione, liquidità e composizione delle posizioni."
       },
       "snapshot": {
         "stage": "Data Analyses",
-        "status": "Waiting for Me",
-        "progress": "Errore sul campione dei closing prices corretto; proposta empirica Bias–Timing–Consequence per dual users.",
-        "issue": "Differenze tra canali potenzialmente influenzate dalla selezione delle posizioni e dalla migrazione dei portafogli.",
-        "nextAction": "Valutare e scegliere il modello principale, il campione e l’interpretazione dei forward returns.",
-        "owner": "Emanuele e Lorenzo",
-        "milestone": "Catch-up Lorenzo · 3 novembre",
-        "dueDate": "2026-11-03",
-        "updatedAt": "2026-10-26",
-        "source": "Email di Lorenzo del 26 ottobre e memo del 20 ottobre"
+        "status": "Waiting for Coauthors",
+        "progress": "Le analisi sul disposition effect sono avanzate. Lorenzo propone un confronto switchers vs stayers nel campione multihoming e riferisce risultati preliminari più coerenti con un DE inferiore dopo lo switch. La riunione ha concordato di passare dalle analisi esplorative alla struttura del paper, con posizionamento descrittivo.",
+        "issue": "Persistono problemi strutturali di selezione nella scelta dei conti e delle posizioni, migrazione e necessità di liquidità, che effetti fissi e altre specificazioni non eliminano automaticamente. Non attribuire interpretazioni causali né un contributo da top journal non sostenuto dal disegno.",
+        "nextAction": "Lorenzo prepara un primo schema di introduzione (cosa sappiamo, cosa manca, perché conta) e seleziona la sequenza delle figure e delle tabelle, da discutere al prossimo confronto.",
+        "owner": "Lorenzo (prima bozza); Emanuele (feedback e challenge)",
+        "milestone": "Prossima call concordata: mercoledì 11 novembre 2026, ore 12:00–12:30. Obiettivo indicativo: primo draft completo entro fine 2026.",
+        "dueDate": null,
+        "updatedAt": "2026-11-03",
+        "source": "Transcript della riunione con Lorenzo del 3 novembre 2026 (Pasted text(8).txt, caricato il 4 novembre)"
       },
       "actions": [
         {
-          "id": "neobrokers-a1",
-          "text": "Decidere baseline e unità di osservazione",
-          "owner": "Emanuele + Lorenzo",
+          "id": "neobrokers-a3",
+          "text": "Preparare storyline/introduzione essenziale: letteratura, gap, contributo e rilevanza",
+          "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
-          "id": "neobrokers-a2",
-          "text": "Chiarire selezione dei dual users e switching",
-          "owner": "Team",
+          "id": "neobrokers-a4",
+          "text": "Selezionare e ordinare figure e tabelle a sostegno della storia del paper",
+          "owner": "Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "neobrokers-a5",
+          "text": "Esplicitare nel draft i limiti di selezione, migrazione e liquidità e presentare i risultati come evidenza descrittiva",
+          "owner": "Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "neobrokers-a6",
+          "text": "Discutere e sfidare outline e figure alla call dell'11 novembre",
+          "owner": "Emanuele e Lorenzo",
+          "status": "unverified",
+          "dueDate": "2026-11-11"
+        },
+        {
+          "id": "neobrokers-a7",
+          "text": "Preparare primo draft scritto del paper (obiettivo indicativo: entro fine 2026)",
+          "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         }
@@ -115,6 +136,33 @@
           "type": "documented_update",
           "label": "Ultimo aggiornamento documentato",
           "source": "Email di Lorenzo del 26 ottobre e memo del 20 ottobre"
+        },
+        {
+          "id": "neobrokers-e2",
+          "date": "2026-11-03",
+          "type": "meeting",
+          "label": "Riunione con Lorenzo: orientamento al packaging di un paper descrittivo; confronto preliminare switchers vs stayers, definizione di storyline e sequenza di figure/tabelle. Prossima call 11 novembre; obiettivo indicativo primo draft entro fine 2026.",
+          "source": "Transcript 3 novembre 2026, Pasted text(8).txt"
+        }
+      ],
+      "actionHistory": [
+        {
+          "id": "neobrokers-a1",
+          "text": "Decidere baseline e unità di osservazione",
+          "owner": "Emanuele + Lorenzo",
+          "status": "unverified",
+          "dueDate": null,
+          "supersededBy": "Riorientamento di lavoro concordato il 3 novembre 2026",
+          "supersededOn": "2026-11-03"
+        },
+        {
+          "id": "neobrokers-a2",
+          "text": "Chiarire selezione dei dual users e switching",
+          "owner": "Team",
+          "status": "unverified",
+          "dueDate": null,
+          "supersededBy": "Riorientamento di lavoro concordato il 3 novembre 2026",
+          "supersededOn": "2026-11-03"
         }
       ]
     },
