@@ -400,6 +400,76 @@
           "source": "Call con Lorenzo del 21 luglio"
         }
       ]
+    },
+    {
+      "id": "journal-networks-raju",
+      "title": "Author Journal Networks",
+      "subtitle": "Journal proximity, latent targeting demand and the economics of scholarly publishing",
+      "coauthors": "Raju V. Chinthalapati",
+      "priority": 8,
+      "trello": {
+        "id": "662902b3277e1364135dd4f2",
+        "url": "https://trello.com/c/1bQ8xzCh",
+        "historicalTitle": "Journal proximity and competition (Raju V.Chinthalapati)",
+        "initialStage": "Initial Ideas"
+      },
+      "profile": {
+        "researchQuestion": "È possibile inferire una misura della domanda latente di riviste scientifiche a partire dalle storie di pubblicazione degli autori, pur osservando solo i paper pubblicati e non le submission fallite o le riviste inizialmente considerate?",
+        "contribution": "Aggregare le probabilità di pubblicazione a livello individuale per stimare una misura di journal-level latent targeting demand; distinguere ritorno a riviste familiari e ingresso in nuove sedi; studiare il rapporto fra domanda inferita, capacità di pubblicazione e caratteristiche delle riviste, senza assimilare la misura ai ranking citazionali.",
+        "methodology": "Analisi di circa 225.000 paper, 235.000 identificativi di autore e 180 riviste ABDC nel periodo 2010–2025. Il modello combina similarità tematica della ricerca, collegamenti fra riviste e precedenti outlet dell'autore e popolarità storica della rivista.",
+        "mainFindings": "Per riviste mai utilizzate in precedenza, il modello include il 43,7% delle destinazioni effettive nelle prime dieci raccomandazioni, contro il 38,7% del modello basato sulla sola similarità. Miglioramento riportato anche nella valutazione 2025; ranking relativamente stabili ma fortemente associati alla dimensione della rivista. Risultati riferiti da Raju via email, non ancora verificati sul draft."
+      },
+      "snapshot": {
+        "stage": "First Draft",
+        "status": "Waiting for Me",
+        "progress": "Raju ha inviato un draft successivo agli esperimenti, dichiarando che il lavoro computazionale è ragionevolmente maturo. La email presenta un modello di publication propensity e una misura aggregata di latent targeting demand.",
+        "issue": "Il lavoro non osserva submission fallite né le riviste considerate ex ante: la misura non identifica volumi di submission o probabilità di accettazione. Serve rendere più solido il collegamento con journal choice, incentivi accademici, concorrenza fra riviste ed economia dell'editoria scientifica. La relazione con la dimensione delle riviste va interpretata con attenzione.",
+        "nextAction": "Esaminare il primo draft allegato e fornire a Raju commenti su literature review, contributo principale e posizionamento per una rivista Q1.",
+        "owner": "Emanuele",
+        "milestone": "Feedback al primo draft richiesto da Raju; nessuna scadenza specificata.",
+        "dueDate": null,
+        "updatedAt": "2026-11-05",
+        "source": "Email di Raju V. Chinthalapati, 'Author Journal Networks', ricevuta il 5 novembre 2026. Allegato presente ma non ancora analizzato."
+      },
+      "actions": [
+        {
+          "id": "journal-networks-raju-a1",
+          "text": "Leggere il draft allegato e preparare feedback su letteratura, contributo scientifico e posizionamento per una rivista Q1",
+          "owner": "Emanuele",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "journal-networks-raju-a2",
+          "text": "Valutare esplicitamente, nella review, la differenza fra latent targeting demand e submission/acceptance, e la dipendenza dei ranking dalla dimensione delle riviste",
+          "owner": "Emanuele",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "journal-networks-raju-e1",
+          "date": "2024-04-24",
+          "type": "created",
+          "label": "Creazione della scheda storica 'Journal proximity and competition' su Trello",
+          "source": "Papers Trello, scheda n. 61 (1bQ8xzCh)"
+        },
+        {
+          "id": "journal-networks-raju-e2",
+          "date": "2025-03-10",
+          "type": "stage_transition",
+          "label": "Passaggio della scheda storica da Initial Ideas a Data Collection",
+          "source": "Cronologia Trello, 10 marzo 2025"
+        },
+        {
+          "id": "journal-networks-raju-e3",
+          "date": "2026-11-05",
+          "type": "draft_received",
+          "label": "Raju invia un primo draft dopo gli esperimenti e richiede feedback su literature review, contributo e posizionamento per una rivista Q1",
+          "source": "Email 'Author Journal Networks', Raju Chinthalapati, 5 novembre 2026"
+        }
+      ]
     }
   ]
 }
