@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-05",
+  "dataPolicy": "Public research project summaries. GPT-managed updates only.",
+  "source": "Initial snapshot from academic-manager/data/portfolio.json",
+  "projects": [
+    {
+      "id": "remote",
+      "title": "Remote Work",
+      "subtitle": "Managerial WFH, wage discount and firm performance",
+      "coauthors": "Matteo Vacca · Aleksi Pitkäjärvi",
+      "priority": 1,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Final Draft",
+        "status": "On Track",
+        "progress": "Struttura empirica e narrativa sostanzialmente condivisa; versione per conferenze di metà novembre.",
+        "issue": "Distinguere efficient compensation da managerial perks senza sovrainterpretare IV e productivity.",
+        "nextAction": "Completare figure, Panel B, Data e Methodology e allineare Results alla nuova introduzione.",
+        "owner": "Matteo, Aleksi, team",
+        "milestone": "Conference submissions · metà novembre",
+        "dueDate": "2026-11-15",
+        "updatedAt": "2026-11-03",
+        "source": "Memo riunione del 3 novembre 2026"
+      },
+      "actions": [
+        {
+          "id": "remote-a1",
+          "text": "Figure, Panel B e numerosità campionarie",
+          "owner": "Matteo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "remote-a2",
+          "text": "Aggiornare Data e Methodology; eliminare framework formale",
+          "owner": "Matteo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "remote-a3",
+          "text": "Ripulire introduction su Overleaf",
+          "owner": "Aleksi",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "remote-a4",
+          "text": "Preparare conference-ready version",
+          "owner": "Team",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "remote-e1",
+          "date": "2026-11-03",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Memo riunione del 3 novembre 2026"
+        }
+      ]
+    },
+    {
+      "id": "neobrokers",
+      "title": "Neobrokers",
+      "subtitle": "Behavioral biases in digital vs traditional brokerage",
+      "coauthors": "Lorenzo Danieli",
+      "priority": 2,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Data Analyses",
+        "status": "Waiting for Me",
+        "progress": "Errore sul campione dei closing prices corretto; proposta empirica Bias–Timing–Consequence per dual users.",
+        "issue": "Differenze tra canali potenzialmente influenzate dalla selezione delle posizioni e dalla migrazione dei portafogli.",
+        "nextAction": "Valutare e scegliere il modello principale, il campione e l’interpretazione dei forward returns.",
+        "owner": "Emanuele e Lorenzo",
+        "milestone": "Catch-up Lorenzo · 3 novembre",
+        "dueDate": "2026-11-03",
+        "updatedAt": "2026-10-26",
+        "source": "Email di Lorenzo del 26 ottobre e memo del 20 ottobre"
+      },
+      "actions": [
+        {
+          "id": "neobrokers-a1",
+          "text": "Decidere baseline e unità di osservazione",
+          "owner": "Emanuele + Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "neobrokers-a2",
+          "text": "Chiarire selezione dei dual users e switching",
+          "owner": "Team",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "neobrokers-e1",
+          "date": "2026-10-26",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Email di Lorenzo del 26 ottobre e memo del 20 ottobre"
+        }
+      ]
+    },
+    {
+      "id": "bankruptcy",
+      "title": "Bankruptcy",
+      "subtitle": "Equity Holders, Court Shopping, and Bankruptcy Outcomes",
+      "coauthors": "Nicoletta Marinelli · Rafael Almeida da Matta · Wilson Pereira",
+      "priority": 3,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Data Collection",
+        "status": "On Track",
+        "progress": "Kickoff completato; Nicoletta ha selezionato dieci casi per il pilot debt–equity overlap.",
+        "issue": "Matching di investitori, veicoli e creditori effettivi; LSEG copre solo parte del campione.",
+        "nextAction": "Verificare accesso ai dati e ricostruire dieci casi: accumulo equity, debito, RSA/DIP, trattamento claims.",
+        "owner": "Nicoletta · Wilson",
+        "milestone": "Pilot review · 18–25 novembre (indicativa)",
+        "dueDate": "2026-11-21",
+        "updatedAt": "2026-10-29",
+        "source": "Kickoff 28 ottobre e selezione dei 10 casi del 29 ottobre"
+      },
+      "actions": [
+        {
+          "id": "bankruptcy-a1",
+          "text": "Condividere dati LSEG e documenti campione",
+          "owner": "Nicoletta",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "bankruptcy-a2",
+          "text": "Analizzare dieci casi e ricostruire overlap",
+          "owner": "Wilson",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "bankruptcy-a3",
+          "text": "Valutare fattibilità dell’estensione",
+          "owner": "Team",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "bankruptcy-e1",
+          "date": "2026-10-29",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Kickoff 28 ottobre e selezione dei 10 casi del 29 ottobre"
+        }
+      ]
+    },
+    {
+      "id": "sherry",
+      "title": "Sherry",
+      "subtitle": "Investor Days: prepared remarks, Q&A and multimodal disclosure",
+      "coauthors": "Xinyue (Sherry) · Kuntara Pukthuanthong (feedback)",
+      "priority": 4,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Data Analyses",
+        "status": "On Track",
+        "progress": "233 webcast validati, 647 ore; prime differenze multimodali tra prepared remarks e Q&A.",
+        "issue": "Separare variazione fisiologica di contesto da segnali informativi; validazione delle misure.",
+        "nextAction": "Definire misure validate e collegamento con fund holdings e altri outcome economici.",
+        "owner": "Xinyue",
+        "milestone": "Prossimo aggiornamento Study 1 · data non confermata",
+        "dueDate": null,
+        "updatedAt": "2026-10-22",
+        "source": "Email Xinyue del 18–22 ottobre"
+      },
+      "actions": [
+        {
+          "id": "sherry-a1",
+          "text": "Validare le features e le distribuzioni within-event",
+          "owner": "Xinyue",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "sherry-a2",
+          "text": "Valutare dati su partecipanti Investor Day",
+          "owner": "Xinyue",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "sherry-e1",
+          "date": "2026-10-22",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Email Xinyue del 18–22 ottobre"
+        }
+      ]
+    },
+    {
+      "id": "brand",
+      "title": "Brand Gender",
+      "subtitle": "Beyond the Ticker — investor responses to brand gender",
+      "coauthors": "Nicoletta Marinelli · Otto Randl · Giorgia Simion",
+      "priority": 5,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Submitted (1st round)",
+        "status": "On Track",
+        "progress": "Manoscritto CORFIN-D-26-01361 inviato al Journal of Corporate Finance e confermato under review.",
+        "issue": "Stato dettagliato dei referee non verificabile dal tracking accessibile.",
+        "nextAction": "Attendere una comunicazione editoriale; nessuna azione immediata.",
+        "owner": "Editorial office",
+        "milestone": "JCF peer review · data non nota",
+        "dueDate": null,
+        "updatedAt": "2026-10-25",
+        "source": "Conferma Elsevier del 25 ottobre"
+      },
+      "actions": [],
+      "events": [
+        {
+          "id": "brand-e1",
+          "date": "2026-10-25",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Conferma Elsevier del 25 ottobre"
+        }
+      ]
+    },
+    {
+      "id": "favoritism",
+      "title": "Favoritism in Academia",
+      "subtitle": "Reviewer connections, evaluation mechanisms and allocation",
+      "coauthors": "Marco Pagano · Luca Coraggio",
+      "priority": 6,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Data Analyses",
+        "status": "Waiting for Coauthors",
+        "progress": "Network ricostruito: 12.615 persone, 25.549 coautoraggi, 67 comunità.",
+        "issue": "Misurare connessioni revisore–autore effettive, non soltanto prossimità istituzionale.",
+        "nextAction": "Ricevere il dataset con la nuova variabile e il codice verificato per iniziare le regressioni.",
+        "owner": "Luca",
+        "milestone": "Dataset network · data non indicata",
+        "dueDate": null,
+        "updatedAt": "2026-10-18",
+        "source": "Email Luca del 18 ottobre e network condiviso"
+      },
+      "actions": [
+        {
+          "id": "favoritism-a1",
+          "text": "Validare codici e condividere dataset",
+          "owner": "Luca",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "favoritism-e1",
+          "date": "2026-10-18",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Email Luca del 18 ottobre e network condiviso"
+        }
+      ]
+    },
+    {
+      "id": "minor",
+      "title": "Minor Trading",
+      "subtitle": "Delegated trading for minors and within-family transmission",
+      "coauthors": "Lorenzo Danieli",
+      "priority": 7,
+      "profile": {
+        "researchQuestion": null,
+        "contribution": null,
+        "methodology": null,
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Data Collection",
+        "status": "At Risk of Stalling",
+        "progress": "Proposta di campione con un genitore e due siblings per studiare risk preferences e behavioral biases.",
+        "issue": "Non risultano nuove statistiche sul campione familiare; disegno a 18 anni ancora da validare.",
+        "nextAction": "Chiedere numerosità, fattibilità e stato del dataset parent + two siblings.",
+        "owner": "Lorenzo",
+        "milestone": "Prossimo catch-up Lorenzo · data da confermare",
+        "dueDate": null,
+        "updatedAt": "2026-07-21",
+        "source": "Call con Lorenzo del 21 luglio"
+      },
+      "actions": [
+        {
+          "id": "minor-a1",
+          "text": "Statistiche descrittive parent + two siblings",
+          "owner": "Lorenzo",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "minor-a2",
+          "text": "Valutare potenza e fattibilità age-18 design",
+          "owner": "Team",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "minor-e1",
+          "date": "2026-07-21",
+          "type": "documented_update",
+          "label": "Ultimo aggiornamento documentato",
+          "source": "Call con Lorenzo del 21 luglio"
+        }
+      ]
+    }
+  ]
+}
