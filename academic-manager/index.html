@@ -12,4 +12,4 @@ el('phases').innerHTML=DATA.phases.map(([name,n],i)=>'<div class="baritem"><butt
 el('phases').querySelectorAll('button').forEach(b=>b.onclick=()=>{const [n,c]=DATA.phases[Number(b.dataset.phase)];el('phase-detail').textContent=n+': '+c+' schede nello snapshot storico. L’elenco delle schede e le transizioni dettagliate restano nel repository privato.'});
 el('kpis').innerHTML='<div class="stat"><strong>'+DATA.projects.length+'</strong><small>Progetti monitorati</small></div><div class="stat"><strong>342</strong><small>Transizioni storiche Trello</small></div><div class="stat"><strong>'+DATA.publications.length+'</strong><small>Pubblicazioni nel sito</small></div>';
 function pubs(q){const f=DATA.publications.filter(x=>x.toLowerCase().includes(q.toLowerCase()));el('pubs').innerHTML=f.length?f.map(x=>'<div class="pub">'+esc(x)+'</div>').join(''):'Nessun risultato.'}
-pubs('');el('q').addEventListener('input',e=>pubs(e.target.value));</script><script src="./projects.js?v=20261106-1" defer></script></body></html>
+pubs('');el('q').addEventListener('input',e=>pubs(e.target.value));</script><script src="./projects.js?v=20261106-2" defer></script></body></html>

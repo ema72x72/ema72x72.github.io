@@ -4,7 +4,7 @@
   const section=document.getElementById('projects');
   if (!section) return;
   const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const dateText=value=>{if(!value)return 'Non indicata';const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);return m?m[3]+'/'+m[2]+'/'+m[1]:escapeHTML(value)};
+  const dateText=value=>{if(!value)return 'Non indicata';const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);if(m)return m[3]+'/'+m[2]+'/'+m[1];const ym=/^(\d{4})-(\d{2})$/.exec(value);if(ym){const months=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];return months[Number(ym[2])-1]+' '+ym[1]}return escapeHTML(value)};
   const empty=value=>value===null||value===undefined||String(value).trim()==='';
   const display=value=>empty(value)?'<em>Da documentare</em>':escapeHTML(value);
   const statusPill=value=>'<span class="rp-pill '+(/Risk|Stalling/i.test(value)?'rp-alert':/Waiting/i.test(value)?'rp-wait':'')+'">'+escapeHTML(value)+'</span>';
@@ -24,7 +24,15 @@
     }
     if(key==='history'){
       const sorted=[...events].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
-      return '<h4>Eventi documentati</h4>'+(sorted.length?sorted.map(e=>'<div class="rp-history"><strong>'+dateText(e.date)+'</strong><p>'+display(e.label)+'</p><p>'+display(e.source)+'</p></div>').join(''):'<p>Nessun evento ancora registrato.</p>')+'<p class="rp-muted">Per ora è registrato un solo evento per progetto, relativo all’ultimo aggiornamento noto. La storia verrà ampliata con le prossime modifiche tramite GPT.</p>';
+      const renderEvent=e=>{
+        const title=String(e.label||'Evento');
+        const generic=/^Ultimo aggiornamento documentato$/i.test(title);
+        const summary=e.summary?'<p class="rp-event-summary">'+escapeHTML(e.summary)+'</p>':'';
+        const sourceLink=typeof e.sourceUrl==='string'&&/^https:\/\//.test(e.sourceUrl)?'<a class="rp-event-source" href="'+escapeHTML(e.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Apri la fonte ↗</a>':'';
+        const fallback=!summary&&generic?'<p class="rp-muted">Riepilogo storico non ancora ricostruito.</p>':'';
+        return '<article class="rp-history"><time class="rp-event-date">'+dateText(e.date)+'</time><h4>'+escapeHTML(title)+'</h4>'+summary+fallback+sourceLink+'</article>';
+      };
+      return '<h4>Eventi documentati</h4>'+(sorted.length?sorted.map(renderEvent).join(''):'<p>Nessun evento ancora registrato.</p>')+'<p class="rp-muted">Le date indicate solo per mese si riferiscono a versioni documentali, non necessariamente al giorno della relativa decisione. I riferimenti alle fonti sono conservati nei dati.</p>';
     }
     return '<h4>Profilo della ricerca</h4><div class="rp-field"><h4>Research question</h4><p>'+display(profile.researchQuestion)+'</p></div><div class="rp-field"><h4>Contributo scientifico</h4><p>'+display(profile.contribution)+'</p></div><div class="rp-field"><h4>Metodologia</h4><p>'+display(profile.methodology)+'</p></div><div class="rp-field"><h4>Risultati principali</h4><p>'+display(profile.mainFindings)+'</p></div><p class="rp-muted">I profili saranno compilati progressivamente da GPT usando fonti verificabili.</p>';
   }
