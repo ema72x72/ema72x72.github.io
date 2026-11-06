@@ -11,10 +11,10 @@
       "coauthors": "Matteo Vacca · Aleksi Pitkäjärvi",
       "priority": 1,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Qual è il valore economico del lavoro da remoto per lavoratori e imprese, e come dipende dal livello nella gerarchia aziendale in cui è adottato? In particolare, i manager accettano compensi inferiori per ottenere flessibilità e questa scelta si accompagna a costi oppure benefici per l'impresa?",
+        "contribution": "La bozza combina compensi individuali e risultati d'impresa per distinguere un possibile compensating wage differential dalla selezione dei lavoratori e dai costi organizzativi del WFH. Il contributo specifico è misurare il lavoro da remoto lungo tre livelli gerarchici nei registri amministrativi finlandesi, anziché trattarlo come caratteristica omogenea dell'impresa. Il collegamento fra wage discount manageriale e valore aggiunto/retention resta interpretativo, non prova causale definitiva.",
+        "methodology": "Dati amministrativi finlandesi 2018–2023 che collegano una misura di WFH basata su dichiarazioni fiscali, storie lavorative, retribuzioni e bilanci: circa 1,15 milioni di osservazioni worker-year e 49.000 firm-year nella bozza di novembre. Event study sui cambi di impiego entro occupazioni comparabili, con effetti fissi di lavoratore, impresa d'origine×anno e impresa di destinazione×anno; panel d'impresa per ROA, valore aggiunto per addetto e retention. Verifiche con teleworkability pre-pandemia interagita con il periodo post-pandemico; interpretazione prudente delle stime IV.",
+        "mainFindings": "Nella bozza di novembre i manager che passano a occupazioni con WFH registrano una diminuzione salariale di circa il 3%, non osservata con pari robustezza negli altri livelli. Il WFH complessivo non mostra una relazione significativa col ROA, mentre la penetrazione tra manager è positivamente associata a ROA, valore aggiunto per addetto e retention. Il testo riporta un'associazione di circa +0,16 punti di ROA per +10 punti percentuali di WFH manageriale. Queste sono evidenze del draft in evoluzione, non effetti causali accertati; gli esiti su produttività/IV richiedono ancora cautela."
       },
       "snapshot": {
         "stage": "Final Draft",
@@ -158,10 +158,10 @@
       "coauthors": "Lorenzo Danieli",
       "priority": 2,
       "profile": {
-        "researchQuestion": "Confrontare il disposition effect e i comportamenti di vendita per posizioni in guadagno/perdita fra i canali digitali e tradizionali utilizzati dallo stesso investitore, considerando separatamente chi migra e chi continua a usare entrambi.",
-        "contribution": "Evidenza descrittiva within-investor sui comportamenti degli investitori multihoming e sui cambiamenti associati allo switching. La riunione non ha stabilito un'identificazione causale dell'effetto piattaforma.",
-        "methodology": "Analisi proposta a livello investor-stock-bank-month per multihomers; confronto switchers vs stayers, con stayers attivi su entrambi i canali nei 12 mesi successivi allo switch del gruppo di confronto. Disegno e specificazioni ancora da consolidare.",
-        "mainFindings": "Lorenzo riferisce evidenze preliminari più coerenti con una riduzione del disposition effect dopo lo switch. Il risultato resta descrittivo e soggetto a selezione, liquidità e composizione delle posizioni."
+        "researchQuestion": "Il disposition effect e la propensione a vendere posizioni in guadagno o in perdita differiscono tra broker digitali e tradizionali per uno stesso investitore? Il comportamento cambia quando l'investitore migra tra canali, rispetto a chi continua a usarli entrambi?",
+        "contribution": "Confronto descrittivo within-investor fra piattaforme digitali e tradizionali, con particolare attenzione agli investitori multihoming e alla distinzione tra switchers e stayers. Il possibile contributo è documentare come il bias, il timing delle vendite e gli esiti successivi co-variano con il canale; non è ancora identificato un effetto causale dell'interfaccia digitale.",
+        "methodology": "Dati sulle transazioni e sulle posizioni degli stessi investitori presso intermediari digitali e tradizionali. Misure di disposition effect (PGR/PLR e propensity-to-sell), costruzione del costo delle posizioni con FIFO e controlli di completezza sui prezzi. Specificazioni proposte a livello investitore×titolo×piattaforma×mese, confronti switchers/stayers nel campione multihoming e controlli per composizione dei portafogli, liquidità e trasferimenti. Il campione e la strategia di identificazione sono ancora in consolidamento.",
+        "mainFindings": "Nel report preliminare dell'8 ottobre il disposition effect risulta inferiore sul canale digitale (5,38 contro 6,08 punti percentuali sul tradizionale); Lorenzo riferisce anche risultati preliminari coerenti con un calo del bias dopo lo switching. La differenza è descrittiva: selezione nella scelta della piattaforma, migrazione di titoli, vendite forzate e necessità di liquidità possono influenzare l'esito. Il gruppo ha scelto di costruire prima una storyline e le figure principali, non di rivendicare una identificazione causale."
       },
       "snapshot": {
         "stage": "Data Analyses",
@@ -323,10 +323,10 @@
       "coauthors": "Nicoletta Marinelli · Rafael Almeida da Matta · Wilson Pereira",
       "priority": 3,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Gli investitori sofisticati, inclusi hedge fund, accumulano partecipazioni azionarie in imprese prossime al Chapter 11 e come si collegano tali posizioni alla loro presenza fra i creditori, alle trattative di ristrutturazione e agli esiti dei claims? In che misura si osserva sovrapposizione fra posizioni equity e debt prima e durante la procedura?",
+        "contribution": "Disegno ancora proposto: collegare empiricamente le posizioni azionarie pre-filing ai ruoli nel debito e nella ristrutturazione, distinguendo possibili spiegazioni come option value, hold-up, productive activism e decoupling. Il valore aggiunto dipenderà dalla possibilità di identificare i beneficial owners e dalla novità rispetto alle letterature su distressed investing, Chapter 11 e court shopping. Nessun meccanismo è ancora dimostrato.",
+        "methodology": "Pilot di dieci procedure Chapter 11 selezionate per diverso peso di hedge fund nell'equity (cinque oltre il 50%, cinque fino al 10%) e copertura LSEG. Ricostruzione manuale delle posizioni azionarie pre-filing, dei titolari effettivi del debito, di RSA/DIP financing e del trattamento dei claims; possibili fonti LSEG, Florida-UCLA-LoPucki, documenti Kroll, court filings, SEC, DealScan e Orbis, da verificare caso per caso. L'eventuale estensione a regressioni dipende dalla fattibilità del matching.",
+        "mainFindings": "Non esistono ancora risultati conclusivi sulla domanda principale. In un esercizio esplorativo su 57 casi ricostruiti tramite Kroll, Nicoletta segnala cancellazione dell'equity in 42 (circa 74%), talvolta con recuperi condizionati per i vecchi azionisti. Il dato illustra perché la proprietà post-filing è difficile da utilizzare e non costituisce evidenza sull'overlap equity–debt o sulla causalità dei comportamenti degli hedge fund. L'ultima attività documentata è la selezione dei dieci casi per il pilot."
       },
       "snapshot": {
         "stage": "Data Collection",
@@ -445,10 +445,10 @@
       "coauthors": "Xinyue (Sherry) · Kuntara Pukthuanthong (feedback)",
       "priority": 4,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Le informazioni visuali, vocali e testuali trasmesse dai dirigenti durante gli Investor Days, soprattutto nel confronto tra prepared remarks e Q&A, contengono segnali economici oltre al contenuto verbale? Chi partecipa a questi eventi, come cambiano le posizioni dei fondi e qual è l'associazione fra Investor Days e successive seasoned equity offerings?",
+        "contribution": "Programma di ricerca articolato in tre studi, secondo la presentazione PhD rivista del luglio 2026: (1) costruzione e validazione di una misura di cross-modal inconsistency nei webcast, (2) partecipazione degli investitori e riallocazione dei portafogli, (3) frequenza delle SEO e loro underpricing dopo gli Investor Days. L'innovazione della misura e i collegamenti economici sono ipotesi/contributi attesi, non ancora risultati consolidati.",
+        "methodology": "Campione corrente riferito da Xinyue di 233 webcast validati, circa 647 ore. Pipeline proposta per identificare speaker e segmenti, estrarre rappresentazioni visuali, vocali e verbali e misurare l'incoerenza con approccio leave-one-modality-out; confronto scripted/Q&A entro speaker ed evento. Estensioni prospettate a tagging dei partecipanti FactSet, dati 13F/CRSP mutual funds con variazioni attive dei pesi, misure di rendimento atteso e successive SEO. Verifiche di validità, copertura e selezione ancora necessarie.",
+        "mainFindings": "Le prime analisi di Xinyue segnalano differenze multimodali tra prepared remarks e Q&A e una forte componente comune nei movimenti degli executive (circa 68–88% in alcune misure), con residua variazione within-event da interpretare. Non risultano ancora dimostrati né il contenuto informativo autonomo della misura né effetti su fund holdings, rendimenti o underpricing SEO. Il transcript di un'intervista con Investor Relations è arrivato il 6 novembre ma non è stato ancora analizzato."
       },
       "snapshot": {
         "stage": "Data Analyses",
@@ -560,10 +560,10 @@
       "coauthors": "Nicoletta Marinelli · Otto Randl · Giorgia Simion",
       "priority": 5,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "La rappresentazione simbolica femminile o maschile di un'impresa nelle immagini del brand influenza le decisioni di portafoglio dei gestori di fondi? In particolare, i gestori uomini sottopesano le società con imagery più femminile e il fenomeno riflette attenzione selettiva oppure caratteristiche economiche e familiarità con i prodotti?",
+        "contribution": "Il paper «Beyond the Ticker» estende lo studio dei gender biases finanziari dalle caratteristiche delle persone alla gendered symbolic identity delle imprese, introducendo un GenderScore basato su immagini pubbliche. La spiegazione proposta è coerente con rational inattention, ma il referee JFQA ha contestato la capacità di separare il simbolismo dalle caratteristiche fondamentali e dalle spiegazioni alternative; il contributo causale resta quindi controverso.",
+        "methodology": "Image recognition su oltre 300.000 immagini legate a 135 brand per calcolare la quota di individui percepiti come donne e costruire il GenderScore. Collegamento con i portafogli di mutual funds azionari attivi statunitensi gestiti da un singolo portfolio manager nel 2008–2021. Analisi di presenza del titolo e pesi, turnover del gestore, intensità di trading e reazioni a news/analyst recommendations, con controlli e verifiche alternative. Una critica editoriale richiede una migliore gestione dei confondenti, inclusi possibili stock×quarter fixed effects.",
+        "mainFindings": "Il manoscritto riporta una minore propensione dei gestori uomini a detenere imprese con imagery più femminile; non emerge un'avversione speculare delle gestori donne verso imprese più maschili. Turnover dei gestori, trading e reazioni alle notizie sono coerenti con attenzione differenziale; condizionatamente al trading non emergono penalità di performance. L'interpretazione come rational inattention è proposta dagli autori ma non distingue definitivamente immagini, familiarity e fondamentali. Paper sotto review al Journal of Corporate Finance alla verifica del 25 ottobre 2026."
       },
       "snapshot": {
         "stage": "Submitted (1st round)",
@@ -753,10 +753,10 @@
       "coauthors": "Marco Pagano · Luca Coraggio",
       "priority": 6,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Le connessioni professionali tra ricercatori — attraverso affiliazioni istituzionali, coautoraggio e comunità accademiche — sono associate agli esiti della valutazione della ricerca e a possibili favoritismi? È possibile distinguere legami effettivi fra valutatori e autori dalla semplice prossimità a un ateneo o a una disciplina?",
+        "contribution": "Contributo ancora da definire: costruire misure osservabili di prossimità e connessione accademica per studiare le decisioni di valutazione, distinguendo social networks, qualità scientifica e struttura istituzionale. La presenza di una connessione non dimostra favoritismo; saranno necessari un campione di decisioni valutative e una strategia empirica credibile per attribuire un'interpretazione al coefficiente.",
+        "methodology": "Luca ha ricostruito network di affiliazioni e coautoraggio (12.615 persone, 25.549 relazioni di coautoraggio e 67 comunità secondo il materiale di progetto). Ha sperimentato un algoritmo di community detection che ritrova gruppi largamente sovrapposti agli atenei. Passi previsti: verificare il codice, unire le variabili di network al dataset delle valutazioni e formulare regressioni con controlli appropriati. La specificazione finale e il dataset dei giudizi non risultano ancora verificati.",
+        "mainFindings": "Finora il risultato documentato è soprattutto infrastrutturale: il network di coautoraggio presenta cluster che coincidono in buona parte con istituzioni accademiche. Non è stata ancora prodotta o verificata evidenza empirica sull'effetto delle relazioni fra autori e valutatori, né sul favoritismo. La consegna del dataset con le variabili di network rimane un passo aperto."
       },
       "snapshot": {
         "stage": "Data Analyses",
@@ -823,10 +823,10 @@
       "coauthors": "Lorenzo Danieli",
       "priority": 7,
       "profile": {
-        "researchQuestion": null,
-        "contribution": null,
-        "methodology": null,
-        "mainFindings": null
+        "researchQuestion": "Come investono i genitori per conto dei figli minorenni, quanto somigliano le decisioni fra genitori e figli o fra fratelli e che cosa cambia quando un figlio compie 18 anni? È possibile distinguere preferenze e sofisticazione del genitore dai comportamenti autonomi del giovane investitore?",
+        "contribution": "La possibile novità è utilizzare dati familiari che collegano genitori, conti dei figli e siblings per studiare investimenti delegati e transizione alla maggiore età. Il gruppo ha considerato più meccanismi alternativi (portafogli e rischio, trading, fiscalità, attenzione alle notizie); il contributo prioritario e la decisione di sviluppare un paper non sono ancora stati stabiliti.",
+        "methodology": "Dati transazionali con mapping fra decision maker, genitori e figli; costruzione di nuclei con un genitore e due siblings, uno dei quali raggiunge i 18 anni. Analisi esplorative proposte di similarità dei portafogli, turnover e concentrazione, confronto entro genitore e fra fratelli, event study intorno ai 18 anni e round-trip potenzialmente fiscali. Il dataset è stato ripulito per errori in anno di nascita e decision maker; la granularità anagrafica e il breve periodo post-18 limitano i test.",
+        "mainFindings": "Sono disponibili statistiche descrittive e analisi esplorative, ma non emerge ancora un risultato scientifico centrale replicato e pronto per un paper. Lorenzo ha stabilizzato il campione durante l'estate 2026 e presentato alcune ipotesi verificabili, fra cui differenze di rischio fra conto del genitore e conto del figlio e reazioni intorno a eventi informativi. Alla riunione del 3 novembre è rimasto aperto il problema del framing e della priorità rispetto agli altri progetti."
       },
       "snapshot": {
         "stage": "Data Analyses",
@@ -975,10 +975,10 @@
         "initialStage": "Initial Ideas"
       },
       "profile": {
-        "researchQuestion": "È possibile inferire una misura della domanda latente di riviste scientifiche a partire dalle storie di pubblicazione degli autori, pur osservando solo i paper pubblicati e non le submission fallite o le riviste inizialmente considerate?",
-        "contribution": "Aggregare le probabilità di pubblicazione a livello individuale per stimare una misura di journal-level latent targeting demand; distinguere ritorno a riviste familiari e ingresso in nuove sedi; studiare il rapporto fra domanda inferita, capacità di pubblicazione e caratteristiche delle riviste, senza assimilare la misura ai ranking citazionali.",
-        "methodology": "Analisi di circa 225.000 paper, 235.000 identificativi di autore e 180 riviste ABDC nel periodo 2010–2025. Il modello combina similarità tematica della ricerca, collegamenti fra riviste e precedenti outlet dell'autore e popolarità storica della rivista.",
-        "mainFindings": "Per riviste mai utilizzate in precedenza, il modello include il 43,7% delle destinazioni effettive nelle prime dieci raccomandazioni, contro il 38,7% del modello basato sulla sola similarità. Miglioramento riportato anche nella valutazione 2025; ranking relativamente stabili ma fortemente associati alla dimensione della rivista. Risultati riferiti da Raju via email, non ancora verificati sul draft."
+        "researchQuestion": "È possibile inferire, dalle pubblicazioni effettive e dai network autori–riviste, una misura della propensione a pubblicare in ciascuna sede e della domanda latente di targeting delle riviste, pur senza osservare le submission respinte né l'insieme delle riviste considerate dagli autori?",
+        "contribution": "Il lavoro propone di aggregare previsioni di outlet a livello di autore per ottenere una misura di latent targeting demand e studiare la competizione fra riviste, combinando affinità tematica, precedenti scelte editoriali e network. Il significato economico della misura deve essere precisato: predire una rivista di pubblicazione non permette di identificare direttamente flussi di submission, acceptance rates o domanda causale.",
+        "methodology": "Dopo raccolta iniziale Crossref e costruzione di network autori–riviste, il modello attuale (secondo l'email di Raju) utilizza circa 225.000 articoli, 235.000 identificativi di autore e 180 riviste ABDC, periodo 2010–2025. Combina similarità fra ricerca e outlet, prossimità nei network, precedenti pubblicazioni e popolarità storica della rivista; valuta le destinazioni pubblicate tramite ranking predittivi. Il draft allegato del 5 novembre non è stato ancora analizzato nel dettaglio.",
+        "mainFindings": "Raju riferisce che, per riviste mai utilizzate in precedenza, il modello include il 43,7% delle destinazioni osservate nelle prime dieci posizioni, rispetto al 38,7% con la sola similarità. Riporta anche ranking relativamente stabili ma fortemente correlati alla dimensione delle riviste. Sono risultati dichiarati nell'email, non ancora verificati sul manoscritto; non misurano direttamente la domanda di submission."
       },
       "snapshot": {
         "stage": "First Draft",
