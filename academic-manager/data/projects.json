@@ -408,11 +408,52 @@
       ],
       "events": [
         {
-          "id": "sherry-e1",
+          "id": "sh-oct18",
+          "date": "2026-10-18",
+          "type": "research_update",
+          "label": "Dataset Investor Days e risultati preliminari sulle componenti multimodali",
+          "summary": "Xinyue condivide i progressi sul campione di webcast Investor Days e sulla distinzione fra prepared remarks e Q&A. Lo snapshot riporta 233 webcast validati e circa 647 ore di registrazioni. Risultati ancora da validare sui diversi contesti.",
+          "source": "Email «Quick catch-up» di Xinyue, 18 ottobre 2026"
+        },
+        {
+          "id": "sh-oct20",
+          "date": "2026-10-20",
+          "type": "feedback",
+          "label": "Discussione sulla significatività economica del segnale",
+          "summary": "Emanuele commenta i risultati e richiama la necessità di distinguere differenze dovute all'ambientazione dell'evento da variazioni potenzialmente informative. Non è una conferma che le misure predicano già gli outcome.",
+          "source": "Thread «Quick catch-up», 19–20 ottobre 2026"
+        },
+        {
+          "id": "sh-oct21",
+          "date": "2026-10-21",
+          "type": "empirical_development",
+          "label": "Separazione delle variazioni di contesto da quelle tra executive",
+          "summary": "Xinyue riferisce una forte componente comune nelle variazioni di voce e linguaggio (68–88% in varie misure) e una residua variazione within-event, potenzialmente informativa. L'affidabilità delle misure non prova ancora il contenuto economico del segnale.",
+          "source": "Email «Re: Quick catch-up», 21 ottobre 2026"
+        },
+        {
+          "id": "sh-oct22",
           "date": "2026-10-22",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Email Xinyue del 18–22 ottobre"
+          "type": "data_collection",
+          "label": "Outreach alle Investor Relations di 50 società",
+          "summary": "Xinyue riferisce di avere contattato le IR di 50 società in tre giorni: alcune sono in quiet period, altre offrono webcast d'archivio o possibili call. Prepara domande su motivazioni, formato e pubblico degli Investor Days.",
+          "source": "Email «IR outreach», 22 ottobre 2026"
+        },
+        {
+          "id": "sh-oct26",
+          "date": "2026-10-26",
+          "type": "research_feedback",
+          "label": "Proposta di brevi interviste con gli IR",
+          "summary": "Emanuele suggerisce di chiedere interviste di circa 15 minuti, anziché inviare un questionario troppo dettagliato via email. È una proposta metodologica per la raccolta qualitativa.",
+          "source": "Email «Re: IR outreach», 26 ottobre 2026"
+        },
+        {
+          "id": "sh-nov06",
+          "date": "2026-11-06",
+          "type": "document_received",
+          "label": "Ricevuto un transcript di intervista Investor Relations",
+          "summary": "Xinyue invia in allegato un transcript d'intervista. Il contenuto del file non è stato verificato tramite il connettore Outlook, quindi non vengono attribuite conclusioni alla conversazione.",
+          "source": "Email Xinyue «Re: IR outreach: IR replies and calls with Brown-Forman IR», 6 novembre 2026"
         }
       ]
     },
@@ -443,11 +484,137 @@
       "actions": [],
       "events": [
         {
+          "id": "bg-2021",
+          "date": "2021-06-11",
+          "type": "created",
+          "label": "Avvio dell'idea su genere dei brand e scelte dei fund manager",
+          "summary": "Creata la scheda Trello per studiare se gli investitori, e in particolare i gestori di fondi, rispondano diversamente a nomi e caratteristiche di genere delle società.",
+          "source": "Trello Papers, scheda n. 43",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-jul2021",
+          "date": "2021-07-14",
+          "type": "stage_transition",
+          "label": "Passaggio da Initial Ideas a Data Collection",
+          "summary": "Il progetto passa dalla prima idea alla raccolta dati.",
+          "source": "Cronologia della scheda Trello n. 43",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-jan2022",
+          "date": "2022-01-05",
+          "type": "stage_transition",
+          "label": "Passaggio a Data Analyses",
+          "summary": "La scheda viene spostata a Data Analyses, segnalando l'avvio del lavoro empirico.",
+          "source": "Cronologia Trello n. 43",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-sep2023",
+          "date": "2023-09-26",
+          "type": "empirical_development",
+          "label": "Analisi delle partecipazioni in portafoglio per genere",
+          "summary": "Giorgia si propone di tabulare le frequenze dei titoli inclusi nei portafogli gestiti da uomini e donne e le variazioni associate al cambio di gestore. Discussioni di fine settembre sulle interpretazioni dei movimenti in portafoglio.",
+          "source": "Commenti Trello del 26–29 settembre 2023",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-jan2024",
+          "date": "2024-01-22",
+          "type": "stage_transition",
+          "label": "Disponibile una prima bozza",
+          "summary": "La scheda passa da Data Analyses a First Draft; la storia Trello non descrive qui in dettaglio la versione del testo.",
+          "source": "Transizione Trello del 22 gennaio 2024",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-feb2025",
+          "date": "2025-02-24",
+          "type": "conference",
+          "label": "Paper pronto per la fase conference",
+          "summary": "Il progetto passa nella fase Out for conference, secondo la cronologia di Trello. Non è documentata in questo evento una conferenza specifica.",
+          "source": "Transizione Trello del 24 febbraio 2025",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-aug2025a",
+          "date": "2025-08-06",
+          "type": "submission",
+          "label": "Submission a Review of Finance",
+          "summary": "La scheda registra la prima submission a Review of Finance (RF).",
+          "source": "Commento e transizione Trello del 6 agosto 2025",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-aug2025b",
+          "date": "2025-08-07",
+          "type": "editorial_decision",
+          "label": "Desk rejection da Review of Finance",
+          "summary": "La cronologia Trello registra un desk rejection il giorno successivo alla submission.",
+          "source": "Commento Trello del 7 agosto 2025",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-sep2025",
+          "date": "2025-09-17",
+          "type": "submission",
+          "label": "Submission a Management Science",
+          "summary": "Il paper viene sottomesso a Management Science (MS).",
+          "source": "Commento e transizione Trello del 17 settembre 2025",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-oct2025",
+          "date": "2025-10-16",
+          "type": "editorial_decision",
+          "label": "Desk rejection da Management Science",
+          "summary": "La cronologia Trello registra un desk rejection da MS.",
+          "source": "Commento Trello del 16 ottobre 2025",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-febmar2026",
+          "date": "2026-03-09",
+          "type": "editorial_decision",
+          "label": "Desk rejection da Review of Financial Studies",
+          "summary": "La scheda registra una nuova submission nel febbraio 2026 e un desk rejection da RFS il 9 marzo; la data della submission nel commento Trello non è indicata.",
+          "source": "Transizioni Trello del 10 febbraio e 9 marzo 2026",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-mar2026",
+          "date": "2026-03-23",
+          "type": "submission",
+          "label": "Submission a Journal of Financial and Quantitative Analysis",
+          "summary": "Trello registra una submission a JFQA; non si deduce l'esito da questa sola fonte.",
+          "source": "Commento Trello del 23 marzo 2026",
+          "sourceUrl": "https://trello.com/c/QN9bUSr5"
+        },
+        {
+          "id": "bg-oct06",
+          "date": "2026-10-06",
+          "type": "submission",
+          "label": "Nuova submission al Journal of Corporate Finance",
+          "summary": "Elsevier conferma la ricezione del manoscritto «Beyond the Ticker: Gendered Firm Imagery and Fund Manager Investment Decisions», codice CORFIN-D-26-01361. La nuova submission è indipendente dai precedenti passaggi editoriali su Trello.",
+          "source": "Email automatica Elsevier del 6 ottobre 2026"
+        },
+        {
+          "id": "bg-oct07",
+          "date": "2026-10-07",
+          "type": "working_paper",
+          "label": "Deposito su SSRN",
+          "summary": "Il servizio conferma la ricezione del working paper, in seguito identificato con DOI 10.2139/ssrn.7576652. La conferma di ricezione non prova da sola la disponibilità finale al pubblico.",
+          "source": "Email SSRN e notifica ORCID del 7 ottobre 2026",
+          "sourceUrl": "https://doi.org/10.2139/ssrn.7576652"
+        },
+        {
           "id": "brand-e1",
           "date": "2026-10-25",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Conferma Elsevier del 25 ottobre"
+          "type": "editorial_status",
+          "label": "JCF: manoscritto in fase di valutazione",
+          "summary": "La comunicazione Elsevier relativa al manoscritto CORFIN-D-26-01361 indica la gestione dello stato di submission; nello snapshot risulta under review. Il numero dei referee e la tempistica della decisione non sono verificati.",
+          "source": "Email Elsevier del 24–25 ottobre 2026"
         }
       ]
     },
@@ -486,11 +653,30 @@
       ],
       "events": [
         {
+          "id": "fav-2022",
+          "date": "2022-02-01",
+          "type": "created",
+          "label": "Avvio del progetto sulla valutazione della ricerca accademica",
+          "summary": "Creata su Trello la scheda «Research evaluation», associata a Marco Pagano e Luca Coraggio, precursore dell'attuale progetto su network e potenziali favoritismi.",
+          "source": "Trello Papers, scheda n. 48",
+          "sourceUrl": "https://trello.com/c/c4xZgHzn"
+        },
+        {
+          "id": "fav-2025",
+          "date": "2025-03-10",
+          "type": "stage_transition",
+          "label": "Passaggio a Data Analyses",
+          "summary": "La scheda Trello viene riclassificata dalla fase Data Collection a Data Analyses. L'archivio non documenta qui i risultati empirici specifici.",
+          "source": "Cronologia Trello del 10 marzo 2025",
+          "sourceUrl": "https://trello.com/c/c4xZgHzn"
+        },
+        {
           "id": "favoritism-e1",
           "date": "2026-10-18",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Email Luca del 18 ottobre e network condiviso"
+          "type": "empirical_development",
+          "label": "Ricostruite reti di affiliazione e coautoraggio",
+          "summary": "Luca riferisce di avere ricostruito network di affiliazioni e applicato un algoritmo di community detection ai legami di coautoraggio. Le comunità individuate coincidono in larga parte con gli atenei; la verifica del codice e l'inserimento delle variabili nel dataset restano da completare.",
+          "source": "Email Luca Coraggio «Nostro progetto», 18 ottobre 2026"
         }
       ]
     },
@@ -667,29 +853,35 @@
           "id": "journal-networks-raju-e1",
           "date": "2024-04-24",
           "type": "created",
-          "label": "Creazione della scheda storica 'Journal proximity and competition' su Trello",
-          "source": "Papers Trello, scheda n. 61 (1bQ8xzCh)"
+          "label": "Inizio del progetto Journal Proximity and Competition",
+          "summary": "La proposta originaria costruisce network di autori e riviste dalla somiglianza tematica delle pubblicazioni, con l'obiettivo di stimare prossimità e potenziale domanda per ciascuna rivista.",
+          "source": "Scheda Trello n. 61",
+          "sourceUrl": "https://trello.com/c/1bQ8xzCh"
         },
         {
           "id": "journal-networks-raju-e2",
           "date": "2025-03-10",
           "type": "stage_transition",
-          "label": "Passaggio della scheda storica da Initial Ideas a Data Collection",
-          "source": "Cronologia Trello, 10 marzo 2025"
+          "label": "Passaggio da Initial Ideas a Data Collection",
+          "summary": "Trello registra l'avanzamento verso la raccolta e preparazione dei dati; non è documentata in questa transizione una versione del paper.",
+          "source": "Trello Papers, transizione 10 marzo 2025",
+          "sourceUrl": "https://trello.com/c/1bQ8xzCh"
         },
         {
           "id": "journal-networks-raju-e3",
           "date": "2026-11-05",
           "type": "draft_received",
-          "label": "Raju invia un primo draft dopo gli esperimenti e richiede feedback su literature review, contributo e posizionamento per una rivista Q1",
-          "source": "Email 'Author Journal Networks', Raju Chinthalapati, 5 novembre 2026"
+          "label": "Raju invia il draft e chiede feedback sul posizionamento",
+          "summary": "Raju comunica analisi su circa 225.000 paper, 235.000 identificativi di autore e 180 riviste ABDC nel 2010–2025. Il modello combina similarità, network e popolarità per inferire la propensione alla pubblicazione; nella top ten individua il 43,7% delle destinazioni contro il 38,7% della sola similarità. Chiede commenti su contributo, letteratura e journal Q1. L'allegato non è stato ancora letto.",
+          "source": "Email Raju «Author Journal Networks», 5 novembre 2026"
         },
         {
           "id": "journal-networks-raju-e4",
           "date": "2026-11-05",
           "type": "metadata_correction",
-          "label": "Elenco coautori integrato con V. Miryala su indicazione dell'autore.",
-          "source": "Correzione comunicata dall'utente il 5 novembre 2026"
+          "label": "Aggiornati i coautori del progetto",
+          "summary": "Aggiunto V. Miryala all'elenco dei coautori, su indicazione dell'utente.",
+          "source": "Correzione comunicata dall'utente nella conversazione"
         }
       ]
     }
