@@ -333,6 +333,46 @@
       ],
       "events": [
         {
+          "id": "bank-may15-2026",
+          "date": "2026-05-15",
+          "type": "data_design",
+          "label": "Definito il primo campione collegato al lavoro sul court shopping",
+          "summary": "Rafael chiede a Wilson di identificare i casi effettivamente utilizzati nel suo paper sul court shopping. Il Florida-UCLA-LoPucki Bankruptcy Research Database contiene circa 1.200 casi, ma i criteri del precedente studio ne selezionano circa 400, con identificativi e variabili supplementari da recuperare. I numeri descrivono il perimetro iniziale, non il campione empirico definitivo del nuovo progetto.",
+          "source": "Email Rafael «My project with Emanuele and Nicoletta», 15 maggio 2026"
+        },
+        {
+          "id": "bank-jul10-2026",
+          "date": "2026-07-10",
+          "type": "research_meeting",
+          "label": "Riunione: spostare il focus sull'equity prima del Chapter 11",
+          "summary": "Il gruppo rileva che la proprietà dopo il filing può essere azzerata, convertita in altri strumenti o disturbata da delisting e cambi d'identificativo. Il principale oggetto empirico diventa quindi l'accumulo di azioni prima del filing da parte di investitori sofisticati e la sua relazione con DIP lending, ristrutturazione e successivi esiti. Resta da decidere se usare LSEG o SEC 13F per la misura principale.",
+          "source": "Memo della riunione del 10 luglio 2026, reinviato con email «update bankruptcy project» del 27 agosto"
+        },
+        {
+          "id": "bank-sep18-2026",
+          "date": "2026-09-18",
+          "type": "data_collection",
+          "label": "Analisi esplorativa di 57 casi Chapter 11 con dati Kroll",
+          "summary": "Nicoletta condivide una raccolta di informazioni su diritti e recuperi degli azionisti da Kroll per 57 casi, non rappresentativi dell'intero campione. Da un primo esame risulta equity cancellata in 42 casi (74%); dieci di questi prevedono comunque qualche forma di corrispettivo condizionato per i vecchi azionisti. I risultati sono preliminari e richiedono verifica.",
+          "source": "Email Nicoletta «Kroll Data» e risposta di Emanuele, 18 settembre 2026"
+        },
+        {
+          "id": "bank-sep18b-2026",
+          "date": "2026-09-18",
+          "type": "research_design",
+          "label": "Quattro meccanismi candidati e verifica della rilevanza del contributo",
+          "summary": "Emanuele individua quattro possibili spiegazioni dell'acquisto di equity pre-filing: option value, hold-up, productive activism e decoupling. Prima di investire in raccolta dati manuale propone di valutare l'originalità scientifica e poi la fattibilità dei dati su azionisti e creditori; nessun meccanismo è ancora validato.",
+          "source": "Email Emanuele «Re: Kroll Data», 18 settembre 2026"
+        },
+        {
+          "id": "bank-sep30-2026",
+          "date": "2026-09-30",
+          "type": "data_feasibility",
+          "label": "Verificata la fattibilità del matching tra azionisti e creditori",
+          "summary": "Nicoletta chiede a Wilson dati sui titolari del debito e caratteristiche dei claims. Wilson chiarisce che CEO Affidavit e Schedules of Assets and Liabilities documentano il debito ma spesso riportano solo l'agente amministrativo, non tutti i finanziatori. Propone di valutare DealScan per i lender, SEC filings per verificare gli accordi e Orbis per l'equity.",
+          "source": "Email Nicoletta e risposta Wilson nel thread «bankrupcy project», 30 settembre 2026"
+        },
+        {
           "id": "bank-oct06",
           "date": "2026-10-06",
           "type": "team",
@@ -361,7 +401,7 @@
           "date": "2026-10-29",
           "type": "pilot",
           "label": "Selezionati dieci casi di bankruptcy",
-          "summary": "Scelti dieci filing per il confronto iniziale di ownership e debt holdings. Wilson conferma l'intenzione di iniziare l'analisi; da verificare RSA/DIP, claims e identificazione dei creditori.",
+          "summary": "Nicoletta seleziona dieci filing per verificare il matching fra ownership e debt holdings: cinque con proprietà di hedge fund superiore al 50% e cinque con quota fino al 10%, scelti anche per differenze nella copertura LSEG prima/dopo filing. Wilson richiede accesso alla cartella di lavoro e si propone di avviare il pilot. Da verificare disponibilità dei dati sui creditori, RSA/DIP e claims.",
           "source": "Thread «10 cases - selection», 29 ottobre 2026"
         }
       ]
