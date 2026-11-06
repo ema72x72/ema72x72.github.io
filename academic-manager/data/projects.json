@@ -68,18 +68,78 @@
       ],
       "events": [
         {
+          "id": "remote-h1",
+          "date": "2026-02-09",
+          "type": "created",
+          "label": "Avvio: ricerca sul lavoro da remoto in Finlandia",
+          "summary": "Creata la scheda Trello «Matteo Vacca» per esplorare dati finlandesi sul lavoro da remoto. È la scheda storica associata all'attuale progetto Remote Work.",
+          "source": "Trello Papers, scheda 69",
+          "sourceUrl": "https://trello.com/c/XUUIt5jZ"
+        },
+        {
+          "id": "remote-h2",
+          "date": "2026-04-01",
+          "type": "stage_transition",
+          "label": "Da Initial Ideas a Data Collection",
+          "summary": "La scheda Trello passa alla raccolta dei dati. Il progetto studia il lavoro da remoto nei dati finlandesi.",
+          "source": "Cronologia Trello, 1 aprile 2026",
+          "sourceUrl": "https://trello.com/c/XUUIt5jZ"
+        },
+        {
+          "id": "remote-h3",
+          "date": "2026-05",
+          "type": "manuscript",
+          "label": "Prima versione documentata del paper",
+          "summary": "La bozza di maggio analizza WFH, gerarchia aziendale, retribuzioni e performance. Riporta un calo salariale di circa il 3% per i manager che passano al lavoro da remoto.",
+          "source": "Bozza Remote Work and the Corporate Hierarchy, maggio 2026"
+        },
+        {
+          "id": "remote-h4",
+          "date": "2026-06",
+          "type": "manuscript",
+          "label": "Revisione della narrativa sul valore del WFH",
+          "summary": "La versione di giugno approfondisce i compensating differentials: il calo salariale dei manager è interpretato come possibile limite inferiore del valore attribuito alla flessibilità.",
+          "source": "Bozza Remote Work and the Corporate Hierarchy, giugno 2026"
+        },
+        {
+          "id": "remote-h5",
+          "date": "2026-09-10",
+          "type": "meeting",
+          "label": "Riunione: managerial WFH e performance aziendale",
+          "summary": "La revisione dei dati conferma risultati diversi lungo la gerarchia: WFH aggregato senza associazione significativa con ROA, managerial WFH positivamente associato. Discussione su retention, strumenti IV, eterogeneità e presentazione dei risultati.",
+          "source": "Memo della riunione del 10 settembre 2026"
+        },
+        {
+          "id": "remote-h6",
+          "date": "2026-10-16",
+          "type": "research_memo",
+          "label": "Produttività: distinguere ROA, valore aggiunto e TFP",
+          "summary": "Proposte misure di valore aggiunto reale per addetto e TFP per distinguere efficienza produttiva da risparmi salariali. La disponibilità degli input e del capitale produttivo resta da verificare.",
+          "source": "Memo metodologico per Matteo, 16 ottobre 2026"
+        },
+        {
+          "id": "remote-h7",
+          "date": "2026-10-22",
+          "type": "literature",
+          "label": "Mappa della letteratura e lavoro sull'introduzione",
+          "summary": "Organizzata una mappa di 17 studi su valutazione del WFH da parte dei lavoratori ed effetti sulle imprese; sviluppati materiali per collegare salari, organizzazione e performance.",
+          "source": "Literature map e materiali dell'introduzione, 22 ottobre 2026"
+        },
+        {
           "id": "remote-e1",
           "date": "2026-11-03",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Memo riunione del 3 novembre 2026"
+          "type": "meeting",
+          "label": "Riunione: risultati empirici e versione per conferenze",
+          "summary": "Discussi Panel B, numerosità, robustezze per dimensione d'impresa, soglia UE di 10 milioni di fatturato e risultati IV sulla produttività (ancora imprecisi). Concordato di eliminare il framework formale, aggiornare Data e Methodology e allineare Results all'introduzione.",
+          "source": "Transcript della riunione del 3 novembre 2026"
         },
         {
           "id": "remote-e2",
           "date": "2026-11-06",
           "type": "progress_update",
-          "label": "Matteo ha terminato le figure e le tabelle (data effettiva di completamento non specificata); Emanuele e Matteo devono completare il draft entro il 17 novembre 2026.",
-          "source": "Aggiornamento fornito dall'utente il 6 novembre 2026."
+          "label": "Figure e tabelle completate; deadline del draft",
+          "summary": "Matteo ha completato figure e tabelle. Emanuele e Matteo devono concludere il draft entro il 17 novembre. La data effettiva del completamento delle figure non è specificata.",
+          "source": "Aggiornamento comunicato il 6 novembre 2026"
         }
       ]
     },
