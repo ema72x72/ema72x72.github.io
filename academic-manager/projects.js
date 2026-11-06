@@ -42,22 +42,84 @@
     const detail=document.getElementById('rp-detail');
     detail.innerHTML=html;
     section.querySelectorAll('#rp-rows tr').forEach(row=>row.classList.toggle('rp-selected',row.dataset.rpId===id));
+    section.querySelectorAll('.rp-mobile-card').forEach(card=>card.classList.toggle('rp-mobile-selected',card.dataset.rpOpen===id));
     detail.querySelectorAll('button[data-rp-tab]').forEach(button=>button.addEventListener('click',()=>renderDetail(id,button.dataset.rpTab,false)));
     if(scroll)detail.scrollIntoView({behavior:'smooth',block:'start'});
   }
 
+
+  // One shared ordering for desktop table and mobile cards.
+  const stageOrder=['Initial Ideas','Data Collection','Data Analyses','First Draft','Final Draft','Out for conference','Submitted (1st round)','Revision','Submitted as R&R','Accepted','Proofs','Online'];
+  const statusOrder=['At Risk of Stalling','At Risk','Decision Pending','Waiting for Me','Waiting for Coauthors','Under Review','On Track'];
+  const collator=new Intl.Collator('it',{numeric:true,sensitivity:'base'});
+  let sortKey='priority';
+  let sortDirection='asc';
+
+  function getOrderedProjects(){
+    const sortNumber=(name,values)=>{const i=values.findIndex(x=>x.toLowerCase()===String(name||'').toLowerCase());return i<0?values.length:i;};
+    const order=sortDirection==='asc'?1:-1;
+    return projects.slice().sort((a,b)=>{
+      const as=a.snapshot||{},bs=b.snapshot||{};
+      let cmp=0;
+      switch(sortKey){
+        case 'title':cmp=collator.compare(a.title||'',b.title||'');break;
+        case 'stage':cmp=sortNumber(as.stage,stageOrder)-sortNumber(bs.stage,stageOrder);break;
+        case 'status':cmp=sortNumber(as.status,statusOrder)-sortNumber(bs.status,statusOrder);break;
+        case 'updated':cmp=String(as.updatedAt||'').localeCompare(String(bs.updatedAt||''));break;
+        default:cmp=(a.priority??999)-(b.priority??999);
+      }
+      return cmp*order||collator.compare(a.title||'',b.title||'');
+    });
+  }
+
+  function sortProjects(key){
+    if(sortKey===key)sortDirection=sortDirection==='asc'?'desc':'asc';
+    else{sortKey=key;sortDirection=key==='updated'?'desc':'asc';}
+    renderProjectLists();
+  }
+
+  function renderProjectLists(){
+    const ordered=getOrderedProjects();
+    const rows=document.getElementById('rp-rows');
+    const cards=document.getElementById('rp-mobile-cards');
+    if(!rows||!cards)return;
+    rows.innerHTML=ordered.map(p=>{
+      const s=p.snapshot||{};
+      return '<tr data-rp-id="'+escapeHTML(p.id)+'" class="'+(selectedId===p.id?'rp-selected':'')+'"><td><button class="rp-project" type="button" data-rp-open="'+escapeHTML(p.id)+'">'+escapeHTML(p.title)+'</button><small class="rp-subtitle">'+display(p.coauthors)+'</small></td><td><span class="rp-stage">'+display(s.stage)+'</span></td><td>'+statusPill(s.status)+'</td><td class="rp-date">'+dateText(s.updatedAt)+'</td></tr>';
+    }).join('');
+    cards.innerHTML=ordered.map(p=>{
+      const s=p.snapshot||{};
+      return '<button type="button" class="rp-mobile-card'+(selectedId===p.id?' rp-mobile-selected':'')+'" data-rp-open="'+escapeHTML(p.id)+'"><span class="rp-mobile-title">'+escapeHTML(p.title)+'</span><span class="rp-mobile-authors">'+display(p.coauthors)+'</span><span class="rp-mobile-info"><span><small>Fase scientifica</small><strong>'+display(s.stage)+'</strong></span><span><small>Stato operativo</small>'+statusPill(s.status)+'</span></span><span class="rp-mobile-date">Aggiornato: '+dateText(s.updatedAt)+'</span></button>';
+    }).join('');
+    section.querySelectorAll('[data-rp-open]').forEach(button=>button.addEventListener('click',()=>renderDetail(button.dataset.rpOpen,'snapshot',true)));
+    section.querySelectorAll('th[data-rp-sort-header]').forEach(th=>{
+      const active=sortKey===th.dataset.rpSortHeader;
+      th.setAttribute('aria-sort',active?(sortDirection==='asc'?'ascending':'descending'):'none');
+      const symbol=th.querySelector('.rp-sort-indicator');
+      if(symbol)symbol.textContent=active?(sortDirection==='asc'?'▲':'▼'):'↕';
+    });
+    const select=document.getElementById('rp-mobile-sort');
+    if(select)select.value=sortKey;
+    const dir=document.getElementById('rp-mobile-direction');
+    if(dir){
+      dir.textContent=sortDirection==='asc'?'↑ Crescente':'↓ Decrescente';
+      dir.setAttribute('aria-label','Inverti ordinamento; attuale: '+(sortDirection==='asc'?'crescente':'decrescente'));
+    }
+  }
+
   function buildApp(){
     projects.sort((a,b)=>(a.priority??999)-(b.priority??999));
+    const headings=[['title','Progetto'],['stage','Fase scientifica'],['status','Stato operativo'],['updated','Aggiornato']];
     section.innerHTML='<div class="rp-header"><div><div class="eyebrow">Portfolio / Current research</div><h2>Progetti attivi</h2><p>Seleziona un progetto per consultare stato, attività, cronologia e profilo di ricerca.</p></div><small class="rp-count">'+projects.length+' progetti · dati versionati su GitHub</small></div>'
-      +'<div class="panel"><div class="rp-table-wrap"><table class="rp-table"><thead><tr><th scope="col">Progetto</th><th scope="col">Fase scientifica</th><th scope="col">Stato operativo</th><th scope="col">Aggiornato</th></tr></thead><tbody id="rp-rows"></tbody></table></div></div>'
+      +'<div class="rp-sort-mobile"><label for="rp-mobile-sort">Ordina per</label><div class="rp-sort-controls"><select id="rp-mobile-sort"><option value="priority">Ordine di lavoro</option>'+headings.map(([k,name])=>'<option value="'+k+'">'+name+'</option>').join('')+'</select><button type="button" id="rp-mobile-direction" aria-label="Inverti ordinamento">↑ Crescente</button></div></div>'
+      +'<div class="panel rp-list-panel"><div class="rp-table-wrap"><table class="rp-table"><thead><tr>'+headings.map(([k,name])=>'<th scope="col" data-rp-sort-header="'+k+'" aria-sort="none"><button class="rp-sort-head" type="button" data-rp-sort="'+k+'" aria-label="Ordina per '+name+'">'+name+' <span class="rp-sort-indicator" aria-hidden="true">↕</span></button></th>').join('')+'</tr></thead><tbody id="rp-rows"></tbody></table></div><div class="rp-mobile-cards" id="rp-mobile-cards"></div></div>'
       +'<div class="panel rp-detail" id="rp-detail" aria-live="polite"></div>';
-    document.getElementById('rp-rows').innerHTML=projects.map(p=>{
-      const s=p.snapshot||{};
-      return '<tr data-rp-id="'+escapeHTML(p.id)+'"><td><button class="rp-project" type="button" data-rp-open="'+escapeHTML(p.id)+'">'+escapeHTML(p.title)+'</button><small class="rp-subtitle">'+display(p.coauthors)+'</small></td><td><span class="rp-stage">'+display(s.stage)+'</span></td><td>'+statusPill(s.status)+'</td><td class="rp-date">'+dateText(s.updatedAt)+'</td></tr>';
-    }).join('');
-    section.querySelectorAll('button[data-rp-open]').forEach(button=>button.addEventListener('click',()=>renderDetail(button.dataset.rpOpen,'snapshot',true)));
+    section.querySelectorAll('[data-rp-sort]').forEach(button=>button.addEventListener('click',()=>sortProjects(button.dataset.rpSort)));
+    document.getElementById('rp-mobile-sort').addEventListener('change',e=>{sortKey=e.target.value;sortDirection=sortKey==='updated'?'desc':'asc';renderProjectLists();});
+    document.getElementById('rp-mobile-direction').addEventListener('click',()=>{sortDirection=sortDirection==='asc'?'desc':'asc';renderProjectLists();});
+    renderProjectLists();
     renderDetail(projects[0].id,'snapshot',false);
-    // Keep the approved Overview layout, but synchronize its card data with the same live JSON.
+    // Overview uses the same live source; its visual redesign remains a separate task.
     const overview=document.getElementById('overview-cards');
     if(overview){
       overview.innerHTML=projects.map(p=>{

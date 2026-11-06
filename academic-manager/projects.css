@@ -46,3 +46,30 @@
 #projects .rp-muted{font-size:12px;color:#647489!important;margin-top:15px!important}
 #projects .rp-error{color:#9a4538;background:#fff2f0;border:1px solid #f4d4cf;border-radius:9px;padding:12px;margin-top:12px}
 @media(max-width:700px){#projects .rp-info{grid-template-columns:1fr}#projects .rp-two{grid-template-columns:1fr;gap:0}#projects .rp-heading h3{font-size:21px}}
+
+/* Clickable sortable column headings */
+#projects .rp-sort-head{font:inherit;font-weight:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;border:0;background:transparent;padding:0;cursor:pointer;text-align:left;white-space:nowrap}
+#projects .rp-sort-head:hover{color:#235d87}
+#projects .rp-sort-head:focus-visible,#projects .rp-mobile-card:focus-visible,#projects .rp-sort-controls :focus-visible{outline:3px solid #d7a84c;outline-offset:3px}
+#projects .rp-sort-indicator{color:#6488a2;font-size:11px;margin-left:5px}
+#projects .rp-mobile-cards,#projects .rp-sort-mobile{display:none}
+@media(max-width:700px){
+  #projects .rp-sort-mobile{display:block;margin:17px 0 12px}
+  #projects .rp-sort-mobile label{display:block;font-size:12px;font-weight:650;margin-bottom:6px;color:#465e73}
+  #projects .rp-sort-controls{display:flex;gap:8px;width:100%}
+  #projects .rp-sort-controls select{flex:1;min-width:0;max-width:100%;border:1px solid #cddbe7;background:white;border-radius:9px;font:inherit;padding:11px 8px;color:#1c344a}
+  #projects .rp-sort-controls button{flex-shrink:0;border:1px solid #cddbe7;background:white;border-radius:9px;font:inherit;padding:10px 9px;color:#245b83}
+  #projects .rp-table-wrap{display:none}
+  #projects .rp-list-panel{padding:0;border:none;background:transparent}
+  #projects .rp-mobile-cards{display:grid;grid-template-columns:1fr;gap:11px}
+  #projects .rp-mobile-card{width:100%;display:block;text-align:left;padding:16px;border:1px solid #dbe4ed;background:#fff;border-radius:13px;color:var(--ink);font:inherit;cursor:pointer;overflow-wrap:anywhere}
+  #projects .rp-mobile-selected{border-color:#7ba6c7;background:#f0f7fc}
+  #projects .rp-mobile-title{display:block;font-size:17px;font-weight:700;line-height:1.3;color:#225b83}
+  #projects .rp-mobile-authors{display:block;font-size:12px;line-height:1.45;color:#65788a;margin-top:4px}
+  #projects .rp-mobile-info{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:13px;padding-top:11px;border-top:1px solid #e3e9ef}
+  #projects .rp-mobile-info>span{min-width:0}
+  #projects .rp-mobile-info small{display:block;font-size:10px;color:#6b7b8c;margin-bottom:5px}
+  #projects .rp-mobile-info strong{display:block;font-size:12px;line-height:1.45;font-weight:650}
+  #projects .rp-mobile-info .rp-pill{white-space:normal;line-height:1.4}
+  #projects .rp-mobile-date{display:block;margin-top:12px;font-size:11px;color:#647489}
+}
