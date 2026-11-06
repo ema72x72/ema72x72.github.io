@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05",
+  "generatedAt": "2026-11-06",
   "dataPolicy": "Public research project summaries. GPT-managed updates only.",
   "source": "Initial snapshot from academic-manager/data/portfolio.json",
   "projects": [
@@ -19,19 +19,19 @@
       "snapshot": {
         "stage": "Final Draft",
         "status": "On Track",
-        "progress": "Struttura empirica e narrativa sostanzialmente condivisa; versione per conferenze di metà novembre.",
+        "progress": "Matteo ha completato il lavoro su figure e tabelle (conferma comunicata il 6 novembre). Il draft deve ora essere completato da Emanuele e Matteo entro il 17 novembre 2026.",
         "issue": "Distinguere efficient compensation da managerial perks senza sovrainterpretare IV e productivity.",
-        "nextAction": "Completare figure, Panel B, Data e Methodology e allineare Results alla nuova introduzione.",
-        "owner": "Matteo, Aleksi, team",
-        "milestone": "Conference submissions · metà novembre",
-        "dueDate": "2026-11-15",
-        "updatedAt": "2026-11-03",
-        "source": "Memo riunione del 3 novembre 2026"
+        "nextAction": "Emanuele e Matteo devono completare il draft entro il 17 novembre 2026.",
+        "owner": "Emanuele · Matteo",
+        "milestone": "Draft completo entro il 17 novembre 2026 (termine massimo).",
+        "dueDate": "2026-11-17",
+        "updatedAt": "2026-11-06",
+        "source": "Aggiornamento comunicato direttamente dall'utente il 6 novembre 2026."
       },
       "actions": [
         {
           "id": "remote-a1",
-          "text": "Figure, Panel B e numerosità campionarie",
+          "text": "Verificare Panel B e numerosità campionarie (completamento non confermato)",
           "owner": "Matteo",
           "status": "unverified",
           "dueDate": null
@@ -52,10 +52,18 @@
         },
         {
           "id": "remote-a4",
-          "text": "Preparare conference-ready version",
-          "owner": "Team",
+          "text": "Completare il draft del paper",
+          "owner": "Emanuele · Matteo",
           "status": "unverified",
-          "dueDate": null
+          "dueDate": "2026-11-17"
+        },
+        {
+          "id": "remote-a5",
+          "text": "Completare le figure e le tabelle",
+          "owner": "Matteo",
+          "status": "completed",
+          "dueDate": null,
+          "reportedAt": "2026-11-06"
         }
       ],
       "events": [
@@ -65,6 +73,13 @@
           "type": "documented_update",
           "label": "Ultimo aggiornamento documentato",
           "source": "Memo riunione del 3 novembre 2026"
+        },
+        {
+          "id": "remote-e2",
+          "date": "2026-11-06",
+          "type": "progress_update",
+          "label": "Matteo ha terminato le figure e le tabelle (data effettiva di completamento non specificata); Emanuele e Matteo devono completare il draft entro il 17 novembre 2026.",
+          "source": "Aggiornamento fornito dall'utente il 6 novembre 2026."
         }
       ]
     },
