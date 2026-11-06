@@ -126,6 +126,14 @@
           "source": "Literature map e materiali dell'introduzione, 22 ottobre 2026"
         },
         {
+          "id": "remote-oct23-tables",
+          "date": "2026-10-23",
+          "type": "research_development",
+          "label": "Tabelle rigenerate e confronto su eterogeneità del ROA",
+          "summary": "Matteo conferma che la figura «Heterogeneity in the Effect of Upper-Layer Remote Work on ROA» risulta corretta nella nuova versione delle tabelle. Il lavoro sulle figure prosegue fino al completamento comunicato il 6 novembre.",
+          "source": "Email Matteo «RE: File tabelle rigenerato», 23 ottobre 2026"
+        },
+        {
           "id": "remote-e1",
           "date": "2026-11-03",
           "type": "meeting",
@@ -213,6 +221,30 @@
           "summary": "La scheda «Behavioural biases in trading with digital brokers» viene creata su Trello. È il precedente storico del progetto sui bias nel trading digitale e tradizionale.",
           "source": "Trello Papers, scheda 64",
           "sourceUrl": "https://trello.com/c/elhNYNiX"
+        },
+        {
+          "id": "neo-sep11-2026",
+          "date": "2026-09-11",
+          "type": "research_update",
+          "label": "Prime slide sistematiche sui bias dei broker digitali",
+          "summary": "Lorenzo condivide un set di slide con selezione campionaria digital/traditional, costruzione dei behavioural biases, statistiche descrittive, regressioni di base e risultati preliminari. Le slide sono materiale metodologico, non una presentazione definitiva.",
+          "source": "Email Lorenzo «Behavioral biases and digital vs. traditional results», 11 settembre 2026"
+        },
+        {
+          "id": "neo-sep22-2026",
+          "date": "2026-09-22",
+          "type": "data_quality",
+          "label": "Verifica della copertura giornaliera dei prezzi",
+          "summary": "Lorenzo verifica la completezza dei prezzi: 2.678 su 3.127 titoli del campione ridotto superano il 90% di copertura. Restano problemi di giorni senza transazioni e ricostruzione dei prezzi; viene discusso il forward fill.",
+          "source": "Email Lorenzo nel thread «Behavioral biases and digital vs. traditional results», 21–22 settembre 2026"
+        },
+        {
+          "id": "neo-sep23-2026",
+          "date": "2026-09-23",
+          "type": "empirical_development",
+          "label": "Confronto sui risultati del disposition effect digitale",
+          "summary": "Lorenzo riassume la discussione dei risultati: il canale digitale presenta una misura più bassa del disposition effect, ma PGR e PLR sono vicine e servono verifiche su definizioni, prezzi, campione ed effetti di piattaforma prima di interpretare il divario.",
+          "source": "Email Lorenzo «RE: Behavioral biases and digital vs. traditional results», 23 settembre 2026"
         },
         {
           "id": "neo-oct06",
@@ -421,14 +453,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "On Track",
-        "progress": "233 webcast validati, 647 ore; prime differenze multimodali tra prepared remarks e Q&A.",
+        "progress": "233 webcast validati, circa 647 ore; prime differenze multimodali fra prepared remarks e Q&A. Il 6 novembre Xinyue ha inoltre inviato un transcript di intervista Investor Relations, non ancora esaminato nei contenuti.",
         "issue": "Separare variazione fisiologica di contesto da segnali informativi; validazione delle misure.",
-        "nextAction": "Definire misure validate e collegamento con fund holdings e altri outcome economici.",
-        "owner": "Xinyue",
+        "nextAction": "Validare le misure multimodali e collegarle a fund holdings e outcome economici; esaminare il transcript IR ricevuto il 6 novembre per eventuali indicazioni utili al research design.",
+        "owner": "Xinyue (analisi); Emanuele (feedback sul transcript)",
         "milestone": "Prossimo aggiornamento Study 1 · data non confermata",
         "dueDate": null,
-        "updatedAt": "2026-10-22",
-        "source": "Email Xinyue del 18–22 ottobre"
+        "updatedAt": "2026-11-06",
+        "source": "Email Xinyue del 18–22 ottobre e «IR outreach», 6 novembre 2026. L'allegato del 6 novembre non è stato letto."
       },
       "actions": [
         {
@@ -447,6 +479,30 @@
         }
       ],
       "events": [
+        {
+          "id": "sherry-jun28-2026",
+          "date": "2026-06-28",
+          "type": "research_design",
+          "label": "Definito il filone multimodale sui video degli Investor Days",
+          "summary": "Xinyue presenta a Luigi Di Stefano, su indicazione di Emanuele, il progetto che studia se segnali visuali, vocali e testuali delle presentazioni Investor Day contengano informazioni oltre le parole. Propone misure robuste entro speaker e distingue interventi preparati da Q&A; il campione iniziale comprende circa 200 video.",
+          "source": "Email Xinyue «Multimodal analysis of investor-day videos», 28 giugno 2026"
+        },
+        {
+          "id": "sherry-jul10-2026",
+          "date": "2026-07-10",
+          "type": "methodology",
+          "label": "Proposta di pipeline multimodale con computer vision",
+          "summary": "Dopo il confronto con il gruppo di computer vision, Xinyue specifica due stadi: riconoscimento di chi parla e quando nei webcast e costruzione di embedding multimodali; propone una misura di incoerenza leave-one-modality-out, confrontandola con benchmark più semplici. La pipeline è un programma di lavoro, non una validazione già realizzata.",
+          "source": "Email Xinyue a Luigi Di Stefano, 10 luglio 2026"
+        },
+        {
+          "id": "sherry-jul24-2026",
+          "date": "2026-07-24",
+          "type": "research_proposal",
+          "label": "Presentazione PhD rivista: tre studi sugli Investor Days",
+          "summary": "La presentazione rivista organizza il progetto in Study 1 (misurazione dell'inconsistenza multimodale), Study 2 (partecipazione e riallocazione dei fondi) e Study 3 (Investor Days e successive SEO). Il confronto scripted/Q&A diventa centrale per Study 1; vengono distinte partecipazione buy-side/sell-side e variazioni attive dei pesi di portafoglio.",
+          "source": "Investor Days — 24 July presentation v2, 24 luglio 2026; design proposto, non risultati validati"
+        },
         {
           "id": "sh-oct18",
           "date": "2026-10-18",
@@ -632,6 +688,38 @@
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
+          "id": "brand-jfqa-reject-may17",
+          "date": "2026-05-17",
+          "type": "editorial_decision",
+          "label": "JFQA: rifiuto dopo referee report",
+          "summary": "Il Journal of Financial and Quantitative Analysis respinge il manoscritto JFQA-26-27418 dopo averlo inviato a un referee. Le criticità principali riguardano identificazione del GenderScore, possibili caratteristiche aziendali omesse e interpretazioni alternative al meccanismo di rational inattention; il referee propone anche stock-by-quarter fixed effects.",
+          "source": "Email «Your Submission - ms# JFQA-26-27418», 17 maggio 2026"
+        },
+        {
+          "id": "brand-jbf-submit-jul16",
+          "date": "2026-07-16",
+          "type": "submission",
+          "label": "Submission a Journal of Banking & Finance",
+          "summary": "Otto completa la transfer submission al Journal of Banking & Finance; manoscritto JBF-D-26-01125. È una nuova submission successiva alla decisione JFQA, non una revise-and-resubmit.",
+          "source": "Email «JBF-D-26-01125 - Confirming your submission», 16 luglio 2026"
+        },
+        {
+          "id": "brand-jbf-review-aug19",
+          "date": "2026-08-19",
+          "type": "editorial_status",
+          "label": "JBF: assegnato almeno un referee",
+          "summary": "Nel tracking del Journal of Banking & Finance risulta assegnato un referee su due. La comunicazione indica una review in corso, senza anticipare il successivo esito.",
+          "source": "Corrispondenza con Otto «Track the status of your submission to Journal of Banking and Finance», 19 agosto 2026"
+        },
+        {
+          "id": "brand-jbf-reject-oct01",
+          "date": "2026-10-01",
+          "type": "editorial_decision",
+          "label": "Rifiuto dal Journal of Banking & Finance",
+          "summary": "Otto comunica il rifiuto del manoscritto JBF-D-26-01125 e propone una rapida nuova submission. Si discutono Journal of Empirical Finance, un field journal e successivamente JCF; non è corretto descrivere l'esito come desk rejection, vista la fase di review documentata.",
+          "source": "Email Otto «FW: Your Submission» e discussione tra coautori, 1–5 ottobre 2026"
+        },
+        {
           "id": "bg-oct06",
           "date": "2026-10-06",
           "type": "submission",
@@ -717,6 +805,14 @@
           "label": "Ricostruite reti di affiliazione e coautoraggio",
           "summary": "Luca riferisce di avere ricostruito network di affiliazioni e applicato un algoritmo di community detection ai legami di coautoraggio. Le comunità individuate coincidono in larga parte con gli atenei; la verifica del codice e l'inserimento delle variabili nel dataset restano da completare.",
           "source": "Email Luca Coraggio «Nostro progetto», 18 ottobre 2026"
+        },
+        {
+          "id": "fav-oct19-2026",
+          "date": "2026-10-19",
+          "type": "team_feedback",
+          "label": "Attese le variabili di network per avviare le regressioni",
+          "summary": "Emanuele ringrazia Luca per la ricostruzione delle reti e propone di avviare regressioni e analisi non appena le nuove variabili saranno disponibili e verificate. La comunicazione non conferma che il dataset sia già stato consegnato.",
+          "source": "Email Emanuele «Re: Nostro progetto», 19 ottobre 2026"
         }
       ]
     },
@@ -791,6 +887,22 @@
           "source": "Email «Letteratura su investimenti minori», 5 giugno 2026"
         },
         {
+          "id": "minor-jul01-2026",
+          "date": "2026-07-01",
+          "type": "research_meeting",
+          "label": "Riunione sul disegno parent–child, siblings e passaggio ai 18 anni",
+          "summary": "Vengono discussi sette possibili filoni: similarità di portafoglio genitore–figlio, allocazione fra siblings, trading fiscalmente motivato, discontinuità a 18 anni, behavioral biases con delega ai genitori, generazioni dei genitori e cultura. Priorità a similarità, siblings e round-trip legati alle imposte; sono opzioni da testare, non risultati.",
+          "source": "Meeting Notes — Project on Minor Trading, 1 luglio 2026"
+        },
+        {
+          "id": "minor-jul08-2026",
+          "date": "2026-07-08",
+          "type": "data_development",
+          "label": "Ricostruito il mapping tra genitori e figli",
+          "summary": "Lorenzo annuncia di aver costruito il matching parent–child e propone misure di similarità dei portafogli tra fratelli, co-occorrenza delle transazioni e correlazione degli importi. L'obiettivo è verificare quantitativamente la trasmissione delle scelte d'investimento.",
+          "source": "Email Lorenzo «Statistiche investimenti minori», 8 luglio 2026"
+        },
+        {
           "id": "minor-jul20",
           "date": "2026-07-20",
           "type": "proposal",
@@ -821,6 +933,14 @@
           "label": "Dataset ripulito e campione considerato stabile",
           "summary": "Lorenzo comunica di avere affrontato errori nei campi decision maker e anno di nascita. Invia filtering e statistiche aggiornate per le coorti dei figli 2005–2007 e siblings nati dal 2008; ritiene il campione abbastanza stabile per avviare l'econometria, senza confermare che questa sia stata completata.",
           "source": "Email Lorenzo «Statistiche investimenti minori», 5 agosto 2026"
+        },
+        {
+          "id": "minor-sep08-2026",
+          "date": "2026-09-08",
+          "type": "research_design",
+          "label": "Due possibili estensioni del disegno empirico",
+          "summary": "Lorenzo propone di confrontare il rischio assunto dallo stesso genitore sul proprio conto e su quello del figlio e di verificare se gli eventuali abnormal returns dei conti minorili intorno a eventi informativi cambiano al compimento dei 18 anni. Sono ipotesi da discutere, non analisi concluse.",
+          "source": "Email Lorenzo «RE: Statistiche investimenti minori», 8 settembre 2026"
         },
         {
           "id": "minor-e2",
@@ -899,6 +1019,30 @@
           "sourceUrl": "https://trello.com/c/1bQ8xzCh"
         },
         {
+          "id": "raju-jul07-2024",
+          "date": "2024-07-07",
+          "type": "research_outline",
+          "label": "Condiviso un primo research outline",
+          "summary": "Raju invia l'outline della ricerca definita nelle discussioni con Emanuele e anticipa futuri aggiornamenti sull'impostazione degli esperimenti. L'allegato non è stato analizzato in questa verifica.",
+          "source": "Email Raju «Research Memo», 7 luglio 2024"
+        },
+        {
+          "id": "raju-mar04-2025",
+          "date": "2025-03-04",
+          "type": "data_development",
+          "label": "Raccolta dati Crossref e primi esperimenti sui network",
+          "summary": "Raju descrive un'estrazione Crossref su riviste, autori, titoli, abstract e keywords (260 GB compressi, circa 2 TB non compressi, secondo la sua stima). I primi esperimenti su 2.000 articoli costruiscono un author network e un journal network. Restano da delimitare le riviste e le caratteristiche dei testi da utilizzare.",
+          "source": "Email Raju «Re: Research Memo», 4 marzo 2025"
+        },
+        {
+          "id": "raju-mar09-2025",
+          "date": "2025-03-09",
+          "type": "code_shared",
+          "label": "Condivisi sample data e codice Jupyter",
+          "summary": "Raju condivide tramite Dropbox un campione dei dati e il notebook Jupyter, oltre a una versione HTML per esaminare i risultati. La presenza del materiale è confermata; il suo contenuto non è stato riesaminato qui.",
+          "source": "Email Raju «Re: Research Memo», 9 marzo 2025"
+        },
+        {
           "id": "journal-networks-raju-e2",
           "date": "2025-03-10",
           "type": "stage_transition",
@@ -917,11 +1061,11 @@
         },
         {
           "id": "journal-networks-raju-e4",
-          "date": "2026-11-05",
+          "date": "2026-11-06",
           "type": "metadata_correction",
           "label": "Aggiornati i coautori del progetto",
           "summary": "Aggiunto V. Miryala all'elenco dei coautori, su indicazione dell'utente.",
-          "source": "Correzione comunicata dall'utente nella conversazione"
+          "source": "Correzione dei coautori comunicata dall'utente il 6 novembre 2026"
         }
       ]
     }
