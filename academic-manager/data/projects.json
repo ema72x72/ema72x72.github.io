@@ -206,18 +206,61 @@
       ],
       "events": [
         {
+          "id": "neo-trello",
+          "date": "2025-03-01",
+          "type": "created",
+          "label": "Inizio del progetto Neobrokers",
+          "summary": "La scheda «Behavioural biases in trading with digital brokers» viene creata su Trello. È il precedente storico del progetto sui bias nel trading digitale e tradizionale.",
+          "source": "Trello Papers, scheda 64",
+          "sourceUrl": "https://trello.com/c/elhNYNiX"
+        },
+        {
+          "id": "neo-oct06",
+          "date": "2026-10-06",
+          "type": "research_development",
+          "label": "Confronto fra misure di prezzo e gestione dello switching",
+          "summary": "Con Lorenzo vengono discusse ricostruzioni FIFO e SQL dei prezzi delle posizioni e il rischio di vendite forzate durante il trasferimento tra conti. Proposta una verifica escludendo i mesi attorno allo switch.",
+          "source": "Corrispondenza con Lorenzo, 6 ottobre 2026"
+        },
+        {
+          "id": "neo-oct08",
+          "date": "2026-10-08",
+          "type": "research_report",
+          "label": "Report iniziale sul disposition effect",
+          "summary": "La versione di ottobre riporta un disposition effect più basso nel canale digitale (5,38 contro 6,08 punti percentuali sul tradizionale). Il confronto è descrittivo e può dipendere da composizione delle posizioni e uso dei conti.",
+          "source": "Report dell'8 ottobre, riassunto nel memo del 2 novembre"
+        },
+        {
+          "id": "neo-oct20",
+          "date": "2026-10-20",
+          "type": "meeting",
+          "label": "Call: campione corretto e limiti dell'identificazione",
+          "summary": "Corretto un errore nella costruzione dei prezzi di chiusura che aveva escluso molti investitori. Discussione su PGR, PLR, switchers, coesistenza dei conti e selezione delle posizioni. Priorità a un disegno interpretabile.",
+          "source": "Memo della call del 20 ottobre 2026"
+        },
+        {
           "id": "neobrokers-e1",
           "date": "2026-10-26",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Email di Lorenzo del 26 ottobre e memo del 20 ottobre"
+          "type": "design",
+          "label": "Proposta Bias–Timing–Consequence",
+          "summary": "Lorenzo propone un modello per dual users che distingua propensione a vendere winners e losers, timing delle vendite e conseguenze in termini di forward returns. Non è una sequenza causale già dimostrata.",
+          "source": "Email Lorenzo del 26 ottobre 2026"
+        },
+        {
+          "id": "neo-nov02",
+          "date": "2026-11-02",
+          "type": "results",
+          "label": "Prime slide e risultati dei nuovi confronti",
+          "summary": "Lorenzo invia slide e risultati preliminari su bias e timing; restano da conciliare grafici, specificazioni e selezione del campione.",
+          "source": "Email Lorenzo del 2 novembre 2026"
         },
         {
           "id": "neobrokers-e2",
           "date": "2026-11-03",
           "type": "meeting",
-          "label": "Riunione con Lorenzo: orientamento al packaging di un paper descrittivo; confronto preliminare switchers vs stayers, definizione di storyline e sequenza di figure/tabelle. Prossima call 11 novembre; obiettivo indicativo primo draft entro fine 2026.",
-          "source": "Transcript 3 novembre 2026, Pasted text(8).txt"
+          "label": "Riunione: orientamento alla scrittura del paper",
+          "summary": "Nuovo confronto preliminare switchers vs stayers. Pur restando selezione e problemi di liquidità, il gruppo concorda di costruire un paper descrittivo: introduzione, storyline e sequenza ragionata di figure e tabelle, con obiettivo indicativo di un draft entro fine 2026.",
+          "source": "Transcript riunione 3 novembre 2026"
         }
       ],
       "actionHistory": [
@@ -290,11 +333,36 @@
       ],
       "events": [
         {
+          "id": "bank-oct06",
+          "date": "2026-10-06",
+          "type": "team",
+          "label": "Discussione sull'inclusione di Wilson nel progetto",
+          "summary": "I coautori discutono l'ingresso di Wilson, in ragione dell'esperienza con dati sui fallimenti, e il suo potenziale contributo al lavoro empirico.",
+          "source": "Thread email «bankrupcy project», 5–6 ottobre 2026"
+        },
+        {
+          "id": "bank-oct16",
+          "date": "2026-10-16",
+          "type": "planning",
+          "label": "Organizzazione del kickoff e dei dati necessari",
+          "summary": "Il gruppo riorganizza la prima riunione per consentire la partecipazione dei coautori; la definizione dei dati disponibili e dei requisiti di accesso è una priorità.",
+          "source": "Email del 15–16 ottobre 2026"
+        },
+        {
+          "id": "bank-oct28",
+          "date": "2026-10-28",
+          "type": "meeting",
+          "label": "Kickoff: test di fattibilità su equity e debt holdings",
+          "summary": "Si imposta un pilot per verificare il matching fra proprietà azionaria, creditori e filing di bankruptcy prima di estendere il campione.",
+          "source": "Riepilogo del kickoff del 28 ottobre 2026"
+        },
+        {
           "id": "bankruptcy-e1",
           "date": "2026-10-29",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Kickoff 28 ottobre e selezione dei 10 casi del 29 ottobre"
+          "type": "pilot",
+          "label": "Selezionati dieci casi di bankruptcy",
+          "summary": "Scelti dieci filing per il confronto iniziale di ownership e debt holdings. Wilson conferma l'intenzione di iniziare l'analisi; da verificare RSA/DIP, claims e identificazione dei creditori.",
+          "source": "Thread «10 cases - selection», 29 ottobre 2026"
         }
       ]
     },
@@ -489,27 +557,62 @@
       ],
       "events": [
         {
+          "id": "minor-jun05",
+          "date": "2026-06-05",
+          "type": "literature",
+          "label": "Prima ricognizione sulla letteratura degli investimenti dei minori",
+          "summary": "Una nota mette in evidenza che le evidenze sui conti intestati o gestiti per minori sono più limitate di quelle su household finance e trasmissione intergenerazionale.",
+          "source": "Email «Letteratura su investimenti minori», 5 giugno 2026"
+        },
+        {
+          "id": "minor-jul20",
+          "date": "2026-07-20",
+          "type": "proposal",
+          "label": "Proposta strutturata sul comportamento di investimento in famiglia",
+          "summary": "Emanuele invia a Lorenzo un documento di lavoro sulle possibili domande di ricerca relative a genitori e figli, da leggere e discutere alla call successiva.",
+          "source": "Email «file proposal», 20 luglio 2026"
+        },
+        {
           "id": "minor-e1",
           "date": "2026-07-21",
-          "type": "documented_update",
-          "label": "Ultimo aggiornamento documentato",
-          "source": "Call con Lorenzo del 21 luglio"
+          "type": "meeting",
+          "label": "Call sul disegno con genitori e due siblings",
+          "summary": "Si valuta l'uso di nuclei con un genitore e due figli e la possibilità di osservare comportamenti intorno ai 18 anni. Da verificare numerosità e qualità del matching.",
+          "source": "Call Lorenzo, 21 luglio 2026"
+        },
+        {
+          "id": "minor-jul23",
+          "date": "2026-07-23",
+          "type": "data_quality",
+          "label": "Controlli su coorti, filtri e decision maker",
+          "summary": "Emergono grafici anomali; Lorenzo verifica la sequenza dei filtri e la ricostruzione dei legami familiari, distinguendo l'analisi sulle coorti dall'identificazione di fratelli e genitori.",
+          "source": "Thread «Statistiche investimenti minori», 23 luglio 2026"
+        },
+        {
+          "id": "minor-aug05",
+          "date": "2026-08-05",
+          "type": "data_quality",
+          "label": "Dataset ripulito e campione considerato stabile",
+          "summary": "Lorenzo comunica di avere affrontato errori nei campi decision maker e anno di nascita. Invia filtering e statistiche aggiornate per le coorti dei figli 2005–2007 e siblings nati dal 2008; ritiene il campione abbastanza stabile per avviare l'econometria, senza confermare che questa sia stata completata.",
+          "source": "Email Lorenzo «Statistiche investimenti minori», 5 agosto 2026"
         },
         {
           "id": "minor-e2",
           "date": "2026-11-03",
           "type": "meeting",
-          "label": "Con Lorenzo si discute il possibile riavvio del progetto sui minori: esistono analisi estive preliminari, ma manca una storyline. Concordata la necessità di organizzare risultati, figure e tabelle e valutare il progetto insieme alle altre opportunità, senza decidere ancora di procedere.",
-          "source": "Transcript riunione del 3 novembre 2026, minuti 14:10–18:20 e 22:15–24:47"
+          "label": "Riunione: verificare se i risultati possono diventare un paper",
+          "summary": "Lorenzo riferisce analisi preliminari svolte in estate ma non ha ancora individuato un framing convincente. Si propone di ordinare le figure e le tabelle disponibili e valutare le priorità rispetto agli altri progetti.",
+          "source": "Transcript riunione Lorenzo, 3 novembre 2026"
         },
         {
           "id": "minor-e3",
           "date": "2026-11-03",
           "type": "stage_transition",
-          "label": "Riclassificazione gestionale da Data Collection a Data Analyses alla luce delle analisi estive già svolte; non è una decisione definitiva di proseguire con il paper.",
+          "label": "Riclassificazione della fase a Data Analyses",
+          "summary": "Le evidenze sul dataset e sulle analisi già svolte giustificano la classificazione gestionale Data Analyses; non equivale alla decisione definitiva di scrivere il paper.",
+          "source": "Riclassificazione in seguito alla discussione del 3 novembre 2026",
           "before": "Data Collection",
-          "after": "Data Analyses",
-          "source": "Transcript riunione 3 novembre 2026, minuti 14:10–17:10"
+          "after": "Data Analyses"
         }
       ]
     },
