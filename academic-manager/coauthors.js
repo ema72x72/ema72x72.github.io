@@ -68,85 +68,113 @@ function communities(nodes,edges){
   return result;
 }
 function layout(nodes,edges,clustering){
-  const W=860,H=460,pad=49;
-  const ids=[...new Set(nodes.map(n=>clustering.get(n.id)||0))];
-  const columns=ids.length>4?3:ids.length>1?2:1;
-  const rows=Math.ceil(ids.length/columns);
-  const centers=new Map(ids.map((id,i)=>[id,{
-    x:W*(i%columns+.5)/columns,
-    y:H*(Math.floor(i/columns)+.5)/rows
-  }]));
-  const grouped=new Map(ids.map(id=>[id,[]]));
-  for(const node of nodes)grouped.get(clustering.get(node.id)||0).push(node);
-  const points=nodes.map(n=>{
-    const group=grouped.get(clustering.get(n.id)||0);
-    const index=group.indexOf(n);
-    const center=centers.get(clustering.get(n.id)||0);
-    const angle=2*Math.PI*index/Math.max(group.length,1)-Math.PI/2;
-    const dist=group.length===1?0:30+Math.min(48,group.length*6);
-    return {id:n.id,name:n.name,count:n.count,r:9+Math.sqrt(n.count)*3.0,
-      x:center.x+Math.cos(angle)*dist,y:center.y+Math.sin(angle)*dist,
-      home:center};
-  });
-  const lookup=new Map(points.map(p=>[p.id,p]));
-  for(let t=0;t<230;t++){
-    const fx=new Map(points.map(p=>[p.id,0])),fy=new Map(points.map(p=>[p.id,0]));
+  // A researcher-centric radial layout. Community order is based on documented
+  // shared publications, not arbitrary subject-area labels.
+  const W=920,H=660,center={x:460,y:330};
+  const byCommunity=new Map();
+  for(const n of nodes){
+    const group=clustering.get(n.id)||0;
+    if(!byCommunity.has(group))byCommunity.set(group,[]);
+    byCommunity.get(group).push(n);
+  }
+  const groups=[...byCommunity.entries()].sort((a,b)=>a[0]-b[0]);
+  const gap=Math.min(.15,Math.PI/(Math.max(groups.length,1)*4));
+  const angleBudget=2*Math.PI-gap*groups.length;
+  let offset=-Math.PI/2;
+  const points=[];
+  for(const [,members] of groups){
+    // Keep community members adjacent while preserving a readable central hub.
+    const sector=angleBudget*members.length/Math.max(nodes.length,1);
+    members.sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name));
+    members.forEach((n,index)=>{
+      const angle=offset+gap*.5+sector*(index+.5)/members.length;
+      const r=nodes.length>18?(index%2===0?205:285):222;
+      points.push({
+        id:n.id,name:n.name,count:n.count,
+        r:8+Math.sqrt(n.count)*3.1,
+        x:center.x+Math.cos(angle)*r,
+        y:center.y+Math.sin(angle)*r
+      });
+    });
+    offset+=sector+gap;
+  }
+  // Avoid overlap between nearby nodes, including across community boundaries.
+  // Radial constraints keep all coauthors outside the labeled central node.
+  for(let k=0;k<75;k++){
     for(let i=0;i<points.length;i++)for(let j=i+1;j<points.length;j++){
-      const a=points[i],b=points[j];let dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy)||.01;
-      if(d<.1){dx=.05;dy=.05;d=.071;}
-      const min= a.r+b.r+33;
-      const push=(d<min?(min-d)*.13:850/(d*d));
-      const x=dx/d*push,y=dy/d*push;
-      fx.set(a.id,fx.get(a.id)+x);fy.set(a.id,fy.get(a.id)+y);
-      fx.set(b.id,fx.get(b.id)-x);fy.set(b.id,fy.get(b.id)-y);
+      const x=points[i],y=points[j];
+      let dx=x.x-y.x,dy=x.y-y.y,d=Math.hypot(dx,dy)||.01;
+      const min=x.r+y.r+(nodes.length>18?17:32);
+      if(d>=min)continue;
+      const f=(min-d)*.2;
+      dx=dx/d*f;dy=dy/d*f;
+      x.x+=dx;y.x-=dx;x.y+=dy;y.y-=dy;
     }
-    for(const link of edges){
-      const a=lookup.get(link.a),b=lookup.get(link.b);
-      if(!a||!b)continue;
-      const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1;
-      const rest=link.count>2?98:124;
-      const f=Math.max(-1.7,Math.min(1.7,(d-rest)*.018));
-      fx.set(a.id,fx.get(a.id)+dx/d*f);fy.set(a.id,fy.get(a.id)+dy/d*f);
-      fx.set(b.id,fx.get(b.id)-dx/d*f);fy.set(b.id,fy.get(b.id)-dy/d*f);
-    }
-    for(const point of points){
-      const balance=t<145?.018:.009;
-      const vx=fx.get(point.id)+(point.home.x-point.x)*balance;
-      const vy=fy.get(point.id)+(point.home.y-point.y)*balance;
-      point.x=Math.max(pad,Math.min(W-pad,point.x+Math.max(-4,Math.min(4,vx))));
-      point.y=Math.max(pad,Math.min(H-pad,point.y+Math.max(-4,Math.min(4,vy))));
+    for(const p of points){
+      const dx=p.x-center.x,dy=p.y-center.y,d=Math.hypot(dx,dy)||1;
+      const ringMin=138,ringMax=294;
+      const target=Math.max(ringMin,Math.min(ringMax,d));
+      p.x=center.x+dx/d*target;
+      p.y=center.y+dy/d*target;
+      p.x=Math.max(67,Math.min(W-67,p.x));
+      p.y=Math.max(48,Math.min(H-50,p.y));
     }
   }
-  return {points,lookup,W,H};
+  return {points,lookup:new Map(points.map(p=>[p.id,p])),W,H,center};
 }
 function buildNetwork(nodes,links,selected,onclick){
   const clusters=communities(nodes,links);
-  const layoutData=layout(nodes,links,clusters);
-  const {points,lookup,W}=layoutData; const graphHeight=layoutData.H;
+  const {points,lookup,W,H:graphHeight,center}=layout(nodes,links,clusters);
   const selectedLinks=new Set(links.filter(l=>l.a===selected||l.b===selected).flatMap(l=>[l.a,l.b]));
-  const graphEdges=links.map(l=>{
+  const spokes=points.map(p=>{
+    const active=!selected||p.id===selected;
+    const color=p.id===selected?'#2577b2':'#9cb8cf';
+    return '<line x1="'+center.x+'" y1="'+center.y+'" x2="'+p.x.toFixed(1)+'" y2="'+p.y.toFixed(1)+
+      '" stroke="'+color+'" stroke-width="'+(p.id===selected?'3.5':'1.15')+
+      '" opacity="'+(active?'.57':'.12')+'"><title>Emanuele Bajo and '+H(p.name)+': '+p.count+
+      ' joint published works</title></line>';
+  }).join('');
+  const coauthorEdges=links.map(l=>{
     const a=lookup.get(l.a),b=lookup.get(l.b);if(!a||!b)return '';
     const active=!selected||l.a===selected||l.b===selected;
-    return '<line x1="'+a.x.toFixed(1)+'" y1="'+a.y.toFixed(1)+'" x2="'+b.x.toFixed(1)+'" y2="'+b.y.toFixed(1)+'" stroke="#8caac3" stroke-width="'+Math.min(6,1.05+1.2*l.count).toFixed(1)+'" opacity="'+(active?'.82':'.12')+'"><title>'+l.count+' joint publication'+(l.count===1?'':'s')+'</title></line>';
+    return '<line x1="'+a.x.toFixed(1)+'" y1="'+a.y.toFixed(1)+
+      '" x2="'+b.x.toFixed(1)+'" y2="'+b.y.toFixed(1)+
+      '" stroke="#376d99" stroke-width="'+Math.min(6.5,1.25+1.25*l.count).toFixed(1)+
+      '" opacity="'+(active?'.86':'.11')+'"><title>'+l.count+
+      ' jointly authored work'+(l.count===1?'':'s')+' between coauthors</title></line>';
   }).join('');
-  const graphNodes=points.map(point=>{
-    const active=!selected||point.id===selected||selectedLinks.has(point.id);
-    const fill=palette[(clusters.get(point.id)||0)%palette.length];
-    const label=point.name.split(',')[0];
-    const size=point.r;
-    return '<g data-coauthor-node="'+H(point.id)+'" role="button" tabindex="0" aria-label="'+H(point.name)+', '+point.count+' publications" style="cursor:pointer" opacity="'+(active?'1':'.24')+'">'+
-      '<circle cx="'+point.x.toFixed(1)+'" cy="'+point.y.toFixed(1)+'" r="'+(size+4).toFixed(1)+'" fill="'+(point.id===selected?'#ffce74':'#fff')+'"/>'+
-      '<circle cx="'+point.x.toFixed(1)+'" cy="'+point.y.toFixed(1)+'" r="'+size.toFixed(1)+'" fill="'+fill+'" stroke="'+(point.id===selected?'#ae6729':'#fff')+'" stroke-width="'+(point.id===selected?'3':'1.5')+'">'+
-      '<title>'+H(point.name)+': '+point.count+' joint published works</title></circle>'+
-      '<text x="'+point.x.toFixed(1)+'" y="'+(point.y+size+15).toFixed(1)+'" font-size="11" font-weight="'+(point.id===selected?'800':'620')+'" fill="#23425d" text-anchor="middle">'+H(label)+'</text>'+
-    '</g>';
+  const graphNodes=points.map(p=>{
+    const active=!selected||p.id===selected||selectedLinks.has(p.id);
+    const fill=palette[(clusters.get(p.id)||0)%palette.length];
+    const label=p.name.split(',')[0];
+    return '<g data-coauthor-node="'+H(p.id)+'" role="button" tabindex="0" aria-label="'+H(p.name)+
+      ', '+p.count+' publications with Emanuele Bajo" style="cursor:pointer" opacity="'+(active?'1':'.25')+'">'+
+      '<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+(p.r+3).toFixed(1)+
+      '" fill="'+(p.id===selected?'#f7cc75':'#fff')+'"/>'+
+      '<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+p.r.toFixed(1)+
+      '" fill="'+fill+'" stroke="'+(p.id===selected?'#a56f21':'#fff')+
+      '" stroke-width="'+(p.id===selected?'3':'1.5')+'"><title>'+H(p.name)+
+      ': '+p.count+' joint publications</title></circle>'+
+      '<text x="'+p.x.toFixed(1)+'" y="'+(p.y+p.r+15).toFixed(1)+
+      '" font-size="12" font-weight="'+(p.id===selected?'800':'650')+
+      '" fill="#203f58" text-anchor="middle">'+H(label)+'</text></g>';
   }).join('');
-  const svg='<svg viewBox="0 0 '+W+' '+graphHeight+'" width="100%" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Coauthor network with documented links between coauthors; select a node for publications">'+graphEdges+graphNodes+'</svg>';
+  // Render the hub above graph edges, with an accessible, unambiguous full name.
+  const hub='<g aria-label="Emanuele Bajo, central researcher" role="img">'+
+    '<circle cx="'+center.x+'" cy="'+center.y+'" r="53" fill="#e5eff8"/>'+
+    '<circle cx="'+center.x+'" cy="'+center.y+'" r="46" fill="#123a61" stroke="#fff" stroke-width="3"/>'+
+    '<text x="'+center.x+'" y="'+(center.y-5)+'" fill="#fff" font-size="15" text-anchor="middle" font-weight="750">Emanuele</text>'+
+    '<text x="'+center.x+'" y="'+(center.y+15)+'" fill="#fff" font-size="17" text-anchor="middle" font-weight="800">Bajo</text></g>';
+  const svg='<svg viewBox="0 0 '+W+' '+graphHeight+
+    '" width="100%" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Emanuele Bajo at the center, connected to coauthors. Additional weighted lines link coauthors who have published together. Select a node for publications">'+
+    spokes+coauthorEdges+hub+graphNodes+'</svg>';
   el('hm-network').innerHTML=nodes.length?svg:'<p class="hm-empty">No coauthors recorded for this period.</p>';
-  el('hm-network').querySelectorAll('[data-coauthor-node]').forEach(g=>{
-    const activate=()=>onclick(g.dataset.coauthorNode);
-    g.addEventListener('click',activate);
-    g.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();activate();}});
+  el('hm-network').querySelectorAll('[data-coauthor-node]').forEach(node=>{
+    const activate=()=>onclick(node.dataset.coauthorNode);
+    node.addEventListener('click',activate);
+    node.addEventListener('keydown',event=>{
+      if(event.key==='Enter'||event.key===' '){event.preventDefault();activate();}
+    });
   });
   return clusters;
 }
@@ -209,7 +237,7 @@ function init(records,publicationDetail){
     const visibleSet=new Set(visible.map(n=>n.id));
     const edges=data.links.filter(e=>visibleSet.has(e.a)&&visibleSet.has(e.b));
     el('hm-coauthor-count').textContent=data.nodes.length+' coauthors · '+data.links.length+' coauthor pairs · '+data.links.filter(e=>e.count>=2).length+' repeated pairs';
-    el('hm-network-note').textContent='Network displays '+visible.length+' of '+data.nodes.length+' coauthors and '+edges.length+' documented links. Line width represents jointly authored works. Colored groups are algorithmic communities within the visible network.';
+    el('hm-network-note').textContent='Network displays '+visible.length+' of '+data.nodes.length+' coauthors and '+edges.length+' documented links. The center connects Emanuele Bajo to each coauthor (thin lines); thicker, darker links show joint papers between coauthors. Colors mark communities in the selected network.';
     el('hm-graph-metrics').innerHTML='<div><strong>'+data.nodes.length+'</strong><small>Coauthors</small></div><div><strong>'+data.links.length+'</strong><small>Pairs</small></div><div><strong>'+data.links.filter(e=>e.count>=2).length+'</strong><small>2+ joint papers</small></div>';
     buildNetwork(visible,edges,selection,select);
     const show=data.nodes.slice(0,scope.value==='all'?data.nodes.length:12);
