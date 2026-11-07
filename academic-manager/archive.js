@@ -9,7 +9,7 @@
  const lifecycle={published:'Published',active:'Active',paused:'Standby',abandoned:'Discontinued'};
  const types={article:'Journal Article',book:'Book',book_chapter:'Book Chapter',project:'Project'};
  const steps=['idea','data_collection','data_analyses','writing','editorial_process','accepted','published'];
- const state={data:null,view:'explorer',record:null,detailTab:'overview',query:'',openFilters:false,sort:'updated',filterIds:null,returnScroll:0,
+ const state={data:null,view:'explorer',record:null,detailTab:'overview',query:'',sort:'updated',filterIds:null,returnScroll:0,
     filters:{type:'all',lifecycle:'all',phase:'all',year:'all',coauthor:''},heatFocus:null};
  const number=(v,n=1)=>Number(v||0).toLocaleString('en-US',{maximumFractionDigits:n,minimumFractionDigits:n});
  const desc=x=>x==='abandoned'?'abandoned':x==='paused'?'paused':x==='active'?'active':'published';
@@ -44,11 +44,11 @@
  function visibleYears(){return [...new Set(state.data.records.map(r=>r.year).filter(Boolean))].sort((a,b)=>b-a)}
  function renderExplorer(){
    const f=state.filters;
-   root.innerHTML='<div class="aa-explorer-layout'+(state.openFilters?' aa-filters-open':'')+'"><div class="aa-explorer-tools">'+
+   root.innerHTML='<div class="aa-explorer-layout"><div class="aa-explorer-tools">'+
     '<input id="aa-search" class="aa-input aa-search" type="search" autocomplete="off" aria-label="Search the research archive" placeholder="Search titles, coauthors, keywords..." value="'+attr(state.query)+'">'+
-    '<button class="aa-button" type="button" id="aa-filter-toggle" aria-expanded="'+String(state.openFilters)+'">☷ Filters <span id="aa-active-filter-count"></span></button>'+
+
     '<select id="aa-sort" class="aa-select aa-sort" aria-label="Sort records"><option value="updated">Last updated (newest)</option><option value="year">Year (newest)</option><option value="title">Title (A–Z)</option><option value="status">Status</option></select></div>'+
-    '<aside id="aa-filter-panel" class="aa-filters" '+(state.openFilters?'':'hidden')+'><div class="aa-filter-title">Filter records <span class="aa-filter-sub">Refine your search</span></div><div class="aa-filtergrid">'+
+    '<aside id="aa-filter-panel" class="aa-filters" aria-label="Research filters"><div class="aa-filter-title">Filters <span id="aa-active-filter-count"></span><span class="aa-filter-sub">Refine your search</span></div><div class="aa-filtergrid">'+
     '<div class="aa-field"><label for="aa-f-type">Type</label><select class="aa-select" id="aa-f-type"><option value="all">All</option><option value="project">Projects</option><option value="article">Journal articles</option><option value="book">Books</option><option value="book_chapter">Book chapters</option></select></div>'+
     '<div class="aa-field"><label for="aa-f-status">Status</label><select class="aa-select" id="aa-f-status"><option value="all">All</option><option value="active">Active</option><option value="paused">Standby</option><option value="published">Published</option><option value="abandoned">Discontinued</option></select></div>'+
     '<div class="aa-field"><label for="aa-f-phase">Last scientific stage</label><select class="aa-select" id="aa-f-phase"><option value="all">All</option>'+steps.map(x=>'<option value="'+x+'">'+E(labels[x])+'</option>').join('')+'</select></div>'+
@@ -65,9 +65,6 @@
    for(const [id,key] of [['aa-f-type','type'],['aa-f-status','lifecycle'],['aa-f-phase','phase'],['aa-f-year','year']])
       document.getElementById(id).addEventListener('change',e=>{state.filters[key]=e.target.value;refreshRecords()});
    document.getElementById('aa-sort').addEventListener('change',e=>{state.sort=e.target.value;refreshRecords()});
-   document.getElementById('aa-filter-toggle').addEventListener('click',()=>{
-      state.openFilters=!state.openFilters;const panel=document.getElementById('aa-filter-panel');panel.hidden=!state.openFilters;document.querySelector('.aa-explorer-layout').classList.toggle('aa-filters-open',state.openFilters);document.getElementById('aa-filter-toggle').setAttribute('aria-expanded',String(state.openFilters));
-   });
    document.getElementById('aa-clear').addEventListener('click',()=>{
       state.filters={type:'all',lifecycle:'all',phase:'all',year:'all',coauthor:''};state.query='';state.filterIds=null;renderExplorer();
    });
