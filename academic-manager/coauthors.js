@@ -5,10 +5,11 @@
 const el=id=>document.getElementById(id);
 const H=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
 const normalize=n=>String(n||'').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,' ').toLowerCase().trim();
+const decodeBibName=name=>String(name||'').replace(/\{\\aa\}/gi,'å').replace(/\{\\\"a\}/g,'ä');
 const palette=['#287cbf','#36a087','#9061ba','#da9850','#628cbd','#b45c87','#578d80','#9a7c51'];
 function authors(pub){
   const seen=new Set();
-  return String(pub.authors||'').split(/\s+and\s+/i).map(name=>({name:name.trim(),key:normalize(name)})).filter(a=>{
+  return String(pub.authors||'').split(/\s+and\s+/i).map(name=>{const display=decodeBibName(name.trim());return {name:display,key:normalize(display)};}).filter(a=>{
     if(!a.key||a.key==='bajo emanuele'||a.key==='emanuele bajo'||seen.has(a.key))return false;
     seen.add(a.key);return true;
   });
