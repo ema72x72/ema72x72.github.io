@@ -143,38 +143,49 @@
      desk_rejected:'Desk rejected',
      reject_resubmit:'Reject and resubmit',
      revise_resubmit:'Revise and resubmit',
-     accepted:'Accepted'
+     accepted:'Accepted',
+     conditional_acceptance:'Conditional acceptance',
+     withdrawn:'Withdrawn',
+     revision_requested:'Revision requested',
+     minor_revision:'Minor revision',
+     major_revision:'Major revision',
+     transfer_suggested:'Transfer suggested',
+     out_of_scope_rejection:'Rejected (out of scope)',
+     unknown:'Decision not documented'
    };
    const submission={
      initial:'Initial submission',
      new_submission:'New submission',
      revised_submission:'Revised submission'
    };
-   const totals=journals.reduce((a,j)=>{a.actions+=(j.rounds||[]).length;a.dated+=(j.rounds||[]).filter(x=>x.decisionDate).length;return a;},{actions:0,dated:0});
+   const totals=journals.reduce((a,j)=>{a.actions+=(j.rounds||[]).filter(x=>x.submissionDate).length;a.dated+=(j.rounds||[]).filter(x=>x.decisionDate).length;return a;},{actions:0,dated:0});
    const groups=journals.map((journal,i)=>{
      const rounds=Array.isArray(journal.rounds)?journal.rounds:[];
      const last=rounds[rounds.length-1]||{};
      const lastLabel=outcome[last.outcome]||'Decision unknown';
-     const statusClass=last.outcome==='accepted'?'aa-editorial-accepted':last.outcome==='revise_resubmit'||last.outcome==='reject_resubmit'?'aa-editorial-revision':'aa-editorial-rejected';
+     const accepted=new Set(['accepted','conditional_acceptance']), revisions=new Set(['revise_resubmit','reject_resubmit','revision_requested','minor_revision','major_revision']), rejected=new Set(['rejected','desk_rejected','out_of_scope_rejection']);
+     const statusClass=accepted.has(last.outcome)?'aa-editorial-accepted':revisions.has(last.outcome)?'aa-editorial-revision':rejected.has(last.outcome)?'aa-editorial-rejected':'aa-editorial-neutral';
      const rows=rounds.map(x=>{
        const validDecision=x.decisionDate&&/^\d{4}-\d{2}-\d{2}$/.test(x.decisionDate);
+       const validSubmission=x.submissionDate&&/^\d{4}-\d{2}-\d{2}$/.test(x.submissionDate);
+       const evidenceText=x.evidenceLevel==='partial'?'Partial record':x.evidenceLevel==='corroborated'?'Stage-corroborated':'Dated source record';
        return '<div class="aa-editorial-round">'+
-         '<div class="aa-editorial-step"><strong>'+E(submission[x.submissionType]||'Submission')+'</strong><small>Recorded journal event</small></div>'+
-         '<div><small>Submitted</small><strong><time datetime="'+E(x.submissionDate||'')+'">'+E(x.submissionDate||'Not documented')+'</time></strong></div>'+
+         '<div class="aa-editorial-step"><strong>'+E(submission[x.submissionType]||'Submission event')+'</strong><small>'+E(evidenceText)+'</small></div>'+
+         '<div><small>Submitted</small><strong>'+(validSubmission?'<time datetime="'+E(x.submissionDate)+'">'+E(x.submissionDate)+'</time>':'Not documented')+'</strong></div>'+
          '<div><small>Decision</small><strong>'+E(outcome[x.outcome]||'Unknown')+'</strong><span class="aa-editorial-date">'+(validDecision?'<time datetime="'+E(x.decisionDate)+'">'+E(x.decisionDate)+'</time>':'Date not documented')+'</span></div>'+
          '<div><small>Elapsed</small><strong>'+(Number.isInteger(x.elapsedDays)&&validDecision?E(x.elapsedDays)+' days':'Not estimable')+'</strong></div>'+
        '</div>';
      }).join('');
      return '<details class="aa-editorial-journal"'+(i===journals.length-1?' open':'')+'>'+
        '<summary><span class="aa-editorial-journal-name">'+E(journal.journal||'Journal not specified')+'</span>'+
-       '<span class="aa-editorial-submissions">'+rounds.length+' '+(rounds.length===1?'submission':'submissions')+'</span>'+
+       '<span class="aa-editorial-submissions">'+rounds.length+' '+(rounds.length===1?'recorded episode':'recorded episodes')+'</span>'+
        '<span class="aa-editorial-status '+statusClass+'">'+E(lastLabel)+'</span><span class="aa-editorial-chevron" aria-hidden="true">⌄</span></summary>'+
        '<div class="aa-editorial-rounds">'+rows+'</div></details>';
    }).join('');
    return '<section class="aa-editorial">'+heading+
-     '<div class="aa-editorial-stats"><span><strong>'+journals.length+'</strong> journals</span><span><strong>'+totals.actions+'</strong> submission actions</span><span><strong>'+totals.dated+'</strong> dated decisions</span></div>'+
+     '<div class="aa-editorial-stats"><span><strong>'+journals.length+'</strong> journals</span><span><strong>'+totals.actions+'</strong> dated submissions</span><span><strong>'+totals.dated+'</strong> dated decisions</span></div>'+
      '<div class="aa-editorial-journals">'+groups+'</div>'+
-     '<p class="aa-statnote">Dates represent logged historical entries, not independently certified journal processing times. Reject and resubmit is not treated as a formal R&R. Where a decision date is missing, no duration is estimated. Source comments and correspondence are not published.</p>'+
+     '<p class="aa-statnote">Journal events are reconstructed from dated historical notes and associated stage transitions. “Stage-corroborated” means that a list transition and the confirmed final publication help establish an event, rather than a standalone editorial decision letter. “Partial record” indicates missing or uncertain dates or attribution. Elapsed days are observed log intervals, not independently verified editorial processing times. Reject and resubmit is not a formal R&R. Private source notes and correspondence are not published.</p>'+
    '</section>';
  }
 

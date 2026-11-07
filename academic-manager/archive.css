@@ -178,3 +178,6 @@ body.aa-body{margin:0;background:var(--aa-bg);color:var(--aa-ink);font:14px/1.5 
 .aa-editorial-date{font-size:11px;color:#657d91;display:block;margin-top:2px}
 @media(max-width:830px){.aa-editorial-round{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}.aa-editorial-journal>summary{flex-wrap:wrap}.aa-editorial-journal-name{flex-basis:100%}.aa-editorial-chevron{margin-left:auto}}
 @media(max-width:430px){.aa-editorial-round{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 8px;padding:12px}.aa-editorial-stats{gap:6px}.aa-editorial-stats>span{padding:6px 8px}.aa-editorial-journal>summary{gap:7px;padding:12px}.aa-editorial-submissions,.aa-editorial-status{font-size:10px}}
+
+.aa-editorial-neutral{background:#edf2f7;color:#567084}
+.aa-editorial-round .aa-editorial-step small{max-width:180px}

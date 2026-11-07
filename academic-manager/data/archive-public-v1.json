@@ -288,7 +288,7 @@
     "titlePresentation": "All public-facing research titles are English display labels. Official titles and translations are retained without change in the canonical private registry. For translated publications, the display title is not the bibliographic citation.",
     "restrictedProjectFields": "For 42 historical/paused projects the allowlist contains only stable public-view IDs, display title, project type, lifecycle, lastScientificPhase and mostAdvancedPhaseReached. No coauthors or detailed records.",
     "publishedPhaseHistory": "Newly approved public display: for published papers with documented project histories, expose ONLY dates (YYYY-MM-DD) and canonical scientific phase changes from/to. Original Trello list movements within a stage, raw names, URLs, comments, and editorial correspondence remain private. Bibliography-only publications have no reconstructed history.",
-    "editorialHistory": "Editorial histories are opt-in verified derived data: journal name, day-level logged submission and decision dates, outcome classification, submission type and observed calendar-day differences only. No original comments, editorial correspondence, source links or inferred rounds. Only the approved pilot paper #37 is currently populated."
+    "editorialHistory": "User-approved structured journal-by-journal history, extracted from dated original Trello comments, corresponding documented list movements and confirmed publication venues. Include only journal name, logged submission/decision dates, outcome codes, submission type, calendar-day elapsed time when both dates are verified, and evidenceLevel. Partial/undated outcomes must remain explicit; no raw comments, private correspondence or inferred submission rounds. Reviewed by source card; 16 additional papers have journal-specific material, one has no dated journal evidence."
   },
   "records": [
     {
@@ -320,7 +320,132 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2013-09-05",
+                "decisionDate": "2013-10-10",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 35,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2014-02-17",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2014-07-09",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "JFR (as recorded)",
+            "rounds": [
+              {
+                "submissionDate": "2014-10-01",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Business Research",
+            "rounds": [
+              {
+                "submissionDate": "2014-11-20",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial Services Research",
+            "rounds": [
+              {
+                "submissionDate": "2014-11-24",
+                "decisionDate": "2014-11-25",
+                "outcome": "desk_rejected",
+                "submissionType": "initial",
+                "elapsedDays": 1,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of International Financial Markets, Institutions & Money",
+            "rounds": [
+              {
+                "submissionDate": "2014-11-26",
+                "decisionDate": "2015-02-25",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 91,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Quarterly Review of Economics and Finance",
+            "rounds": [
+              {
+                "submissionDate": "2015-03-07",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2015-09-02",
+                "decisionDate": "2015-11-06",
+                "outcome": "minor_revision",
+                "submissionType": "revised_submission",
+                "elapsedDays": 65,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2016-02-08",
+                "decisionDate": "2016-02-19",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 11,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-002",
@@ -356,7 +481,54 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Financial Economics",
+            "rounds": [
+              {
+                "submissionDate": "2014-11-14",
+                "decisionDate": "2014-12-16",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 32,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": null,
+                "decisionDate": "2015-08-24",
+                "outcome": "revise_resubmit",
+                "submissionType": "revised_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              },
+              {
+                "submissionDate": "2015-12-22",
+                "decisionDate": null,
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "The Journal of Finance",
+            "rounds": [
+              {
+                "submissionDate": "2014-12-19",
+                "decisionDate": "2015-03-02",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 73,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-003",
@@ -402,7 +574,54 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Financial Management",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2016-04-22",
+                "outcome": "desk_rejected",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Corporate Finance",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2016-06-17",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              },
+              {
+                "submissionDate": "2016-09-01",
+                "decisionDate": "2016-11-01",
+                "outcome": "revise_resubmit",
+                "submissionType": "revised_submission",
+                "elapsedDays": 61,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2017-04-13",
+                "decisionDate": "2017-06-01",
+                "outcome": "conditional_acceptance",
+                "submissionType": "revised_submission",
+                "elapsedDays": 49,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-004",
@@ -468,7 +687,64 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Corporate Finance (special issue)",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": null,
+                "outcome": "withdrawn",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2013-08-14",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "Accounting & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2013-08-28",
+                "decisionDate": "2013-11-16",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 80,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          },
+          {
+            "journal": "North American Journal of Economics and Finance",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2014-08-18",
+                "outcome": "accepted",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-007",
@@ -494,7 +770,33 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "European Journal of Finance",
+            "rounds": [
+              {
+                "submissionDate": "2013-01-10",
+                "decisionDate": "2013-08-30",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 232,
+                "evidenceLevel": "corroborated"
+              },
+              {
+                "submissionDate": "2013-09-10",
+                "decisionDate": "2013-11-18",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 69,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-008",
@@ -545,7 +847,41 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2018-09-03",
+                "decisionDate": "2018-11-07",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 65,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2019-02-21",
+                "decisionDate": "2019-03-11",
+                "outcome": "major_revision",
+                "submissionType": "revised_submission",
+                "elapsedDays": 18,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2019-07-02",
+                "decisionDate": "2019-07-11",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 9,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-009",
@@ -643,7 +979,106 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "The Journal of Finance",
+            "rounds": [
+              {
+                "submissionDate": "2015-03-02",
+                "decisionDate": "2015-05-24",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 83,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial Economics",
+            "rounds": [
+              {
+                "submissionDate": "2016-07-21",
+                "decisionDate": "2016-08-20",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 30,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Review of Finance",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2016-12-16",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "Management Science",
+            "rounds": [
+              {
+                "submissionDate": "2017-01-30",
+                "decisionDate": "2017-05-24",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 114,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial and Quantitative Analysis",
+            "rounds": [
+              {
+                "submissionDate": "2017-05-25",
+                "decisionDate": "2017-07-08",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 44,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2017-07-09",
+                "decisionDate": "2017-09-21",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 74,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2018-03-18",
+                "decisionDate": "2018-06-19",
+                "outcome": "minor_revision",
+                "submissionType": "revised_submission",
+                "elapsedDays": 93,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2018-06-30",
+                "decisionDate": "2018-08-01",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 32,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-013",
@@ -731,7 +1166,98 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Management Science",
+            "rounds": [
+              {
+                "submissionDate": "2017-01-11",
+                "decisionDate": "2017-02-27",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 47,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Economic Behavior & Organization",
+            "rounds": [
+              {
+                "submissionDate": "2017-05-02",
+                "decisionDate": "2017-05-04",
+                "outcome": "desk_rejected",
+                "submissionType": "initial",
+                "elapsedDays": 2,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Economic Psychology",
+            "rounds": [
+              {
+                "submissionDate": "2017-05-07",
+                "decisionDate": "2017-06-04",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 28,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          },
+          {
+            "journal": "Experimental Economics",
+            "rounds": [
+              {
+                "submissionDate": "2017-06-04",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Behavioral Decision Making",
+            "rounds": [
+              {
+                "submissionDate": "2017-06-15",
+                "decisionDate": "2017-06-27",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 12,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Behavioral Finance",
+            "rounds": [
+              {
+                "submissionDate": "2017-06-27",
+                "decisionDate": "2017-09-17",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 82,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2017-10-12",
+                "decisionDate": "2017-10-23",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 11,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-017",
@@ -805,7 +1331,33 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Financial Management, Markets and Institutions",
+            "rounds": [
+              {
+                "submissionDate": "2014-12-24",
+                "decisionDate": "2015-04-20",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 117,
+                "evidenceLevel": "corroborated"
+              },
+              {
+                "submissionDate": "2015-05-24",
+                "decisionDate": "2015-05-26",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 2,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-020",
@@ -865,7 +1417,109 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Corporate Finance",
+            "rounds": [
+              {
+                "submissionDate": "2016-05-30",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "JFI (as recorded)",
+            "rounds": [
+              {
+                "submissionDate": "2016-09-28",
+                "decisionDate": "2016-11-17",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 50,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2017-01-31",
+                "decisionDate": "2017-03-12",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 40,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2017-08-01",
+                "decisionDate": "2017-11-30",
+                "outcome": "revision_requested",
+                "submissionType": "initial",
+                "elapsedDays": 121,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2018-07-12",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "revised_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Business Research",
+            "rounds": [
+              {
+                "submissionDate": "2019-02-28",
+                "decisionDate": "2019-05-20",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 81,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2019-08-08",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "revised_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2019-11-06",
+                "decisionDate": "2020-01-10",
+                "outcome": "minor_revision",
+                "submissionType": "revised_submission",
+                "elapsedDays": 65,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-01-16",
+                "decisionDate": "2020-01-21",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 5,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-022",
@@ -948,7 +1602,114 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Management Science",
+            "rounds": [
+              {
+                "submissionDate": "2018-12-04",
+                "decisionDate": "2019-02-12",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 70,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Behavioral Finance",
+            "rounds": [
+              {
+                "submissionDate": "2019-03-19",
+                "decisionDate": "2019-03-25",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 6,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Behavioral and Experimental Economics",
+            "rounds": [
+              {
+                "submissionDate": "2019-03-30",
+                "decisionDate": "2019-04-01",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 2,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-02-23",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "new_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Review of Behavioral Finance",
+            "rounds": [
+              {
+                "submissionDate": null,
+                "decisionDate": "2019-12-17",
+                "outcome": "withdrawn",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "Review of Behavioral Economics",
+            "rounds": [
+              {
+                "submissionDate": "2019-12-17",
+                "decisionDate": "2020-01-03",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 17,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Finance Research Letters",
+            "rounds": [
+              {
+                "submissionDate": "2020-01-31",
+                "decisionDate": "2020-02-20",
+                "outcome": "transfer_suggested",
+                "submissionType": "initial",
+                "elapsedDays": 20,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2023-06-19",
+                "decisionDate": "2023-07-03",
+                "outcome": "minor_revision",
+                "submissionType": "new_submission",
+                "elapsedDays": 14,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2023-07-21",
+                "decisionDate": "2023-07-22",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 1,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-026",
@@ -1050,7 +1811,49 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2019-02-25",
+                "decisionDate": "2019-04-30",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 64,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2019-10-17",
+                "decisionDate": "2019-12-12",
+                "outcome": "minor_revision",
+                "submissionType": "revised_submission",
+                "elapsedDays": 56,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-01-23",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "revised_submission",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-02-06",
+                "decisionDate": "2020-02-11",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 5,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-031",
@@ -1096,7 +1899,85 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Financial and Quantitative Analysis",
+            "rounds": [
+              {
+                "submissionDate": "2019-10-24",
+                "decisionDate": "2019-11-17",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 24,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Corporate Finance",
+            "rounds": [
+              {
+                "submissionDate": "2020-01-08",
+                "decisionDate": "2020-03-19",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 71,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2020-06-23",
+                "decisionDate": "2020-06-24",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 1,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2020-06-25",
+                "decisionDate": "2020-08-15",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 51,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2020-11-09",
+                "decisionDate": "2020-12-28",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 49,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2021-04-14",
+                "decisionDate": "2021-06-14",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 61,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-032",
@@ -1319,7 +2200,41 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Corporate Finance",
+            "rounds": [
+              {
+                "submissionDate": "2019-08-29",
+                "decisionDate": "2019-10-31",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 63,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-04-26",
+                "decisionDate": "2020-06-26",
+                "outcome": "revision_requested",
+                "submissionType": "revised_submission",
+                "elapsedDays": 61,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2020-09-01",
+                "decisionDate": "2020-10-05",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 34,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-035",
@@ -1397,7 +2312,72 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Research Policy",
+            "rounds": [
+              {
+                "submissionDate": "2022-01-31",
+                "decisionDate": null,
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "partial"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Business Ethics",
+            "rounds": [
+              {
+                "submissionDate": "2023-03-17",
+                "decisionDate": "2023-03-23",
+                "outcome": "out_of_scope_rejection",
+                "submissionType": "initial",
+                "elapsedDays": 6,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial Research",
+            "rounds": [
+              {
+                "submissionDate": "2023-03-27",
+                "decisionDate": null,
+                "outcome": "unknown",
+                "submissionType": "initial",
+                "elapsedDays": null,
+                "evidenceLevel": "documented"
+              }
+            ]
+          },
+          {
+            "journal": "International Review of Financial Analysis",
+            "rounds": [
+              {
+                "submissionDate": "2024-03-15",
+                "decisionDate": "2024-07-25",
+                "outcome": "minor_revision",
+                "submissionType": "initial",
+                "elapsedDays": 132,
+                "evidenceLevel": "documented"
+              },
+              {
+                "submissionDate": "2024-08-03",
+                "decisionDate": "2024-08-23",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 20,
+                "evidenceLevel": "corroborated"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-039",
@@ -1699,7 +2679,25 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2025-06-07",
+                "decisionDate": "2025-07-03",
+                "outcome": "accepted",
+                "submissionType": "initial",
+                "elapsedDays": 26,
+                "evidenceLevel": "documented"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-059",
