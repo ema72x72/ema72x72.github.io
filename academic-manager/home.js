@@ -88,6 +88,7 @@
       const s=p.snapshot||{},status=s.status||'';
       if(/Waiting for Me/i.test(status))return 0;
       if(/Decision Pending|At Risk|Stalling/i.test(status))return 1;
+      if(s.dueDate&&s.dueDate<today)return 0;
       if(s.dueDate&&s.dueDate>=today)return 2;
       if(/Waiting for Coauthors/i.test(status))return 3;
       return 9;
@@ -115,13 +116,13 @@
     projects.forEach(p=>{
       const s=p.snapshot||{},due=s.dueDate;
       if(/^\d{4}-\d{2}-\d{2}$/.test(due||'')&&due>=today){
-        rows.push({id:p.id,title:p.title,date:due,tag:/tentative|indicative|expected/i.test(s.milestone||'')?'Indicative':'Target date',note:s.milestone||'Recorded milestone'});
+        rows.push({id:p.id,title:p.title,date:due,tag:/tentative|indicative|expected/i.test(s.milestone||'')?'Indicative':/final deadline/i.test(s.milestone||'')?'Deadline':'Target date',note:s.milestone||'Recorded milestone'});
       }
       const message=String(s.milestone||'');
       for(const m of message.matchAll(pattern)){
         const d=m[3]+'-'+String(monthIdx[m[1]]).padStart(2,'0')+'-'+String(m[2]).padStart(2,'0');
         if(d<today||d===due)continue;
-        rows.push({id:p.id,title:p.title,date:d,tag:/expected|tentative/i.test(message)?'Planned':'Meeting / milestone',note:message});
+        rows.push({id:p.id,title:p.title,date:d,tag:/call|meeting/i.test(message)?'Meeting':'Documented date',note:message});
       }
     });
     rows.sort((a,b)=>a.date.localeCompare(b.date)||(a.title.localeCompare(b.title)));
