@@ -131,6 +131,53 @@
    if(!fields.length)return '';
    return '<div class="aa-summary-grid" style="margin:15px 0">'+fields.map(([label,value])=>'<div class="aa-info"><small>'+E(label)+'</small><p>'+E(value)+'</p></div>').join('')+'</div>';
  }
+
+ function renderEditorialHistory(r){
+   if(r.lifecycle!=='published')return '';
+   const history=r.editorialHistory;
+   const journals=history&&Array.isArray(history.journals)?history.journals:[];
+   const heading='<div class="aa-editorial-head"><h3 class="aa-heading">Editorial History</h3><p class="aa-caption">Journal-by-journal submissions and editorial decisions from documented historical records.</p></div>';
+   if(!journals.length)return '<section class="aa-editorial">'+heading+'<p class="aa-muted">A verified journal-by-journal submission history is not available for this publication yet. No decisions or dates are inferred.</p></section>';
+   const outcome={
+     rejected:'Rejected',
+     desk_rejected:'Desk rejected',
+     reject_resubmit:'Reject and resubmit',
+     revise_resubmit:'Revise and resubmit',
+     accepted:'Accepted'
+   };
+   const submission={
+     initial:'Initial submission',
+     new_submission:'New submission',
+     revised_submission:'Revised submission'
+   };
+   const totals=journals.reduce((a,j)=>{a.actions+=(j.rounds||[]).length;a.dated+=(j.rounds||[]).filter(x=>x.decisionDate).length;return a;},{actions:0,dated:0});
+   const groups=journals.map((journal,i)=>{
+     const rounds=Array.isArray(journal.rounds)?journal.rounds:[];
+     const last=rounds[rounds.length-1]||{};
+     const lastLabel=outcome[last.outcome]||'Decision unknown';
+     const statusClass=last.outcome==='accepted'?'aa-editorial-accepted':last.outcome==='revise_resubmit'||last.outcome==='reject_resubmit'?'aa-editorial-revision':'aa-editorial-rejected';
+     const rows=rounds.map(x=>{
+       const validDecision=x.decisionDate&&/^\d{4}-\d{2}-\d{2}$/.test(x.decisionDate);
+       return '<div class="aa-editorial-round">'+
+         '<div class="aa-editorial-step"><strong>'+E(submission[x.submissionType]||'Submission')+'</strong><small>Recorded journal event</small></div>'+
+         '<div><small>Submitted</small><strong><time datetime="'+E(x.submissionDate||'')+'">'+E(x.submissionDate||'Not documented')+'</time></strong></div>'+
+         '<div><small>Decision</small><strong>'+E(outcome[x.outcome]||'Unknown')+'</strong><span class="aa-editorial-date">'+(validDecision?'<time datetime="'+E(x.decisionDate)+'">'+E(x.decisionDate)+'</time>':'Date not documented')+'</span></div>'+
+         '<div><small>Elapsed</small><strong>'+(Number.isInteger(x.elapsedDays)&&validDecision?E(x.elapsedDays)+' days':'Not estimable')+'</strong></div>'+
+       '</div>';
+     }).join('');
+     return '<details class="aa-editorial-journal"'+(i===journals.length-1?' open':'')+'>'+
+       '<summary><span class="aa-editorial-journal-name">'+E(journal.journal||'Journal not specified')+'</span>'+
+       '<span class="aa-editorial-submissions">'+rounds.length+' '+(rounds.length===1?'submission':'submissions')+'</span>'+
+       '<span class="aa-editorial-status '+statusClass+'">'+E(lastLabel)+'</span><span class="aa-editorial-chevron" aria-hidden="true">⌄</span></summary>'+
+       '<div class="aa-editorial-rounds">'+rows+'</div></details>';
+   }).join('');
+   return '<section class="aa-editorial">'+heading+
+     '<div class="aa-editorial-stats"><span><strong>'+journals.length+'</strong> journals</span><span><strong>'+totals.actions+'</strong> submission actions</span><span><strong>'+totals.dated+'</strong> dated decisions</span></div>'+
+     '<div class="aa-editorial-journals">'+groups+'</div>'+
+     '<p class="aa-statnote">Dates represent logged historical entries, not independently certified journal processing times. Reject and resubmit is not treated as a formal R&R. Where a decision date is missing, no duration is estimated. Source comments and correspondence are not published.</p>'+
+   '</section>';
+ }
+
  function paintDetailTab(r){
    const priv=r.visibility==='restricted',limited=r.visibility==='limited';
    const body=document.getElementById('aa-detail-body');
@@ -157,7 +204,7 @@
        '<div class="aa-info-grid">'+info('Last scientific stage',r.phase?labels[r.phase]:null)+info('Most advanced stage reached',r.maxPhase?labels[r.maxPhase]:null)+'</div>'+
        '<p class="aa-statnote">Filled stages mark documented visits; blue and purple indicators mark the last and most advanced stages. Undocumented intermediate stages are not inferred.</p>'+
        '<div class="aa-journey"><h3 class="aa-heading">Documented stage transitions'+(transitions.length?' ('+transitions.length+')':'')+'</h3>'+history+
-       (transitions.length?'<p class="aa-muted aa-timeline-foot">Only changes between canonical scientific stages are shown. Movements within the same stage, including editorial administration, are omitted.</p>':'')+'</div></div>';
+       (transitions.length?'<p class="aa-muted aa-timeline-foot">Only changes between canonical scientific stages are shown above. Journal-level decisions, where verified, appear below.</p>':'')+'</div>'+renderEditorialHistory(r)+'</div>';
      return;
    }
    const sourceCards=Array.isArray(r.sources)?r.sources.filter(x=>x&&typeof x.trelloUrl==='string'&&/^https:\/\/trello\.com\//.test(x.trelloUrl)):[];

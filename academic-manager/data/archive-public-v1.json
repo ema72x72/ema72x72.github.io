@@ -287,7 +287,8 @@
     "redactions": "Private ideas, notes, historical Trello events, and internal correspondence withheld from public bundle.",
     "titlePresentation": "All public-facing research titles are English display labels. Official titles and translations are retained without change in the canonical private registry. For translated publications, the display title is not the bibliographic citation.",
     "restrictedProjectFields": "For 42 historical/paused projects the allowlist contains only stable public-view IDs, display title, project type, lifecycle, lastScientificPhase and mostAdvancedPhaseReached. No coauthors or detailed records.",
-    "publishedPhaseHistory": "Newly approved public display: for published papers with documented project histories, expose ONLY dates (YYYY-MM-DD) and canonical scientific phase changes from/to. Original Trello list movements within a stage, raw names, URLs, comments, and editorial correspondence remain private. Bibliography-only publications have no reconstructed history."
+    "publishedPhaseHistory": "Newly approved public display: for published papers with documented project histories, expose ONLY dates (YYYY-MM-DD) and canonical scientific phase changes from/to. Original Trello list movements within a stage, raw names, URLs, comments, and editorial correspondence remain private. Bibliography-only publications have no reconstructed history.",
+    "editorialHistory": "Editorial histories are opt-in verified derived data: journal name, day-level logged submission and decision dates, outcome classification, submission type and observed calendar-day differences only. No original comments, editorial correspondence, source links or inferred rounds. Only the approved pilot paper #37 is currently populated."
   },
   "records": [
     {
@@ -1150,7 +1151,134 @@
           "from": "accepted",
           "to": "published"
         }
-      ]
+      ],
+      "editorialHistory": {
+        "evidence": "historical-recorded-events",
+        "journals": [
+          {
+            "journal": "Journal of Financial and Quantitative Analysis",
+            "rounds": [
+              {
+                "submissionDate": "2021-04-08",
+                "decisionDate": "2021-05-11",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 33
+              }
+            ]
+          },
+          {
+            "journal": "Management Science",
+            "rounds": [
+              {
+                "submissionDate": "2021-07-26",
+                "decisionDate": "2021-09-22",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 58
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial Economics",
+            "rounds": [
+              {
+                "submissionDate": "2021-12-22",
+                "decisionDate": null,
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": null
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Banking & Finance",
+            "rounds": [
+              {
+                "submissionDate": "2021-12-30",
+                "decisionDate": "2022-01-06",
+                "outcome": "desk_rejected",
+                "submissionType": "initial",
+                "elapsedDays": 7
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Corporate Finance",
+            "rounds": [
+              {
+                "submissionDate": "2022-01-12",
+                "decisionDate": "2022-02-18",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 37
+              }
+            ]
+          },
+          {
+            "journal": "Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2022-03-17",
+                "decisionDate": "2022-03-18",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 1
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Empirical Finance",
+            "rounds": [
+              {
+                "submissionDate": "2022-04-22",
+                "decisionDate": "2022-11-28",
+                "outcome": "reject_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 220
+              },
+              {
+                "submissionDate": "2023-02-15",
+                "decisionDate": "2023-06-05",
+                "outcome": "rejected",
+                "submissionType": "new_submission",
+                "elapsedDays": 110
+              }
+            ]
+          },
+          {
+            "journal": "Journal of Financial Markets",
+            "rounds": [
+              {
+                "submissionDate": "2023-06-09",
+                "decisionDate": "2023-07-16",
+                "outcome": "rejected",
+                "submissionType": "initial",
+                "elapsedDays": 37
+              }
+            ]
+          },
+          {
+            "journal": "European Financial Management",
+            "rounds": [
+              {
+                "submissionDate": "2023-08-03",
+                "decisionDate": "2023-10-02",
+                "outcome": "revise_resubmit",
+                "submissionType": "initial",
+                "elapsedDays": 60
+              },
+              {
+                "submissionDate": "2023-10-27",
+                "decisionDate": "2023-11-07",
+                "outcome": "accepted",
+                "submissionType": "revised_submission",
+                "elapsedDays": 11
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rec-034",
