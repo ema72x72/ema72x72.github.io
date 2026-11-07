@@ -204,40 +204,6 @@
     q('hm-all-journals').addEventListener('click',()=>{all=!all;draw();});
     draw();
   }
-  function normName(raw){return String(raw||'').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,' ').toLowerCase().trim();}
-  function renderCoauthors(records){
-    const map=new Map();
-    for(const p of records){
-      const seen=new Set();
-      for(const raw of String(p.authors||'').split(/\s+and\s+/i)){
-        const name=raw.trim(),key=normName(name);
-        if(!key||/^(bajo emanuele|emanuele bajo)$/.test(key)||seen.has(key))continue;
-        seen.add(key);
-        if(!map.has(key))map.set(key,{name,count:0,records:[]});
-        const co=map.get(key);co.count++;co.records.push(p);
-      }
-    }
-    const arr=[...map.values()].sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name));
-    q('hm-coauthor-count').textContent=arr.length+' distinct coauthor names after formatting normalization';
-    const show=arr.slice(0,8);
-    q('hm-coauthors').innerHTML=show.map((c,i)=>
-      '<button type="button" class="hm-vrow" data-coauthor="'+i+'" style="width:100%;border:0;background:none;text-align:left;padding:0"><span class="hm-vlabel">'+E(c.name)+'</span><span class="hm-vnum">'+c.count+'</span></button>'
-    ).join('');
-    q('hm-coauthors').querySelectorAll('[data-coauthor]').forEach(b=>b.addEventListener('click',()=>{
-      const c=show[Number(b.dataset.coauthor)];publicationDetail(q('hm-coauthor-detail'),c.name+' · '+c.count+' joint publications',c.records);
-    }));
-    const colors=['#3e87bd','#6eb1db','#9bcee9'];
-    const center={x:170,y:111},radius=80;
-    const svg=arr.slice(0,12).map((c,i)=>{
-      const angle=(i/Math.min(arr.length,12))*Math.PI*2-Math.PI/2;
-      const x=center.x+Math.cos(angle)*radius,y=center.y+Math.sin(angle)*radius;
-      const size=5+Math.min(10,Math.sqrt(c.count)*2);
-      return '<path d="M170 111 L'+x.toFixed(1)+' '+y.toFixed(1)+'" stroke="#8cacca" stroke-width="1.6"/>'+
-        '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+size.toFixed(1)+'" fill="'+colors[i%3]+'"><title>'+E(c.name)+' · '+c.count+' publications</title></circle>';
-    }).join('');
-    q('hm-network').innerHTML='<svg class="hm-network" viewBox="0 0 340 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of leading coauthors. Node sizes represent joint publication counts.">'+svg+
-      '<circle cx="170" cy="111" r="32" fill="#123f68"/><text x="170" y="116" fill="white" font-size="14" font-weight="700" text-anchor="middle">E. Bajo</text></svg>';
-  }
   function renderAreas(cv,records){
     const all=(cv.website?.publicationGroups||[]);
     const groups=all.filter(x=>x.name!=='Books & Book Chapters');
@@ -266,7 +232,8 @@
       q('hm-publication-header').textContent=records.length+' published records';
       drawHistory(records);
       renderVenues(records);
-      renderCoauthors(records);
+      if(!window.AcademicCoauthors)throw Error('Collaboration module missing');
+      window.AcademicCoauthors.init(records,publicationDetail);
       renderAreas(cv,records);
       q('hm-publication-source').textContent='Source: approved archive public projection ('+(archive.generatedOn||'undated')+'), derived from private canonical scientific registry. Publication years use reconciled bibliographic records; the CV bibliography may contain pending corrections. No citation metrics inferred.';
     }).catch(e=>{q('hm-history').innerHTML='<div class="hm-error" role="alert">Publication sources unavailable: '+E(e.message)+'</div>';});

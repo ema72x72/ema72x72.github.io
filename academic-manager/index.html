@@ -84,7 +84,7 @@
     <div id="hm-history" class="hm-chart-wrap"><div class="hm-muted">Loading annual publication chart…</div></div>
     <div class="hm-selected-year" id="hm-history-detail" aria-live="polite"></div>
    </article>
-   <div class="hm-three">
+   <div class="hm-three hm-pub-secondary">
     <article class="hm-card">
      <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▤</span><div><h2>Top Journals</h2><p class="hm-card-sub">Articles by publication venue</p></div></div>
      <div id="hm-journals"></div>
@@ -92,18 +92,43 @@
      <div id="hm-journal-detail" class="hm-selected-year" aria-live="polite"></div>
     </article>
     <article class="hm-card">
-     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">♧</span><div><h2>Collaboration Network</h2><p class="hm-card-sub">Leading coauthors by joint published works</p></div></div>
-     <div id="hm-network"></div>
-     <p class="hm-muted" id="hm-coauthor-count"></p>
-     <div class="hm-coauthor-list" id="hm-coauthors"></div>
-     <div class="hm-selected-year" id="hm-coauthor-detail" aria-live="polite"></div>
-    </article>
-    <article class="hm-card">
      <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">◉</span><div><h2>Research Areas</h2><p class="hm-card-sub">Approved topical grouping of curated finance articles</p></div></div>
      <div id="hm-areas"></div>
      <p class="hm-source" id="hm-area-note"></p>
     </article>
    </div>
+   <article class="hm-card hm-collab-card">
+    <div class="hm-collab-top">
+      <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">♧</span>
+        <div><h2>Collaboration Network</h2><p class="hm-card-sub">Verified joint publications among your coauthors, without a central Bajo node</p></div>
+      </div>
+      <div class="hm-collab-filters">
+        <label for="hm-network-period">Period</label>
+        <select id="hm-network-period" class="hm-select"><option value="all">All years</option><option value="1998-2009">1998–2009</option><option value="2010-2019">2010–2019</option><option value="2020-2026">2020–2026</option></select>
+        <label for="hm-network-scope">Display</label>
+        <select id="hm-network-scope" class="hm-select"><option value="top">Top 12 coauthors</option><option value="all">All coauthors</option></select>
+      </div>
+    </div>
+    <div class="hm-collab-layout">
+      <div class="hm-graph-column">
+        <div class="hm-graph-metrics" id="hm-graph-metrics" aria-label="Network summary"></div>
+        <div id="hm-network" class="hm-network-scroll" aria-label="Coauthor collaboration network"><p class="hm-muted">Loading verified coauthor relationships…</p></div>
+        <p class="hm-muted" id="hm-network-note"></p>
+        <p class="hm-muted" id="hm-coauthor-count"></p>
+      </div>
+      <div class="hm-coauthor-column">
+       <div class="hm-coauthor-heading"><h3>Top Coauthors</h3><button id="hm-clear-coauthor" type="button" class="hm-more" hidden>Clear selection</button></div>
+       <p class="hm-card-sub">Joint published works · select a name or node</p>
+       <div class="hm-coauthor-list" id="hm-coauthors"></div>
+      </div>
+    </div>
+    <div id="hm-coauthor-detail" class="hm-selected-year" aria-live="polite" hidden></div>
+   </article>
+   <article class="hm-card hm-collab-timeline">
+     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▦</span><div><h2>Collaboration over Time</h2><p class="hm-card-sub">Published papers with leading coauthors by bibliographic year</p></div></div>
+     <div id="hm-timeline" class="hm-timeline-scroll"><p class="hm-muted">Loading collaboration timeline…</p></div>
+     <p id="hm-timeline-note" class="hm-source"></p>
+   </article>
    <p class="hm-source" id="hm-publication-source">Data source: public allowlisted Archive and CV projections.</p>
   </section>
   <section id="projects" class="hm-view" aria-label="Active Projects" hidden>
@@ -112,7 +137,8 @@
   <footer class="hm-bottom-note">Academic Manager · GitHub is the authoritative source · This Home is read-only. Editorial and research changes require source review.</footer>
  </main>
 </div>
-<script src="./home.js?v=20261107-1" defer></script>
+<script src="./coauthors.js?v=20261107-2" defer></script>
+<script src="./home.js?v=20261107-2" defer></script>
 <script src="./projects.js?v=20261107-1" defer></script>
 </body>
 </html>

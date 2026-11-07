@@ -122,7 +122,7 @@ function layout(nodes,edges,clustering){
 function buildNetwork(nodes,links,selected,onclick){
   const clusters=communities(nodes,links);
   const layoutData=layout(nodes,links,clusters);
-  const {points,lookup,W,H}=layoutData;
+  const {points,lookup,W}=layoutData; const graphHeight=layoutData.H;
   const selectedLinks=new Set(links.filter(l=>l.a===selected||l.b===selected).flatMap(l=>[l.a,l.b]));
   const graphEdges=links.map(l=>{
     const a=lookup.get(l.a),b=lookup.get(l.b);if(!a||!b)return '';
@@ -141,7 +141,7 @@ function buildNetwork(nodes,links,selected,onclick){
       '<text x="'+point.x.toFixed(1)+'" y="'+(point.y+size+15).toFixed(1)+'" font-size="11" font-weight="'+(point.id===selected?'800':'620')+'" fill="#23425d" text-anchor="middle">'+H(label)+'</text>'+
     '</g>';
   }).join('');
-  const svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Coauthor network with documented links between coauthors; select a node for publications">'+graphEdges+graphNodes+'</svg>';
+  const svg='<svg viewBox="0 0 '+W+' '+graphHeight+'" width="100%" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Coauthor network with documented links between coauthors; select a node for publications">'+graphEdges+graphNodes+'</svg>';
   el('hm-network').innerHTML=nodes.length?svg:'<p class="hm-empty">No coauthors recorded for this period.</p>';
   el('hm-network').querySelectorAll('[data-coauthor-node]').forEach(g=>{
     const activate=()=>onclick(g.dataset.coauthorNode);
