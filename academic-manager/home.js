@@ -22,7 +22,6 @@
     document.querySelectorAll('[data-home-tab]').forEach(b => {
       const active=b.dataset.homeTab===t;
       b.setAttribute('aria-selected',String(active));
-      b.tabIndex=active?0:-1;
     });
     window.scrollTo(0,0);
   }
@@ -67,7 +66,7 @@
     const remaining=projects.filter(p=>!known.has(p.id));
     if(remaining.length)groups.push({name:'Other stages',items:remaining});
     q('hm-pipeline').innerHTML=groups.map((g,i)=>
-      '<button class="hm-phase" type="button" data-phase="'+i+'" aria-pressed="false"><span>'+E(g.name)+'</span><b>'+g.items.length+'</b><small>'+g.items.length===1?'1 project':g.items.length+' projects'+'</small></button>'
+      '<button class="hm-phase" type="button" data-phase="'+i+'" aria-pressed="false"><span>'+E(g.name)+'</span><b>'+g.items.length+'</b><small>'+(g.items.length===1?'1 project':g.items.length+' projects')+'</small></button>'
     ).join('');
     const summary=q('hm-phase-summary');
     summary.textContent='Select a phase to see its projects. Project phases come from the current Active Projects registry.';
