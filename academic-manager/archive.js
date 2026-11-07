@@ -9,13 +9,15 @@
  const lifecycle={published:'Pubblicato',active:'Attivo',paused:'Standby',abandoned:'Abbandonato'};
  const types={article:'Articolo',book:'Libro',book_chapter:'Capitolo',project:'Progetto'};
  const steps=['idea','data_collection','data_analyses','writing','editorial_process','accepted','published'];
- const state={data:null,view:'explorer',record:null,detailTab:'overview',query:'',openFilters:false,sort:'updated',filterIds:null,
+ const state={data:null,view:'explorer',record:null,detailTab:'overview',query:'',openFilters:false,sort:'updated',filterIds:null,returnScroll:0,
     filters:{type:'all',lifecycle:'all',phase:'all',year:'all',coauthor:''},heatFocus:null};
  const number=(v,n=1)=>Number(v||0).toLocaleString('it-IT',{maximumFractionDigits:n,minimumFractionDigits:n});
  const desc=x=>x==='abandoned'?'abandoned':x==='paused'?'paused':x==='active'?'active':'published';
  const date=x=>x?String(x).slice(0,10).split('-').reverse().join('/'):'Non disponibile';
  const badge=(x)=>'<span class="aa-tag aa-tag-'+desc(x)+'">'+E(lifecycle[x]||x)+'</span>';
  function setView(view,record){
+    if(view==='detail'&&state.view==='explorer')state.returnScroll=window.scrollY;
+    if(view==='explorer'&&state.view==='analytics')state.returnScroll=0;
     const hash=view==='detail'?'record='+encodeURIComponent(record):view;
     if(location.hash.slice(1)===hash){readRoute();return;}
     location.hash=hash;
@@ -26,7 +28,7 @@
       const id=hash.slice(7);
       if(state.data?.records?.some(x=>x.id===id)){state.view='detail';state.record=id;}else{state.view='explorer';state.record=null;}
     }else{state.view=hash==='analytics'?'analytics':'explorer';state.record=null;}
-    render();window.scrollTo({top:0,behavior:'instant'});
+    render();window.scrollTo(0,state.view==='explorer'?state.returnScroll:0);
  }
  function navTabs(){
     document.querySelectorAll('[data-aa-main-tab]').forEach(btn=>btn.setAttribute('aria-selected',String(state.view===(btn.dataset.aaMainTab))));
@@ -217,7 +219,7 @@
    root.querySelectorAll('[data-aa-lifecycle]').forEach(b=>b.addEventListener('click',()=>{state.filters={type:'all',lifecycle:b.dataset.aaLifecycle,phase:'all',year:'all',coauthor:''};state.query='';state.filterIds=null;setView('explorer')}));
    root.querySelectorAll('[data-aa-phase][data-aa-year]').forEach(b=>b.addEventListener('click',()=>{
       const phase=b.dataset.aaPhase,year=b.dataset.aaYear,n=Number(b.dataset.aaValue);
-      const matches=state.data.records.filter(r=>(r.events||[]).some(t=>String(t.date||'').startsWith(year)&&t.from!==t.to&&t.to===phase));
+      const matches=state.data.records.filter(r=>(r.events||[]).some(t=>String(t.date||'').startsWith(year)&&(t.canonicalFrom||t.from)!==(t.canonicalTo||t.to)&&(t.canonicalTo||t.to)===phase));
       const target=document.getElementById('aa-heat-description');
       target.innerHTML='<strong>'+E(labels[phase])+' · '+year+': '+n+' progetti</strong>. '+(matches.length?'<button type="button" class="aa-button" style="margin-left:8px" id="aa-heat-go">Apri i record documentati ('+matches.length+')</button>':'I dettagli delle transizioni individuali sono disponibili soltanto nella modalità privata.');
       const go=document.getElementById('aa-heat-go');if(go)go.addEventListener('click',()=>{state.filterIds=new Set(matches.map(x=>x.id));setView('explorer')});
