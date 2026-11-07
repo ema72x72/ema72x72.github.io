@@ -286,7 +286,8 @@
     "durations": "Exploratory complete observed dated intervals between consecutive cross-stage changes; one completed spell per project/step; N variable, 95% percentile bootstrap CI of mean (3000 resamples); may not equal true scientific elapsed time.",
     "redactions": "Private ideas, notes, historical Trello events, and internal correspondence withheld from public bundle.",
     "titlePresentation": "All public-facing research titles are English display labels. Official titles and translations are retained without change in the canonical private registry. For translated publications, the display title is not the bibliographic citation.",
-    "restrictedProjectFields": "For 42 historical/paused projects the allowlist contains only stable public-view IDs, display title, project type, lifecycle, lastScientificPhase and mostAdvancedPhaseReached. No coauthors or detailed records."
+    "restrictedProjectFields": "For 42 historical/paused projects the allowlist contains only stable public-view IDs, display title, project type, lifecycle, lastScientificPhase and mostAdvancedPhaseReached. No coauthors or detailed records.",
+    "publishedPhaseHistory": "Newly approved public display: for published papers with documented project histories, expose ONLY dates (YYYY-MM-DD) and canonical scientific phase changes from/to. Original Trello list movements within a stage, raw names, URLs, comments, and editorial correspondence remain private. Bibliography-only publications have no reconstructed history."
   },
   "records": [
     {
@@ -301,7 +302,24 @@
       "year": 2017,
       "journal": "Quarterly Review of Economics and Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2013-09-05",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2016-02-19",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2016-03-20",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-002",
@@ -315,7 +333,29 @@
       "year": 2016,
       "journal": "Journal of Financial Economics",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-01-17",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2014-11-16",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2015-12-22",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2016-08-20",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-003",
@@ -329,7 +369,39 @@
       "year": 2017,
       "journal": "Journal of Corporate Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-02-28",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2014-06-24",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2014-10-15",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2016-04-20",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2017-06-01",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2017-07-16",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-004",
@@ -357,7 +429,19 @@
       "year": 2013,
       "journal": "Journal of Banking & Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2013-07-05",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2013-09-09",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-006",
@@ -371,7 +455,19 @@
       "year": 2014,
       "journal": "North American Journal of Economics and Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-08-18",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2014-09-19",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-007",
@@ -385,7 +481,19 @@
       "year": 2015,
       "journal": "European Journal of Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2013-11-18",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2014-02-16",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-008",
@@ -399,7 +507,44 @@
       "year": 2020,
       "journal": "European Financial Management",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-11-08",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2014-11-08",
+          "from": "data_analyses",
+          "to": "data_collection"
+        },
+        {
+          "date": "2014-12-19",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2016-04-26",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2018-09-03",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2019-07-11",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2019-08-26",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-009",
@@ -455,7 +600,49 @@
       "year": 2018,
       "journal": "Journal of Banking & Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2013-11-20",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2013-11-27",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2014-02-21",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2014-07-16",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2014-11-28",
+          "from": "editorial_process",
+          "to": "writing"
+        },
+        {
+          "date": "2015-01-22",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2018-08-01",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2018-08-27",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-013",
@@ -511,7 +698,39 @@
       "year": 2019,
       "journal": "Journal of Behavioral Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-10-17",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2014-12-24",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2015-07-15",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2017-01-30",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2017-10-23",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2019-01-07",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-017",
@@ -553,7 +772,39 @@
       "year": 2015,
       "journal": "Journal of Financial Management, Markets and Institutions",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-09-28",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2014-11-19",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2014-12-23",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2014-12-24",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2015-05-26",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2015-09-08",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-020",
@@ -581,7 +832,39 @@
       "year": 2020,
       "journal": "Journal of Business Research",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2014-12-19",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2015-04-02",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2015-06-05",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2016-05-23",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2020-01-21",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2020-03-19",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-022",
@@ -637,7 +920,34 @@
       "year": 2023,
       "journal": "Finance Research Letters",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2015-10-26",
+          "from": "idea",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2016-04-27",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2018-12-04",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2023-07-22",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2023-08-21",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-026",
@@ -707,7 +1017,39 @@
       "year": 2020,
       "journal": "Journal of Banking & Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2017-05-16",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2018-01-10",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2018-01-15",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2019-02-25",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2020-02-11",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2020-02-16",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-031",
@@ -721,7 +1063,39 @@
       "year": 2022,
       "journal": "European Financial Management",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2017-09-03",
+          "from": "idea",
+          "to": "data_collection"
+        },
+        {
+          "date": "2018-03-18",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2019-05-22",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2019-10-24",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2021-06-14",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2021-11-08",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-032",
@@ -749,7 +1123,34 @@
       "year": 2024,
       "journal": "European Financial Management",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2019-04-26",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2020-07-24",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2021-04-08",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2023-11-07",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2024-07-03",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-034",
@@ -763,7 +1164,34 @@
       "year": 2020,
       "journal": "Journal of Corporate Finance",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2018-07-25",
+          "from": "data_collection",
+          "to": "data_analyses"
+        },
+        {
+          "date": "2019-05-28",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2019-08-29",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2020-10-05",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2020-11-09",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-035",
@@ -819,7 +1247,29 @@
       "year": 2024,
       "journal": "International Review of Financial Analysis",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2021-07-27",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2022-01-31",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2024-08-23",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2024-12-19",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-039",
@@ -1099,7 +1549,29 @@
       "year": 2026,
       "journal": "European Financial Management",
       "updatedAt": null,
-      "summary": null
+      "summary": null,
+      "events": [
+        {
+          "date": "2025-04-14",
+          "from": "data_analyses",
+          "to": "writing"
+        },
+        {
+          "date": "2025-06-07",
+          "from": "writing",
+          "to": "editorial_process"
+        },
+        {
+          "date": "2025-07-03",
+          "from": "editorial_process",
+          "to": "accepted"
+        },
+        {
+          "date": "2025-08-06",
+          "from": "accepted",
+          "to": "published"
+        }
+      ]
     },
     {
       "id": "rec-059",

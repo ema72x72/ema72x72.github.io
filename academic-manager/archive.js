@@ -44,20 +44,20 @@
  function visibleYears(){return [...new Set(state.data.records.map(r=>r.year).filter(Boolean))].sort((a,b)=>b-a)}
  function renderExplorer(){
    const f=state.filters;
-   root.innerHTML='<div class="aa-explorer-tools">'+
+   root.innerHTML='<div class="aa-explorer-layout'+(state.openFilters?' aa-filters-open':'')+'"><div class="aa-explorer-tools">'+
     '<input id="aa-search" class="aa-input aa-search" type="search" autocomplete="off" aria-label="Search the research archive" placeholder="Search titles, coauthors, keywords..." value="'+attr(state.query)+'">'+
     '<button class="aa-button" type="button" id="aa-filter-toggle" aria-expanded="'+String(state.openFilters)+'">☷ Filters <span id="aa-active-filter-count"></span></button>'+
     '<select id="aa-sort" class="aa-select aa-sort" aria-label="Sort records"><option value="updated">Last updated (newest)</option><option value="year">Year (newest)</option><option value="title">Title (A–Z)</option><option value="status">Status</option></select></div>'+
-    '<div id="aa-filter-panel" class="aa-filters" '+(state.openFilters?'':'hidden')+'><div class="aa-filtergrid">'+
+    '<aside id="aa-filter-panel" class="aa-filters" '+(state.openFilters?'':'hidden')+'><div class="aa-filter-title">Filter records <span class="aa-filter-sub">Refine your search</span></div><div class="aa-filtergrid">'+
     '<div class="aa-field"><label for="aa-f-type">Type</label><select class="aa-select" id="aa-f-type"><option value="all">All</option><option value="project">Projects</option><option value="article">Journal articles</option><option value="book">Books</option><option value="book_chapter">Book chapters</option></select></div>'+
     '<div class="aa-field"><label for="aa-f-status">Status</label><select class="aa-select" id="aa-f-status"><option value="all">All</option><option value="active">Active</option><option value="paused">Standby</option><option value="published">Published</option><option value="abandoned">Discontinued</option></select></div>'+
     '<div class="aa-field"><label for="aa-f-phase">Last scientific stage</label><select class="aa-select" id="aa-f-phase"><option value="all">All</option>'+steps.map(x=>'<option value="'+x+'">'+E(labels[x])+'</option>').join('')+'</select></div>'+
     '<div class="aa-field"><label for="aa-f-year">Publication year</label><select class="aa-select" id="aa-f-year"><option value="all">All</option>'+visibleYears().map(y=>'<option value="'+y+'">'+y+'</option>').join('')+'</select></div>'+
     '<div class="aa-field"><label for="aa-f-coauthors">Coauthors</label><input class="aa-input" id="aa-f-coauthors" placeholder="Coauthor name" value="'+attr(f.coauthor)+'"></div></div>'+
-    '<div class="aa-row" style="margin-top:13px;justify-content:flex-end"><button class="aa-button" id="aa-clear" type="button">Clear filters</button></div></div>'+
+    '<div class="aa-row" style="margin-top:13px;justify-content:flex-end"><button class="aa-button" id="aa-clear" type="button">Clear filters</button></div></aside>'+
     '<div class="aa-explorer-foot"><strong id="aa-result-count"></strong><span>Select a record to open its detail page</span></div>'+
     '<div class="aa-list" id="aa-results" aria-live="polite"></div>'+
-    '<p class="aa-statnote">Public view: historical project titles, lifecycle and scientific stages are displayed. Private notes, coauthors, correspondence and individual histories remain in the private repository.</p>';
+    '<p class="aa-statnote">Research titles and scientific stages are displayed where authorized. Private documentation, correspondence and individual historical project events are excluded.</p></div>';
    document.getElementById('aa-sort').value=state.sort;
    for(const [id,v] of [['aa-f-type',f.type],['aa-f-status',f.lifecycle],['aa-f-phase',f.phase],['aa-f-year',f.year]])document.getElementById(id).value=v;
    document.getElementById('aa-search').addEventListener('input',e=>{state.query=e.target.value;refreshRecords()});
@@ -66,7 +66,7 @@
       document.getElementById(id).addEventListener('change',e=>{state.filters[key]=e.target.value;refreshRecords()});
    document.getElementById('aa-sort').addEventListener('change',e=>{state.sort=e.target.value;refreshRecords()});
    document.getElementById('aa-filter-toggle').addEventListener('click',()=>{
-      state.openFilters=!state.openFilters;const panel=document.getElementById('aa-filter-panel');panel.hidden=!state.openFilters;document.getElementById('aa-filter-toggle').setAttribute('aria-expanded',String(state.openFilters));
+      state.openFilters=!state.openFilters;const panel=document.getElementById('aa-filter-panel');panel.hidden=!state.openFilters;document.querySelector('.aa-explorer-layout').classList.toggle('aa-filters-open',state.openFilters);document.getElementById('aa-filter-toggle').setAttribute('aria-expanded',String(state.openFilters));
    });
    document.getElementById('aa-clear').addEventListener('click',()=>{
       state.filters={type:'all',lifecycle:'all',phase:'all',year:'all',coauthor:''};state.query='';state.filterIds=null;renderExplorer();
@@ -103,12 +103,10 @@
    if(!list.length){place.innerHTML='<div class="aa-empty">No records match your search or filters.</div>';return;}
    place.innerHTML=list.map(r=>{
      const privateRecord=r.visibility==='restricted';
-     const sub=privateRecord?'Additional details are private':r.visibility==='limited'?'Title and scientific stages only':(r.authors||r.journal||r.summary||'');
-     const yearText=r.year?' · '+E(r.year):r.updatedAt?' · Updated '+E(date(r.updatedAt)):'';
+     const meta=[r.authors||'',types[r.type]||r.type,r.year?String(r.year):(r.updatedAt?'Updated '+date(r.updatedAt):''),r.type==='project'&&r.phase?labels[r.phase]:''].filter(Boolean).join(' · ');
      return '<button type="button" class="aa-record" data-aa-record="'+attr(r.id)+'"><span class="aa-record-icon" aria-hidden="true">'+(r.type==='project'?'◇':'▤')+'</span>'+
-      '<span class="aa-record-body"><span class="aa-record-title">'+E(r.title)+'</span><span class="aa-record-sub">'+E(sub)+yearText+'</span>'+
-      '<span class="aa-record-flags"><span class="aa-tag">'+E(types[r.type]||r.type)+'</span>'+badge(r.lifecycle)+(r.phase?'<span class="aa-tag">'+E(labels[r.phase]||r.phase)+'</span>':'')+'</span></span>'+
-      '<span class="aa-chevron" aria-hidden="true">›</span></button>';
+      '<span class="aa-record-body"><span class="aa-record-title">'+E(r.title)+'</span><span class="aa-record-sub">'+E(meta)+'</span></span>'+
+      '<span class="aa-record-badge">'+badge(r.lifecycle)+'</span><span class="aa-chevron" aria-hidden="true">›</span></button>';
    }).join('');
    place.querySelectorAll('[data-aa-record]').forEach(b=>b.addEventListener('click',()=>setView('detail',b.dataset.aaRecord)));
  }
@@ -146,14 +144,20 @@
    }
    if(state.detailTab==='journey'){
      const noPhase=!r.phase&&!r.maxPhase;
-     const progress='<div class="aa-flow">'+steps.map((p,i)=>'<div class="aa-flowitem'+(p===r.phase?' aa-last':'')+(p===r.maxPhase?' aa-max':'')+'"><span class="aa-dot">'+(p===r.phase||p===r.maxPhase?'●':'·')+'</span><span class="aa-flowname">'+E(labels[p])+'</span></div>').join('')+'</div>';
-     const events=(r.events||[]).filter(x=>x.date).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-     const history=events.length?'<div class="aa-timeline">'+events.map(x=>'<article class="aa-event"><time>'+E(date(x.date))+'</time><strong>'+E(x.from?((labels[x.from]||x.from)+' → '+(labels[x.to]||x.to)):(x.label||'Documented event'))+'</strong></article>').join('')+'</div>':'<p class="aa-muted">Individual event history is not publicly available. Missing dates and milestones are not inferred.</p>';
+     const canonical=e=>({date:String(e.date||'').slice(0,10),from:e.canonicalFrom||e.from,to:e.canonicalTo||e.to});
+     const raw=(Array.isArray(r.events)?r.events:[]).map(canonical);
+     const transitions=raw.filter(e=>e.date&&steps.includes(e.from)&&steps.includes(e.to)&&e.from!==e.to).sort((a,b)=>a.date.localeCompare(b.date));
+     const visited=new Set(transitions.flatMap(e=>[e.from,e.to]));
+     const progress='<div class="aa-flow" aria-label="Documented scientific journey">'+steps.map(p=>'<div class="aa-flowitem'+(visited.has(p)?' aa-visited':'')+(p===r.phase?' aa-last':'')+(p===r.maxPhase?' aa-max':'')+'"><span class="aa-dot">'+(visited.has(p)||p===r.phase||p===r.maxPhase?'●':'·')+'</span><span class="aa-flowname">'+E(labels[p])+'</span></div>').join('')+'</div>';
+     const history=transitions.length?'<div class="aa-timeline">'+transitions.map(e=>'<article class="aa-event"><time datetime="'+E(e.date)+'">'+E(e.date)+'</time><strong>'+E(labels[e.from])+' → '+E(labels[e.to])+'</strong></article>').join('')+'</div>':
+       (r.lifecycle==='published'?'<p class="aa-muted">No stage-by-stage project history is documented for this publication. The verified bibliographic year is '+E(r.year||'not available')+'.</p>':
+       '<p class="aa-muted">Dated individual stage transitions are not available in this public view for this project.</p>');
      body.innerHTML='<div class="aa-panel"><h3 class="aa-heading">Scientific Journey</h3>'+
        (noPhase?'<p class="aa-muted">Scientific stages are not available in this public view.</p>':progress)+
        '<div class="aa-info-grid">'+info('Last scientific stage',r.phase?labels[r.phase]:null)+info('Most advanced stage reached',r.maxPhase?labels[r.maxPhase]:null)+'</div>'+
-       '<p class="aa-statnote">The diagram distinguishes last stage from the furthest stage reached; intermediate milestones are not assumed.</p>'+
-       '<div class="aa-journey"><h3 class="aa-heading">Documented event timeline</h3>'+history+'</div></div>';
+       '<p class="aa-statnote">Filled stages mark documented visits; blue and purple indicators mark the last and most advanced stages. Undocumented intermediate stages are not inferred.</p>'+
+       '<div class="aa-journey"><h3 class="aa-heading">Documented stage transitions'+(transitions.length?' ('+transitions.length+')':'')+'</h3>'+history+
+       (transitions.length?'<p class="aa-muted aa-timeline-foot">Only changes between canonical scientific stages are shown. Movements within the same stage, including editorial administration, are omitted.</p>':'')+'</div></div>';
      return;
    }
    const sourceCards=Array.isArray(r.sources)?r.sources.filter(x=>x&&typeof x.trelloUrl==='string'&&/^https:\/\/trello\.com\//.test(x.trelloUrl)):[];
