@@ -16,7 +16,7 @@
  const date=x=>x?String(x).slice(0,10).split('-').reverse().join('/'):'Non disponibile';
  const badge=(x)=>'<span class="aa-tag aa-tag-'+desc(x)+'">'+E(lifecycle[x]||x)+'</span>';
  function setView(view,record){
-    if(view==='detail'&&state.view==='explorer')state.returnScroll=window.scrollY;
+    if(view==='detail'&&state.view==='explorer'){state.returnScroll=window.scrollY;state.detailTab='overview';}
     if(view==='explorer'&&state.view==='analytics')state.returnScroll=0;
     const hash=view==='detail'?'record='+encodeURIComponent(record):view;
     if(location.hash.slice(1)===hash){readRoute();return;}
