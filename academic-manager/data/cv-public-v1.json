@@ -1,0 +1,1142 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07",
+  "source": {
+    "cvRepo": "ema72x72/curriculum",
+    "cvTexSha": "ead1daa374713dbc1dfb539211e689b8e1ae7836",
+    "bibSha": "adf1ee12dc3ad5325277ab2c58842497609627d3",
+    "websiteRepo": "ema72x72/ema72x72.github.io",
+    "websiteCommit": "3be77d7a3326cde7b13d5ffc1204fbd0af8e5e98"
+  },
+  "cv": {
+    "date": "February 2026",
+    "sections": [
+      {
+        "id": "short-bio",
+        "title": "Short Bio",
+        "tex": "Emanuele Bajo is Full Professor of Finance at the University of Bologna and Director of the Master in Finance and Honorary Professor at the University of Queensland (Australia).\n\nHis research spans IPOs and capital markets, household finance and financial literacy, behavioral finance, corporate risk management, and the role of information and governance structures in financial markets. He has published extensively in leading international journals, including the \\textit{Journal of Financial Economics}, the \\textit{Journal of Corporate Finance}, and the \\textit{Journal of Banking and Finance}. \n\nHe serves as Executive Editor of the \\textit{Journal of Economics and Business} and is a member of the Consultative Working Group of the Risk Standing Committee of the European Securities and Markets Authority (ESMA).\n\nHe has held visiting appointments at the University of Queensland, Johns Hopkins University, San Diego State University, and Boston College. Earlier in his career, he worked in business consulting and founded one of Italy’s first major financial websites."
+      },
+      {
+        "id": "academic-appointments",
+        "title": "Academic Appointments",
+        "tex": "\\textbf{University of Bologna} \\\\\nFull Professor of Corporate Finance (2015--present) \\\\\nAssociate Professor of Corporate Finance (2005--2015) \\\\\nAssistant Professor (2001--2005)\n\n\\textbf{University of Queensland} \\\\\nHonorary Professor (2021--present)\n\n\\textbf{Academic Leadership Roles} \\\\\nAssociate Dean, Bologna Business School (2015--2026) \\\\\nDirector, Master in Finance (2025--present) \\\\\nDirector, Master in Finance \\& Fintech (2019--2024) \\\\\nGlobal MBA Director, Bologna Business School (2008--2014)"
+      },
+      {
+        "id": "short-term-and-visiting-appointments",
+        "title": "Short-Term and Visiting Appointments",
+        "tex": "\\textbf{University of Queensland} \\\\\nVisiting Professor (2017, 2020, 2023)\n\n\\textbf{Johns Hopkins University, Bologna Center} \\\\\nAdjunct Professor (2005--2007; 2014--2019)\n\n\\textbf{Boston College} \\\\\nVisiting Researcher (2008)\n\n\\textbf{San Diego State University} \\\\\nAdjunct Professor (2004)"
+      },
+      {
+        "id": "professional-and-governance-roles",
+        "title": "Professional and Governance Roles",
+        "tex": "Member, Consultative Working Group, ESMA Risk Standing Committee (2023--present) \\\\\nNon-Executive Director, Sella Personal Credit (2021--2024) \\\\\nFounder, www.borse.it (1999--2001) \\\\\nBusiness Analyst, Europraxis, Barcelona (1995--1996)"
+      },
+      {
+        "id": "education",
+        "title": "Education",
+        "tex": "PhD in Finance, Catholic University of Milan (2000) \\\\\nVisiting PhD Student, University of Alberta (1997--1998) \\\\\nDegree in Economics (cum laude), University of Bologna (1995)"
+      },
+      {
+        "id": "editorial-and-academic-service",
+        "title": "Editorial and Academic Service",
+        "tex": "Executive Editor, \\textit{Journal of Economics and Business} (2020--present) \\\\\nEditor, \\textit{Journal of Economics and Business} (2013--2020) \\\\\nConference Organizer, European Finance and Banking Conference (2016) \\\\\nProgram Chair, International Accounting \\& Finance Doctoral Symposium (2013) \\\\\nGuest Editor, \\textit{Journal of Financial Management, Markets and Institutions} (2013)"
+      },
+      {
+        "id": "current-research-interests",
+        "title": "Current Research Interests",
+        "tex": "IPOs \\& Capital Markets; Household Finance \\& Investor Behavior; Corporate Finance, Governance \\& Risk Management; Financial Networks, Institutions \\& Research Evaluation; Financial Information, Media \\& Digital Finance."
+      },
+      {
+        "id": "publications",
+        "title": "Publications",
+        "tex": "\\subsection*{Journal Articles (Finance)}\n\\printbibliography[keyword=finance, heading=none]\n\n\\subsection*{Journal Articles (Cost Effectiveness in Psychiatry)}\n\\printbibliography[keyword=medicine, heading=none]\n\n\\subsection*{Working Papers}\n\\printbibliography[keyword=workingpaper, heading=none]\n\n\\subsection*{Books}\n\\printbibliography[keyword=book, heading=none]\n\n\\subsection*{Chapters in Books}\n\\printbibliography[keyword=chapter, heading=none]\n\n\\subsection*{Journal Articles / Chapters (Italian and Other)}\n\\printbibliography[keyword=italian, heading=none]"
+      },
+      {
+        "id": "grants-and-awards",
+        "title": "Grants and Awards",
+        "tex": "\\textbf{Research Grants} \\\\\n2023 Principal Investigator, Italian Ministry of Education and Research (Corporate Policies in Covid-19 Times). \\\\\n2004--2008 Collaborator, Italian Ministry of Education and Research (Going Private; Dual Class Shares; Internal Dealing).\n\n\\textbf{Awards} \\\\\n2021 Best Teacher Award, University of Bologna. \\\\\n2018 Best Teacher Award, Bologna Business School. \\\\\n2014 Best Overall Paper Award, International Corporate Governance Symposium. \\\\\n2006 Emerald Literati Outstanding Paper Award."
+      },
+      {
+        "id": "keynotes-and-invited-talks",
+        "title": "Keynotes and Invited Talks",
+        "tex": "\\textbf{Keynotes} \\\\\n2026 Sustainable Finance and Green Banking for a Resilient Economy, Risk Banking and Finance Society. \\\\\n2025 12th International Conference in Finance, Tunisian Society for Financial Studies. \\\\\n2018 Winter Finance Workshop, Norwegian University of Science and Technology (NTNU).\n\n\\textbf{Invited Seminars} \\\\\nKing's College London (2022); University of Queensland (2022); University of Trento (2019); Lund University (2018); University of Duisburg-Essen (2018); Skema Business School (2017); University of Bolzano (2017); University of Lugano (2017); University of Strathclyde (2015)."
+      },
+      {
+        "id": "affiliations",
+        "title": "Affiliations",
+        "tex": "American Finance Association; European Financial Management Association; Financial Management Association."
+      },
+      {
+        "id": "teaching",
+        "title": "Teaching",
+        "tex": "\\subsection*{Courses Taught in English}\n\n\\textbf{University of Bologna}\\\\\nRisk Management (MSc in International Management, 2009--present); \nCorporate Finance (MSc in Quantitative Finance, 2010--2021; \nBA in Economics and Finance, 2018--present); \nFinance Laboratory (MSc in International Management, 2024--present).\n\n\\textbf{Bologna Business School}\\\\\nCorporate Finance (Global MBA; International EMBA, 2012--present); \nRisk Management and Derivatives (Master in Finance and Fintech, 2021--present); \nFixed Income and Financial Derivatives (International MBA, 2009--2019); \nBankruptcy Law and Economics (2007--2008).\n\n\\textbf{University of Queensland}\\\\\nFinancial Management (MBA, 2017, 2019).\n\n\\textbf{Johns Hopkins University}\\\\\nApplied Corporate Finance; \nFinancial Derivatives and Risk Management (MSc in International Relations, 2005--2019).\n\n\\textbf{LUISS Business School}\\\\\nCorporate Finance (MBA, 2011--2016).\n\n\\subsection*{Courses Taught in Italian}\n\n\\textbf{University of Bologna}\\\\\nCorporate Finance (BA, 2002–present); Derivatives (MSc, 2003–present); Fintech (MSc, 2023).\n\n\\textbf{Bologna Business School}  \nCorporate Finance (Executive MBA, 2002–present); EMBA Ferrari; EMBA Capgemini; CMBA Ferrari;  \nDerivatives (2006–2009); Financial Accounting (2005–2006); Corporate Finance (2001–2006).\n\n\\textbf{LUISS Business School}  \nCorporate Finance II (MBA, 2005–2010); Risk Management (Executive Master in Finance, 2010–present)."
+      },
+      {
+        "id": "phd-supervision",
+        "title": "PhD Supervision",
+        "tex": "\\textbf{Current PhD Students}\\\\\nLorenzo Danieli -- PhD in Finance | University of Bologna\\\\\nXinyue (Sherry) Huang -- PhD in Finance | University of Bologna\\\\\n\n\\textbf{Completed PhD Students}\\\\\nMassimiliano Barbi -- Full professor at University of Bologna\\\\\nLuca Di Simone -- Assistant professor at Catholic University of Milan\\\\\nBarbara Petracci -- Associate professor at University of Bologna\\\\\nGustavo Rodrigues -- Professor at Universidade do Estado de Minas Gerais\\\\\nCarlo Raimondo -- Ceresio Investors\\\\\nMarco Cecchini -- CEO Farmasa Group\\\\\nDaniela Arzu -- Permasteelisa Group\\\\"
+      },
+      {
+        "id": "professional-consulting",
+        "title": "Professional Consulting",
+        "tex": "Selected advisory engagements in:\n\\begin{itemize}\n\t\\item Public-sector project financing and infrastructure funding\n\t\\item Corporate valuation and financial restructuring\n\t\\item Interest rate derivative (IRS) valuation\n\t\\item Expert witness opinions on the fairness of financial instruments\n\t\\item Analysis and price impact of public announcements\n\t\\item Commodity risk management for industrial groups\n\t\\item Commercial credit risk management in regulated utility sectors\n\\end{itemize}"
+      }
+    ]
+  },
+  "bibliography": [
+    {
+      "key": "BajoPitkajarviVacca_Working_RemoteWorkHierarchy",
+      "type": "misc",
+      "title": "Remote Work and the Corporate Hierarchy",
+      "author": "Bajo, Emanuele and Pitk{\\\"a}j{\\\"a}rvi, Aleksi and Vacca, Matteo",
+      "year": "",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "Working paper",
+      "doi": "",
+      "url": "",
+      "keywords": "workingpaper"
+    },
+    {
+      "key": "BajoMarinelliRandlSimion_Working_FemaleBrands",
+      "type": "misc",
+      "title": "Beyond the Ticker: Female Brands and Fund Manager Investment Decisions",
+      "author": "Bajo, Emanuele and Marinelli, Nicoletta and Randl, Otto and Simion, George",
+      "year": "",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "Working paper",
+      "doi": "",
+      "url": "",
+      "keywords": "workingpaper"
+    },
+    {
+      "key": "BajoArzuDahya_Working_MigrationLending",
+      "type": "misc",
+      "title": "Migration and International Lending",
+      "author": "Bajo, Emanuele and Arzu, Daniela and Dahya, Jay",
+      "year": "",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "Working paper",
+      "doi": "",
+      "url": "",
+      "keywords": "workingpaper"
+    },
+    {
+      "key": "BajoBarbiBigelli2025Brink",
+      "type": "article",
+      "title": "Back From the Brink: State-Guaranteed Loans and Financial Recovery",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Bigelli, Marco",
+      "year": "2025",
+      "journal": "European Financial Management",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "forthcoming",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiHillier2024GenderBalanceAcademia",
+      "type": "article",
+      "title": "Gender Balance in Academia: Evidence from Finance Departments",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Hillier, David",
+      "year": "2024",
+      "journal": "International Review of Financial Analysis",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "96",
+      "number": "",
+      "pages": "1--11",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoRandlSimion2024BirthdaysTrading",
+      "type": "article",
+      "title": "I’ll Trade, Just Not Today: Individual Investor Trading Activity Around Birthdays",
+      "author": "Bajo, Emanuele and Randl, Otto and Simion, Giorgia",
+      "year": "2024",
+      "journal": "European Financial Management",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "30",
+      "number": "",
+      "pages": "2164--2194",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoCecchiniOliver2023PsychologicalProfile",
+      "type": "article",
+      "title": "Psychological Profile and Investment Decisions",
+      "author": "Bajo, Emanuele and Cecchini, Marco and Oliver, Barry",
+      "year": "2023",
+      "journal": "Finance Research Letters",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "58",
+      "number": "",
+      "pages": "1--13",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoJankensgardMarinelli2022NarcissismHedging",
+      "type": "article",
+      "title": "My, Myself and I: CEO Narcissism and Selective Hedging",
+      "author": "Bajo, Emanuele and Jankensg{\\aa}rd, H{\\aa}kan and Marinelli, Nicoletta",
+      "year": "2022",
+      "journal": "European Financial Management",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "28",
+      "number": "",
+      "pages": "809--833",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiBigelliCroci2020LoyaltyShares",
+      "type": "article",
+      "title": "Bolstering Family Control: Evidence from Loyalty Shares",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Bigelli, Marco and Croci, Ettore",
+      "year": "2020",
+      "journal": "Journal of Corporate Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "65",
+      "number": "",
+      "pages": "101755",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBigelliRaimondo2020OwnershipTiesToneNews",
+      "type": "article",
+      "title": "Ownership Ties, Conflict of Interest, and the Tone of News",
+      "author": "Bajo, Emanuele and Bigelli, Marco and Raimondo, Carlo",
+      "year": "2020",
+      "journal": "European Financial Management",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "26",
+      "number": "3",
+      "pages": "560--578",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiHillier2020JournalRankingPromotions",
+      "type": "article",
+      "title": "Where Should I Publish to Get Promoted? A Finance Journal Ranking Based on Business School Promotions",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Hillier, David",
+      "year": "2020",
+      "journal": "Journal of Banking \\& Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "114",
+      "number": "",
+      "pages": "105780",
+      "note": "",
+      "doi": "10.1016/j.jbankfin.2020.105780",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoCrociMarinelli2020ConnectednessFirmValue",
+      "type": "article",
+      "title": "Institutional Investor Connectedness and Firm Value",
+      "author": "Bajo, Emanuele and Croci, Ettore and Marinelli, Nicoletta",
+      "year": "2020",
+      "journal": "Journal of Business Research",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "112",
+      "number": "",
+      "pages": "65--80",
+      "note": "",
+      "doi": "10.1016/j.jbusres.2020.02.041",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoCecchiniSobreroRusso2019DispositionEffect",
+      "type": "article",
+      "title": "Individual Differences in Disposition Effect",
+      "author": "Bajo, Emanuele and Cecchini, Marco and Sobrero, Maurizio and Russo, Pier Maria",
+      "year": "2019",
+      "journal": "Journal of Behavioral Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "20",
+      "number": "1",
+      "pages": "107--126",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbi2018MortgageRefinancing",
+      "type": "article",
+      "title": "Financial Illiteracy and Mortgage Refinancing Decisions",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano",
+      "year": "2018",
+      "journal": "Journal of Banking \\& Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "94",
+      "number": "",
+      "pages": "279--286",
+      "note": "",
+      "doi": "10.1016/j.jbankfin.2018.07.004",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoRaimondo2017MediaSentimentIPO",
+      "type": "article",
+      "title": "Media Sentiment and IPO Underpricing",
+      "author": "Bajo, Emanuele and Raimondo, Cristian",
+      "year": "2017",
+      "journal": "Journal of Corporate Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "46",
+      "number": "",
+      "pages": "139--153",
+      "note": "",
+      "doi": "10.1016/j.jcorpfin.2017.06.003",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiPetrella2017Overallotment",
+      "type": "article",
+      "title": "Do IPO Firms Get What They Pay For? A Second Thought on Granting the Over-allotment Option",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Petrella, Giovanni",
+      "year": "2017",
+      "journal": "Quarterly Review of Economics and Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "63",
+      "number": "",
+      "pages": "219--232",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "ChemmanurBajoSimonyanTehranian2016UnderwriterNetworks",
+      "type": "article",
+      "title": "Underwriter Networks, Investor Attention, and Initial Public Offerings",
+      "author": "Chemmanur, Thomas J. and Bajo, Emanuele and Simonyan, Karen and Tehranian, Hassan",
+      "year": "2016",
+      "journal": "Journal of Financial Economics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "122",
+      "number": "",
+      "pages": "376--408",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiRomagnoli2015GeneralizedHedging",
+      "type": "article",
+      "title": "A Generalized Approach to Optimal Hedging con Option Contracts",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Romagnoli, Stefano",
+      "year": "2015",
+      "journal": "European Journal of Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "21",
+      "number": "9",
+      "pages": "714--733",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiSandri2015FinancialLiteracyRiskPropensity",
+      "type": "article",
+      "title": "Financial Literacy, Households’ Investment Behavior, and Risk Propensity",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Sandri, Serena",
+      "year": "2015",
+      "journal": "Journal of Financial Management, Markets and Institutions",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "3",
+      "number": "1",
+      "pages": "157--174",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiRomagnoli2014OptimalCorporateHedging",
+      "type": "article",
+      "title": "Optimal Corporate Hedging Using Options con Basis e Production Risk",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Romagnoli, Stefano",
+      "year": "2014",
+      "journal": "North American Journal of Economics and Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "30",
+      "number": "",
+      "pages": "56--71",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiBigelliHillier2013InstitutionalInvestorsPTP",
+      "type": "article",
+      "title": "The Role of Institutional Investors in Controlling Shareholder Public-to-Private Transactions",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Bigelli, Marco and Hillier, David",
+      "year": "2013",
+      "journal": "Journal of Banking \\& Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "37",
+      "number": "11",
+      "pages": "4327--4336",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbiHillier2013InterestRateRiskDuration",
+      "type": "article",
+      "title": "Interest Rate Risk Estimation: A New Duration-based Approach",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano and Hillier, David",
+      "year": "2013",
+      "journal": "Applied Economics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "45",
+      "number": "19",
+      "pages": "2697--2704",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbi2012ConvertibleBondCall",
+      "type": "article",
+      "title": "The Role of Time Value in Convertible Bond Call Policy",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano",
+      "year": "2012",
+      "journal": "Journal of Banking \\& Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "36",
+      "number": "2",
+      "pages": "550--563",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBarbi2010RiskShiftingWarrant",
+      "type": "article",
+      "title": "The Risk-shifting Effect and the Value of a Warrant",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano",
+      "year": "2010",
+      "journal": "Quantitative Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "10",
+      "number": "10",
+      "pages": "1203--1213",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "Bajo2010AbnormalTradingVolume",
+      "type": "article",
+      "title": "The Information Content of Abnormal Trading Volume",
+      "author": "Bajo, Emanuele",
+      "year": "2010",
+      "journal": "Journal of Business Finance \\& Accounting",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "37",
+      "number": "7-8",
+      "pages": "950--978",
+      "note": "",
+      "doi": "10.1111/j.1468-5957.2010.02193.x",
+      "url": "https://doi.org/10.1111/j.1468-5957.2010.02193.x",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBigelliHillierPetracci2009InsiderTradingDisclosures",
+      "type": "article",
+      "title": "The Determinants and Value Impact of Regulatory Compliance: An Analysis of Insider Trading Disclosures",
+      "author": "Bajo, Emanuele and Bigelli, Marco and Hillier, David and Petracci, Barbara",
+      "year": "2009",
+      "journal": "Journal of Business Ethics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "90",
+      "number": "3",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoPetracci2006DoWhatInsidersDo",
+      "type": "article",
+      "title": "Do What Insiders Do: Abnormal Performance After the Release of Insider’s Transaction",
+      "author": "Bajo, Emanuele and Petracci, Barbara",
+      "year": "2006",
+      "journal": "Studies in Economics and Finance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "23",
+      "number": "2",
+      "pages": "94--118",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "BajoBigelliSandri1998MarketMyopia",
+      "type": "article",
+      "title": "New Investments e Market Myopia: Firm’s Value versus Private Benefits Maximization: Evidence from Italy",
+      "author": "Bajo, Emanuele and Bigelli, Marco and Sandri, Serena",
+      "year": "1998",
+      "journal": "Journal of Management and Governance",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "2",
+      "number": "1",
+      "pages": "1--16",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "finance"
+    },
+    {
+      "key": "OlgiatiBajoSerretti2014_ParoxetineTitration",
+      "type": "article",
+      "title": "Benefit of Slow Titration of Paroxetine to Treat Depression in the Elderly",
+      "author": "Olgiati, Paolo and Bajo, Emanuele and Serretti, Alessandro",
+      "year": "2014",
+      "journal": "Human Psychopharmacology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "29",
+      "number": "6",
+      "pages": "544--551",
+      "note": "",
+      "doi": "10.1002/hup.2433",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/hup.2433",
+      "keywords": "medicine"
+    },
+    {
+      "key": "OlgiatiBajoBigelliMontgomerySerretti2013_STARD",
+      "type": "article",
+      "title": "Challenging Sequential Approach to Treatment-Resistant Depression: Cost-Utility Analysis Based on the Sequenced Treatment Alternatives to Relieve Depression (STAR\\*D) Trial",
+      "author": "Olgiati, Paolo and Bajo, Emanuele and Bigelli, Marco and Montgomery, Stuart and Serretti, Alessandro",
+      "year": "2013",
+      "journal": "European Neuropsychopharmacology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "23",
+      "number": "12",
+      "pages": "1739--1746",
+      "note": "",
+      "doi": "10.1016/j.euroneuro.2013.08.008",
+      "url": "https://doi.org/10.1016/j.euroneuro.2013.08.008",
+      "keywords": "medicine"
+    },
+    {
+      "key": "OlgiatiBajoBigelliDeRonchiSerretti2012_Pharmacogenetics",
+      "type": "article",
+      "title": "Should Pharmacogenetics Be Incorporated in Major Depression Treatment? Economic Evaluation in High- and Middle-Income European Countries",
+      "author": "Olgiati, Paolo and Bajo, Emanuele and Bigelli, Marco and De Ronchi, Diana and Serretti, Alessandro",
+      "year": "2012",
+      "journal": "Progress in Neuro-Psychopharmacology \\& Biological Psychiatry",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "36",
+      "number": "1",
+      "pages": "147--154",
+      "note": "",
+      "doi": "10.1016/j.pnpbp.2011.09.006",
+      "url": "https://doi.org/10.1016/j.pnpbp.2011.09.006",
+      "keywords": "medicine"
+    },
+    {
+      "key": "SerrettiOlgiatiBigelliDeRonchi2011_5HTTLPR",
+      "type": "article",
+      "title": "A Model to Incorporate Genetic Testing (5-HTTLPR) in Pharmacological Treatment of Major Depressive Disorders",
+      "author": "Serretti, Alessandro and Olgiati, Paolo and Bigelli, Marco and De Ronchi, Diana",
+      "year": "2011",
+      "journal": "The World Journal of Biological Psychiatry",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "12",
+      "number": "7",
+      "pages": "501--515",
+      "note": "",
+      "doi": "10.3109/15622975.2010.545809",
+      "url": "https://doi.org/10.3109/15622975.2010.545809",
+      "keywords": "medicine"
+    },
+    {
+      "key": "SerrettiMandelliBajoCeveniniPapiliMoriBigelliOlgiatiBerardi2009_SchizophreniaCosts",
+      "type": "article",
+      "title": "The Socio-Economical Burden of Schizophrenia: A Simulation of Cost-Offset of Early Intervention Program in Italy",
+      "author": "Serretti, Alessandro and Mandelli, Laura and Bajo, Emanuele and Cevenini, Nicola and Papili, Paolo and Mori, Elisa and Bigelli, Marco and Olgiati, Paolo and Berardi, Diego",
+      "year": "2009",
+      "journal": "European Psychiatry",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "24",
+      "number": "1",
+      "pages": "11--16",
+      "note": "",
+      "doi": "10.1016/j.eurpsy.2008.07.009",
+      "url": "https://doi.org/10.1016/j.eurpsy.2008.07.009",
+      "keywords": "medicine"
+    },
+    {
+      "key": "BajoBigelliPetracci2007_InternalDealing",
+      "type": "incollection",
+      "title": "L'Internal dealing: una prima verifica empirica sul mercato italiano",
+      "author": "Bajo, Emanuele and Bigelli, Marco and Petracci, Barbara",
+      "year": "2007",
+      "journal": "",
+      "booktitle": "Finanza e Industria in Italia. Ripensare la corporate governance e i rapporti tra banche, imprese e risparmiatori per lo sviluppo della competitività",
+      "publisher": "Il Mulino",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "chapter"
+    },
+    {
+      "key": "BajoRighetti2005_WeatherDerivatives",
+      "type": "article",
+      "title": "Weather derivatives come strumento per la copertura del rischio climatico: un’applicazione empirica su dati italiani",
+      "author": "Bajo, Emanuele and Righetti, Stefano",
+      "year": "2005",
+      "journal": "Analisi Finanziaria",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "58",
+      "number": "",
+      "pages": "110--128",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "BajoPetracci2004_VariazioniQuotaInsider",
+      "type": "article",
+      "title": "Variazioni della quota azionaria da parte degli Insider: quale segnale per il mercato?",
+      "author": "Bajo, Emanuele and Petracci, Barbara",
+      "year": "2004",
+      "journal": "Banca Impresa Società",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "2",
+      "pages": "309--338",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "Bajo2004_VolumiAnomali",
+      "type": "article",
+      "title": "Il contenuto informativo dei volumi anomali",
+      "author": "Bajo, Emanuele",
+      "year": "2004",
+      "journal": "Banca Impresa Società",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "1",
+      "pages": "177--204",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "BajoDiSimone2003_GrowthCompanyValuation",
+      "type": "article",
+      "title": "La valutazione delle growth company: un confronto tra opzioni reali e discounted cash flow",
+      "author": "Bajo, Emanuele and Di Simone, Luca",
+      "year": "2003",
+      "journal": "La Valutazione delle Aziende",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "30",
+      "number": "",
+      "pages": "71--82",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "BajoDiSimone2003_TiscaliRealOptions",
+      "type": "article",
+      "title": "Opzioni Reali: la valutazione della società Tiscali SPA attraverso il modello Schwartz-Moon",
+      "author": "Bajo, Emanuele and Di Simone, Luca",
+      "year": "2003",
+      "journal": "Analisi Finanziaria",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "49",
+      "number": "",
+      "pages": "101--115",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "Bajo2002_PricingTitoliDebito",
+      "type": "article",
+      "title": "Il pricing dei titoli di debito nell’accesso delle imprese al mercato dei capitali",
+      "author": "Bajo, Emanuele",
+      "year": "2002",
+      "journal": "Collana Newfin",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "85",
+      "number": "",
+      "pages": "269--285",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "Bajo1999_ConvertibleBondPricing",
+      "type": "article",
+      "title": "Pricing e principali problematiche delle obbligazioni convertibili e delle obbligazioni cum warrant",
+      "author": "Bajo, Emanuele",
+      "year": "1999",
+      "journal": "Analisi Finanziaria",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "32",
+      "number": "",
+      "pages": "71--88",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "italian"
+    },
+    {
+      "key": "Bajo2012_RischiFinanziari",
+      "type": "book",
+      "title": "Rischi finanziari delle imprese. Politiche di copertura, modelli ed evidenze empiriche",
+      "author": "Bajo, Emanuele",
+      "year": "2012",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "Franco Angeli",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "book"
+    },
+    {
+      "key": "Bajo2003_ObbligazioniConvertibili",
+      "type": "book",
+      "title": "Le Obbligazioni Convertibili",
+      "author": "Bajo, Emanuele",
+      "year": "2003",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "Carocci",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "book"
+    },
+    {
+      "key": "Bajo2026_RiskManagementChapter",
+      "type": "incollection",
+      "title": "Risk Management",
+      "author": "Bajo, Emanuele",
+      "year": "2026",
+      "journal": "",
+      "booktitle": "Topics in Corporate Finance: Challenges, Opportunities, Debates, and Trends",
+      "publisher": "Springer Nature Switzerland AG",
+      "volume": "",
+      "number": "",
+      "pages": "3--20",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "chapter"
+    },
+    {
+      "key": "BajoBarbi2013_EnelChapter",
+      "type": "incollection",
+      "title": "Enel, Ten Years of Extraordinary Financial Performance",
+      "author": "Bajo, Emanuele and Barbi, Massimiliano",
+      "year": "2013",
+      "journal": "",
+      "booktitle": "National Monopoly to Successful Multinational: The Case of Enel",
+      "publisher": "Palgrave Macmillan",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "chapter"
+    },
+    {
+      "key": "Bajo2001_VentureCapitalChapter",
+      "type": "incollection",
+      "title": "Il Venture Capital",
+      "author": "Bajo, Emanuele",
+      "year": "2001",
+      "journal": "",
+      "booktitle": "Le fonti di finanziamento non bancarie. Il Venture Capital. Percorsi imprenditoriali generati nell'Università. Il fenomeno Spin-off accademici",
+      "publisher": "Clueb",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "note": "",
+      "doi": "",
+      "url": "",
+      "keywords": "chapter"
+    }
+  ],
+  "website": {
+    "researchInterests": [
+      "IPOs & Capital Markets",
+      "Household Finance & Investor Behavior",
+      "Corporate Finance, Governance & Risk Management",
+      "Financial Networks, Institutions & Research Evaluation",
+      "Financial Information, Media & Digital Finance"
+    ],
+    "currentProjects": [
+      "Finance and AI",
+      "Digital Trading Platforms",
+      "Remote Work and Firm Performance",
+      "Research Evaluation and Academic Networks"
+    ],
+    "selectedPublications": [
+      {
+        "title": "Underwriter Networks, Investor Attention, and Initial Public Offerings",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0304405X1630126X",
+        "meta": "<span class=\"pub-journal\">Journal of Financial Economics</span>, 122, 376–408 · Chemmanur, Bajo, Simonyan, Tehranian"
+      },
+      {
+        "title": "Media Sentiment and IPO Underpricing",
+        "url": "https://doi.org/10.1016/j.jcorpfin.2017.06.003",
+        "meta": "<span class=\"pub-journal\">Journal of Corporate Finance</span>, 46, 139–153 · Bajo, Raimondo"
+      },
+      {
+        "title": "Financial Illiteracy and Mortgage Refinancing Decisions",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0378426618301687",
+        "meta": "<span class=\"pub-journal\">Journal of Banking &amp; Finance</span>, 94, 279–286 · Bajo, Barbi"
+      },
+      {
+        "title": "Bolstering Family Control: Evidence from Loyalty Shares",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0929119920301991",
+        "meta": "<span class=\"pub-journal\">Journal of Corporate Finance</span>, 65 · Bajo, Barbi, Bigelli, Croci"
+      },
+      {
+        "title": "Back From the Brink: State-Guaranteed Loans and Financial Recovery",
+        "url": "https://doi.org/10.1111/eufm.70006",
+        "meta": "<span class=\"pub-journal\">European Financial Management</span> (forthcoming) · Bajo, Barbi, Bigelli"
+      }
+    ],
+    "workingPapers": [
+      {
+        "title": "Beyond the Ticker: Female Brands and Fund Manager Investment Decisions",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040923",
+        "authors": "Bajo, Marinelli, Randl, Simion"
+      },
+      {
+        "title": "Remote Work and the Corporate Hierarchy",
+        "url": "",
+        "authors": "Bajo, Pitkäjärvi, Vacca"
+      }
+    ],
+    "publicationGroups": [
+      {
+        "name": "IPOs & Capital Markets",
+        "items": [
+          {
+            "title": "Media Sentiment and IPO Underpricing",
+            "url": "https://doi.org/10.1016/j.jcorpfin.2017.06.003",
+            "year": "2017",
+            "meta": "<span class=\"pub-journal\">Journal of Corporate Finance</span>, 46, 139–153 · Bajo, Raimondo"
+          },
+          {
+            "title": "Do IPO Firms Get What They Pay For? A Second Thought on Granting the Over-allotment Option",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1062976916000260",
+            "year": "2017",
+            "meta": "<span class=\"pub-journal\">Quarterly Review of Economics and Finance</span>, 63, 219–232 · Bajo, Barbi, Petrella"
+          },
+          {
+            "title": "Underwriter Networks, Investor Attention, and Initial Public Offerings",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0304405X1630126X",
+            "year": "2016",
+            "meta": "<span class=\"pub-journal\">Journal of Financial Economics</span>, 122, 376–408 · Chemmanur, Bajo, Simonyan, Tehranian"
+          }
+        ]
+      },
+      {
+        "name": "Household Finance & Investor Behavior",
+        "items": [
+          {
+            "title": "I'll Trade, Just Not Today: Individual Investor Trading Activity Around Birthdays",
+            "url": "https://doi.org/10.1111/eufm.12472",
+            "year": "2024",
+            "meta": "<span class=\"pub-journal\">European Financial Management</span>, 30, 2164–2194 · Bajo, Randl, Simion"
+          },
+          {
+            "title": "Psychological Profile and Investment Decisions",
+            "url": "https://doi.org/10.1016/j.frl.2023.104245",
+            "year": "2023",
+            "meta": "<span class=\"pub-journal\">Finance Research Letters</span>, 58, 1–13 · Bajo, Cecchini, Oliver"
+          },
+          {
+            "title": "Individual Differences in Disposition Effect",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/15427560.2018.1492579",
+            "year": "2019",
+            "meta": "<span class=\"pub-journal\">Journal of Behavioral Finance</span>, 20(1), 107–126 · Bajo, Cecchini, Sobrero, Russo"
+          },
+          {
+            "title": "Financial Illiteracy and Mortgage Refinancing Decisions",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0378426618301687",
+            "year": "2018",
+            "meta": "<span class=\"pub-journal\">Journal of Banking &amp; Finance</span>, 94, 279–286 · Bajo, Barbi"
+          },
+          {
+            "title": "Financial Literacy, Households' Investment Behavior, and Risk Propensity",
+            "url": "https://www.rivisteweb.it/doi/10.12831/80534",
+            "year": "2015",
+            "meta": "<span class=\"pub-journal\">Journal of Financial Management, Markets and Institutions</span>, 3(1), 157–174 · Bajo, Barbi, Sandri"
+          }
+        ]
+      },
+      {
+        "name": "Corporate Finance, Governance & Risk Management",
+        "items": [
+          {
+            "title": "Back From the Brink: State-Guaranteed Loans and Financial Recovery",
+            "url": "https://doi.org/10.1111/eufm.70006",
+            "year": "2025",
+            "meta": "<span class=\"pub-journal\">European Financial Management</span> (forthcoming) · Bajo, Barbi, Bigelli"
+          },
+          {
+            "title": "My, Myself and I: CEO Narcissism and Selective Hedging",
+            "url": "https://doi.org/10.1111/eufm.12328",
+            "year": "2022",
+            "meta": "<span class=\"pub-journal\">European Financial Management</span>, 28, 809–833 · Bajo, Jankensgård, Marinelli"
+          },
+          {
+            "title": "Bolstering Family Control: Evidence from Loyalty Shares",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0929119920301991",
+            "year": "2020",
+            "meta": "<span class=\"pub-journal\">Journal of Corporate Finance</span>, 65 · Bajo, Barbi, Bigelli, Croci"
+          },
+          {
+            "title": "A Generalized Approach to Optimal Hedging with Option Contracts",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/1351847X.2013.875050",
+            "year": "2015",
+            "meta": "<span class=\"pub-journal\">European Journal of Finance</span>, 21(9), 714–733 · Bajo, Barbi, Romagnoli"
+          },
+          {
+            "title": "Optimal Corporate Hedging Using Options with Basis and Production Risk",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1062940814000990",
+            "year": "2014",
+            "meta": "<span class=\"pub-journal\">North American Journal of Economics and Finance</span>, 30, 56–71 · Bajo, Barbi, Romagnoli"
+          },
+          {
+            "title": "Interest Rate Risk Estimation: A New Duration-based Approach",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/00036846.2012.667552",
+            "year": "2013",
+            "meta": "<span class=\"pub-journal\">Applied Economics</span>, 45(19), 2697–2704 · Bajo, Barbi, Hillier"
+          },
+          {
+            "title": "The Role of Time Value in Convertible Bond Call Policy",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0378426611002585",
+            "year": "2012",
+            "meta": "<span class=\"pub-journal\">Journal of Banking &amp; Finance</span>, 36(2), 550–563 · Bajo, Barbi"
+          },
+          {
+            "title": "The Risk-Shifting Effect and the Value of a Warrant",
+            "url": "https://www.tandfonline.com/doi/full/10.1080/14697680902953841",
+            "year": "2010",
+            "meta": "<span class=\"pub-journal\">Quantitative Finance</span>, 10(10), 1203–1213 · Bajo, Barbi"
+          },
+          {
+            "title": "New Investments and Market Myopia: Firm's Value versus Private Benefits Maximization — Evidence from Italy",
+            "url": "",
+            "year": "1998",
+            "meta": "<span class=\"pub-journal\">Journal of Management and Governance</span>, 2(1), 1–16 · Bajo, Bigelli, Sandri"
+          }
+        ]
+      },
+      {
+        "name": "Financial Networks, Institutions & Research Evaluation",
+        "items": [
+          {
+            "title": "Gender Balance in Academia: Evidence from Finance Departments",
+            "url": "https://doi.org/10.1016/j.irfa.2024.103532",
+            "year": "2024",
+            "meta": "<span class=\"pub-journal\">International Review of Financial Analysis</span>, 96, 1–11 · Bajo, Barbi, Hillier"
+          },
+          {
+            "title": "Institutional Investor Connectedness and Firm Value",
+            "url": "https://doi.org/10.1016/j.jbusres.2020.02.041",
+            "year": "2020",
+            "meta": "<span class=\"pub-journal\">Journal of Business Research</span>, 112, 65–80 · Bajo, Croci, Marinelli"
+          },
+          {
+            "title": "Where Should I Publish to Get Promoted? A Finance Journal Ranking Based on Business School Promotions",
+            "url": "https://doi.org/10.1016/j.jbankfin.2020.105780",
+            "year": "2020",
+            "meta": "<span class=\"pub-journal\">Journal of Banking &amp; Finance</span>, 114 · Bajo, Barbi, Hillier"
+          },
+          {
+            "title": "The Role of Institutional Investors in Controlling Shareholder Public-to-Private Transactions",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0378426613002744",
+            "year": "2013",
+            "meta": "<span class=\"pub-journal\">Journal of Banking &amp; Finance</span>, 37(11), 4327–4336 · Bajo, Barbi, Bigelli, Hillier"
+          }
+        ]
+      },
+      {
+        "name": "Financial Information, Media & Digital Finance",
+        "items": [
+          {
+            "title": "Ownership Ties, Conflict of Interest, and the Tone of News",
+            "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/eufm.12237",
+            "year": "2020",
+            "meta": "<span class=\"pub-journal\">European Financial Management</span>, 26(3), 560–578 · Bajo, Bigelli, Raimondo"
+          },
+          {
+            "title": "The Information Content of Abnormal Trading Volume",
+            "url": "https://doi.org/10.1111/j.1468-5957.2010.02193.x",
+            "year": "2010",
+            "meta": "<span class=\"pub-journal\">Journal of Business Finance &amp; Accounting</span>, 37(7–8), 950–978 · Bajo"
+          },
+          {
+            "title": "The Determinants and Value Impact of Regulatory Compliance: An Analysis of Insider Trading Disclosures",
+            "url": "",
+            "year": "2009",
+            "meta": "<span class=\"pub-journal\">Journal of Business Ethics</span>, 90(3) · Bajo, Bigelli, Hillier, Petracci"
+          },
+          {
+            "title": "Do What Insiders Do: Abnormal Performance After the Release of Insider's Transaction",
+            "url": "https://www.emerald.com/insight/content/doi/10.1108/10867370610706537/full/html",
+            "year": "2006",
+            "meta": "<span class=\"pub-journal\">Studies in Economics and Finance</span>, 23(2), 94–118 · Bajo, Petracci"
+          }
+        ]
+      },
+      {
+        "name": "Books & Book Chapters",
+        "items": [
+          {
+            "title": "Risk Management",
+            "url": "",
+            "year": "2026",
+            "meta": "<em>Topics in Corporate Finance: Challenges, Opportunities, Debates, and Trends</em>, Springer Nature, pp. 3–20"
+          },
+          {
+            "title": "Enel, Ten Years of Extraordinary Financial Performance",
+            "url": "",
+            "year": "2013",
+            "meta": "<em>National Monopoly to Successful Multinational: The Case of Enel</em>, Palgrave Macmillan · Bajo, Barbi"
+          },
+          {
+            "title": "Rischi finanziari delle imprese. Politiche di copertura, modelli ed evidenze empiriche",
+            "url": "",
+            "year": "2012",
+            "meta": "Franco Angeli, Milano"
+          },
+          {
+            "title": "L'Internal dealing: una prima verifica empirica sul mercato italiano",
+            "url": "",
+            "year": "2007",
+            "meta": "<em>Finanza e Industria in Italia</em>, Il Mulino · Bajo, Bigelli, Petracci"
+          },
+          {
+            "title": "Le Obbligazioni Convertibili",
+            "url": "",
+            "year": "2003",
+            "meta": "Carocci, Roma"
+          },
+          {
+            "title": "Il Venture Capital",
+            "url": "",
+            "year": "2001",
+            "meta": "<em>Le fonti di finanziamento non bancarie</em>, Clueb"
+          }
+        ]
+      }
+    ]
+  }
+}
