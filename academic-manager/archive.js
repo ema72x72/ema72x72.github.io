@@ -156,10 +156,14 @@
        '<div class="aa-journey"><h3 class="aa-heading">Timeline degli eventi documentati</h3>'+history+'</div></div>';
      return;
    }
+   const sourceCards=Array.isArray(r.sources)?r.sources.filter(x=>x&&typeof x.trelloUrl==='string'&&/^https:\/\/trello\.com\//.test(x.trelloUrl)):[];
+   const sourceLinks=sourceCards.length?'<h4>Fonti storiche collegate</h4><div class="aa-list">'+sourceCards.map(x=>'<a class="aa-link" href="'+E(x.trelloUrl)+'" target="_blank" rel="noopener noreferrer">Scheda Trello #'+E(x.trelloNum||'—')+'</a>').join('')+'</div>':'';
    body.innerHTML='<div class="aa-panel"><h3 class="aa-heading">Sources & References</h3>'+
       (priv?'<p>Il record integrale e la provenienza delle decisioni sono conservati nel repository GitHub privato. Non vengono pubblicati commenti Trello, bozze, email o note riservate.</p>':
          '<div class="aa-info-grid">'+info('Autori',r.authors)+info('Rivista / sede editoriale',r.journal)+info('Anno bibliografico',r.year||null)+'</div>'+
-         '<p class="aa-statnote">I metadati delle pubblicazioni sono tratti dal registro canonico; gli otto progetti attivi sono identificati tramite il JSON pubblico corrente.</p>')+'</div>';
+         (r.bibliographyKey?'<p class="aa-muted">Chiave bibliografica: '+E(r.bibliographyKey)+'</p>':'')+
+         sourceLinks+
+         '<p class="aa-statnote">I metadati derivano dalle fonti ufficiali disponibili per questa vista. Le note e la corrispondenza non sono incluse nella proiezione pubblica.</p>')+'</div>';
  }
  function analyticsSVG(){
    const starts=state.data.starts,max=Math.max(10,...starts.map(x=>x.count)),w=660,h=258;
