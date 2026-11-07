@@ -11,55 +11,55 @@
       "coauthors": "Matteo Vacca · Aleksi Pitkäjärvi",
       "priority": 1,
       "profile": {
-        "researchQuestion": "Qual è il valore economico del lavoro da remoto per lavoratori e imprese, e come dipende dal livello nella gerarchia aziendale in cui è adottato? In particolare, i manager accettano compensi inferiori per ottenere flessibilità e questa scelta si accompagna a costi oppure benefici per l'impresa?",
-        "contribution": "La bozza combina compensi individuali e risultati d'impresa per distinguere un possibile compensating wage differential dalla selezione dei lavoratori e dai costi organizzativi del WFH. Il contributo specifico è misurare il lavoro da remoto lungo tre livelli gerarchici nei registri amministrativi finlandesi, anziché trattarlo come caratteristica omogenea dell'impresa. Il collegamento fra wage discount manageriale e valore aggiunto/retention resta interpretativo, non prova causale definitiva.",
-        "methodology": "Dati amministrativi finlandesi 2018–2023 che collegano una misura di WFH basata su dichiarazioni fiscali, storie lavorative, retribuzioni e bilanci: circa 1,15 milioni di osservazioni worker-year e 49.000 firm-year nella bozza di novembre. Event study sui cambi di impiego entro occupazioni comparabili, con effetti fissi di lavoratore, impresa d'origine×anno e impresa di destinazione×anno; panel d'impresa per ROA, valore aggiunto per addetto e retention. Verifiche con teleworkability pre-pandemia interagita con il periodo post-pandemico; interpretazione prudente delle stime IV.",
-        "mainFindings": "Nella bozza di novembre i manager che passano a occupazioni con WFH registrano una diminuzione salariale di circa il 3%, non osservata con pari robustezza negli altri livelli. Il WFH complessivo non mostra una relazione significativa col ROA, mentre la penetrazione tra manager è positivamente associata a ROA, valore aggiunto per addetto e retention. Il testo riporta un'associazione di circa +0,16 punti di ROA per +10 punti percentuali di WFH manageriale. Queste sono evidenze del draft in evoluzione, non effetti causali accertati; gli esiti su produttività/IV richiedono ancora cautela."
+        "researchQuestion": "What is the economic value of remote work for employees and firms, and how does it vary with the level of the corporate hierarchy at which it is adopted? In particular, do managers accept lower pay in return for flexibility, and does that choice entail costs or benefits for the firm?",
+        "contribution": "The draft combines individual compensation and firm outcomes to distinguish a potential compensating wage differential from worker selection and the organizational costs of working from home (WFH). Its distinctive contribution is measuring WFH across three hierarchical levels using Finnish administrative records, rather than treating it as a uniform firm characteristic. The connection between managers' wage discount and value added or retention remains interpretive rather than definitive causal evidence.",
+        "methodology": "Finnish administrative data for 2018–2023 linking a tax-return-based measure of WFH to employment histories, compensation, and company accounts: approximately 1.15 million worker-year and 49,000 firm-year observations in the November draft. An event study of job transitions within comparable occupations uses worker, origin firm × year, and destination firm × year fixed effects; firm panels examine ROA, value added per employee, and retention. Additional tests interact pre-pandemic teleworkability with the post-pandemic period; IV estimates require cautious interpretation.",
+        "mainFindings": "In the November draft, managers moving into jobs with WFH experience a roughly 3% wage decrease, an effect not found as robustly at other hierarchical levels. Overall WFH is not significantly related to ROA, whereas managerial WFH penetration is positively associated with ROA, value added per employee, and retention. The paper reports an association of approximately +0.16 ROA percentage points for a 10-percentage-point increase in managerial WFH. These are evolving draft findings, not established causal effects; productivity and IV results still require caution."
       },
       "snapshot": {
         "stage": "Final Draft",
         "status": "On Track",
-        "progress": "Matteo ha completato il lavoro su figure e tabelle (conferma comunicata il 6 novembre). Il draft deve ora essere completato da Emanuele e Matteo entro il 17 novembre 2026.",
-        "issue": "Distinguere efficient compensation da managerial perks senza sovrainterpretare IV e productivity.",
-        "nextAction": "Emanuele e Matteo devono completare il draft entro il 17 novembre 2026.",
+        "progress": "Matteo completed the figures and tables (confirmed on November 6). Emanuele and Matteo must now finish the draft by November 17, 2026.",
+        "issue": "Distinguish efficient compensation from managerial perks without overinterpreting the IV and productivity results.",
+        "nextAction": "Emanuele and Matteo to complete the draft by November 17, 2026.",
         "owner": "Emanuele · Matteo",
-        "milestone": "Draft completo entro il 17 novembre 2026 (termine massimo).",
+        "milestone": "Complete draft by November 17, 2026 (final deadline).",
         "dueDate": "2026-11-17",
         "updatedAt": "2026-11-06",
-        "source": "Aggiornamento comunicato direttamente dall'utente il 6 novembre 2026."
+        "source": "Update communicated directly by the user on November 6, 2026."
       },
       "actions": [
         {
           "id": "remote-a1",
-          "text": "Verificare Panel B e numerosità campionarie (completamento non confermato)",
+          "text": "Check Panel B and sample sizes (completion not confirmed).",
           "owner": "Matteo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "remote-a2",
-          "text": "Aggiornare Data e Methodology; eliminare framework formale",
+          "text": "Update the Data and Methodology sections; remove the formal framework.",
           "owner": "Matteo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "remote-a3",
-          "text": "Ripulire introduction su Overleaf",
+          "text": "Polish the introduction in Overleaf.",
           "owner": "Aleksi",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "remote-a4",
-          "text": "Completare il draft del paper",
+          "text": "Complete the paper draft.",
           "owner": "Emanuele · Matteo",
           "status": "unverified",
           "dueDate": "2026-11-17"
         },
         {
           "id": "remote-a5",
-          "text": "Completare le figure e le tabelle",
+          "text": "Complete the figures and tables.",
           "owner": "Matteo",
           "status": "completed",
           "dueDate": null,
@@ -71,83 +71,83 @@
           "id": "remote-h1",
           "date": "2026-02-09",
           "type": "created",
-          "label": "Avvio: ricerca sul lavoro da remoto in Finlandia",
-          "summary": "Creata la scheda Trello «Matteo Vacca» per esplorare dati finlandesi sul lavoro da remoto. È la scheda storica associata all'attuale progetto Remote Work.",
-          "source": "Trello Papers, scheda 69",
+          "label": "Project launch: remote work research in Finland",
+          "summary": "Trello card 'Matteo Vacca' was created to explore Finnish remote-work data. It is the historical card associated with the current Remote Work project.",
+          "source": "Trello Papers, card 69",
           "sourceUrl": "https://trello.com/c/XUUIt5jZ"
         },
         {
           "id": "remote-h2",
           "date": "2026-04-01",
           "type": "stage_transition",
-          "label": "Da Initial Ideas a Data Collection",
-          "summary": "La scheda Trello passa alla raccolta dei dati. Il progetto studia il lavoro da remoto nei dati finlandesi.",
-          "source": "Cronologia Trello, 1 aprile 2026",
+          "label": "From Initial Ideas to Data Collection",
+          "summary": "The Trello card moved into data collection. The project examines remote work using Finnish data.",
+          "source": "Trello history, April 1, 2026",
           "sourceUrl": "https://trello.com/c/XUUIt5jZ"
         },
         {
           "id": "remote-h3",
           "date": "2026-05",
           "type": "manuscript",
-          "label": "Prima versione documentata del paper",
-          "summary": "La bozza di maggio analizza WFH, gerarchia aziendale, retribuzioni e performance. Riporta un calo salariale di circa il 3% per i manager che passano al lavoro da remoto.",
-          "source": "Bozza Remote Work and the Corporate Hierarchy, maggio 2026"
+          "label": "First documented paper draft",
+          "summary": "The May draft examines WFH, corporate hierarchy, pay, and performance. It reports an approximately 3% wage decrease for managers moving into remote work.",
+          "source": "Remote Work and the Corporate Hierarchy draft, May 2026"
         },
         {
           "id": "remote-h4",
           "date": "2026-06",
           "type": "manuscript",
-          "label": "Revisione della narrativa sul valore del WFH",
-          "summary": "La versione di giugno approfondisce i compensating differentials: il calo salariale dei manager è interpretato come possibile limite inferiore del valore attribuito alla flessibilità.",
-          "source": "Bozza Remote Work and the Corporate Hierarchy, giugno 2026"
+          "label": "Revising the narrative on WFH value",
+          "summary": "The June draft expands the discussion of compensating differentials: the wage decrease among managers is interpreted as a possible lower bound on the value they place on flexibility.",
+          "source": "Remote Work and the Corporate Hierarchy draft, June 2026"
         },
         {
           "id": "remote-h5",
           "date": "2026-09-10",
           "type": "meeting",
-          "label": "Riunione: managerial WFH e performance aziendale",
-          "summary": "La revisione dei dati conferma risultati diversi lungo la gerarchia: WFH aggregato senza associazione significativa con ROA, managerial WFH positivamente associato. Discussione su retention, strumenti IV, eterogeneità e presentazione dei risultati.",
-          "source": "Memo della riunione del 10 settembre 2026"
+          "label": "Meeting: managerial WFH and firm performance",
+          "summary": "The data review confirms different results across hierarchical levels: aggregate WFH has no significant association with ROA, while managerial WFH is positively associated. Discussion covered retention, IV instruments, heterogeneity, and presentation of the results.",
+          "source": "Meeting memo, September 10, 2026"
         },
         {
           "id": "remote-h6",
           "date": "2026-10-16",
           "type": "research_memo",
-          "label": "Produttività: distinguere ROA, valore aggiunto e TFP",
-          "summary": "Proposte misure di valore aggiunto reale per addetto e TFP per distinguere efficienza produttiva da risparmi salariali. La disponibilità degli input e del capitale produttivo resta da verificare.",
-          "source": "Memo metodologico per Matteo, 16 ottobre 2026"
+          "label": "Productivity: distinguishing ROA, value added, and TFP",
+          "summary": "Proposed real value added per employee and TFP measures to distinguish productive efficiency from wage savings. Availability of inputs and productive capital remains to be verified.",
+          "source": "Methodological memo for Matteo, October 16, 2026"
         },
         {
           "id": "remote-h7",
           "date": "2026-10-22",
           "type": "literature",
-          "label": "Mappa della letteratura e lavoro sull'introduzione",
-          "summary": "Organizzata una mappa di 17 studi su valutazione del WFH da parte dei lavoratori ed effetti sulle imprese; sviluppati materiali per collegare salari, organizzazione e performance.",
-          "source": "Literature map e materiali dell'introduzione, 22 ottobre 2026"
+          "label": "Literature map and introduction work",
+          "summary": "Compiled a map of 17 studies on workers' valuation of WFH and firm effects; developed materials connecting wages, organization, and performance.",
+          "source": "Literature map and introduction materials, October 22, 2026"
         },
         {
           "id": "remote-oct23-tables",
           "date": "2026-10-23",
           "type": "research_development",
-          "label": "Tabelle rigenerate e confronto su eterogeneità del ROA",
-          "summary": "Matteo conferma che la figura «Heterogeneity in the Effect of Upper-Layer Remote Work on ROA» risulta corretta nella nuova versione delle tabelle. Il lavoro sulle figure prosegue fino al completamento comunicato il 6 novembre.",
-          "source": "Email Matteo «RE: File tabelle rigenerato», 23 ottobre 2026"
+          "label": "Regenerated tables and ROA heterogeneity discussion",
+          "summary": "Matteo confirmed that the figure 'Heterogeneity in the Effect of Upper-Layer Remote Work on ROA' was correct in the regenerated tables. Work on the figures continued until their reported completion on November 6.",
+          "source": "Matteo email, 'RE: Regenerated tables file', October 23, 2026"
         },
         {
           "id": "remote-e1",
           "date": "2026-11-03",
           "type": "meeting",
-          "label": "Riunione: risultati empirici e versione per conferenze",
-          "summary": "Discussi Panel B, numerosità, robustezze per dimensione d'impresa, soglia UE di 10 milioni di fatturato e risultati IV sulla produttività (ancora imprecisi). Concordato di eliminare il framework formale, aggiornare Data e Methodology e allineare Results all'introduzione.",
-          "source": "Transcript della riunione del 3 novembre 2026"
+          "label": "Meeting: empirical results and conference draft",
+          "summary": "Discussed Panel B, sample sizes, firm-size robustness, the EU €10 million turnover threshold, and still-imprecise productivity IV results. Agreed to remove the formal framework, update Data and Methodology, and align Results with the introduction.",
+          "source": "Meeting transcript, November 3, 2026"
         },
         {
           "id": "remote-e2",
           "date": "2026-11-06",
           "type": "progress_update",
-          "label": "Figure e tabelle completate; deadline del draft",
-          "summary": "Matteo ha completato figure e tabelle. Emanuele e Matteo devono concludere il draft entro il 17 novembre. La data effettiva del completamento delle figure non è specificata.",
-          "source": "Aggiornamento comunicato il 6 novembre 2026"
+          "label": "Figures and tables completed; draft deadline",
+          "summary": "Matteo completed the figures and tables. Emanuele and Matteo need to finish the draft by November 17. The exact date on which the figures were completed was not specified.",
+          "source": "Update communicated November 6, 2026"
         }
       ]
     },
@@ -158,55 +158,55 @@
       "coauthors": "Lorenzo Danieli",
       "priority": 2,
       "profile": {
-        "researchQuestion": "Il disposition effect e la propensione a vendere posizioni in guadagno o in perdita differiscono tra broker digitali e tradizionali per uno stesso investitore? Il comportamento cambia quando l'investitore migra tra canali, rispetto a chi continua a usarli entrambi?",
-        "contribution": "Confronto descrittivo within-investor fra piattaforme digitali e tradizionali, con particolare attenzione agli investitori multihoming e alla distinzione tra switchers e stayers. Il possibile contributo è documentare come il bias, il timing delle vendite e gli esiti successivi co-variano con il canale; non è ancora identificato un effetto causale dell'interfaccia digitale.",
-        "methodology": "Dati sulle transazioni e sulle posizioni degli stessi investitori presso intermediari digitali e tradizionali. Misure di disposition effect (PGR/PLR e propensity-to-sell), costruzione del costo delle posizioni con FIFO e controlli di completezza sui prezzi. Specificazioni proposte a livello investitore×titolo×piattaforma×mese, confronti switchers/stayers nel campione multihoming e controlli per composizione dei portafogli, liquidità e trasferimenti. Il campione e la strategia di identificazione sono ancora in consolidamento.",
-        "mainFindings": "Nel report preliminare dell'8 ottobre il disposition effect risulta inferiore sul canale digitale (5,38 contro 6,08 punti percentuali sul tradizionale); Lorenzo riferisce anche risultati preliminari coerenti con un calo del bias dopo lo switching. La differenza è descrittiva: selezione nella scelta della piattaforma, migrazione di titoli, vendite forzate e necessità di liquidità possono influenzare l'esito. Il gruppo ha scelto di costruire prima una storyline e le figure principali, non di rivendicare una identificazione causale."
+        "researchQuestion": "Does the disposition effect—and investors' propensity to sell positions at gains or losses—differ between digital and traditional brokers for the same investor? Does behavior change when investors migrate between channels, compared with investors who continue to use both?",
+        "contribution": "A descriptive within-investor comparison of digital and traditional platforms, focusing on multihoming investors and distinguishing switchers from stayers. The potential contribution is to document how behavioral bias, sale timing, and subsequent outcomes covary with the channel. A causal effect of the digital interface has not yet been identified.",
+        "methodology": "Transactions and positions for the same investors across digital and traditional intermediaries. Measures of the disposition effect (PGR/PLR and propensity to sell), FIFO-based cost basis reconstruction, and price-completeness checks. Proposed specifications at the investor × security × platform × month level; switcher/stayer comparisons among multihoming investors, controlling for portfolio composition, liquidity needs, and transfers. The sample and identification strategy are still being refined.",
+        "mainFindings": "The preliminary October 8 report shows a smaller disposition effect on digital platforms (5.38 versus 6.08 percentage points on traditional platforms). Lorenzo also reports preliminary findings consistent with a lower bias following switching. The difference is descriptive: platform selection, security migration, forced sales, and liquidity needs may affect the estimates. The team decided to develop the storyline and core figures before claiming causal identification."
       },
       "snapshot": {
         "stage": "Data Analyses",
         "status": "Waiting for Coauthors",
-        "progress": "Le analisi sul disposition effect sono avanzate. Lorenzo propone un confronto switchers vs stayers nel campione multihoming e riferisce risultati preliminari più coerenti con un DE inferiore dopo lo switch. La riunione ha concordato di passare dalle analisi esplorative alla struttura del paper, con posizionamento descrittivo.",
-        "issue": "Persistono problemi strutturali di selezione nella scelta dei conti e delle posizioni, migrazione e necessità di liquidità, che effetti fissi e altre specificazioni non eliminano automaticamente. Non attribuire interpretazioni causali né un contributo da top journal non sostenuto dal disegno.",
-        "nextAction": "Lorenzo prepara un primo schema di introduzione (cosa sappiamo, cosa manca, perché conta) e seleziona la sequenza delle figure e delle tabelle, da discutere al prossimo confronto.",
-        "owner": "Lorenzo (prima bozza); Emanuele (feedback e challenge)",
-        "milestone": "Prossima call concordata: mercoledì 11 novembre 2026, ore 12:00–12:30. Obiettivo indicativo: primo draft completo entro fine 2026.",
+        "progress": "The disposition-effect analyses have progressed. Lorenzo proposes comparing switchers and stayers in the multihoming sample and reports preliminary evidence more consistent with lower disposition effects after a switch. The team agreed to move from exploratory analyses to a descriptive paper structure.",
+        "issue": "Structural selection issues persist in account and position choices, migration, and liquidity needs; fixed effects and alternative specifications do not automatically eliminate them. Do not claim causality or a top-journal contribution unsupported by the research design.",
+        "nextAction": "Lorenzo to draft an introduction outline (what is known, what is missing, why it matters) and select the sequence of figures and tables for discussion at the next meeting.",
+        "owner": "Lorenzo (initial draft); Emanuele (feedback and critical review)",
+        "milestone": "Next call: Wednesday, November 11, 2026, 12:00–12:30. Tentative target: complete first draft by the end of 2026.",
         "dueDate": null,
         "updatedAt": "2026-11-03",
-        "source": "Transcript della riunione con Lorenzo del 3 novembre 2026 (Pasted text(8).txt, caricato il 4 novembre)"
+        "source": "Transcript of meeting with Lorenzo on November 3, 2026 (Pasted text(8).txt, uploaded November 4)."
       },
       "actions": [
         {
           "id": "neobrokers-a3",
-          "text": "Preparare storyline/introduzione essenziale: letteratura, gap, contributo e rilevanza",
+          "text": "Prepare a concise storyline/introduction: literature, gap, contribution, and relevance.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "neobrokers-a4",
-          "text": "Selezionare e ordinare figure e tabelle a sostegno della storia del paper",
+          "text": "Select and order the figures and tables supporting the paper's argument.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "neobrokers-a5",
-          "text": "Esplicitare nel draft i limiti di selezione, migrazione e liquidità e presentare i risultati come evidenza descrittiva",
+          "text": "Explicitly discuss selection, migration, and liquidity limitations and present the findings as descriptive evidence.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "neobrokers-a6",
-          "text": "Discutere e sfidare outline e figure alla call dell'11 novembre",
-          "owner": "Emanuele e Lorenzo",
+          "text": "Critically review the outline and figures during the November 11 call.",
+          "owner": "Emanuele and Lorenzo",
           "status": "unverified",
           "dueDate": "2026-11-11"
         },
         {
           "id": "neobrokers-a7",
-          "text": "Preparare primo draft scritto del paper (obiettivo indicativo: entro fine 2026)",
+          "text": "Prepare the first written paper draft (tentative goal: by the end of 2026).",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
@@ -217,101 +217,101 @@
           "id": "neo-trello",
           "date": "2025-03-01",
           "type": "created",
-          "label": "Inizio del progetto Neobrokers",
-          "summary": "La scheda «Behavioural biases in trading with digital brokers» viene creata su Trello. È il precedente storico del progetto sui bias nel trading digitale e tradizionale.",
-          "source": "Trello Papers, scheda 64",
+          "label": "Neobrokers project initiated",
+          "summary": "The Trello card 'Behavioural biases in trading with digital brokers' was created as the historical predecessor of the project on digital and traditional trading biases.",
+          "source": "Trello Papers, card 64",
           "sourceUrl": "https://trello.com/c/elhNYNiX"
         },
         {
           "id": "neo-sep11-2026",
           "date": "2026-09-11",
           "type": "research_update",
-          "label": "Prime slide sistematiche sui bias dei broker digitali",
-          "summary": "Lorenzo condivide un set di slide con selezione campionaria digital/traditional, costruzione dei behavioural biases, statistiche descrittive, regressioni di base e risultati preliminari. Le slide sono materiale metodologico, non una presentazione definitiva.",
-          "source": "Email Lorenzo «Behavioral biases and digital vs. traditional results», 11 settembre 2026"
+          "label": "First systematic slides on digital broker biases",
+          "summary": "Lorenzo shared slides on digital/traditional sample selection, behavioral bias construction, descriptive statistics, baseline regressions, and early findings. These were methodological materials, not a finalized presentation.",
+          "source": "Lorenzo email, 'Behavioral biases and digital vs. traditional results', September 11, 2026"
         },
         {
           "id": "neo-sep22-2026",
           "date": "2026-09-22",
           "type": "data_quality",
-          "label": "Verifica della copertura giornaliera dei prezzi",
-          "summary": "Lorenzo verifica la completezza dei prezzi: 2.678 su 3.127 titoli del campione ridotto superano il 90% di copertura. Restano problemi di giorni senza transazioni e ricostruzione dei prezzi; viene discusso il forward fill.",
-          "source": "Email Lorenzo nel thread «Behavioral biases and digital vs. traditional results», 21–22 settembre 2026"
+          "label": "Daily price coverage validation",
+          "summary": "Lorenzo checked price completeness: 2,678 of 3,127 securities in the restricted sample exceeded 90% coverage. Days without trades and price reconstruction remained challenging; forward-filling was discussed.",
+          "source": "Lorenzo email thread 'Behavioral biases and digital vs. traditional results', September 21–22, 2026"
         },
         {
           "id": "neo-sep23-2026",
           "date": "2026-09-23",
           "type": "empirical_development",
-          "label": "Confronto sui risultati del disposition effect digitale",
-          "summary": "Lorenzo riassume la discussione dei risultati: il canale digitale presenta una misura più bassa del disposition effect, ma PGR e PLR sono vicine e servono verifiche su definizioni, prezzi, campione ed effetti di piattaforma prima di interpretare il divario.",
-          "source": "Email Lorenzo «RE: Behavioral biases and digital vs. traditional results», 23 settembre 2026"
+          "label": "Discussion of digital disposition-effect estimates",
+          "summary": "Lorenzo summarized the results: the digital channel had a smaller measured disposition effect, but PGR and PLR were close, requiring checks on definitions, prices, sample composition, and platform effects before interpreting the gap.",
+          "source": "Lorenzo email, 'RE: Behavioral biases and digital vs. traditional results', September 23, 2026"
         },
         {
           "id": "neo-oct06",
           "date": "2026-10-06",
           "type": "research_development",
-          "label": "Confronto fra misure di prezzo e gestione dello switching",
-          "summary": "Con Lorenzo vengono discusse ricostruzioni FIFO e SQL dei prezzi delle posizioni e il rischio di vendite forzate durante il trasferimento tra conti. Proposta una verifica escludendo i mesi attorno allo switch.",
-          "source": "Corrispondenza con Lorenzo, 6 ottobre 2026"
+          "label": "Price measures and account switching discussion",
+          "summary": "The team discussed FIFO and SQL methods for reconstructing position prices and the risk of forced sales during account transfers. One suggested robustness test excludes the months surrounding switching.",
+          "source": "Correspondence with Lorenzo, October 6, 2026"
         },
         {
           "id": "neo-oct08",
           "date": "2026-10-08",
           "type": "research_report",
-          "label": "Report iniziale sul disposition effect",
-          "summary": "La versione di ottobre riporta un disposition effect più basso nel canale digitale (5,38 contro 6,08 punti percentuali sul tradizionale). Il confronto è descrittivo e può dipendere da composizione delle posizioni e uso dei conti.",
-          "source": "Report dell'8 ottobre, riassunto nel memo del 2 novembre"
+          "label": "Initial disposition-effect report",
+          "summary": "The October report finds a lower disposition effect on the digital channel (5.38 versus 6.08 percentage points on the traditional channel). The comparison is descriptive and may be driven by position composition and account use.",
+          "source": "October 8 report, summarized in the November 2 memo"
         },
         {
           "id": "neo-oct20",
           "date": "2026-10-20",
           "type": "meeting",
-          "label": "Call: campione corretto e limiti dell'identificazione",
-          "summary": "Corretto un errore nella costruzione dei prezzi di chiusura che aveva escluso molti investitori. Discussione su PGR, PLR, switchers, coesistenza dei conti e selezione delle posizioni. Priorità a un disegno interpretabile.",
-          "source": "Memo della call del 20 ottobre 2026"
+          "label": "Call: corrected sample and identification limits",
+          "summary": "Corrected a closing-price construction error that had excluded many investors. Discussed PGR, PLR, switchers, simultaneous account use, and position selection. Priority was given to an interpretable design.",
+          "source": "Call memo, October 20, 2026"
         },
         {
           "id": "neobrokers-e1",
           "date": "2026-10-26",
           "type": "design",
-          "label": "Proposta Bias–Timing–Consequence",
-          "summary": "Lorenzo propone un modello per dual users che distingua propensione a vendere winners e losers, timing delle vendite e conseguenze in termini di forward returns. Non è una sequenza causale già dimostrata.",
-          "source": "Email Lorenzo del 26 ottobre 2026"
+          "label": "Bias–Timing–Consequence proposal",
+          "summary": "Lorenzo proposed a model for dual-platform users separating the propensity to sell winners and losers, sale timing, and consequences in terms of forward returns. This is not an established causal sequence.",
+          "source": "Lorenzo email, October 26, 2026"
         },
         {
           "id": "neo-nov02",
           "date": "2026-11-02",
           "type": "results",
-          "label": "Prime slide e risultati dei nuovi confronti",
-          "summary": "Lorenzo invia slide e risultati preliminari su bias e timing; restano da conciliare grafici, specificazioni e selezione del campione.",
-          "source": "Email Lorenzo del 2 novembre 2026"
+          "label": "New comparison slides and early results",
+          "summary": "Lorenzo sent slides and preliminary results on behavioral bias and timing; figures, specifications, and sample selection still need reconciliation.",
+          "source": "Lorenzo email, November 2, 2026"
         },
         {
           "id": "neobrokers-e2",
           "date": "2026-11-03",
           "type": "meeting",
-          "label": "Riunione: orientamento alla scrittura del paper",
-          "summary": "Nuovo confronto preliminare switchers vs stayers. Pur restando selezione e problemi di liquidità, il gruppo concorda di costruire un paper descrittivo: introduzione, storyline e sequenza ragionata di figure e tabelle, con obiettivo indicativo di un draft entro fine 2026.",
-          "source": "Transcript riunione 3 novembre 2026"
+          "label": "Meeting: shift toward writing the paper",
+          "summary": "A new preliminary comparison of switchers versus stayers was discussed. Despite continuing selection and liquidity concerns, the team agreed to develop a descriptive paper: introduction, storyline, and sequenced figures and tables, with a tentative draft by the end of 2026.",
+          "source": "Meeting transcript, November 3, 2026"
         }
       ],
       "actionHistory": [
         {
           "id": "neobrokers-a1",
-          "text": "Decidere baseline e unità di osservazione",
-          "owner": "Emanuele + Lorenzo",
+          "text": "Choose a baseline specification and observation unit",
+          "owner": "Emanuele and Lorenzo",
           "status": "unverified",
           "dueDate": null,
-          "supersededBy": "Riorientamento di lavoro concordato il 3 novembre 2026",
+          "supersededBy": "Research direction revised by agreement on November 3, 2026",
           "supersededOn": "2026-11-03"
         },
         {
           "id": "neobrokers-a2",
-          "text": "Chiarire selezione dei dual users e switching",
+          "text": "Clarify selection among dual-platform users and switching",
           "owner": "Team",
           "status": "unverified",
           "dueDate": null,
-          "supersededBy": "Riorientamento di lavoro concordato il 3 novembre 2026",
+          "supersededBy": "Research direction revised by agreement on November 3, 2026",
           "supersededOn": "2026-11-03"
         }
       ]
@@ -323,41 +323,41 @@
       "coauthors": "Nicoletta Marinelli · Rafael Almeida da Matta · Wilson Pereira",
       "priority": 3,
       "profile": {
-        "researchQuestion": "Gli investitori sofisticati, inclusi hedge fund, accumulano partecipazioni azionarie in imprese prossime al Chapter 11 e come si collegano tali posizioni alla loro presenza fra i creditori, alle trattative di ristrutturazione e agli esiti dei claims? In che misura si osserva sovrapposizione fra posizioni equity e debt prima e durante la procedura?",
-        "contribution": "Disegno ancora proposto: collegare empiricamente le posizioni azionarie pre-filing ai ruoli nel debito e nella ristrutturazione, distinguendo possibili spiegazioni come option value, hold-up, productive activism e decoupling. Il valore aggiunto dipenderà dalla possibilità di identificare i beneficial owners e dalla novità rispetto alle letterature su distressed investing, Chapter 11 e court shopping. Nessun meccanismo è ancora dimostrato.",
-        "methodology": "Pilot di dieci procedure Chapter 11 selezionate per diverso peso di hedge fund nell'equity (cinque oltre il 50%, cinque fino al 10%) e copertura LSEG. Ricostruzione manuale delle posizioni azionarie pre-filing, dei titolari effettivi del debito, di RSA/DIP financing e del trattamento dei claims; possibili fonti LSEG, Florida-UCLA-LoPucki, documenti Kroll, court filings, SEC, DealScan e Orbis, da verificare caso per caso. L'eventuale estensione a regressioni dipende dalla fattibilità del matching.",
-        "mainFindings": "Non esistono ancora risultati conclusivi sulla domanda principale. In un esercizio esplorativo su 57 casi ricostruiti tramite Kroll, Nicoletta segnala cancellazione dell'equity in 42 (circa 74%), talvolta con recuperi condizionati per i vecchi azionisti. Il dato illustra perché la proprietà post-filing è difficile da utilizzare e non costituisce evidenza sull'overlap equity–debt o sulla causalità dei comportamenti degli hedge fund. L'ultima attività documentata è la selezione dei dieci casi per il pilot."
+        "researchQuestion": "Do sophisticated investors, including hedge funds, accumulate equity stakes in firms approaching Chapter 11, and how are those positions related to their roles as creditors, restructuring negotiations, and claim outcomes? To what extent do equity and debt positions overlap before and during bankruptcy proceedings?",
+        "contribution": "The proposed research design links pre-filing equity positions to debt positions and restructuring roles, distinguishing candidate explanations such as option value, hold-up, productive activism, and decoupling. Its value will depend on identifying beneficial owners and establishing novelty relative to distressed-investing, Chapter 11, and court-shopping research. No mechanism has yet been demonstrated.",
+        "methodology": "A pilot of ten Chapter 11 cases selected for differences in hedge-fund equity ownership (five above 50%, five at or below 10%) and LSEG coverage. Manually reconstruct pre-filing equity positions, beneficial debt ownership, RSA/DIP financing, and claim treatment. Potential sources include LSEG, the Florida-UCLA-LoPucki database, Kroll documents, court filings, SEC, DealScan, and Orbis, to be checked case by case. Any expansion to regression analyses depends on successful matching.",
+        "mainFindings": "There are no conclusive findings on the main research question yet. In a separate exploratory exercise involving 57 cases reconstructed from Kroll records, Nicoletta reports equity cancellation in 42 (about 74%), sometimes with contingent recovery for former shareholders. This illustrates why post-filing ownership is difficult to use, but is not evidence of equity–debt overlap or causality in hedge-fund behavior. The latest documented activity is the selection of ten pilot cases."
       },
       "snapshot": {
         "stage": "Data Collection",
         "status": "On Track",
-        "progress": "Kickoff completato; Nicoletta ha selezionato dieci casi per il pilot debt–equity overlap.",
-        "issue": "Matching di investitori, veicoli e creditori effettivi; LSEG copre solo parte del campione.",
-        "nextAction": "Verificare accesso ai dati e ricostruire dieci casi: accumulo equity, debito, RSA/DIP, trattamento claims.",
+        "progress": "Kickoff completed; Nicoletta selected ten cases for the debt–equity overlap pilot.",
+        "issue": "Matching investors, investment vehicles, and ultimate creditors; LSEG covers only part of the sample.",
+        "nextAction": "Check data access and reconstruct ten cases: equity accumulation, debt, RSA/DIP financing, and claim treatment.",
         "owner": "Nicoletta · Wilson",
-        "milestone": "Pilot review · 18–25 novembre (indicativa)",
+        "milestone": "Pilot review, tentatively November 18–25.",
         "dueDate": "2026-11-21",
         "updatedAt": "2026-10-29",
-        "source": "Kickoff 28 ottobre e selezione dei 10 casi del 29 ottobre"
+        "source": "Kickoff on October 28 and selection of ten cases on October 29."
       },
       "actions": [
         {
           "id": "bankruptcy-a1",
-          "text": "Condividere dati LSEG e documenti campione",
+          "text": "Share the LSEG data and sample documents.",
           "owner": "Nicoletta",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "bankruptcy-a2",
-          "text": "Analizzare dieci casi e ricostruire overlap",
+          "text": "Analyze ten cases and reconstruct equity–debt overlap.",
           "owner": "Wilson",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "bankruptcy-a3",
-          "text": "Valutare fattibilità dell’estensione",
+          "text": "Assess the feasibility of extending the sample.",
           "owner": "Team",
           "status": "unverified",
           "dueDate": null
@@ -368,73 +368,73 @@
           "id": "bank-may15-2026",
           "date": "2026-05-15",
           "type": "data_design",
-          "label": "Definito il primo campione collegato al lavoro sul court shopping",
-          "summary": "Rafael chiede a Wilson di identificare i casi effettivamente utilizzati nel suo paper sul court shopping. Il Florida-UCLA-LoPucki Bankruptcy Research Database contiene circa 1.200 casi, ma i criteri del precedente studio ne selezionano circa 400, con identificativi e variabili supplementari da recuperare. I numeri descrivono il perimetro iniziale, non il campione empirico definitivo del nuovo progetto.",
-          "source": "Email Rafael «My project with Emanuele and Nicoletta», 15 maggio 2026"
+          "label": "Initial sample defined using the court-shopping research",
+          "summary": "Rafael asked Wilson to identify the cases actually used in his court-shopping paper. The Florida-UCLA-LoPucki Bankruptcy Research Database contains around 1,200 cases, while the prior study's selection criteria yield about 400; identifiers and supplementary variables still need to be retrieved. These figures describe the starting universe, not the new project's final empirical sample.",
+          "source": "Rafael email, 'My project with Emanuele and Nicoletta', May 15, 2026"
         },
         {
           "id": "bank-jul10-2026",
           "date": "2026-07-10",
           "type": "research_meeting",
-          "label": "Riunione: spostare il focus sull'equity prima del Chapter 11",
-          "summary": "Il gruppo rileva che la proprietà dopo il filing può essere azzerata, convertita in altri strumenti o disturbata da delisting e cambi d'identificativo. Il principale oggetto empirico diventa quindi l'accumulo di azioni prima del filing da parte di investitori sofisticati e la sua relazione con DIP lending, ristrutturazione e successivi esiti. Resta da decidere se usare LSEG o SEC 13F per la misura principale.",
-          "source": "Memo della riunione del 10 luglio 2026, reinviato con email «update bankruptcy project» del 27 agosto"
+          "label": "Meeting: shift focus to pre-Chapter 11 equity",
+          "summary": "The team noted that post-filing ownership can be wiped out, converted into other instruments, or disrupted by delisting and identifier changes. The central empirical question therefore became sophisticated investors' accumulation of shares before filing and its relationship to DIP lending, restructuring, and subsequent outcomes. Whether to use LSEG or SEC 13F for the main ownership measure remains unresolved.",
+          "source": "Meeting memo, July 10, 2026, resent with the August 27 'update bankruptcy project' email"
         },
         {
           "id": "bank-sep18-2026",
           "date": "2026-09-18",
           "type": "data_collection",
-          "label": "Analisi esplorativa di 57 casi Chapter 11 con dati Kroll",
-          "summary": "Nicoletta condivide una raccolta di informazioni su diritti e recuperi degli azionisti da Kroll per 57 casi, non rappresentativi dell'intero campione. Da un primo esame risulta equity cancellata in 42 casi (74%); dieci di questi prevedono comunque qualche forma di corrispettivo condizionato per i vecchi azionisti. I risultati sono preliminari e richiedono verifica.",
-          "source": "Email Nicoletta «Kroll Data» e risposta di Emanuele, 18 settembre 2026"
+          "label": "Exploratory analysis of 57 Chapter 11 cases using Kroll data",
+          "summary": "Nicoletta assembled Kroll information on shareholder rights and recoveries for 57 cases, not representative of the complete sample. An initial review suggests equity was canceled in 42 cases (74%); ten of those still included some contingent consideration for former shareholders. These preliminary findings require verification.",
+          "source": "Nicoletta email 'Kroll Data' and Emanuele's response, September 18, 2026"
         },
         {
           "id": "bank-sep18b-2026",
           "date": "2026-09-18",
           "type": "research_design",
-          "label": "Quattro meccanismi candidati e verifica della rilevanza del contributo",
-          "summary": "Emanuele individua quattro possibili spiegazioni dell'acquisto di equity pre-filing: option value, hold-up, productive activism e decoupling. Prima di investire in raccolta dati manuale propone di valutare l'originalità scientifica e poi la fattibilità dei dati su azionisti e creditori; nessun meccanismo è ancora validato.",
-          "source": "Email Emanuele «Re: Kroll Data», 18 settembre 2026"
+          "label": "Four candidate mechanisms and contribution assessment",
+          "summary": "Emanuele identified four possible motives for purchasing pre-filing equity: option value, hold-up, productive activism, and decoupling. Before investing in manual data collection, he proposed assessing scientific novelty and then the feasibility of obtaining shareholder and creditor data. None of these mechanisms has been validated.",
+          "source": "Emanuele email, 'Re: Kroll Data', September 18, 2026"
         },
         {
           "id": "bank-sep30-2026",
           "date": "2026-09-30",
           "type": "data_feasibility",
-          "label": "Verificata la fattibilità del matching tra azionisti e creditori",
-          "summary": "Nicoletta chiede a Wilson dati sui titolari del debito e caratteristiche dei claims. Wilson chiarisce che CEO Affidavit e Schedules of Assets and Liabilities documentano il debito ma spesso riportano solo l'agente amministrativo, non tutti i finanziatori. Propone di valutare DealScan per i lender, SEC filings per verificare gli accordi e Orbis per l'equity.",
-          "source": "Email Nicoletta e risposta Wilson nel thread «bankrupcy project», 30 settembre 2026"
+          "label": "Feasibility of matching equity holders and creditors",
+          "summary": "Nicoletta requested debt-holder and claim-characteristic data from Wilson. Wilson explained that CEO affidavits and schedules of assets and liabilities record debt but often identify only the administrative agent, not all lenders. He suggested examining DealScan for lenders, SEC filings for agreements, and Orbis for equity.",
+          "source": "Nicoletta and Wilson correspondence, 'bankrupcy project', September 30, 2026"
         },
         {
           "id": "bank-oct06",
           "date": "2026-10-06",
           "type": "team",
-          "label": "Discussione sull'inclusione di Wilson nel progetto",
-          "summary": "I coautori discutono l'ingresso di Wilson, in ragione dell'esperienza con dati sui fallimenti, e il suo potenziale contributo al lavoro empirico.",
-          "source": "Thread email «bankrupcy project», 5–6 ottobre 2026"
+          "label": "Discussion of Wilson joining the project",
+          "summary": "The coauthors discussed Wilson's involvement, drawing on his bankruptcy-data experience and potential contribution to the empirical work.",
+          "source": "'bankrupcy project' email thread, October 5–6, 2026"
         },
         {
           "id": "bank-oct16",
           "date": "2026-10-16",
           "type": "planning",
-          "label": "Organizzazione del kickoff e dei dati necessari",
-          "summary": "Il gruppo riorganizza la prima riunione per consentire la partecipazione dei coautori; la definizione dei dati disponibili e dei requisiti di accesso è una priorità.",
-          "source": "Email del 15–16 ottobre 2026"
+          "label": "Arranging the kickoff and required data",
+          "summary": "The team rescheduled the first meeting to accommodate coauthors. Defining available data and access requirements was a priority.",
+          "source": "Emails, October 15–16, 2026"
         },
         {
           "id": "bank-oct28",
           "date": "2026-10-28",
           "type": "meeting",
-          "label": "Kickoff: test di fattibilità su equity e debt holdings",
-          "summary": "Si imposta un pilot per verificare il matching fra proprietà azionaria, creditori e filing di bankruptcy prima di estendere il campione.",
-          "source": "Riepilogo del kickoff del 28 ottobre 2026"
+          "label": "Kickoff: feasibility test of equity and debt holdings",
+          "summary": "The team designed a pilot to test the matching of equity ownership, creditors, and bankruptcy filings before expanding the sample.",
+          "source": "Kickoff summary, October 28, 2026"
         },
         {
           "id": "bankruptcy-e1",
           "date": "2026-10-29",
           "type": "pilot",
-          "label": "Selezionati dieci casi di bankruptcy",
-          "summary": "Nicoletta seleziona dieci filing per verificare il matching fra ownership e debt holdings: cinque con proprietà di hedge fund superiore al 50% e cinque con quota fino al 10%, scelti anche per differenze nella copertura LSEG prima/dopo filing. Wilson richiede accesso alla cartella di lavoro e si propone di avviare il pilot. Da verificare disponibilità dei dati sui creditori, RSA/DIP e claims.",
-          "source": "Thread «10 cases - selection», 29 ottobre 2026"
+          "label": "Ten bankruptcy cases selected",
+          "summary": "Nicoletta selected ten filings to test the matching of equity ownership and debt holdings: five with hedge-fund ownership above 50% and five at or below 10%, also chosen to vary in LSEG coverage before and after filing. Wilson requested access to the working folder and offered to begin the pilot. Creditor, RSA/DIP, and claim data availability remains to be verified.",
+          "source": "'10 cases - selection' thread, October 29, 2026"
         }
       ]
     },
@@ -445,34 +445,34 @@
       "coauthors": "Xinyue (Sherry) · Kuntara Pukthuanthong (feedback)",
       "priority": 4,
       "profile": {
-        "researchQuestion": "Le informazioni visuali, vocali e testuali trasmesse dai dirigenti durante gli Investor Days, soprattutto nel confronto tra prepared remarks e Q&A, contengono segnali economici oltre al contenuto verbale? Chi partecipa a questi eventi, come cambiano le posizioni dei fondi e qual è l'associazione fra Investor Days e successive seasoned equity offerings?",
-        "contribution": "Programma di ricerca articolato in tre studi, secondo la presentazione PhD rivista del luglio 2026: (1) costruzione e validazione di una misura di cross-modal inconsistency nei webcast, (2) partecipazione degli investitori e riallocazione dei portafogli, (3) frequenza delle SEO e loro underpricing dopo gli Investor Days. L'innovazione della misura e i collegamenti economici sono ipotesi/contributi attesi, non ancora risultati consolidati.",
-        "methodology": "Campione corrente riferito da Xinyue di 233 webcast validati, circa 647 ore. Pipeline proposta per identificare speaker e segmenti, estrarre rappresentazioni visuali, vocali e verbali e misurare l'incoerenza con approccio leave-one-modality-out; confronto scripted/Q&A entro speaker ed evento. Estensioni prospettate a tagging dei partecipanti FactSet, dati 13F/CRSP mutual funds con variazioni attive dei pesi, misure di rendimento atteso e successive SEO. Verifiche di validità, copertura e selezione ancora necessarie.",
-        "mainFindings": "Le prime analisi di Xinyue segnalano differenze multimodali tra prepared remarks e Q&A e una forte componente comune nei movimenti degli executive (circa 68–88% in alcune misure), con residua variazione within-event da interpretare. Non risultano ancora dimostrati né il contenuto informativo autonomo della misura né effetti su fund holdings, rendimenti o underpricing SEO. Il transcript di un'intervista con Investor Relations è arrivato il 6 novembre ma non è stato ancora analizzato."
+        "researchQuestion": "Do the visual, vocal, and textual signals communicated by executives during Investor Days—particularly the contrast between prepared remarks and Q&A—convey economically relevant information beyond spoken words? Who attends these events, how do fund positions change, and how are Investor Days associated with subsequent seasoned equity offerings (SEOs)?",
+        "contribution": "A three-study research program outlined in the revised July 2026 PhD presentation: (1) construction and validation of a cross-modal inconsistency measure in webcasts; (2) investor attendance and portfolio reallocation; and (3) the frequency and underpricing of subsequent SEOs following Investor Days. The novelty of the measure and its links to economic outcomes are hypotheses and intended contributions, not yet established results.",
+        "methodology": "The current sample reported by Xinyue comprises 233 validated webcasts, approximately 647 hours. The proposed pipeline identifies speakers and segments, extracts visual, vocal, and verbal representations, and measures inconsistency using a leave-one-modality-out approach; scripted remarks are compared with Q&A within speaker and event. Potential extensions include FactSet participant tagging, 13F/CRSP mutual-fund data for active portfolio-weight changes, expected-return measures, and subsequent SEOs. Validity, coverage, and selection checks are still needed.",
+        "mainFindings": "Xinyue's preliminary analyses indicate multimodal differences between prepared remarks and Q&A and a strong common component in executives' movements (approximately 68–88% in some measures), leaving within-event variation to interpret. Neither independent information content of the measure nor effects on fund holdings, returns, or SEO underpricing have been demonstrated. An Investor Relations interview transcript arrived November 6 but its contents had not yet been analyzed at this snapshot."
       },
       "snapshot": {
         "stage": "Data Analyses",
         "status": "On Track",
-        "progress": "233 webcast validati, circa 647 ore; prime differenze multimodali fra prepared remarks e Q&A. Il 6 novembre Xinyue ha inoltre inviato un transcript di intervista Investor Relations, non ancora esaminato nei contenuti.",
-        "issue": "Separare variazione fisiologica di contesto da segnali informativi; validazione delle misure.",
-        "nextAction": "Validare le misure multimodali e collegarle a fund holdings e outcome economici; esaminare il transcript IR ricevuto il 6 novembre per eventuali indicazioni utili al research design.",
-        "owner": "Xinyue (analisi); Emanuele (feedback sul transcript)",
-        "milestone": "Prossimo aggiornamento Study 1 · data non confermata",
+        "progress": "233 validated webcasts, approximately 647 hours; preliminary multimodal differences between prepared remarks and Q&A. On November 6, Xinyue also sent an Investor Relations interview transcript, whose content had not yet been reviewed at this snapshot.",
+        "issue": "Separate natural contextual variation from informative signals; validate the measures.",
+        "nextAction": "Validate multimodal measures and link them to fund holdings and economic outcomes; review the IR transcript received November 6 for potentially useful research-design insights.",
+        "owner": "Xinyue (analyses); Emanuele (transcript feedback)",
+        "milestone": "Next Study 1 update; date not confirmed.",
         "dueDate": null,
         "updatedAt": "2026-11-06",
-        "source": "Email Xinyue del 18–22 ottobre e «IR outreach», 6 novembre 2026. L'allegato del 6 novembre non è stato letto."
+        "source": "Xinyue emails of October 18–22 and 'IR outreach' of November 6, 2026. The November 6 attachment was not reviewed in this snapshot."
       },
       "actions": [
         {
           "id": "sherry-a1",
-          "text": "Validare le features e le distribuzioni within-event",
+          "text": "Validate features and within-event distributions.",
           "owner": "Xinyue",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "sherry-a2",
-          "text": "Valutare dati su partecipanti Investor Day",
+          "text": "Evaluate Investor Day participant data.",
           "owner": "Xinyue",
           "status": "unverified",
           "dueDate": null
@@ -483,73 +483,73 @@
           "id": "sherry-jun28-2026",
           "date": "2026-06-28",
           "type": "research_design",
-          "label": "Definito il filone multimodale sui video degli Investor Days",
-          "summary": "Xinyue presenta a Luigi Di Stefano, su indicazione di Emanuele, il progetto che studia se segnali visuali, vocali e testuali delle presentazioni Investor Day contengano informazioni oltre le parole. Propone misure robuste entro speaker e distingue interventi preparati da Q&A; il campione iniziale comprende circa 200 video.",
-          "source": "Email Xinyue «Multimodal analysis of investor-day videos», 28 giugno 2026"
+          "label": "Multimodal analysis of Investor Day videos defined",
+          "summary": "At Emanuele's suggestion, Xinyue introduced the project to Luigi Di Stefano, examining whether visual, vocal, and textual signals from Investor Day presentations convey information beyond words. She proposed robust within-speaker measures, distinguishing prepared remarks from Q&A; the initial sample contained about 200 videos.",
+          "source": "Xinyue email, 'Multimodal analysis of investor-day videos', June 28, 2026"
         },
         {
           "id": "sherry-jul10-2026",
           "date": "2026-07-10",
           "type": "methodology",
-          "label": "Proposta di pipeline multimodale con computer vision",
-          "summary": "Dopo il confronto con il gruppo di computer vision, Xinyue specifica due stadi: riconoscimento di chi parla e quando nei webcast e costruzione di embedding multimodali; propone una misura di incoerenza leave-one-modality-out, confrontandola con benchmark più semplici. La pipeline è un programma di lavoro, non una validazione già realizzata.",
-          "source": "Email Xinyue a Luigi Di Stefano, 10 luglio 2026"
+          "label": "Proposed multimodal computer-vision pipeline",
+          "summary": "Following discussions with the computer vision team, Xinyue specified two steps: identifying who speaks and when in the webcasts, then constructing multimodal embeddings. She proposed a leave-one-modality-out inconsistency measure and comparisons against simpler benchmarks. This was a work plan, not a validated pipeline.",
+          "source": "Xinyue email to Luigi Di Stefano, July 10, 2026"
         },
         {
           "id": "sherry-jul24-2026",
           "date": "2026-07-24",
           "type": "research_proposal",
-          "label": "Presentazione PhD rivista: tre studi sugli Investor Days",
-          "summary": "La presentazione rivista organizza il progetto in Study 1 (misurazione dell'inconsistenza multimodale), Study 2 (partecipazione e riallocazione dei fondi) e Study 3 (Investor Days e successive SEO). Il confronto scripted/Q&A diventa centrale per Study 1; vengono distinte partecipazione buy-side/sell-side e variazioni attive dei pesi di portafoglio.",
-          "source": "Investor Days — 24 July presentation v2, 24 luglio 2026; design proposto, non risultati validati"
+          "label": "Revised PhD presentation: three Investor Day studies",
+          "summary": "The revised presentation divided the project into Study 1 (multimodal inconsistency), Study 2 (investor attendance and fund reallocation), and Study 3 (Investor Days and subsequent SEOs). The scripted/Q&A contrast became central to Study 1; buy-side versus sell-side attendance and active portfolio-weight changes were distinguished.",
+          "source": "Investor Days presentation v2, July 24, 2026; proposed design, not validated findings"
         },
         {
           "id": "sh-oct18",
           "date": "2026-10-18",
           "type": "research_update",
-          "label": "Dataset Investor Days e risultati preliminari sulle componenti multimodali",
-          "summary": "Xinyue condivide i progressi sul campione di webcast Investor Days e sulla distinzione fra prepared remarks e Q&A. Lo snapshot riporta 233 webcast validati e circa 647 ore di registrazioni. Risultati ancora da validare sui diversi contesti.",
-          "source": "Email «Quick catch-up» di Xinyue, 18 ottobre 2026"
+          "label": "Investor Day dataset and preliminary multimodal results",
+          "summary": "Xinyue shared progress on the Investor Day webcast sample and the distinction between prepared remarks and Q&A. The snapshot reports 233 validated webcasts and about 647 recording hours. Findings still require validation across contexts.",
+          "source": "Xinyue email, 'Quick catch-up', October 18, 2026"
         },
         {
           "id": "sh-oct20",
           "date": "2026-10-20",
           "type": "feedback",
-          "label": "Discussione sulla significatività economica del segnale",
-          "summary": "Emanuele commenta i risultati e richiama la necessità di distinguere differenze dovute all'ambientazione dell'evento da variazioni potenzialmente informative. Non è una conferma che le misure predicano già gli outcome.",
-          "source": "Thread «Quick catch-up», 19–20 ottobre 2026"
+          "label": "Discussion of the signal's economic significance",
+          "summary": "Emanuele commented on the results, emphasizing the need to distinguish differences caused by event settings from potentially informative changes. This was not confirmation that the measures predict economic outcomes.",
+          "source": "'Quick catch-up' email thread, October 19–20, 2026"
         },
         {
           "id": "sh-oct21",
           "date": "2026-10-21",
           "type": "empirical_development",
-          "label": "Separazione delle variazioni di contesto da quelle tra executive",
-          "summary": "Xinyue riferisce una forte componente comune nelle variazioni di voce e linguaggio (68–88% in varie misure) e una residua variazione within-event, potenzialmente informativa. L'affidabilità delle misure non prova ancora il contenuto economico del segnale.",
-          "source": "Email «Re: Quick catch-up», 21 ottobre 2026"
+          "label": "Separating contextual variation from executive-specific changes",
+          "summary": "Xinyue reported a strong common component in voice and language changes (68–88% across different measures), with residual within-event variation that may be informative. Measurement reliability does not yet establish the signal's economic content.",
+          "source": "Xinyue email, 'Re: Quick catch-up', October 21, 2026"
         },
         {
           "id": "sh-oct22",
           "date": "2026-10-22",
           "type": "data_collection",
-          "label": "Outreach alle Investor Relations di 50 società",
-          "summary": "Xinyue riferisce di avere contattato le IR di 50 società in tre giorni: alcune sono in quiet period, altre offrono webcast d'archivio o possibili call. Prepara domande su motivazioni, formato e pubblico degli Investor Days.",
-          "source": "Email «IR outreach», 22 ottobre 2026"
+          "label": "Outreach to Investor Relations teams at 50 companies",
+          "summary": "Xinyue reported contacting IR teams at 50 companies in three days. Some were in quiet periods, while others offered archived webcasts or potential calls. She prepared questions on Investor Day motivations, format, and audiences.",
+          "source": "Xinyue email, 'IR outreach', October 22, 2026"
         },
         {
           "id": "sh-oct26",
           "date": "2026-10-26",
           "type": "research_feedback",
-          "label": "Proposta di brevi interviste con gli IR",
-          "summary": "Emanuele suggerisce di chiedere interviste di circa 15 minuti, anziché inviare un questionario troppo dettagliato via email. È una proposta metodologica per la raccolta qualitativa.",
-          "source": "Email «Re: IR outreach», 26 ottobre 2026"
+          "label": "Proposal for brief IR interviews",
+          "summary": "Emanuele suggested requesting interviews of approximately 15 minutes rather than emailing an overly detailed questionnaire. This was a methodological proposal for qualitative data collection.",
+          "source": "Email, 'Re: IR outreach', October 26, 2026"
         },
         {
           "id": "sh-nov06",
           "date": "2026-11-06",
           "type": "document_received",
-          "label": "Ricevuto un transcript di intervista Investor Relations",
-          "summary": "Xinyue invia in allegato un transcript d'intervista. Il contenuto del file non è stato verificato tramite il connettore Outlook, quindi non vengono attribuite conclusioni alla conversazione.",
-          "source": "Email Xinyue «Re: IR outreach: IR replies and calls with Brown-Forman IR», 6 novembre 2026"
+          "label": "Investor Relations interview transcript received",
+          "summary": "Xinyue sent an interview transcript as an attachment. At the time of this snapshot, its contents had not been checked through the Outlook connector, so no conclusions were attributed to the conversation.",
+          "source": "Xinyue email, 'Re: IR outreach: IR replies and calls with Brown-Forman IR', November 6, 2026"
         }
       ]
     },
@@ -560,22 +560,22 @@
       "coauthors": "Nicoletta Marinelli · Otto Randl · Giorgia Simion",
       "priority": 5,
       "profile": {
-        "researchQuestion": "La rappresentazione simbolica femminile o maschile di un'impresa nelle immagini del brand influenza le decisioni di portafoglio dei gestori di fondi? In particolare, i gestori uomini sottopesano le società con imagery più femminile e il fenomeno riflette attenzione selettiva oppure caratteristiche economiche e familiarità con i prodotti?",
-        "contribution": "Il paper «Beyond the Ticker» estende lo studio dei gender biases finanziari dalle caratteristiche delle persone alla gendered symbolic identity delle imprese, introducendo un GenderScore basato su immagini pubbliche. La spiegazione proposta è coerente con rational inattention, ma il referee JFQA ha contestato la capacità di separare il simbolismo dalle caratteristiche fondamentali e dalle spiegazioni alternative; il contributo causale resta quindi controverso.",
-        "methodology": "Image recognition su oltre 300.000 immagini legate a 135 brand per calcolare la quota di individui percepiti come donne e costruire il GenderScore. Collegamento con i portafogli di mutual funds azionari attivi statunitensi gestiti da un singolo portfolio manager nel 2008–2021. Analisi di presenza del titolo e pesi, turnover del gestore, intensità di trading e reazioni a news/analyst recommendations, con controlli e verifiche alternative. Una critica editoriale richiede una migliore gestione dei confondenti, inclusi possibili stock×quarter fixed effects.",
-        "mainFindings": "Il manoscritto riporta una minore propensione dei gestori uomini a detenere imprese con imagery più femminile; non emerge un'avversione speculare delle gestori donne verso imprese più maschili. Turnover dei gestori, trading e reazioni alle notizie sono coerenti con attenzione differenziale; condizionatamente al trading non emergono penalità di performance. L'interpretazione come rational inattention è proposta dagli autori ma non distingue definitivamente immagini, familiarity e fondamentali. Paper sotto review al Journal of Corporate Finance alla verifica del 25 ottobre 2026."
+        "researchQuestion": "Does a firm's symbolically feminine or masculine representation in brand imagery affect fund managers' portfolio decisions? In particular, do male managers underweight firms with more feminine imagery, and does this reflect selective attention rather than economic fundamentals or familiarity with the products?",
+        "contribution": "'Beyond the Ticker' extends research on financial gender biases from individuals' characteristics to firms' gendered symbolic identities, introducing an image-based GenderScore. The proposed rational-inattention explanation faces a JFQA referee's criticism that the design does not adequately separate symbolic imagery from fundamentals and alternative explanations; its causal contribution therefore remains contested.",
+        "methodology": "Image recognition on more than 300,000 images linked to 135 brands measures the share of people perceived as women and constructs GenderScore. These measures are linked to portfolios of actively managed U.S. equity mutual funds with a single portfolio manager over 2008–2021. The analysis examines stock inclusion and weights, manager turnover, trading intensity, and reactions to news or analyst recommendations, with controls and alternative checks. An editorial critique called for better handling of confounders, potentially including stock × quarter fixed effects.",
+        "mainFindings": "The manuscript reports that male managers are less likely to hold firms with more feminine imagery, without a symmetric aversion by female managers toward more masculine firms. Manager turnover, trading, and reactions to news are consistent with differential attention; conditional on trading, no performance penalties emerge. The authors propose rational inattention, but the evidence does not definitively distinguish imagery, familiarity, and fundamentals. The paper was under review at the Journal of Corporate Finance at the October 25, 2026 check."
       },
       "snapshot": {
         "stage": "Submitted (1st round)",
         "status": "On Track",
-        "progress": "Manoscritto CORFIN-D-26-01361 inviato al Journal of Corporate Finance e confermato under review.",
-        "issue": "Stato dettagliato dei referee non verificabile dal tracking accessibile.",
-        "nextAction": "Attendere una comunicazione editoriale; nessuna azione immediata.",
+        "progress": "Manuscript CORFIN-D-26-01361 submitted to the Journal of Corporate Finance and confirmed under review.",
+        "issue": "Detailed referee status cannot be verified through the available tracking information.",
+        "nextAction": "Await the editorial communication; no immediate action required.",
         "owner": "Editorial office",
-        "milestone": "JCF peer review · data non nota",
+        "milestone": "JCF peer review; decision date unknown.",
         "dueDate": null,
         "updatedAt": "2026-10-25",
-        "source": "Conferma Elsevier del 25 ottobre"
+        "source": "Elsevier confirmation dated October 25, 2026."
       },
       "actions": [],
       "events": [
@@ -583,166 +583,166 @@
           "id": "bg-2021",
           "date": "2021-06-11",
           "type": "created",
-          "label": "Avvio dell'idea su genere dei brand e scelte dei fund manager",
-          "summary": "Creata la scheda Trello per studiare se gli investitori, e in particolare i gestori di fondi, rispondano diversamente a nomi e caratteristiche di genere delle società.",
-          "source": "Trello Papers, scheda n. 43",
+          "label": "Project initiated: brand gender and fund-manager decisions",
+          "summary": "A Trello card was created to investigate whether investors, particularly fund managers, respond differently to the gender cues in company names and brand characteristics.",
+          "source": "Trello Papers, card 43",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-jul2021",
           "date": "2021-07-14",
           "type": "stage_transition",
-          "label": "Passaggio da Initial Ideas a Data Collection",
-          "summary": "Il progetto passa dalla prima idea alla raccolta dati.",
-          "source": "Cronologia della scheda Trello n. 43",
+          "label": "From Initial Ideas to Data Collection",
+          "summary": "The project advanced from the initial idea stage to data collection.",
+          "source": "Trello card 43 history",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-jan2022",
           "date": "2022-01-05",
           "type": "stage_transition",
-          "label": "Passaggio a Data Analyses",
-          "summary": "La scheda viene spostata a Data Analyses, segnalando l'avvio del lavoro empirico.",
-          "source": "Cronologia Trello n. 43",
+          "label": "Transition to Data Analyses",
+          "summary": "The card moved to Data Analyses, marking the start of empirical work.",
+          "source": "Trello card 43 history",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-sep2023",
           "date": "2023-09-26",
           "type": "empirical_development",
-          "label": "Analisi delle partecipazioni in portafoglio per genere",
-          "summary": "Giorgia si propone di tabulare le frequenze dei titoli inclusi nei portafogli gestiti da uomini e donne e le variazioni associate al cambio di gestore. Discussioni di fine settembre sulle interpretazioni dei movimenti in portafoglio.",
-          "source": "Commenti Trello del 26–29 settembre 2023",
+          "label": "Analysis of portfolio holdings by manager gender",
+          "summary": "Giorgia proposed tabulating stock-inclusion frequencies in portfolios managed by men versus women and changes associated with manager turnover. Late-September discussions addressed the interpretation of portfolio rebalancing.",
+          "source": "Trello comments, September 26–29, 2023",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-jan2024",
           "date": "2024-01-22",
           "type": "stage_transition",
-          "label": "Disponibile una prima bozza",
-          "summary": "La scheda passa da Data Analyses a First Draft; la storia Trello non descrive qui in dettaglio la versione del testo.",
-          "source": "Transizione Trello del 22 gennaio 2024",
+          "label": "First draft available",
+          "summary": "The project moved from Data Analyses to First Draft; the Trello record does not provide a detailed description of that manuscript version.",
+          "source": "Trello stage transition, January 22, 2024",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-feb2025",
           "date": "2025-02-24",
           "type": "conference",
-          "label": "Paper pronto per la fase conference",
-          "summary": "Il progetto passa nella fase Out for conference, secondo la cronologia di Trello. Non è documentata in questo evento una conferenza specifica.",
-          "source": "Transizione Trello del 24 febbraio 2025",
+          "label": "Paper ready for conference stage",
+          "summary": "The project moved into Out for Conference in Trello. The event does not identify a specific conference.",
+          "source": "Trello stage transition, February 24, 2025",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-aug2025a",
           "date": "2025-08-06",
           "type": "submission",
-          "label": "Submission a Review of Finance",
-          "summary": "La scheda registra la prima submission a Review of Finance (RF).",
-          "source": "Commento e transizione Trello del 6 agosto 2025",
+          "label": "Submission to Review of Finance",
+          "summary": "The Trello history records an initial submission to Review of Finance (RF).",
+          "source": "Trello comment and transition, August 6, 2025",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-aug2025b",
           "date": "2025-08-07",
           "type": "editorial_decision",
-          "label": "Desk rejection da Review of Finance",
-          "summary": "La cronologia Trello registra un desk rejection il giorno successivo alla submission.",
-          "source": "Commento Trello del 7 agosto 2025",
+          "label": "Desk rejection from Review of Finance",
+          "summary": "The Trello record reports a desk rejection the day after submission.",
+          "source": "Trello comment, August 7, 2025",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-sep2025",
           "date": "2025-09-17",
           "type": "submission",
-          "label": "Submission a Management Science",
-          "summary": "Il paper viene sottomesso a Management Science (MS).",
-          "source": "Commento e transizione Trello del 17 settembre 2025",
+          "label": "Submission to Management Science",
+          "summary": "The manuscript was submitted to Management Science (MS).",
+          "source": "Trello comment and transition, September 17, 2025",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-oct2025",
           "date": "2025-10-16",
           "type": "editorial_decision",
-          "label": "Desk rejection da Management Science",
-          "summary": "La cronologia Trello registra un desk rejection da MS.",
-          "source": "Commento Trello del 16 ottobre 2025",
+          "label": "Desk rejection from Management Science",
+          "summary": "The Trello history reports a desk rejection by MS.",
+          "source": "Trello comment, October 16, 2025",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-febmar2026",
           "date": "2026-03-09",
           "type": "editorial_decision",
-          "label": "Desk rejection da Review of Financial Studies",
-          "summary": "La scheda registra una nuova submission nel febbraio 2026 e un desk rejection da RFS il 9 marzo; la data della submission nel commento Trello non è indicata.",
-          "source": "Transizioni Trello del 10 febbraio e 9 marzo 2026",
+          "label": "Desk rejection from Review of Financial Studies",
+          "summary": "The card records a new submission in February 2026 and a desk rejection by RFS on March 9; the original submission date was not specified in the Trello comment.",
+          "source": "Trello transitions, February 10 and March 9, 2026",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "bg-mar2026",
           "date": "2026-03-23",
           "type": "submission",
-          "label": "Submission a Journal of Financial and Quantitative Analysis",
-          "summary": "Trello registra una submission a JFQA; non si deduce l'esito da questa sola fonte.",
-          "source": "Commento Trello del 23 marzo 2026",
+          "label": "Submission to Journal of Financial and Quantitative Analysis",
+          "summary": "Trello records a submission to JFQA; the outcome cannot be inferred from this event alone.",
+          "source": "Trello comment, March 23, 2026",
           "sourceUrl": "https://trello.com/c/QN9bUSr5"
         },
         {
           "id": "brand-jfqa-reject-may17",
           "date": "2026-05-17",
           "type": "editorial_decision",
-          "label": "JFQA: rifiuto dopo referee report",
-          "summary": "Il Journal of Financial and Quantitative Analysis respinge il manoscritto JFQA-26-27418 dopo averlo inviato a un referee. Le criticità principali riguardano identificazione del GenderScore, possibili caratteristiche aziendali omesse e interpretazioni alternative al meccanismo di rational inattention; il referee propone anche stock-by-quarter fixed effects.",
-          "source": "Email «Your Submission - ms# JFQA-26-27418», 17 maggio 2026"
+          "label": "JFQA rejection following referee report",
+          "summary": "The Journal of Financial and Quantitative Analysis rejected manuscript JFQA-26-27418 following an external referee report. Main concerns included GenderScore identification, omitted firm characteristics, and explanations alternative to rational inattention; the referee also suggested stock-by-quarter fixed effects.",
+          "source": "Email, 'Your Submission - ms# JFQA-26-27418', May 17, 2026"
         },
         {
           "id": "brand-jbf-submit-jul16",
           "date": "2026-07-16",
           "type": "submission",
-          "label": "Submission a Journal of Banking & Finance",
-          "summary": "Otto completa la transfer submission al Journal of Banking & Finance; manoscritto JBF-D-26-01125. È una nuova submission successiva alla decisione JFQA, non una revise-and-resubmit.",
-          "source": "Email «JBF-D-26-01125 - Confirming your submission», 16 luglio 2026"
+          "label": "Submission to Journal of Banking & Finance",
+          "summary": "Otto completed a transfer submission to Journal of Banking & Finance, manuscript JBF-D-26-01125. This was a new submission after the JFQA decision, not a revise and resubmit.",
+          "source": "Email, 'JBF-D-26-01125 - Confirming your submission', July 16, 2026"
         },
         {
           "id": "brand-jbf-review-aug19",
           "date": "2026-08-19",
           "type": "editorial_status",
-          "label": "JBF: assegnato almeno un referee",
-          "summary": "Nel tracking del Journal of Banking & Finance risulta assegnato un referee su due. La comunicazione indica una review in corso, senza anticipare il successivo esito.",
-          "source": "Corrispondenza con Otto «Track the status of your submission to Journal of Banking and Finance», 19 agosto 2026"
+          "label": "JBF: at least one referee assigned",
+          "summary": "Journal of Banking & Finance tracking showed one of two referees assigned. The correspondence establishes an ongoing review without anticipating the eventual outcome.",
+          "source": "Correspondence with Otto, 'Track the status of your submission to Journal of Banking and Finance', August 19, 2026"
         },
         {
           "id": "brand-jbf-reject-oct01",
           "date": "2026-10-01",
           "type": "editorial_decision",
-          "label": "Rifiuto dal Journal of Banking & Finance",
-          "summary": "Otto comunica il rifiuto del manoscritto JBF-D-26-01125 e propone una rapida nuova submission. Si discutono Journal of Empirical Finance, un field journal e successivamente JCF; non è corretto descrivere l'esito come desk rejection, vista la fase di review documentata.",
-          "source": "Email Otto «FW: Your Submission» e discussione tra coautori, 1–5 ottobre 2026"
+          "label": "Rejected by Journal of Banking & Finance",
+          "summary": "Otto reported the rejection of manuscript JBF-D-26-01125 and proposed a prompt new submission. Journal of Empirical Finance, another field journal, and eventually JCF were discussed. It would be incorrect to call this a desk rejection given the documented review process.",
+          "source": "Otto email, 'FW: Your Submission', and coauthor discussion, October 1–5, 2026"
         },
         {
           "id": "bg-oct06",
           "date": "2026-10-06",
           "type": "submission",
-          "label": "Nuova submission al Journal of Corporate Finance",
-          "summary": "Elsevier conferma la ricezione del manoscritto «Beyond the Ticker: Gendered Firm Imagery and Fund Manager Investment Decisions», codice CORFIN-D-26-01361. La nuova submission è indipendente dai precedenti passaggi editoriali su Trello.",
-          "source": "Email automatica Elsevier del 6 ottobre 2026"
+          "label": "New submission to Journal of Corporate Finance",
+          "summary": "Elsevier confirmed receipt of 'Beyond the Ticker: Gendered Firm Imagery and Fund Manager Investment Decisions', manuscript CORFIN-D-26-01361. This is a new submission, separate from previous Trello editorial events.",
+          "source": "Automated Elsevier email, October 6, 2026"
         },
         {
           "id": "bg-oct07",
           "date": "2026-10-07",
           "type": "working_paper",
-          "label": "Deposito su SSRN",
-          "summary": "Il servizio conferma la ricezione del working paper, in seguito identificato con DOI 10.2139/ssrn.7576652. La conferma di ricezione non prova da sola la disponibilità finale al pubblico.",
-          "source": "Email SSRN e notifica ORCID del 7 ottobre 2026",
+          "label": "SSRN working-paper deposit",
+          "summary": "The service confirmed receipt of the working paper, subsequently associated with DOI 10.2139/ssrn.7576652. Receipt confirmation alone does not establish final public availability.",
+          "source": "SSRN email and ORCID notification, October 7, 2026",
           "sourceUrl": "https://doi.org/10.2139/ssrn.7576652"
         },
         {
           "id": "brand-e1",
           "date": "2026-10-25",
           "type": "editorial_status",
-          "label": "JCF: manoscritto in fase di valutazione",
-          "summary": "La comunicazione Elsevier relativa al manoscritto CORFIN-D-26-01361 indica la gestione dello stato di submission; nello snapshot risulta under review. Il numero dei referee e la tempistica della decisione non sono verificati.",
-          "source": "Email Elsevier del 24–25 ottobre 2026"
+          "label": "JCF: manuscript under evaluation",
+          "summary": "Elsevier correspondence regarding manuscript CORFIN-D-26-01361 describes submission-status handling; the snapshot shows 'under review'. Neither the number of referees nor the decision timeline was verified.",
+          "source": "Elsevier email, October 24–25, 2026"
         }
       ]
     },
@@ -753,27 +753,27 @@
       "coauthors": "Marco Pagano · Luca Coraggio",
       "priority": 6,
       "profile": {
-        "researchQuestion": "Le connessioni professionali tra ricercatori — attraverso affiliazioni istituzionali, coautoraggio e comunità accademiche — sono associate agli esiti della valutazione della ricerca e a possibili favoritismi? È possibile distinguere legami effettivi fra valutatori e autori dalla semplice prossimità a un ateneo o a una disciplina?",
-        "contribution": "Contributo ancora da definire: costruire misure osservabili di prossimità e connessione accademica per studiare le decisioni di valutazione, distinguendo social networks, qualità scientifica e struttura istituzionale. La presenza di una connessione non dimostra favoritismo; saranno necessari un campione di decisioni valutative e una strategia empirica credibile per attribuire un'interpretazione al coefficiente.",
-        "methodology": "Luca ha ricostruito network di affiliazioni e coautoraggio (12.615 persone, 25.549 relazioni di coautoraggio e 67 comunità secondo il materiale di progetto). Ha sperimentato un algoritmo di community detection che ritrova gruppi largamente sovrapposti agli atenei. Passi previsti: verificare il codice, unire le variabili di network al dataset delle valutazioni e formulare regressioni con controlli appropriati. La specificazione finale e il dataset dei giudizi non risultano ancora verificati.",
-        "mainFindings": "Finora il risultato documentato è soprattutto infrastrutturale: il network di coautoraggio presenta cluster che coincidono in buona parte con istituzioni accademiche. Non è stata ancora prodotta o verificata evidenza empirica sull'effetto delle relazioni fra autori e valutatori, né sul favoritismo. La consegna del dataset con le variabili di network rimane un passo aperto."
+        "researchQuestion": "Are professional ties among researchers—through institutional affiliations, coauthorship, and academic communities—associated with research-evaluation outcomes and potential favoritism? Can genuine links between evaluators and authors be distinguished from merely belonging to the same university or discipline?",
+        "contribution": "The contribution remains to be defined: construct observable measures of academic proximity and connection to study evaluation decisions, distinguishing social networks, scientific quality, and institutional structures. A connection does not establish favoritism; a sample of evaluation decisions and a credible empirical design will be needed to interpret estimated coefficients.",
+        "methodology": "Luca reconstructed affiliation and coauthorship networks (12,615 individuals, 25,549 coauthorship ties, and 67 communities according to the project materials). He tested a community-detection algorithm yielding groups that largely overlap with universities. Next steps: verify the code, merge network variables into the evaluation dataset, and formulate regressions with appropriate controls. The final specification and evaluation dataset have not yet been verified.",
+        "mainFindings": "The documented result so far is largely infrastructural: coauthorship networks form clusters that substantially overlap with academic institutions. No empirical evidence has yet been produced or verified on the effects of author–evaluator ties or favoritism. Delivery of the dataset containing network variables remains pending."
       },
       "snapshot": {
         "stage": "Data Analyses",
         "status": "Waiting for Coauthors",
-        "progress": "Network ricostruito: 12.615 persone, 25.549 coautoraggi, 67 comunità.",
-        "issue": "Misurare connessioni revisore–autore effettive, non soltanto prossimità istituzionale.",
-        "nextAction": "Ricevere il dataset con la nuova variabile e il codice verificato per iniziare le regressioni.",
+        "progress": "Network reconstructed: 12,615 individuals, 25,549 coauthorship ties, and 67 communities.",
+        "issue": "Measure actual reviewer–author connections rather than only institutional proximity.",
+        "nextAction": "Receive the dataset with the new network variable and verified code to begin regressions.",
         "owner": "Luca",
-        "milestone": "Dataset network · data non indicata",
+        "milestone": "Network dataset; delivery date not specified.",
         "dueDate": null,
         "updatedAt": "2026-10-18",
-        "source": "Email Luca del 18 ottobre e network condiviso"
+        "source": "Luca's October 18 email and the shared network."
       },
       "actions": [
         {
           "id": "favoritism-a1",
-          "text": "Validare codici e condividere dataset",
+          "text": "Validate the code and share the dataset.",
           "owner": "Luca",
           "status": "unverified",
           "dueDate": null
@@ -784,35 +784,35 @@
           "id": "fav-2022",
           "date": "2022-02-01",
           "type": "created",
-          "label": "Avvio del progetto sulla valutazione della ricerca accademica",
-          "summary": "Creata su Trello la scheda «Research evaluation», associata a Marco Pagano e Luca Coraggio, precursore dell'attuale progetto su network e potenziali favoritismi.",
-          "source": "Trello Papers, scheda n. 48",
+          "label": "Academic research evaluation project initiated",
+          "summary": "A Trello card titled 'Research evaluation' was created, associated with Marco Pagano and Luca Coraggio, as the predecessor of the current network and potential favoritism project.",
+          "source": "Trello Papers, card 48",
           "sourceUrl": "https://trello.com/c/c4xZgHzn"
         },
         {
           "id": "fav-2025",
           "date": "2025-03-10",
           "type": "stage_transition",
-          "label": "Passaggio a Data Analyses",
-          "summary": "La scheda Trello viene riclassificata dalla fase Data Collection a Data Analyses. L'archivio non documenta qui i risultati empirici specifici.",
-          "source": "Cronologia Trello del 10 marzo 2025",
+          "label": "Transition to Data Analyses",
+          "summary": "The Trello card was reclassified from Data Collection to Data Analyses. The historical archive does not document specific empirical findings for this event.",
+          "source": "Trello history, March 10, 2025",
           "sourceUrl": "https://trello.com/c/c4xZgHzn"
         },
         {
           "id": "favoritism-e1",
           "date": "2026-10-18",
           "type": "empirical_development",
-          "label": "Ricostruite reti di affiliazione e coautoraggio",
-          "summary": "Luca riferisce di avere ricostruito network di affiliazioni e applicato un algoritmo di community detection ai legami di coautoraggio. Le comunità individuate coincidono in larga parte con gli atenei; la verifica del codice e l'inserimento delle variabili nel dataset restano da completare.",
-          "source": "Email Luca Coraggio «Nostro progetto», 18 ottobre 2026"
+          "label": "Affiliation and coauthorship networks reconstructed",
+          "summary": "Luca reported reconstructing affiliation networks and applying a community-detection algorithm to coauthorship links. The resulting communities largely coincide with universities; code verification and integration of the variables into the evaluation dataset remain incomplete.",
+          "source": "Luca Coraggio email, 'Our project', October 18, 2026"
         },
         {
           "id": "fav-oct19-2026",
           "date": "2026-10-19",
           "type": "team_feedback",
-          "label": "Attese le variabili di network per avviare le regressioni",
-          "summary": "Emanuele ringrazia Luca per la ricostruzione delle reti e propone di avviare regressioni e analisi non appena le nuove variabili saranno disponibili e verificate. La comunicazione non conferma che il dataset sia già stato consegnato.",
-          "source": "Email Emanuele «Re: Nostro progetto», 19 ottobre 2026"
+          "label": "Awaiting network variables to start regressions",
+          "summary": "Emanuele thanked Luca for reconstructing the networks and suggested starting regressions once the new variables are available and verified. The message does not confirm that the dataset has already been delivered.",
+          "source": "Emanuele email, 'Re: Our project', October 19, 2026"
         }
       ]
     },
@@ -823,56 +823,56 @@
       "coauthors": "Lorenzo Danieli",
       "priority": 7,
       "profile": {
-        "researchQuestion": "Come investono i genitori per conto dei figli minorenni, quanto somigliano le decisioni fra genitori e figli o fra fratelli e che cosa cambia quando un figlio compie 18 anni? È possibile distinguere preferenze e sofisticazione del genitore dai comportamenti autonomi del giovane investitore?",
-        "contribution": "La possibile novità è utilizzare dati familiari che collegano genitori, conti dei figli e siblings per studiare investimenti delegati e transizione alla maggiore età. Il gruppo ha considerato più meccanismi alternativi (portafogli e rischio, trading, fiscalità, attenzione alle notizie); il contributo prioritario e la decisione di sviluppare un paper non sono ancora stati stabiliti.",
-        "methodology": "Dati transazionali con mapping fra decision maker, genitori e figli; costruzione di nuclei con un genitore e due siblings, uno dei quali raggiunge i 18 anni. Analisi esplorative proposte di similarità dei portafogli, turnover e concentrazione, confronto entro genitore e fra fratelli, event study intorno ai 18 anni e round-trip potenzialmente fiscali. Il dataset è stato ripulito per errori in anno di nascita e decision maker; la granularità anagrafica e il breve periodo post-18 limitano i test.",
-        "mainFindings": "Sono disponibili statistiche descrittive e analisi esplorative, ma non emerge ancora un risultato scientifico centrale replicato e pronto per un paper. Lorenzo ha stabilizzato il campione durante l'estate 2026 e presentato alcune ipotesi verificabili, fra cui differenze di rischio fra conto del genitore e conto del figlio e reazioni intorno a eventi informativi. Alla riunione del 3 novembre è rimasto aperto il problema del framing e della priorità rispetto agli altri progetti."
+        "researchQuestion": "How do parents invest on behalf of underage children, how similar are investment decisions between parents and children or among siblings, and what changes when a child turns 18? Can parental preferences and sophistication be distinguished from young investors' independent behavior?",
+        "contribution": "The potential novelty is using linked family data on parents, children's accounts, and siblings to study delegated investing and the transition to adulthood. Several mechanisms have been considered (portfolio risk, trading, taxation, and attention to news), but the main contribution and the decision to develop a paper have not yet been settled.",
+        "methodology": "Transaction data linking decision-makers, parents, and children, including family units with one parent and two siblings, one of whom turns 18. Proposed exploratory analyses examine portfolio similarity, turnover, and concentration; within-parent and sibling comparisons; event studies around age 18; and potentially tax-related round trips. Errors in birth year and decision-maker identifiers were cleaned, but the granularity of demographic data and a short post-18 period constrain the tests.",
+        "mainFindings": "Descriptive statistics and exploratory analyses are available, but no replicated, central scientific finding ready for publication has emerged. Lorenzo stabilized the sample during summer 2026 and proposed testable hypotheses, including risk differences between parents' own and children's accounts and responses around news events. At the November 3 meeting, framing and priority relative to other projects remained unresolved."
       },
       "snapshot": {
         "stage": "Data Analyses",
         "status": "Decision Pending",
-        "progress": "Nella riunione del 3 novembre Lorenzo conferma di avere svolto durante l'estate alcune analisi esplorative sui conti dei minori, con dati e risultati preliminari, ma senza aver ancora individuato un framing scientifico convincente. Il progetto è meno avanzato del lavoro sul disposition effect; è stata proposta una ricognizione delle evidenze esistenti, non la scelta definitiva di procedere.",
-        "issue": "Il contributo scientifico e il posizionamento del lavoro sono ancora indefiniti. Serve valutare se le analisi disponibili consentano un paper coerente e se dedicarvi risorse rispetto ad alternative come payment for order flow, nel quadro dei progetti da concordare con Claudia e il gruppo.",
-        "nextAction": "Lorenzo riprende le analisi esistenti e raccoglie le principali figure e tabelle per discutere la fattibilità e la storyline del paper. Confronto nella call dell'11 novembre, anche in preparazione del planning del 16 novembre con Claudia.",
-        "owner": "Lorenzo (ricognizione); Emanuele e Lorenzo (valutazione)",
-        "milestone": "Call con Lorenzo mercoledì 11 novembre 2026 alle 12:00–12:30; planning con Claudia previsto per il 16 novembre 2026.",
+        "progress": "At the November 3 meeting, Lorenzo confirmed having conducted exploratory analyses of minors' accounts during the summer, with preliminary data and results but no persuasive scientific framing yet. The project is less advanced than the disposition-effect work; the team proposed reviewing available evidence rather than making a final decision to proceed.",
+        "issue": "The scientific contribution and positioning remain undefined. The team needs to assess whether the existing analyses can support a coherent paper and whether to allocate resources to it rather than alternatives such as payment for order flow, as part of the project priorities to be agreed with Claudia and the team.",
+        "nextAction": "Lorenzo to revisit existing analyses and collect the main figures and tables to discuss paper feasibility and storyline. Discussion at the November 11 call, also preparing for the November 16 planning meeting with Claudia.",
+        "owner": "Lorenzo (review); Emanuele and Lorenzo (assessment)",
+        "milestone": "Call with Lorenzo on Wednesday, November 11, 2026, 12:00–12:30; planning with Claudia expected on November 16.",
         "dueDate": null,
         "updatedAt": "2026-11-03",
-        "source": "Transcript della riunione con Lorenzo del 3 novembre 2026 (Pasted text(8).txt, minuti 14:10–18:20 e 22:15–29:49)"
+        "source": "Transcript of meeting with Lorenzo on November 3, 2026 (Pasted text(8).txt, minutes 14:10–18:20 and 22:15–29:49)."
       },
       "actions": [
         {
           "id": "minor-a1",
-          "text": "Statistiche descrittive parent + two siblings",
+          "text": "Descriptive statistics for one parent and two siblings.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "minor-a2",
-          "text": "Valutare potenza e fattibilità age-18 design",
+          "text": "Assess statistical power and feasibility of an age-18 research design.",
           "owner": "Team",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "minor-a3",
-          "text": "Riprendere e sintetizzare le analisi svolte in estate sul progetto minori",
+          "text": "Revisit and summarize the minors-project analyses conducted over the summer.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "minor-a4",
-          "text": "Organizzare le figure e le tabelle già disponibili per verificare se emerge una storyline e un contributo pubblicabile",
+          "text": "Organize existing figures and tables to assess whether a coherent storyline and publishable contribution emerge.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "minor-a5",
-          "text": "Discutere fattibilità, priorità e allocazione del tempo rispetto agli altri progetti alla call dell'11 novembre",
-          "owner": "Emanuele e Lorenzo",
+          "text": "Discuss feasibility, priorities, and time allocation relative to other projects during the November 11 call.",
+          "owner": "Emanuele and Lorenzo",
           "status": "unverified",
           "dueDate": "2026-11-11"
         }
@@ -882,81 +882,81 @@
           "id": "minor-jun05",
           "date": "2026-06-05",
           "type": "literature",
-          "label": "Prima ricognizione sulla letteratura degli investimenti dei minori",
-          "summary": "Una nota mette in evidenza che le evidenze sui conti intestati o gestiti per minori sono più limitate di quelle su household finance e trasmissione intergenerazionale.",
-          "source": "Email «Letteratura su investimenti minori», 5 giugno 2026"
+          "label": "Initial review of the literature on minors' investments",
+          "summary": "A note highlighted that evidence on accounts held or managed for minors is more limited than the broader household-finance and intergenerational-transmission literatures.",
+          "source": "Email, 'Literature on minors' investments', June 5, 2026"
         },
         {
           "id": "minor-jul01-2026",
           "date": "2026-07-01",
           "type": "research_meeting",
-          "label": "Riunione sul disegno parent–child, siblings e passaggio ai 18 anni",
-          "summary": "Vengono discussi sette possibili filoni: similarità di portafoglio genitore–figlio, allocazione fra siblings, trading fiscalmente motivato, discontinuità a 18 anni, behavioral biases con delega ai genitori, generazioni dei genitori e cultura. Priorità a similarità, siblings e round-trip legati alle imposte; sono opzioni da testare, non risultati.",
-          "source": "Meeting Notes — Project on Minor Trading, 1 luglio 2026"
+          "label": "Meeting on parent–child, sibling, and age-18 designs",
+          "summary": "Seven possible directions were discussed: parent–child portfolio similarity, allocation between siblings, tax-motivated trading, discontinuities at age 18, behavioral biases under parental delegation, parents' generations, and culture. Priority was given to similarity, sibling comparisons, and tax-related round trips—hypotheses to test, not results.",
+          "source": "Meeting Notes — Project on Minor Trading, July 1, 2026"
         },
         {
           "id": "minor-jul08-2026",
           "date": "2026-07-08",
           "type": "data_development",
-          "label": "Ricostruito il mapping tra genitori e figli",
-          "summary": "Lorenzo annuncia di aver costruito il matching parent–child e propone misure di similarità dei portafogli tra fratelli, co-occorrenza delle transazioni e correlazione degli importi. L'obiettivo è verificare quantitativamente la trasmissione delle scelte d'investimento.",
-          "source": "Email Lorenzo «Statistiche investimenti minori», 8 luglio 2026"
+          "label": "Parent–child mapping reconstructed",
+          "summary": "Lorenzo announced that he had built parent–child matching and proposed measures of sibling portfolio similarity, co-occurrence of transactions, and correlation in transaction amounts. The goal is to quantify the transmission of investment decisions.",
+          "source": "Lorenzo email, 'Statistics on minors' investments', July 8, 2026"
         },
         {
           "id": "minor-jul20",
           "date": "2026-07-20",
           "type": "proposal",
-          "label": "Proposta strutturata sul comportamento di investimento in famiglia",
-          "summary": "Emanuele invia a Lorenzo un documento di lavoro sulle possibili domande di ricerca relative a genitori e figli, da leggere e discutere alla call successiva.",
-          "source": "Email «file proposal», 20 luglio 2026"
+          "label": "Structured proposal on family investment behavior",
+          "summary": "Emanuele sent Lorenzo a working document on possible parent–child research questions for discussion during their next call.",
+          "source": "Email, 'file proposal', July 20, 2026"
         },
         {
           "id": "minor-e1",
           "date": "2026-07-21",
           "type": "meeting",
-          "label": "Call sul disegno con genitori e due siblings",
-          "summary": "Si valuta l'uso di nuclei con un genitore e due figli e la possibilità di osservare comportamenti intorno ai 18 anni. Da verificare numerosità e qualità del matching.",
-          "source": "Call Lorenzo, 21 luglio 2026"
+          "label": "Call on one-parent, two-sibling research design",
+          "summary": "The team considered family groups with one parent and two children and the opportunity to study behavior around the 18th birthday. Sample size and matching quality still needed verification.",
+          "source": "Call with Lorenzo, July 21, 2026"
         },
         {
           "id": "minor-jul23",
           "date": "2026-07-23",
           "type": "data_quality",
-          "label": "Controlli su coorti, filtri e decision maker",
-          "summary": "Emergono grafici anomali; Lorenzo verifica la sequenza dei filtri e la ricostruzione dei legami familiari, distinguendo l'analisi sulle coorti dall'identificazione di fratelli e genitori.",
-          "source": "Thread «Statistiche investimenti minori», 23 luglio 2026"
+          "label": "Checks on cohorts, filters, and decision-makers",
+          "summary": "Anomalous plots emerged; Lorenzo checked the filtering sequence and reconstruction of family relationships, distinguishing cohort analyses from identifying siblings and parents.",
+          "source": "'Statistics on minors' investments' email thread, July 23, 2026"
         },
         {
           "id": "minor-aug05",
           "date": "2026-08-05",
           "type": "data_quality",
-          "label": "Dataset ripulito e campione considerato stabile",
-          "summary": "Lorenzo comunica di avere affrontato errori nei campi decision maker e anno di nascita. Invia filtering e statistiche aggiornate per le coorti dei figli 2005–2007 e siblings nati dal 2008; ritiene il campione abbastanza stabile per avviare l'econometria, senza confermare che questa sia stata completata.",
-          "source": "Email Lorenzo «Statistiche investimenti minori», 5 agosto 2026"
+          "label": "Cleaned dataset and relatively stable sample",
+          "summary": "Lorenzo reported fixing errors in the decision-maker and birth-year fields. He sent updated filters and statistics for children born in 2005–2007 and siblings born from 2008 onward. He considered the sample stable enough to begin econometrics, without confirming that this work had been completed.",
+          "source": "Lorenzo email, 'Statistics on minors' investments', August 5, 2026"
         },
         {
           "id": "minor-sep08-2026",
           "date": "2026-09-08",
           "type": "research_design",
-          "label": "Due possibili estensioni del disegno empirico",
-          "summary": "Lorenzo propone di confrontare il rischio assunto dallo stesso genitore sul proprio conto e su quello del figlio e di verificare se gli eventuali abnormal returns dei conti minorili intorno a eventi informativi cambiano al compimento dei 18 anni. Sono ipotesi da discutere, non analisi concluse.",
-          "source": "Email Lorenzo «RE: Statistiche investimenti minori», 8 settembre 2026"
+          "label": "Two potential empirical design extensions",
+          "summary": "Lorenzo suggested comparing a parent's risk taking in their own account versus their child's account, and testing whether abnormal returns in minors' accounts around news events change when they turn 18. These were proposals for discussion, not completed analyses.",
+          "source": "Lorenzo email, 'RE: Statistics on minors' investments', September 8, 2026"
         },
         {
           "id": "minor-e2",
           "date": "2026-11-03",
           "type": "meeting",
-          "label": "Riunione: verificare se i risultati possono diventare un paper",
-          "summary": "Lorenzo riferisce analisi preliminari svolte in estate ma non ha ancora individuato un framing convincente. Si propone di ordinare le figure e le tabelle disponibili e valutare le priorità rispetto agli altri progetti.",
-          "source": "Transcript riunione Lorenzo, 3 novembre 2026"
+          "label": "Meeting: can the findings become a paper?",
+          "summary": "Lorenzo reported preliminary summer analyses but had not identified a convincing framing. The team proposed organizing existing figures and tables and evaluating priorities relative to other projects.",
+          "source": "Meeting transcript with Lorenzo, November 3, 2026"
         },
         {
           "id": "minor-e3",
           "date": "2026-11-03",
           "type": "stage_transition",
-          "label": "Riclassificazione della fase a Data Analyses",
-          "summary": "Le evidenze sul dataset e sulle analisi già svolte giustificano la classificazione gestionale Data Analyses; non equivale alla decisione definitiva di scrivere il paper.",
-          "source": "Riclassificazione in seguito alla discussione del 3 novembre 2026",
+          "label": "Research stage reclassified as Data Analyses",
+          "summary": "The available dataset and completed exploratory work support the management classification Data Analyses. This does not represent a final decision to write the paper.",
+          "source": "Reclassification following the November 3, 2026 discussion",
           "before": "Data Collection",
           "after": "Data Analyses"
         }
@@ -975,34 +975,34 @@
         "initialStage": "Initial Ideas"
       },
       "profile": {
-        "researchQuestion": "È possibile inferire, dalle pubblicazioni effettive e dai network autori–riviste, una misura della propensione a pubblicare in ciascuna sede e della domanda latente di targeting delle riviste, pur senza osservare le submission respinte né l'insieme delle riviste considerate dagli autori?",
-        "contribution": "Il lavoro propone di aggregare previsioni di outlet a livello di autore per ottenere una misura di latent targeting demand e studiare la competizione fra riviste, combinando affinità tematica, precedenti scelte editoriali e network. Il significato economico della misura deve essere precisato: predire una rivista di pubblicazione non permette di identificare direttamente flussi di submission, acceptance rates o domanda causale.",
-        "methodology": "Dopo raccolta iniziale Crossref e costruzione di network autori–riviste, il modello attuale (secondo l'email di Raju) utilizza circa 225.000 articoli, 235.000 identificativi di autore e 180 riviste ABDC, periodo 2010–2025. Combina similarità fra ricerca e outlet, prossimità nei network, precedenti pubblicazioni e popolarità storica della rivista; valuta le destinazioni pubblicate tramite ranking predittivi. Il draft allegato del 5 novembre non è stato ancora analizzato nel dettaglio.",
-        "mainFindings": "Raju riferisce che, per riviste mai utilizzate in precedenza, il modello include il 43,7% delle destinazioni osservate nelle prime dieci posizioni, rispetto al 38,7% con la sola similarità. Riporta anche ranking relativamente stabili ma fortemente correlati alla dimensione delle riviste. Sono risultati dichiarati nell'email, non ancora verificati sul manoscritto; non misurano direttamente la domanda di submission."
+        "researchQuestion": "Can published outcomes and author–journal networks be used to infer researchers' propensities to publish in particular outlets and a measure of latent journal targeting demand, even without observing rejected submissions or the set of journals authors considered?",
+        "contribution": "The study proposes aggregating author-level predictions of publication outlets into a measure of latent targeting demand and examining journal competition, combining topical fit, prior publication choices, and networks. The economic meaning of the measure needs clarification: predicting the journal of publication does not directly identify submission flows, acceptance rates, or causal demand.",
+        "methodology": "Following initial Crossref collection and construction of author–journal networks, the current model (according to Raju's email) uses approximately 225,000 articles, 235,000 author identifiers, and 180 ABDC journals over 2010–2025. It combines research–outlet similarity, network proximity, past publications, and a journal's historical popularity, evaluating published destinations through predictive rankings. The November 5 draft attachment had not yet been examined in detail at this snapshot.",
+        "mainFindings": "Raju reports that, for journals an author had never previously used, the model places 43.7% of observed publication destinations within its top ten, versus 38.7% using similarity alone. He also reports relatively stable rankings that are strongly correlated with journal size. These figures come from his email and have not yet been verified against the manuscript; they do not directly measure submission demand."
       },
       "snapshot": {
         "stage": "First Draft",
         "status": "Waiting for Me",
-        "progress": "Raju ha inviato un draft successivo agli esperimenti, dichiarando che il lavoro computazionale è ragionevolmente maturo. La email presenta un modello di publication propensity e una misura aggregata di latent targeting demand.",
-        "issue": "Il lavoro non osserva submission fallite né le riviste considerate ex ante: la misura non identifica volumi di submission o probabilità di accettazione. Serve rendere più solido il collegamento con journal choice, incentivi accademici, concorrenza fra riviste ed economia dell'editoria scientifica. La relazione con la dimensione delle riviste va interpretata con attenzione.",
-        "nextAction": "Esaminare il primo draft allegato e fornire a Raju commenti su literature review, contributo principale e posizionamento per una rivista Q1.",
+        "progress": "Raju sent a draft following the experiments, describing the computational work as reasonably mature. His email outlines a publication-propensity model and an aggregate latent-targeting-demand measure.",
+        "issue": "The study does not observe unsuccessful submissions or journals considered ex ante, so the measure does not identify submission volumes or acceptance probabilities. Its link to journal choice, academic incentives, journal competition, and scholarly publishing economics needs strengthening. The correlation with journal size requires careful interpretation.",
+        "nextAction": "Review the attached first draft and provide Raju with comments on the literature review, principal contribution, and positioning for a Q1 journal.",
         "owner": "Emanuele",
-        "milestone": "Feedback al primo draft richiesto da Raju; nessuna scadenza specificata.",
+        "milestone": "Raju requested feedback on the first draft; no specific deadline was provided.",
         "dueDate": null,
         "updatedAt": "2026-11-05",
-        "source": "Email di Raju V. Chinthalapati, 'Author Journal Networks', ricevuta il 5 novembre 2026. Allegato presente ma non ancora analizzato."
+        "source": "Email from Raju V. Chinthalapati, 'Author Journal Networks', received November 5, 2026. Attachment available but not yet analyzed at this snapshot."
       },
       "actions": [
         {
           "id": "journal-networks-raju-a1",
-          "text": "Leggere il draft allegato e preparare feedback su letteratura, contributo scientifico e posizionamento per una rivista Q1",
+          "text": "Read the attached draft and provide feedback on literature, scientific contribution, and positioning for a Q1 journal.",
           "owner": "Emanuele",
           "status": "unverified",
           "dueDate": null
         },
         {
           "id": "journal-networks-raju-a2",
-          "text": "Valutare esplicitamente, nella review, la differenza fra latent targeting demand e submission/acceptance, e la dipendenza dei ranking dalla dimensione delle riviste",
+          "text": "Explicitly assess latent targeting demand versus submission/acceptance, and rankings' dependence on journal size.",
           "owner": "Emanuele",
           "status": "unverified",
           "dueDate": null
@@ -1013,59 +1013,59 @@
           "id": "journal-networks-raju-e1",
           "date": "2024-04-24",
           "type": "created",
-          "label": "Inizio del progetto Journal Proximity and Competition",
-          "summary": "La proposta originaria costruisce network di autori e riviste dalla somiglianza tematica delle pubblicazioni, con l'obiettivo di stimare prossimità e potenziale domanda per ciascuna rivista.",
-          "source": "Scheda Trello n. 61",
+          "label": "Journal Proximity and Competition project initiated",
+          "summary": "The original proposal used author and journal networks based on topical similarity among publications, aiming to estimate proximity and potential demand for each journal.",
+          "source": "Trello card 61",
           "sourceUrl": "https://trello.com/c/1bQ8xzCh"
         },
         {
           "id": "raju-jul07-2024",
           "date": "2024-07-07",
           "type": "research_outline",
-          "label": "Condiviso un primo research outline",
-          "summary": "Raju invia l'outline della ricerca definita nelle discussioni con Emanuele e anticipa futuri aggiornamenti sull'impostazione degli esperimenti. L'allegato non è stato analizzato in questa verifica.",
-          "source": "Email Raju «Research Memo», 7 luglio 2024"
+          "label": "First research outline shared",
+          "summary": "Raju sent a research outline based on discussions with Emanuele and anticipated further updates on the experimental setup. The attachment was not reviewed in this snapshot.",
+          "source": "Raju email, 'Research Memo', July 7, 2024"
         },
         {
           "id": "raju-mar04-2025",
           "date": "2025-03-04",
           "type": "data_development",
-          "label": "Raccolta dati Crossref e primi esperimenti sui network",
-          "summary": "Raju descrive un'estrazione Crossref su riviste, autori, titoli, abstract e keywords (260 GB compressi, circa 2 TB non compressi, secondo la sua stima). I primi esperimenti su 2.000 articoli costruiscono un author network e un journal network. Restano da delimitare le riviste e le caratteristiche dei testi da utilizzare.",
-          "source": "Email Raju «Re: Research Memo», 4 marzo 2025"
+          "label": "Crossref data collection and initial network experiments",
+          "summary": "Raju described extracting journals, authors, titles, abstracts, and keywords from Crossref (estimated at 260 GB compressed and approximately 2 TB uncompressed). Initial experiments using 2,000 articles built author and journal networks. The journal universe and text features remained to be defined.",
+          "source": "Raju email, 'Re: Research Memo', March 4, 2025"
         },
         {
           "id": "raju-mar09-2025",
           "date": "2025-03-09",
           "type": "code_shared",
-          "label": "Condivisi sample data e codice Jupyter",
-          "summary": "Raju condivide tramite Dropbox un campione dei dati e il notebook Jupyter, oltre a una versione HTML per esaminare i risultati. La presenza del materiale è confermata; il suo contenuto non è stato riesaminato qui.",
-          "source": "Email Raju «Re: Research Memo», 9 marzo 2025"
+          "label": "Sample data and Jupyter code shared",
+          "summary": "Raju shared a sample dataset and Jupyter notebook through Dropbox, plus an HTML version for reviewing the results. The files were reportedly shared, but their contents were not reexamined here.",
+          "source": "Raju email, 'Re: Research Memo', March 9, 2025"
         },
         {
           "id": "journal-networks-raju-e2",
           "date": "2025-03-10",
           "type": "stage_transition",
-          "label": "Passaggio da Initial Ideas a Data Collection",
-          "summary": "Trello registra l'avanzamento verso la raccolta e preparazione dei dati; non è documentata in questa transizione una versione del paper.",
-          "source": "Trello Papers, transizione 10 marzo 2025",
+          "label": "From Initial Ideas to Data Collection",
+          "summary": "Trello records a transition toward data collection and preparation; the transition does not document a manuscript version.",
+          "source": "Trello Papers, March 10, 2025 transition",
           "sourceUrl": "https://trello.com/c/1bQ8xzCh"
         },
         {
           "id": "journal-networks-raju-e3",
           "date": "2026-11-05",
           "type": "draft_received",
-          "label": "Raju invia il draft e chiede feedback sul posizionamento",
-          "summary": "Raju comunica analisi su circa 225.000 paper, 235.000 identificativi di autore e 180 riviste ABDC nel 2010–2025. Il modello combina similarità, network e popolarità per inferire la propensione alla pubblicazione; nella top ten individua il 43,7% delle destinazioni contro il 38,7% della sola similarità. Chiede commenti su contributo, letteratura e journal Q1. L'allegato non è stato ancora letto.",
-          "source": "Email Raju «Author Journal Networks», 5 novembre 2026"
+          "label": "Raju sends a draft and requests positioning feedback",
+          "summary": "Raju reported analyses involving approximately 225,000 papers, 235,000 author identifiers, and 180 ABDC journals during 2010–2025. The model combines similarity, networks, and popularity to predict publication propensity; it identifies 43.7% of destinations in the top ten versus 38.7% using similarity alone. He requested comments on contribution, literature, and suitable Q1 journals. The attachment had not yet been read at this snapshot.",
+          "source": "Raju email, 'Author Journal Networks', November 5, 2026"
         },
         {
           "id": "journal-networks-raju-e4",
           "date": "2026-11-06",
           "type": "metadata_correction",
-          "label": "Aggiornati i coautori del progetto",
-          "summary": "Aggiunto V. Miryala all'elenco dei coautori, su indicazione dell'utente.",
-          "source": "Correzione dei coautori comunicata dall'utente il 6 novembre 2026"
+          "label": "Project coauthors updated",
+          "summary": "V. Miryala was added to the coauthor list at the user's request.",
+          "source": "Coauthor correction communicated by the user on November 6, 2026"
         }
       ]
     }

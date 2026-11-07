@@ -4,9 +4,9 @@
   const section=document.getElementById('projects');
   if (!section) return;
   const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const dateText=value=>{if(!value)return 'Non indicata';const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);if(m)return m[3]+'/'+m[2]+'/'+m[1];const ym=/^(\d{4})-(\d{2})$/.exec(value);if(ym){const months=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];return months[Number(ym[2])-1]+' '+ym[1]}return escapeHTML(value)};
+  const dateText=value=>{if(!value)return 'Not provided';const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);if(m)return m[3]+'/'+m[2]+'/'+m[1];const ym=/^(\d{4})-(\d{2})$/.exec(value);if(ym){const months=['January','February','March','April','May','June','July','August','September','October','November','December'];return months[Number(ym[2])-1]+' '+ym[1]}return escapeHTML(value)};
   const empty=value=>value===null||value===undefined||String(value).trim()==='';
-  const display=value=>empty(value)?'<em>Da documentare</em>':escapeHTML(value);
+  const display=value=>empty(value)?'<em>Not documented</em>':escapeHTML(value);
   const statusPill=value=>'<span class="rp-pill '+(/Risk|Stalling/i.test(value)?'rp-alert':/Waiting/i.test(value)?'rp-wait':'')+'">'+escapeHTML(value)+'</span>';
   const phasePill=value=>'<span class="rp-pill">'+escapeHTML(value)+'</span>';
   const oldContent=section.innerHTML;
@@ -17,36 +17,36 @@
   function panelContent(p,key){
     const s=p.snapshot||{}, profile=p.profile||{}, actions=p.actions||[], events=p.events||[];
     if(key==='snapshot'){
-      return '<div class="rp-two"><div class="rp-field"><h4>Ultimi risultati e avanzamenti</h4><p>'+display(s.progress)+'</p></div><div class="rp-field"><h4>Criticità / questioni aperte</h4><p>'+display(s.issue)+'</p></div></div><div class="rp-field"><h4>Prossima milestone</h4><p>'+display(s.milestone)+'</p>'+(s.dueDate?'<p class="rp-muted">Scadenza indicativa: '+dateText(s.dueDate)+'</p>':'')+'</div>';
+      return '<div class="rp-two"><div class="rp-field"><h4>Latest Results & Progress</h4><p>'+display(s.progress)+'</p></div><div class="rp-field"><h4>Issues & Open Questions</h4><p>'+display(s.issue)+'</p></div></div><div class="rp-field"><h4>Next Milestone</h4><p>'+display(s.milestone)+'</p>'+(s.dueDate?'<p class="rp-muted">Indicative deadline: '+dateText(s.dueDate)+'</p>':'')+'</div>';
     }
     if(key==='actions'){
-      return '<h4>To-do registrati</h4>'+(actions.length?'<div class="rp-todo">'+actions.map(a=>'<div><span class="rp-circle" aria-hidden="true"></span><div><div>'+display(a.text)+'</div><small>Responsabile: '+display(a.owner)+(a.dueDate?' · '+dateText(a.dueDate):'')+'</small></div></div>').join('')+'</div>':'<p>Nessuna attività immediata registrata.</p>')+'<p class="rp-muted">Lo stato delle singole attività non è ancora verificato. Il cerchio non indica che l’attività sia aperta o incompleta.</p>';
+      return '<h4>Recorded To-dos</h4>'+(actions.length?'<div class="rp-todo">'+actions.map(a=>'<div><span class="rp-circle" aria-hidden="true"></span><div><div>'+display(a.text)+'</div><small>Owner: '+display(a.owner)+(a.dueDate?' · '+dateText(a.dueDate):'')+'</small></div></div>').join('')+'</div>':'<p>No immediate tasks recorded.</p>')+'<p class="rp-muted">The status of individual tasks has not yet been verified. The circle does not imply that a task is open or incomplete.</p>';
     }
     if(key==='history'){
       const sorted=[...events].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
       const renderEvent=e=>{
-        const title=String(e.label||'Evento');
-        const generic=/^Ultimo aggiornamento documentato$/i.test(title);
+        const title=String(e.label||'Event');
+        const generic=/^Last documented update$/i.test(title);
         const summary=e.summary?'<p class="rp-event-summary">'+escapeHTML(e.summary)+'</p>':'';
-        const sourceLink=typeof e.sourceUrl==='string'&&/^https:\/\//.test(e.sourceUrl)?'<a class="rp-event-source" href="'+escapeHTML(e.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Apri la fonte ↗</a>':'';
-        const fallback=!summary&&generic?'<p class="rp-muted">Riepilogo storico non ancora ricostruito.</p>':'';
+        const sourceLink=typeof e.sourceUrl==='string'&&/^https:\/\//.test(e.sourceUrl)?'<a class="rp-event-source" href="'+escapeHTML(e.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Open source ↗</a>':'';
+        const fallback=!summary&&generic?'<p class="rp-muted">Historical summary not yet reconstructed.</p>':'';
         return '<article class="rp-history"><time class="rp-event-date">'+dateText(e.date)+'</time><h4>'+escapeHTML(title)+'</h4>'+summary+fallback+sourceLink+'</article>';
       };
-      return '<h4>Eventi documentati</h4>'+(sorted.length?sorted.map(renderEvent).join(''):'<p>Nessun evento ancora registrato.</p>')+'<p class="rp-muted">Le date indicate solo per mese si riferiscono a versioni documentali, non necessariamente al giorno della relativa decisione. I riferimenti alle fonti sono conservati nei dati.</p>';
+      return '<h4>Documented Events</h4>'+(sorted.length?sorted.map(renderEvent).join(''):'<p>No events recorded yet.</p>')+'<p class="rp-muted">Month-only dates refer to document versions and may not correspond to the exact date of an underlying decision. Source references remain attached to the records.</p>';
     }
-    return '<h4>Profilo della ricerca</h4><div class="rp-field"><h4>Research question</h4><p>'+display(profile.researchQuestion)+'</p></div><div class="rp-field"><h4>Contributo scientifico</h4><p>'+display(profile.contribution)+'</p></div><div class="rp-field"><h4>Metodologia</h4><p>'+display(profile.methodology)+'</p></div><div class="rp-field"><h4>Risultati principali</h4><p>'+display(profile.mainFindings)+'</p></div><p class="rp-muted">I profili saranno compilati progressivamente da GPT usando fonti verificabili.</p>';
+    return '<h4>Research Profile</h4><div class="rp-field"><h4>Research question</h4><p>'+display(profile.researchQuestion)+'</p></div><div class="rp-field"><h4>Scientific Contribution</h4><p>'+display(profile.contribution)+'</p></div><div class="rp-field"><h4>Methodology</h4><p>'+display(profile.methodology)+'</p></div><div class="rp-field"><h4>Main Findings</h4><p>'+display(profile.mainFindings)+'</p></div><p class="rp-muted">Research profiles are progressively completed using verifiable sources.</p>';
   }
 
   function renderDetail(id,panel='snapshot',scroll=false){
     const p=projects.find(x=>x.id===id);if(!p)return;
     selectedId=id;selectedPanel=panel;
     const s=p.snapshot||{};
-    const tabs=[['snapshot','Stato e risultati'],['actions','To-do'],['history','Cronologia'],['profile','Profilo ricerca']];
-    const html='<div class="rp-heading"><div><div class="rp-overline">Scheda di ricerca</div><h3>'+escapeHTML(p.title)+'</h3><p>'+display(p.coauthors)+'</p></div><div class="rp-heading-tags">'+phasePill(s.stage)+statusPill(s.status)+'</div></div>'
-      +'<div class="rp-info"><div><small>Fase scientifica</small><strong>'+display(s.stage)+'</strong></div><div><small>Stato operativo</small><strong>'+display(s.status)+'</strong></div><div><small>Ultimo aggiornamento</small><strong>'+dateText(s.updatedAt)+'</strong></div></div>'
-      +'<div class="rp-next"><strong>Prossima azione</strong><div>'+display(s.nextAction)+'</div><small>Responsabile: '+display(s.owner)+'</small></div>'
-      +'<div class="rp-tabs" role="tablist" aria-label="Sezioni del progetto">'+tabs.map(([key,name])=>'<button type="button" role="tab" aria-selected="'+String(panel===key)+'" data-rp-tab="'+key+'">'+name+'</button>').join('')+'</div>'
-      +'<div class="rp-body" role="tabpanel">'+panelContent(p,panel)+'</div><div class="rp-source">Fonte dello snapshot: '+display(s.source)+'</div>';
+    const tabs=[['snapshot','Status & Results'],['actions','To-do'],['history','Timeline'],['profile','Research Profile']];
+    const html='<div class="rp-heading"><div><div class="rp-overline">Research Project</div><h3>'+escapeHTML(p.title)+'</h3><p>'+display(p.coauthors)+'</p></div><div class="rp-heading-tags">'+phasePill(s.stage)+statusPill(s.status)+'</div></div>'
+      +'<div class="rp-info"><div><small>Scientific Stage</small><strong>'+display(s.stage)+'</strong></div><div><small>Operational Status</small><strong>'+display(s.status)+'</strong></div><div><small>Last Updated</small><strong>'+dateText(s.updatedAt)+'</strong></div></div>'
+      +'<div class="rp-next"><strong>Next Action</strong><div>'+display(s.nextAction)+'</div><small>Owner: '+display(s.owner)+'</small></div>'
+      +'<div class="rp-tabs" role="tablist" aria-label="Project sections">'+tabs.map(([key,name])=>'<button type="button" role="tab" aria-selected="'+String(panel===key)+'" data-rp-tab="'+key+'">'+name+'</button>').join('')+'</div>'
+      +'<div class="rp-body" role="tabpanel">'+panelContent(p,panel)+'</div><div class="rp-source">Snapshot source: '+display(s.source)+'</div>';
     const detail=document.getElementById('rp-detail');
     detail.innerHTML=html;
     section.querySelectorAll('#rp-rows tr').forEach(row=>row.classList.toggle('rp-selected',row.dataset.rpId===id));
@@ -59,7 +59,7 @@
   // One shared ordering for desktop table and mobile cards.
   const stageOrder=['Initial Ideas','Data Collection','Data Analyses','First Draft','Final Draft','Out for conference','Submitted (1st round)','Revision','Submitted as R&R','Accepted','Proofs','Online'];
   const statusOrder=['At Risk of Stalling','At Risk','Decision Pending','Waiting for Me','Waiting for Coauthors','Under Review','On Track'];
-  const collator=new Intl.Collator('it',{numeric:true,sensitivity:'base'});
+  const collator=new Intl.Collator('en',{numeric:true,sensitivity:'base'});
   let sortKey='priority';
   let sortDirection='asc';
 
@@ -97,7 +97,7 @@
     }).join('');
     cards.innerHTML=ordered.map(p=>{
       const s=p.snapshot||{};
-      return '<button type="button" class="rp-mobile-card'+(selectedId===p.id?' rp-mobile-selected':'')+'" data-rp-open="'+escapeHTML(p.id)+'"><span class="rp-mobile-title">'+escapeHTML(p.title)+'</span><span class="rp-mobile-authors">'+display(p.coauthors)+'</span><span class="rp-mobile-info"><span><small>Fase scientifica</small><strong>'+display(s.stage)+'</strong></span><span><small>Stato operativo</small>'+statusPill(s.status)+'</span></span><span class="rp-mobile-date">Aggiornato: '+dateText(s.updatedAt)+'</span></button>';
+      return '<button type="button" class="rp-mobile-card'+(selectedId===p.id?' rp-mobile-selected':'')+'" data-rp-open="'+escapeHTML(p.id)+'"><span class="rp-mobile-title">'+escapeHTML(p.title)+'</span><span class="rp-mobile-authors">'+display(p.coauthors)+'</span><span class="rp-mobile-info"><span><small>Scientific Stage</small><strong>'+display(s.stage)+'</strong></span><span><small>Operational Status</small>'+statusPill(s.status)+'</span></span><span class="rp-mobile-date">Updated: '+dateText(s.updatedAt)+'</span></button>';
     }).join('');
     section.querySelectorAll('[data-rp-open]').forEach(button=>button.addEventListener('click',()=>renderDetail(button.dataset.rpOpen,'snapshot',true)));
     section.querySelectorAll('th[data-rp-sort-header]').forEach(th=>{
@@ -110,17 +110,17 @@
     if(select)select.value=sortKey;
     const dir=document.getElementById('rp-mobile-direction');
     if(dir){
-      dir.textContent=sortDirection==='asc'?'↑ Crescente':'↓ Decrescente';
-      dir.setAttribute('aria-label','Inverti ordinamento; attuale: '+(sortDirection==='asc'?'crescente':'decrescente'));
+      dir.textContent=sortDirection==='asc'?'↑ Ascending':'↓ Descending';
+      dir.setAttribute('aria-label','Reverse sort direction; currently: '+(sortDirection==='asc'?'ascending':'descending'));
     }
   }
 
   function buildApp(){
     projects.sort((a,b)=>(a.priority??999)-(b.priority??999));
-    const headings=[['title','Progetto'],['stage','Fase scientifica'],['status','Stato operativo'],['updated','Aggiornato']];
-    section.innerHTML='<div class="rp-header"><div><div class="eyebrow">Portfolio / Current research</div><h2>Progetti attivi</h2><p>Seleziona un progetto per consultare stato, attività, cronologia e profilo di ricerca.</p></div><small class="rp-count">'+projects.length+' progetti · dati versionati su GitHub</small></div>'
-      +'<div class="rp-sort-mobile"><label for="rp-mobile-sort">Ordina per</label><div class="rp-sort-controls"><select id="rp-mobile-sort"><option value="priority">Ordine di lavoro</option>'+headings.map(([k,name])=>'<option value="'+k+'">'+name+'</option>').join('')+'</select><button type="button" id="rp-mobile-direction" aria-label="Inverti ordinamento">↑ Crescente</button></div></div>'
-      +'<div class="panel rp-list-panel"><div class="rp-table-wrap"><table class="rp-table"><thead><tr>'+headings.map(([k,name])=>'<th scope="col" data-rp-sort-header="'+k+'" aria-sort="none"><button class="rp-sort-head" type="button" data-rp-sort="'+k+'" aria-label="Ordina per '+name+'">'+name+' <span class="rp-sort-indicator" aria-hidden="true">↕</span></button></th>').join('')+'</tr></thead><tbody id="rp-rows"></tbody></table></div><div class="rp-mobile-cards" id="rp-mobile-cards"></div></div>'
+    const headings=[['title','Project'],['stage','Scientific Stage'],['status','Operational Status'],['updated','Last Updated']];
+    section.innerHTML='<div class="rp-header"><div><div class="eyebrow">Portfolio / Current research</div><h2>Active Projects</h2><p>Select a project to review its status, tasks, timeline, and research profile.</p></div><small class="rp-count">'+projects.length+' projects · versioned on GitHub</small></div>'
+      +'<div class="rp-sort-mobile"><label for="rp-mobile-sort">Sort by</label><div class="rp-sort-controls"><select id="rp-mobile-sort"><option value="priority">Working Priority</option>'+headings.map(([k,name])=>'<option value="'+k+'">'+name+'</option>').join('')+'</select><button type="button" id="rp-mobile-direction" aria-label="Reverse sort direction">↑ Ascending</button></div></div>'
+      +'<div class="panel rp-list-panel"><div class="rp-table-wrap"><table class="rp-table"><thead><tr>'+headings.map(([k,name])=>'<th scope="col" data-rp-sort-header="'+k+'" aria-sort="none"><button class="rp-sort-head" type="button" data-rp-sort="'+k+'" aria-label="Sort by '+name+'">'+name+' <span class="rp-sort-indicator" aria-hidden="true">↕</span></button></th>').join('')+'</tr></thead><tbody id="rp-rows"></tbody></table></div><div class="rp-mobile-cards" id="rp-mobile-cards"></div></div>'
       +'<div class="panel rp-detail" id="rp-detail" aria-live="polite"></div>';
     section.querySelectorAll('[data-rp-sort]').forEach(button=>button.addEventListener('click',()=>sortProjects(button.dataset.rpSort)));
     document.getElementById('rp-mobile-sort').addEventListener('change',e=>{sortKey=e.target.value;sortDirection=sortKey==='updated'?'desc':'asc';renderProjectLists();});
@@ -152,16 +152,16 @@
   fetch('./data/projects.json?refresh='+Date.now(),{cache:'no-store'})
     .then(response=>{if(!response.ok)throw Error('HTTP '+response.status);return response.json()})
     .then(payload=>{
-      if(payload.schemaVersion!==1||!Array.isArray(payload.projects)||!payload.projects.length)throw Error('Schema non valido');
-      for(const p of payload.projects){if(!p.id||!p.title||!p.snapshot||!p.snapshot.stage)throw Error('Record di progetto incompleto')}
+      if(payload.schemaVersion!==1||!Array.isArray(payload.projects)||!payload.projects.length)throw Error('Invalid schema');
+      for(const p of payload.projects){if(!p.id||!p.title||!p.snapshot||!p.snapshot.stage)throw Error('Incomplete project record')}
       projects=payload.projects;
       buildApp();
       const stamp=document.querySelector('#overview .top p');
-      if(stamp)stamp.textContent=projects.length+' progetti monitorati · dati aggiornati da GitHub';
+      if(stamp)stamp.textContent=projects.length+' monitored projects · data updated from GitHub';
     })
     .catch(error=>{
-      section.innerHTML=oldContent+'<div class="rp-error" role="alert">I dati aggiornati di GitHub non sono disponibili. Ricarica la pagina tra poco. Dettaglio tecnico: '+escapeHTML(error.message)+'</div>';
+      section.innerHTML=oldContent+'<div class="rp-error" role="alert">Current GitHub project data are unavailable. Please reload the page. Technical details: '+escapeHTML(error.message)+'</div>';
       const overview=document.getElementById('overview');
-      if(overview)overview.insertAdjacentHTML('afterbegin','<p class="rp-error" role="alert">Attenzione: impossibile aggiornare i progetti da GitHub. Le schede seguenti sono una vecchia copia.</p>');
+      if(overview)overview.insertAdjacentHTML('afterbegin','<p class="rp-error" role="alert">Warning: live project data could not be updated from GitHub. The cards below are an older snapshot.</p>');
     });
 })();
