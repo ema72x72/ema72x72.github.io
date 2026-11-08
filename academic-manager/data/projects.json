@@ -476,6 +476,20 @@
           "owner": "Xinyue",
           "status": "unverified",
           "dueDate": null
+        },
+        {
+          "id": "sherry-a3",
+          "text": "Conduct additional qualitative IR interviews focusing on investor invitation decisions, existing relationships, and acquisition versus strengthening of investor ties.",
+          "owner": "Xinyue",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "sherry-a4",
+          "text": "After the additional interviews, evaluate the usefulness and design of a more structured IR questionnaire (exploratory, not yet adopted).",
+          "owner": "Emanuele · Xinyue",
+          "status": "unverified",
+          "dueDate": null
         }
       ],
       "events": [
@@ -550,6 +564,14 @@
           "label": "Investor Relations interview transcript received",
           "summary": "Xinyue sent an interview transcript as an attachment. At the time of this snapshot, its contents had not been checked through the Outlook connector, so no conclusions were attributed to the conversation.",
           "source": "Xinyue email, 'Re: IR outreach: IR replies and calls with Brown-Forman IR', November 6, 2026"
+        },
+        {
+          "id": "sherry-nov06-ir-interview-strategy",
+          "date": "2026-11-06",
+          "type": "research_feedback",
+          "label": "Follow-up interviews for qualitative research design",
+          "summary": "A series of further Investor Relations interviews was recommended to clarify investor invitation criteria and existing-versus-new investor relationships. A structured questionnaire may be considered afterward; no interview completion or survey design has been confirmed.",
+          "source": "Research-direction update, November 6, 2026"
         }
       ]
     },
