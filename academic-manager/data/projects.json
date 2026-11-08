@@ -453,14 +453,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "On Track",
-        "progress": "233 validated webcasts, approximately 647 hours; preliminary multimodal differences between prepared remarks and Q&A. On November 6, Xinyue also sent an Investor Relations interview transcript, whose content had not yet been reviewed at this snapshot.",
+        "progress": "233 validated webcasts, approximately 647 hours; preliminary multimodal differences between prepared remarks and Q&A. On November 6, Xinyue shared a Brown-Forman IR interview transcript, and Emanuele replied with guidance for further qualitative interviews.",
         "issue": "Separate natural contextual variation from informative signals; validate the measures.",
-        "nextAction": "Validate multimodal measures and link them to fund holdings and economic outcomes; review the IR transcript received November 6 for potentially useful research-design insights.",
-        "owner": "Xinyue (analyses); Emanuele (transcript feedback)",
+        "nextAction": "Xinyue to validate the multimodal measures, connect them to fund holdings and economic outcomes, and conduct follow-up qualitative IR interviews on invitation decisions and investor relationships. Consider a structured questionnaire only after further interviews.",
+        "owner": "Xinyue (empirical analyses and follow-up IR interviews)",
         "milestone": "Next Study 1 update; date not confirmed.",
         "dueDate": null,
-        "updatedAt": "2026-11-06",
-        "source": "Xinyue emails of October 18–22 and 'IR outreach' of November 6, 2026. The November 6 attachment was not reviewed in this snapshot."
+        "updatedAt": "2026-11-08",
+        "source": "Xinyue email and Emanuele's reply, 'Re: IR outreach: IR replies and calls with Brown-Forman IR', November 6, 2026; user clarification on November 8. No interview completion or questionnaire adoption confirmed."
       },
       "actions": [
         {
@@ -486,8 +486,8 @@
         },
         {
           "id": "sherry-a4",
-          "text": "After the additional interviews, evaluate the usefulness and design of a more structured IR questionnaire (exploratory, not yet adopted).",
-          "owner": "Emanuele · Xinyue",
+          "text": "After additional IR interviews, consider whether a structured IR questionnaire is warranted (exploratory; no current task assigned to Emanuele).",
+          "owner": "Xinyue",
           "status": "unverified",
           "dueDate": null
         }
@@ -561,8 +561,8 @@
           "id": "sh-nov06",
           "date": "2026-11-06",
           "type": "document_received",
-          "label": "Investor Relations interview transcript received",
-          "summary": "Xinyue sent an interview transcript as an attachment. At the time of this snapshot, its contents had not been checked through the Outlook connector, so no conclusions were attributed to the conversation.",
+          "label": "Brown-Forman IR interview transcript shared",
+          "summary": "Xinyue shared the Brown-Forman Investor Relations interview transcript. This is a documented receipt of research material, not a pending action; Emanuele's subsequent guidance on further interviews is documented separately.",
           "source": "Xinyue email, 'Re: IR outreach: IR replies and calls with Brown-Forman IR', November 6, 2026"
         },
         {
