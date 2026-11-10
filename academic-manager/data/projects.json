@@ -19,14 +19,14 @@
       "snapshot": {
         "stage": "Final Draft",
         "status": "On Track",
-        "progress": "Matteo completed the figures and tables (confirmed on November 6). Emanuele and Matteo must now finish the draft by November 17, 2026.",
-        "issue": "Distinguish efficient compensation from managerial perks without overinterpreting the IV and productivity results.",
-        "nextAction": "Emanuele and Matteo to complete the draft by November 17, 2026.",
-        "owner": "Emanuele · Matteo",
-        "milestone": "Complete draft by November 17, 2026 (final deadline).",
-        "dueDate": "2026-11-17",
-        "updatedAt": "2026-11-06",
-        "source": "Update communicated directly by the user on November 6, 2026."
+        "progress": "The team reviewed refined conference tables, including heterogeneity by parental status and commuting distance and summary statistics matched to the regression samples. Targeted manuscript revisions remain before conference submission.",
+        "issue": "Clarify the economic interpretation of managerial WFH without overclaiming supervisory-demand mechanisms; verify submission cutoffs and time zones.",
+        "nextAction": "Emanuele to revise the abstract and results narrative by November 14; Aleksi to add supervisory-demands framing by November 14; Matteo to finalize the manuscript and submit to WFA, FRS and Edinburgh on November 18, subject to verified deadlines.",
+        "owner": "Emanuele · Aleksi · Matteo",
+        "milestone": "Conference-ready draft targeted by November 17; WFA, FRS and Edinburgh submissions targeted November 18. Code review, selected external feedback and an updated SSRN version planned for December.",
+        "dueDate": "2026-11-18",
+        "updatedAt": "2026-11-10",
+        "source": "Coauthor meeting, November 10, 2026."
       },
       "actions": [
         {
@@ -45,10 +45,10 @@
         },
         {
           "id": "remote-a3",
-          "text": "Polish the introduction in Overleaf.",
+          "text": "Incorporate supervisory-demands interpretation into the introduction and results discussion without a formal theoretical model.",
           "owner": "Aleksi",
           "status": "unverified",
-          "dueDate": null
+          "dueDate": "2026-11-14"
         },
         {
           "id": "remote-a4",
@@ -64,6 +64,27 @@
           "status": "completed",
           "dueDate": null,
           "reportedAt": "2026-11-06"
+        },
+        {
+          "id": "remote-a6",
+          "text": "Revise the abstract and align the results discussion with updated figures and tables.",
+          "owner": "Emanuele",
+          "status": "unverified",
+          "dueDate": "2026-11-14"
+        },
+        {
+          "id": "remote-a7",
+          "text": "Verify conference cutoffs and time zones, then submit the paper to WFA, FRS and Edinburgh.",
+          "owner": "Matteo",
+          "status": "unverified",
+          "dueDate": "2026-11-18"
+        },
+        {
+          "id": "remote-a8",
+          "text": "Review code, refine manuscript writing, seek external feedback and prepare an updated SSRN version.",
+          "owner": "Emanuele · Matteo · Aleksi",
+          "status": "unverified",
+          "dueDate": null
         }
       ],
       "events": [
@@ -148,6 +169,30 @@
           "label": "Figures and tables completed; draft deadline",
           "summary": "Matteo completed the figures and tables. Emanuele and Matteo need to finish the draft by November 17. The exact date on which the figures were completed was not specified.",
           "source": "Update communicated November 6, 2026"
+        },
+        {
+          "id": "remote-nov10-empirical",
+          "date": "2026-11-10",
+          "type": "research_development",
+          "label": "Heterogeneity tests and summary statistics refined",
+          "summary": "Updated evidence shows statistically significant differences by parental status and commuting distance (10 km threshold), but no statistically significant gender difference. Summary statistics were aligned with estimation samples. These were results presented at the meeting.",
+          "source": "Coauthor meeting, November 10, 2026."
+        },
+        {
+          "id": "remote-nov10-framing",
+          "date": "2026-11-10",
+          "type": "research_decision",
+          "label": "Supervisory demands as the organizing interpretation",
+          "summary": "The coauthors reaffirmed excluding a formal theoretical model and agreed to frame Figure 3 heterogeneity through managerial supervisory demands, without claiming direct causal identification of that mechanism.",
+          "source": "Coauthor meeting, November 10, 2026."
+        },
+        {
+          "id": "remote-nov10-submissions",
+          "date": "2026-11-10",
+          "type": "submission_plan",
+          "label": "Conference submissions targeted for November 18",
+          "summary": "The team targeted a conference-ready paper by November 17 and submissions to WFA, FRS and Edinburgh on November 18, led by Matteo. Exact cutoffs need confirmation. Code review, outside feedback and an updated SSRN draft are planned for December; submissions are not yet completed.",
+          "source": "Coauthor meeting, November 10, 2026."
         }
       ]
     },
