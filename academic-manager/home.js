@@ -121,7 +121,7 @@
       const message=String(s.milestone||'');
       // Do not turn cancellation or rescheduling history into an upcoming appointment.
       // The dueDate field is the only structured date guaranteed to remain actionable.
-      if (/\b(cancelled|canceled|postponed|rescheduled|called off)\b/i.test(message)) continue;
+      if (/\b(cancelled|canceled|postponed|rescheduled|called off)\b/i.test(message)) return;
       for(const m of message.matchAll(pattern)){
         const d=m[3]+'-'+String(monthIdx[m[1]]).padStart(2,'0')+'-'+String(m[2]).padStart(2,'0');
         if(d<today||d===due)continue;

@@ -1,0 +1,40 @@
+name: Validate Academic Manager Home
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'academic-manager/home.js'
+      - 'academic-manager/index.html'
+      - 'academic-manager/coauthors.js'
+      - 'academic-manager/projects.js'
+      - 'academic-manager/data/projects.json'
+      - '.github/workflows/validate-academic-home.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript syntax (prevents blank Loading placeholders)
+        run: |
+          node --check academic-manager/home.js
+          node --check academic-manager/projects.js
+          node --check academic-manager/coauthors.js
+      - name: Validate public project data and script reference
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('academic-manager/data/projects.json').read_text(encoding='utf-8'))
+          ids=[p['id'] for p in d['projects']]
+          assert d['schemaVersion'] == 1
+          assert len(ids) == 8 and len(set(ids)) == 8
+          assert all(isinstance(p.get('snapshot'),dict) and isinstance(p.get('actions'),list) and isinstance(p.get('events'),list) for p in d['projects'])
+          html=Path('academic-manager/index.html').read_text(encoding='utf-8')
+          assert '<script src="./home.js?v=' in html
+          assert 'id="hm-pipeline"' in html
+          print('Home JS, public data, and script references validated.')
+          PY
