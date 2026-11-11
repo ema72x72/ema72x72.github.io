@@ -215,10 +215,10 @@
         "issue": "Structural selection issues persist in account and position choices, migration, and liquidity needs; fixed effects and alternative specifications do not automatically eliminate them. Do not claim causality or a top-journal contribution unsupported by the research design.",
         "nextAction": "Lorenzo to draft an introduction outline (what is known, what is missing, why it matters) and select the sequence of figures and tables for discussion at the next meeting.",
         "owner": "Lorenzo (initial draft); Emanuele (feedback and critical review)",
-        "milestone": "Next call: Wednesday, November 11, 2026, 12:00–12:30. Tentative target: complete first draft by the end of 2026.",
+        "milestone": "The scheduled November 11 call was canceled because there were no new developments. The next meeting is expected during the following week; date and time are not confirmed. The first-draft target remains tentative for end-2026.",
         "dueDate": null,
-        "updatedAt": "2026-11-03",
-        "source": "Transcript of meeting with Lorenzo on November 3, 2026 (Pasted text(8).txt, uploaded November 4)."
+        "updatedAt": "2026-11-11",
+        "source": "Meeting cancellation reported by Emanuele, November 11, 2026."
       },
       "actions": [
         {
@@ -244,10 +244,10 @@
         },
         {
           "id": "neobrokers-a6",
-          "text": "Critically review the outline and figures during the November 11 call.",
+          "text": "Review the outline and figures at the next meeting, expected the following week; date not yet confirmed.",
           "owner": "Emanuele and Lorenzo",
           "status": "unverified",
-          "dueDate": "2026-11-11"
+          "dueDate": null
         },
         {
           "id": "neobrokers-a7",
@@ -338,6 +338,14 @@
           "label": "Meeting: shift toward writing the paper",
           "summary": "A new preliminary comparison of switchers versus stayers was discussed. Despite continuing selection and liquidity concerns, the team agreed to develop a descriptive paper: introduction, storyline, and sequenced figures and tables, with a tentative draft by the end of 2026.",
           "source": "Meeting transcript, November 3, 2026"
+        },
+        {
+          "id": "neo-nov11-postponed",
+          "date": "2026-11-11",
+          "type": "meeting_rescheduled",
+          "label": "November 11 meeting canceled",
+          "summary": "The scheduled November 11 call was canceled; no new research developments were reported. A follow-up is expected the following week, without a confirmed date.",
+          "source": "Scheduling update communicated November 11, 2026."
         }
       ],
       "actionHistory": [

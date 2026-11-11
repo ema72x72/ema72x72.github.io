@@ -119,6 +119,9 @@
         rows.push({id:p.id,title:p.title,date:due,tag:/tentative|indicative|expected/i.test(s.milestone||'')?'Indicative':/final deadline/i.test(s.milestone||'')?'Deadline':'Target date',note:s.milestone||'Recorded milestone'});
       }
       const message=String(s.milestone||'');
+      // Do not turn cancellation or rescheduling history into an upcoming appointment.
+      // The dueDate field is the only structured date guaranteed to remain actionable.
+      if (/\b(cancelled|canceled|postponed|rescheduled|called off)\b/i.test(message)) continue;
       for(const m of message.matchAll(pattern)){
         const d=m[3]+'-'+String(monthIdx[m[1]]).padStart(2,'0')+'-'+String(m[2]).padStart(2,'0');
         if(d<today||d===due)continue;
