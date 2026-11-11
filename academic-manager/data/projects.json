@@ -908,12 +908,12 @@
         "status": "Decision Pending",
         "progress": "At the November 3 meeting, Lorenzo confirmed having conducted exploratory analyses of minors' accounts during the summer, with preliminary data and results but no persuasive scientific framing yet. The project is less advanced than the disposition-effect work; the team proposed reviewing available evidence rather than making a final decision to proceed.",
         "issue": "The scientific contribution and positioning remain undefined. The team needs to assess whether the existing analyses can support a coherent paper and whether to allocate resources to it rather than alternatives such as payment for order flow, as part of the project priorities to be agreed with Claudia and the team.",
-        "nextAction": "Lorenzo to revisit existing analyses and collect the main figures and tables to discuss paper feasibility and storyline. Discussion at the November 11 call, also preparing for the November 16 planning meeting with Claudia.",
+        "nextAction": "Lorenzo to revisit existing analyses and prepare the main figures and tables for a future discussion of the project's feasibility and storyline. The November 11 joint call was canceled; the follow-up with Lorenzo is expected next week, date to be confirmed. A separate planning discussion with Claudia was expected for November 16 (not confirmed).",
         "owner": "Lorenzo (review); Emanuele and Lorenzo (assessment)",
-        "milestone": "Call with Lorenzo on Wednesday, November 11, 2026, 12:00–12:30; planning with Claudia expected on November 16.",
+        "milestone": "Planning with Claudia tentatively expected November 16, 2026 (not confirmed). Follow-up with Lorenzo expected next week, date and time unconfirmed.",
         "dueDate": null,
-        "updatedAt": "2026-11-03",
-        "source": "Transcript of meeting with Lorenzo on November 3, 2026 (Pasted text(8).txt, minutes 14:10–18:20 and 22:15–29:49)."
+        "updatedAt": "2026-11-11",
+        "source": "User clarification November 11, 2026: same canceled call covered both Neobrokers and Minor Trading."
       },
       "actions": [
         {
@@ -946,10 +946,10 @@
         },
         {
           "id": "minor-a5",
-          "text": "Discuss feasibility, priorities, and time allocation relative to other projects during the November 11 call.",
+          "text": "Discuss feasibility, priorities, and time allocation relative to other projects at the next Lorenzo meeting (rescheduled from November 11; date unconfirmed).",
           "owner": "Emanuele and Lorenzo",
           "status": "unverified",
-          "dueDate": "2026-11-11"
+          "dueDate": null
         }
       ],
       "events": [
@@ -1034,6 +1034,14 @@
           "source": "Reclassification following the November 3, 2026 discussion",
           "before": "Data Collection",
           "after": "Data Analyses"
+        },
+        {
+          "id": "minor-nov11-shared-cancellation",
+          "date": "2026-11-11",
+          "type": "meeting_rescheduled",
+          "label": "Shared Lorenzo meeting canceled",
+          "summary": "The November 11 call was a single meeting covering both Minor Trading and Neobrokers. Lorenzo canceled it because there were no new developments. A follow-up is expected the following week; no date has been fixed. The tentative Claudia planning discussion is a separate item.",
+          "source": "User clarification, November 11, 2026."
         }
       ]
     },
