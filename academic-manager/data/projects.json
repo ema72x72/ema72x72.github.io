@@ -1052,17 +1052,17 @@
         "status": "Waiting for Me",
         "progress": "Raju sent a draft following the experiments, describing the computational work as reasonably mature. His email outlines a publication-propensity model and an aggregate latent-targeting-demand measure.",
         "issue": "The study does not observe unsuccessful submissions or journals considered ex ante, so the measure does not identify submission volumes or acceptance probabilities. Its link to journal choice, academic incentives, journal competition, and scholarly publishing economics needs strengthening. The correlation with journal size requires careful interpretation.",
-        "nextAction": "Review the attached first draft and provide Raju with comments on the literature review, principal contribution, and positioning for a Q1 journal.",
+        "nextAction": "Emanuele to review the first draft and provide Raju with feedback on literature, contribution and Q1-journal positioning by his self-imposed deadline in the week beginning November 16, 2026 (exact day not specified).",
         "owner": "Emanuele",
-        "milestone": "Raju requested feedback on the first draft; no specific deadline was provided.",
+        "milestone": "Self-imposed feedback deadline: week beginning November 16, 2026; Raju expects comments later that week. Exact day not specified.",
         "dueDate": null,
-        "updatedAt": "2026-11-05",
-        "source": "Email from Raju V. Chinthalapati, 'Author Journal Networks', received November 5, 2026. Attachment available but not yet analyzed at this snapshot."
+        "updatedAt": "2026-11-11",
+        "source": "November 10, 2026 coauthor exchange; November 11 user-confirmed personal deadline."
       },
       "actions": [
         {
           "id": "journal-networks-raju-a1",
-          "text": "Read the attached draft and provide feedback on literature, scientific contribution, and positioning for a Q1 journal.",
+          "text": "Review the draft and provide Raju with substantive feedback on literature, contribution and Q1-journal positioning within the self-imposed deadline in the week beginning November 16, 2026 (exact day unspecified).",
           "owner": "Emanuele",
           "status": "unverified",
           "dueDate": null
@@ -1133,6 +1133,14 @@
           "label": "Project coauthors updated",
           "summary": "V. Miryala was added to the coauthor list at the user's request.",
           "source": "Coauthor correction communicated by the user on November 6, 2026"
+        },
+        {
+          "id": "journal-networks-raju-nov11-personal-feedback-deadline",
+          "date": "2026-11-11",
+          "type": "deadline_clarification",
+          "label": "Personal feedback deadline confirmed",
+          "summary": "Emanuele confirmed a self-imposed deadline for substantive feedback to Raju during the week beginning November 16, 2026. The exact day was not specified; the review is not yet completed.",
+          "source": "Research project update, November 11, 2026."
         }
       ]
     }
