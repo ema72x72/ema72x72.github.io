@@ -104,9 +104,13 @@
   function renderActivity(projects){
     const latest=[...projects].filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.snapshot?.updatedAt||''))
       .sort((a,b)=>b.snapshot.updatedAt.localeCompare(a.snapshot.updatedAt)||(a.priority||99)-(b.priority||99)).slice(0,4);
-    q('hm-activity').innerHTML=latest.map(p=>projectLink(p,
-      '<span class="hm-row-inner"><strong>'+E(p.title)+'</strong><small>'+E(p.snapshot.stage)+' · '+E(p.snapshot.status)+'</small></span><span class="hm-date">'+E(dateLabel(p.snapshot.updatedAt))+'</span>'
-    )).join('')||'<div class="hm-empty">No dated updates documented.</div>';
+    q('hm-activity').innerHTML=latest.map(p=>{
+      const datedEvents=(p.events||[]).filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.date||'')&&e.date<=p.snapshot.updatedAt)
+        .sort((a,b)=>b.date.localeCompare(a.date));
+      const description=datedEvents[0]?.label||[p.snapshot?.stage,p.snapshot?.status].filter(Boolean).join(' · ');
+      return projectLink(p,
+        '<span class="hm-row-inner"><strong>'+E(p.title)+'</strong><small>'+E(short(description,105))+'</small></span><span class="hm-date">'+E(dateLabel(p.snapshot.updatedAt))+'</span>');
+    }).join('')||'<div class="hm-empty">No dated updates documented.</div>';
     bindProjectClicks(q('hm-activity'));
   }
   function renderMilestones(projects){

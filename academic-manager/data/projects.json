@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06",
+  "generatedAt": "2026-11-19",
   "dataPolicy": "Public research project summaries. GPT-managed updates only.",
-  "source": "Initial snapshot from academic-manager/data/portfolio.json",
+  "source": "Public allowlisted projection of the private Active Projects research registry.",
   "projects": [
     {
       "id": "remote",
@@ -211,14 +211,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "Waiting for Coauthors",
-        "progress": "The disposition-effect analyses have progressed. Lorenzo proposes comparing switchers and stayers in the multihoming sample and reports preliminary evidence more consistent with lower disposition effects after a switch. The team agreed to move from exploratory analyses to a descriptive paper structure.",
+        "progress": "Disposition-effect analyses and paper framing are ongoing. On November 19, the collaborators agreed to prioritize preparing the first written draft of this research paper by the end of 2026. This is a planned draft, not a completed manuscript.",
         "issue": "Structural selection issues persist in account and position choices, migration, and liquidity needs; fixed effects and alternative specifications do not automatically eliminate them. Do not claim causality or a top-journal contribution unsupported by the research design.",
-        "nextAction": "Lorenzo to draft an introduction outline (what is known, what is missing, why it matters) and select the sequence of figures and tables for discussion at the next meeting.",
+        "nextAction": "Prepare the first written disposition-effect paper draft, developing the research storyline and main figures and tables.",
         "owner": "Lorenzo (initial draft); Emanuele (feedback and critical review)",
-        "milestone": "The scheduled November 11 call was canceled because there were no new developments. The next meeting is expected during the following week; date and time are not confirmed. The first-draft target remains tentative for end-2026.",
+        "milestone": "First disposition-effect paper draft targeted by end-2026 (indicative planning target).",
         "dueDate": null,
-        "updatedAt": "2026-11-11",
-        "source": "Meeting cancellation reported by Emanuele, November 11, 2026."
+        "updatedAt": "2026-11-19",
+        "source": "Research planning update, November 19, 2026."
       },
       "actions": [
         {
@@ -251,7 +251,7 @@
         },
         {
           "id": "neobrokers-a7",
-          "text": "Prepare the first written paper draft (tentative goal: by the end of 2026).",
+          "text": "Prepare the first written paper draft; indicative target: end of 2026.",
           "owner": "Lorenzo",
           "status": "unverified",
           "dueDate": null
@@ -346,6 +346,14 @@
           "label": "November 11 meeting canceled",
           "summary": "The scheduled November 11 call was canceled; no new research developments were reported. A follow-up is expected the following week, without a confirmed date.",
           "source": "Scheduling update communicated November 11, 2026."
+        },
+        {
+          "id": "neo-nov19-2026-public-priority",
+          "date": "2026-11-19",
+          "type": "research_priority_decision",
+          "label": "Disposition-effect paper prioritized for a first draft",
+          "summary": "The collaborators agreed to prioritize the disposition-effect paper and target a first written draft by the end of 2026. The draft is not yet complete, and no new empirical findings were reported.",
+          "source": "Research planning update, November 19, 2026."
         }
       ],
       "actionHistory": [
@@ -906,14 +914,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "Decision Pending",
-        "progress": "At the November 3 meeting, Lorenzo confirmed having conducted exploratory analyses of minors' accounts during the summer, with preliminary data and results but no persuasive scientific framing yet. The project is less advanced than the disposition-effect work; the team proposed reviewing available evidence rather than making a final decision to proceed.",
+        "progress": "Exploratory analyses of minors' trading remain available, but a central publishable contribution has not yet been established. On November 19, Minor Trading was retained as one possible direction for a future paper, with the topic choice still open.",
         "issue": "The scientific contribution and positioning remain undefined. The team needs to assess whether the existing analyses can support a coherent paper and whether to allocate resources to it rather than alternatives such as payment for order flow, as part of the project priorities to be agreed with Claudia and the team.",
-        "nextAction": "Lorenzo to revisit existing analyses and prepare the main figures and tables for a future discussion of the project's feasibility and storyline. The November 11 joint call was canceled; the follow-up with Lorenzo is expected next week, date to be confirmed. A separate planning discussion with Claudia was expected for November 16 (not confirmed).",
+        "nextAction": "Compare the scientific potential and feasibility of Minor Trading with the alternative research direction before deciding whether to develop a paper.",
         "owner": "Lorenzo (review); Emanuele and Lorenzo (assessment)",
-        "milestone": "Planning with Claudia tentatively expected November 16, 2026 (not confirmed). Follow-up with Lorenzo expected next week, date and time unconfirmed.",
+        "milestone": "Future-paper topic decision pending; Minor Trading remains an option as of November 19, 2026.",
         "dueDate": null,
-        "updatedAt": "2026-11-11",
-        "source": "User clarification November 11, 2026: same canceled call covered both Neobrokers and Minor Trading."
+        "updatedAt": "2026-11-19",
+        "source": "Research planning update, November 19, 2026."
       },
       "actions": [
         {
@@ -946,7 +954,7 @@
         },
         {
           "id": "minor-a5",
-          "text": "Discuss feasibility, priorities, and time allocation relative to other projects at the next Lorenzo meeting (rescheduled from November 11; date unconfirmed).",
+          "text": "Evaluate Minor Trading against the alternative research direction before selecting a future paper topic.",
           "owner": "Emanuele and Lorenzo",
           "status": "unverified",
           "dueDate": null
@@ -1042,6 +1050,14 @@
           "label": "Shared Lorenzo meeting canceled",
           "summary": "The November 11 call was a single meeting covering both Minor Trading and Neobrokers. Lorenzo canceled it because there were no new developments. A follow-up is expected the following week; no date has been fixed. The tentative Claudia planning discussion is a separate item.",
           "source": "User clarification, November 11, 2026."
+        },
+        {
+          "id": "minor-nov19-2026-public-priority",
+          "date": "2026-11-19",
+          "type": "research_priority_decision",
+          "label": "Minor Trading remains an option for a future paper",
+          "summary": "Minor Trading remains one of the possible research directions for a future paper. No definitive topic selection or development commitment was made at the November 19 discussion.",
+          "source": "Research planning update, November 19, 2026."
         }
       ]
     },
