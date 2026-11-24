@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19",
+  "generatedAt": "2026-11-24",
   "dataPolicy": "Public research project summaries. GPT-managed updates only.",
   "source": "Public allowlisted projection of the private Active Projects research registry.",
   "projects": [
@@ -514,14 +514,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "On Track",
-        "progress": "233 validated webcasts, approximately 647 hours; preliminary multimodal differences between prepared remarks and Q&A. On November 6, Xinyue shared a Brown-Forman IR interview transcript, and Emanuele replied with guidance for further qualitative interviews.",
-        "issue": "Separate natural contextual variation from informative signals; validate the measures.",
-        "nextAction": "Xinyue to validate the multimodal measures, connect them to fund holdings and economic outcomes, and conduct follow-up qualitative IR interviews on invitation decisions and investor relationships. Consider a structured questionnaire only after further interviews.",
+        "progress": "Investor Day webcast and multimodal research continues. Two completed qualitative IR interviews have added insights into event organization and investor targeting; recent outreach has identified a possible issuer-side data collaboration, subject to feasibility and access.",
+        "issue": "Validate the empirical measures and assess whether investor invitation, attendance and subsequent-interaction records can be obtained and matched to holdings. Address investor selection if a feasible dataset emerges.",
+        "nextAction": "Xinyue to pursue exploratory introductions through industry IR contacts and assess the availability and scope of issuer-side Investor Day invitation, attendance and follow-up interaction data; continue validation of multimodal features and investor-holdings analysis.",
         "owner": "Xinyue (empirical analyses and follow-up IR interviews)",
         "milestone": "Next Study 1 update; date not confirmed.",
         "dueDate": null,
-        "updatedAt": "2026-11-08",
-        "source": "Xinyue email and Emanuele's reply, 'Re: IR outreach: IR replies and calls with Brown-Forman IR', November 6, 2026; user clarification on November 8. No interview completion or questionnaire adoption confirmed."
+        "updatedAt": "2026-11-24",
+        "source": "Investor Relations research outreach update, November 24, 2026; potential data access is not confirmed."
       },
       "actions": [
         {
@@ -548,6 +548,13 @@
         {
           "id": "sherry-a4",
           "text": "After additional IR interviews, consider whether a structured IR questionnaire is warranted (exploratory; no current task assigned to Emanuele).",
+          "owner": "Xinyue",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "sherry-a5",
+          "text": "Explore potential industry introductions and assess feasibility of issuer-side Investor Day invitation, attendance and post-event interaction data (access unconfirmed).",
           "owner": "Xinyue",
           "status": "unverified",
           "dueDate": null
@@ -633,6 +640,14 @@
           "label": "Follow-up interviews for qualitative research design",
           "summary": "A series of further Investor Relations interviews was recommended to clarify investor invitation criteria and existing-versus-new investor relationships. A structured questionnaire may be considered afterward; no interview completion or survey design has been confirmed.",
           "source": "Research-direction update, November 6, 2026"
+        },
+        {
+          "id": "sherry-nov24-2026-public-data-access-opportunity",
+          "date": "2026-11-24",
+          "type": "research_development",
+          "label": "IR interviews open potential issuer-side Investor Day data avenue",
+          "summary": "Recent qualitative interviews with Investor Relations practitioners suggest a possible extension to issuer-side records on invited investors, event participation and subsequent engagement. Xinyue is encouraged to assess data-access feasibility before developing the empirical design further. No proprietary data access or partnership has been confirmed.",
+          "source": "Research outreach and supervisory guidance, November 2026"
         }
       ]
     },
