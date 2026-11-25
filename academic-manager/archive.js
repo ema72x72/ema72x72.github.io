@@ -6,13 +6,13 @@
  const root=document.getElementById('aa-root'); if(!root)return;
  const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const labels={idea:'Idea',data_collection:'Data Collection',data_analyses:'Data Analyses',writing:'Writing',editorial_process:'Editorial Process',accepted:'Accepted',published:'Published'};
- const lifecycle={published:'Published',active:'Active',paused:'Standby',abandoned:'Discontinued'};
+ const lifecycle={published:'Published',active:'Active',incubating:'Exploratory Idea',paused:'Standby',abandoned:'Discontinued'};
  const types={article:'Journal Article',book:'Book',book_chapter:'Book Chapter',project:'Project'};
  const steps=['idea','data_collection','data_analyses','writing','editorial_process','accepted','published'];
  const state={data:null,view:'explorer',record:null,detailTab:'overview',query:'',sort:'updated',filterIds:null,returnScroll:0,
     filters:{type:'all',lifecycle:'all',phase:'all',year:'all',coauthor:''},heatFocus:null};
  const number=(v,n=1)=>Number(v||0).toLocaleString('en-US',{maximumFractionDigits:n,minimumFractionDigits:n});
- const desc=x=>x==='abandoned'?'abandoned':x==='paused'?'paused':x==='active'?'active':'published';
+ const desc=x=>x==='abandoned'?'abandoned':x==='paused'?'paused':x==='incubating'?'incubating':x==='active'?'active':'published';
  const date=x=>x?String(x).slice(0,10):'Not available';
  const badge=(x)=>'<span class="aa-tag aa-tag-'+desc(x)+'">'+E(lifecycle[x]||x)+'</span>';
  function setView(view,record){
@@ -50,7 +50,7 @@
     '<select id="aa-sort" class="aa-select aa-sort" aria-label="Sort records"><option value="updated">Last updated (newest)</option><option value="year">Year (newest)</option><option value="title">Title (A–Z)</option><option value="status">Status</option></select></div>'+
     '<aside id="aa-filter-panel" class="aa-filters" aria-label="Research filters"><div class="aa-filter-title">Filters <span id="aa-active-filter-count"></span><span class="aa-filter-sub">Refine your search</span></div><div class="aa-filtergrid">'+
     '<div class="aa-field"><label for="aa-f-type">Type</label><select class="aa-select" id="aa-f-type"><option value="all">All</option><option value="project">Projects</option><option value="article">Journal articles</option><option value="book">Books</option><option value="book_chapter">Book chapters</option></select></div>'+
-    '<div class="aa-field"><label for="aa-f-status">Status</label><select class="aa-select" id="aa-f-status"><option value="all">All</option><option value="active">Active</option><option value="paused">Standby</option><option value="published">Published</option><option value="abandoned">Discontinued</option></select></div>'+
+    '<div class="aa-field"><label for="aa-f-status">Status</label><select class="aa-select" id="aa-f-status"><option value="all">All</option><option value="active">Active</option><option value="incubating">Exploratory Ideas</option><option value="paused">Standby</option><option value="published">Published</option><option value="abandoned">Discontinued</option></select></div>'+
     '<div class="aa-field"><label for="aa-f-phase">Last scientific stage</label><select class="aa-select" id="aa-f-phase"><option value="all">All</option>'+steps.map(x=>'<option value="'+x+'">'+E(labels[x])+'</option>').join('')+'</select></div>'+
     '<div class="aa-field"><label for="aa-f-year">Publication year</label><select class="aa-select" id="aa-f-year"><option value="all">All</option>'+visibleYears().map(y=>'<option value="'+y+'">'+y+'</option>').join('')+'</select></div>'+
     '<div class="aa-field"><label for="aa-f-coauthors">Coauthors</label><input class="aa-input" id="aa-f-coauthors" placeholder="Coauthor name" value="'+attr(f.coauthor)+'"></div></div>'+
@@ -226,18 +226,42 @@
          '<p class="aa-statnote">Metadata are drawn from authorized source fields. Notes and correspondence are excluded from the public projection.</p>')+'</div>';
  }
  function analyticsSVG(){
-   const starts=state.data.starts,max=Math.max(10,...starts.map(x=>x.count)),w=660,h=258;
-   const left=38,right=14,top=18,bottom=39,plot=(w-left-right),band=plot/starts.length,graphH=h-top-bottom;
-   let s='<svg class="aa-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Projects started by year from 2013 to 2026">';
-   for(const v of [0,5,10]){const y=top+graphH-v/max*graphH;s+='<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#e1eaf3"/><text x="28" y="'+(y+4)+'" text-anchor="end" font-size="12" fill="#607b91">'+v+'</text>';}
-   starts.forEach((d,i)=>{const x=left+i*band+band*.18,bw=band*.64,y=top+graphH-d.count/max*graphH,bar=top+graphH-y;
-      s+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+bar+'" rx="3" fill="#2c80cb"><title>'+d.year+': '+d.count+' projects</title></rect>';
-      s+='<text x="'+(x+bw/2)+'" y="'+(h-17)+'" text-anchor="middle" font-size="10.5" fill="#627c92">'+String(d.year).slice(2)+'</text>';
-   });
-   return s+'</svg>';
+   const confirmed=state.data.starts;
+   const documented=state.data.records.filter(r=>r.ideaOrigin&&r.ideaOrigin.evidence==='first_documented_not_start'&&/^\d{4}-\d{2}-\d{2}$/.test(r.ideaOrigin.date||''));
+   const origins=new Map();
+   for(const r of documented){
+     const year=Number(r.ideaOrigin.date.slice(0,4));
+     origins.set(year,(origins.get(year)||0)+1);
+   }
+   const base=new Map(confirmed.map(r=>[Number(r.year),Number(r.count)]));
+   const all=[...new Set([...base.keys(),...origins.keys()])].sort((a,b)=>a-b);
+   if(!all.length)return '<p class="aa-muted">No dated initiative evidence available.</p>';
+   const first=all[0],last=all[all.length-1],years=Array.from({length:last-first+1},(_,i)=>first+i);
+   const max=Math.max(10,...years.map(y=>(base.get(y)||0)+(origins.get(y)||0)));
+   const w=660,h=264,left=40,right=15,top=20,bottom=41,plot=w-left-right,band=plot/years.length,graphH=h-top-bottom;
+   let svg='<svg class="aa-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="New research initiatives from '+first+' to '+last+'; confirmed starts and exploratory ideas are distinct">';
+   const ticks=[0,Math.ceil(max/2),max];
+   for(const v of ticks){
+     const y=top+graphH-v/max*graphH;
+     svg+='<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#e1eaf3"/><text x="29" y="'+(y+4)+'" text-anchor="end" font-size="12" fill="#607b91">'+v+'</text>';
+   }
+   for(let i=0;i<years.length;i++){
+     const year=years[i],verified=base.get(year)||0,explore=origins.get(year)||0,total=verified+explore;
+     const x=left+i*band+band*.18,bw=band*.64,h0=verified/max*graphH,h1=explore/max*graphH,y0=top+graphH-h0,y1=y0-h1;
+     svg+='<rect x="'+x+'" y="'+y0+'" width="'+bw+'" height="'+h0+'" rx="2" fill="#2c80cb"><title>'+year+': '+verified+' verified project starts</title></rect>';
+     if(explore)svg+='<rect x="'+x+'" y="'+y1+'" width="'+bw+'" height="'+h1+'" rx="2" fill="#de9e44"><title>'+year+': '+explore+' exploratory idea(s) first documented, no verified start</title></rect>';
+     if(explore)svg+='<text x="'+(x+bw/2)+'" y="'+Math.max(13,y1-6)+'" font-size="12" font-weight="800" fill="#24435f" text-anchor="middle">'+total+'</text>';
+     svg+='<text x="'+(x+bw/2)+'" y="'+(h-17)+'" text-anchor="middle" font-size="10.5" fill="#627c92">'+String(year).slice(2)+'</text>';
+   }
+   svg+='</svg>';
+   const latest=years[years.length-1],startCount=base.get(latest)||0,ideaCount=origins.get(latest)||0;
+   const related=documented.filter(r=>Number(r.ideaOrigin.date.slice(0,4))===latest);
+   const relatedLinks=related.map(r=>'<button class="aa-origin-link" type="button" data-aa-origin-record="'+attr(r.id)+'">'+E(r.title)+'</button>').join(', ');
+   return svg+'<div class="aa-origin-legend"><span><i class="aa-origin-start"></i>Verified project starts</span><span><i class="aa-origin-idea"></i>Exploratory ideas (first documented)</span></div>'+
+      '<p class="aa-origin-explain"><strong>'+latest+': '+(startCount+ideaCount)+' documented initiative'+(startCount+ideaCount===1?'':'s')+'</strong> ('+startCount+' verified start'+(startCount===1?'':'s')+' + '+ideaCount+' exploratory idea'+(ideaCount===1?'':'s')+'). '+(relatedLinks?'Exploratory: '+relatedLinks+'. ':'')+'No start dates have been inferred.</p>';
  }
  function donut(){
-   const s=state.data.summary,total=s.total;const entries=[['published','Publications','#1268bb'],['active','Active projects','#2bb67e'],['paused','Standby','#efbb50'],['abandoned','Discontinued projects','#aebbc9']];
+   const s=state.data.summary,total=s.total;const entries=[['published','Publications','#1268bb'],['active','Active projects','#2bb67e'],['incubating','Exploratory ideas','#de9e44'],['paused','Standby','#efbb50'],['abandoned','Discontinued projects','#aebbc9']];
    let n=0;const wedges=entries.map(([key,label,color])=>{const from=n/total*100;n+=s[key];return color+' '+from+'% '+(n/total*100)+'%';});
    return '<div class="aa-donut-layout"><div class="aa-donut" style="background:conic-gradient('+wedges.join(',')+')"><div class="aa-donut-core"><strong>'+total+'</strong><small>record</small></div></div>'+
       '<div class="aa-legend">'+entries.map(([key,label,color])=>'<button type="button" data-aa-lifecycle="'+key+'"><span class="aa-swatch" style="background:'+color+'"></span>'+label+': <strong>'+s[key]+'</strong> ('+Math.round(s[key]/total*100)+'%)</button>').join('')+'</div></div>';
@@ -269,17 +293,18 @@
  }
  function renderAnalytics(){
    const s=state.data.summary;
-   const k=[['◈',s.total,'Total records',''],['▤',s.published,'Publications',''],['◇',s.active,'Active projects','aa-kpi-green'],['Ⅱ',s.paused,'On standby','aa-kpi-yellow'],['⊗',s.abandoned,'Discontinued projects','aa-kpi-red']];
+   const k=[['◈',s.total,'Total records',''],['▤',s.published,'Publications',''],['◇',s.active,'Active projects','aa-kpi-green'],['✧',s.incubating||0,'Exploratory ideas','aa-kpi-idea'],['Ⅱ',s.paused,'On standby','aa-kpi-yellow'],['⊗',s.abandoned,'Discontinued projects','aa-kpi-red']];
    root.innerHTML='<div class="aa-kpis">'+k.map(([icon,n,label,cls])=>'<div class="aa-kpi '+cls+'"><span class="aa-kpi-icon">'+icon+'</span><span><strong>'+n+'</strong><small>'+label+'</small></span></div>').join('')+'</div>'+
-    '<div class="aa-chartgrid"><section class="aa-panel aa-chartpanel"><h2 class="aa-heading">Projects Started by Year</h2><p class="aa-caption">Research initiatives with an identified start date (56 of 93 records; 2013–2026)</p>'+analyticsSVG()+'</section>'+
+    '<div class="aa-chartgrid"><section class="aa-panel aa-chartpanel"><h2 class="aa-heading">New Research Initiatives by Year</h2><p class="aa-caption">Verified research starts and first-documented exploratory ideas. Dates refer to different evidence levels, not assumed start dates.</p>'+analyticsSVG()+'</section>'+
     '<section class="aa-panel aa-chartpanel"><h2 class="aa-heading">Portfolio Composition</h2><p class="aa-caption">Distribution of records by lifecycle status</p>'+donut()+'</section></div>'+
     '<section class="aa-panel aa-full"><h2 class="aa-heading">Research Journey — Scientific Stage Transitions</h2><p class="aa-caption">Distinct projects with a documented transition into each scientific stage, by year</p>'+
-    heatmap()+'<p class="aa-statnote">The heatmap counts changes between scientific stages, not repeated movements within an editorial stage. Individual histories may be incomplete.</p></section>'+
+    heatmap()+'<p class="aa-statnote">The heatmap counts changes between scientific stages, not repeated movements within an editorial stage. New ideas do not create a transition into Initial Ideas and are counted in the initiative chart above. Individual histories may be incomplete.</p></section>'+
     '<section class="aa-panel aa-full"><h2 class="aa-heading">Research Stage Durations</h2><p class="aa-caption">Observed time between documented consecutive stage changes · months · exploratory analysis</p>'+
     '<div class="aa-forest-wrap"><div><table class="aa-forest-table"><thead><tr><th>Scientific stage transition</th><th>n</th><th>Mean</th><th>Median</th></tr></thead><tbody>'+
     state.data.durations.map(d=>'<tr><td>'+E(labels[d.from]+' → '+labels[d.to])+'</td><td>'+d.n+'</td><td><strong>'+number(d.mean)+'</strong></td><td>'+number(d.median)+'</td></tr>').join('')+'</tbody></table>'+
     '<p class="aa-statnote"><strong>Interpretation.</strong> Blue dots: mean; whiskers: 95% bootstrap CI for the mean; purple ticks: median; pale blue bands: interquartile range (25th–75th percentiles). Only completed documented intervals are included; these may not reflect actual scientific stage durations.</p></div>'+
     '<div class="aa-forest-chart">'+forestSVG()+'</div></div></section>';
+   root.querySelectorAll('[data-aa-origin-record]').forEach(b=>b.addEventListener('click',()=>setView('detail',b.dataset.aaOriginRecord)));
    root.querySelectorAll('[data-aa-lifecycle]').forEach(b=>b.addEventListener('click',()=>{state.filters={type:'all',lifecycle:b.dataset.aaLifecycle,phase:'all',year:'all',coauthor:''};state.query='';state.filterIds=null;setView('explorer')}));
    root.querySelectorAll('[data-aa-phase][data-aa-year]').forEach(b=>b.addEventListener('click',()=>{
       const phase=b.dataset.aaPhase,year=b.dataset.aaYear,n=Number(b.dataset.aaValue);
@@ -294,7 +319,7 @@
     const embedded=document.getElementById('aa-embedded');
     if(embedded){state.data=JSON.parse(embedded.textContent);}
     else{const res=await fetch('./data/archive-public-v1.json',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);state.data=await res.json();}
-    if(state.data?.records?.length!==93)throw Error('Archive record count mismatch');
+    if(!state.data||!Array.isArray(state.data.records)||!state.data.summary||state.data.records.length!==state.data.summary.total||Object.entries(state.data.summary).some(([key,n])=>key!=='total'&&state.data.records.filter(r=>r.lifecycle===key).length!==n))throw Error('Archive registry counts do not match the approved public projection');
     document.querySelectorAll('[data-aa-main-tab]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.aaMainTab)));
     window.addEventListener('hashchange',readRoute);
     window.addEventListener('popstate',readRoute);

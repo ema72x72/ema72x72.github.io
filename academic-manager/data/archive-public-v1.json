@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
-  "generatedOn": "2026-11-07",
+  "generatedOn": "2026-11-25",
   "projection": "explicit-public-allowlist",
   "sources": {
     "canonical": "ema72x72/academic-manager:data/research-registry-v1.json",
     "active": "ema72x72/ema72x72.github.io:academic-manager/data/projects.json"
   },
-  "privacy": "Authorized public fields: published bibliographic metadata; previously public active project metadata; historical/paused project titles (English presentation labels), lifecycle, last and most advanced scientific stages only; aggregate statistics. Never publish source card names, author hints, comments, correspondence, documents or individual transitions.",
+  "privacy": "Authorized public fields: published bibliographic metadata; previously public active project metadata; historical/paused project titles (English presentation labels), lifecycle, last and most advanced scientific stages only; aggregate statistics. Never publish source card names, author hints, comments, correspondence, documents or individual transitions. New exploratory project display is limited to title, status, generic public description and previously public first-documentation date.",
   "summary": {
-    "total": 93,
+    "total": 94,
     "published": 43,
     "active": 8,
     "paused": 2,
-    "abandoned": 40
+    "abandoned": 40,
+    "incubating": 1
   },
   "years": [
     "2013",
@@ -288,7 +289,8 @@
     "titlePresentation": "All public-facing research titles are English display labels. Official titles and translations are retained without change in the canonical private registry. For translated publications, the display title is not the bibliographic citation.",
     "restrictedProjectFields": "For 42 historical/paused projects the allowlist contains only stable public-view IDs, display title, project type, lifecycle, lastScientificPhase and mostAdvancedPhaseReached. No coauthors or detailed records.",
     "publishedPhaseHistory": "Newly approved public display: for published papers with documented project histories, expose ONLY dates (YYYY-MM-DD) and canonical scientific phase changes from/to. Original Trello list movements within a stage, raw names, URLs, comments, and editorial correspondence remain private. Bibliography-only publications have no reconstructed history.",
-    "editorialHistory": "User-approved structured journal-by-journal history, extracted from dated original Trello comments, corresponding documented list movements and confirmed publication venues. Include only journal name, logged submission/decision dates, outcome codes, submission type, calendar-day elapsed time when both dates are verified, and evidenceLevel. Partial/undated outcomes must remain explicit; no raw comments, private correspondence or inferred submission rounds. Reviewed by source card; 16 additional papers have journal-specific material, one has no dated journal evidence."
+    "editorialHistory": "User-approved structured journal-by-journal history, extracted from dated original Trello comments, corresponding documented list movements and confirmed publication venues. Include only journal name, logged submission/decision dates, outcome codes, submission type, calendar-day elapsed time when both dates are verified, and evidenceLevel. Partial/undated outcomes must remain explicit; no raw comments, private correspondence or inferred submission rounds. Reviewed by source card; 16 additional papers have journal-specific material, one has no dated journal evidence.",
+    "ideaOrigins": "New research initiatives: verified-start counts from 'starts' (56 documented actual starts) plus separately displayed exploratory concepts with a first documented date but no verified actual start. These are distinct categories, not imputed starts; coverage is incomplete for undated records."
   },
   "records": [
     {
@@ -3188,6 +3190,24 @@
       "journal": null,
       "updatedAt": null,
       "summary": null
+    },
+    {
+      "id": "rec-094",
+      "visibility": "public",
+      "title": "ESG & Retail Trading",
+      "authors": null,
+      "type": "project",
+      "lifecycle": "incubating",
+      "phase": "idea",
+      "maxPhase": "idea",
+      "year": null,
+      "journal": null,
+      "updatedAt": "2026-11-25",
+      "summary": "Exploratory research on ESG preferences and retail-investor transactions. Feasibility and scientific contribution remain under assessment; no research paper has been initiated or final empirical design confirmed.",
+      "ideaOrigin": {
+        "date": "2026-11-16",
+        "evidence": "first_documented_not_start"
+      }
     }
   ]
 }

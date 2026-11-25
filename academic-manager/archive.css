@@ -180,3 +180,14 @@ body.aa-body{margin:0;background:var(--aa-bg);color:var(--aa-ink);font:14px/1.5 
 
 .aa-editorial-neutral{background:#edf2f7;color:#567084}
 .aa-editorial-round .aa-editorial-step small{max-width:180px}
+
+/* Public archive 2026: documented initiative origins and exploratory lifecycle */
+.aa-tag-incubating{background:#fff1dc;color:#916227}
+.aa-kpi-idea .aa-kpi-icon{background:#fff2e0;color:#996c26}
+.aa-origin-legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11px;color:#526e86;margin:10px 0}
+.aa-origin-legend span{display:inline-flex;align-items:center;gap:6px}
+.aa-origin-legend i{display:inline-block;width:12px;height:10px;border-radius:2px}
+.aa-origin-start{background:#2c80cb}.aa-origin-idea{background:#de9e44}
+.aa-origin-explain{font-size:11px;color:#5c7388;margin:9px 0 0;line-height:1.6}
+.aa-origin-link{border:0;background:none;padding:0 2px;color:#1d6da4;font:inherit;font-weight:730;text-decoration:underline;cursor:pointer}
+@media(min-width:1201px){.aa-kpis{grid-template-columns:repeat(6,minmax(0,1fr))}}
