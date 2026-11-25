@@ -31,7 +31,9 @@ jobs:
           d=json.loads(Path('academic-manager/data/projects.json').read_text(encoding='utf-8'))
           ids=[p['id'] for p in d['projects']]
           assert d['schemaVersion'] == 1
-          assert len(ids) == 8 and len(set(ids)) == 8
+          assert len(ids) == len(set(ids)) and len(ids) >= 9
+          required={'remote','neobrokers','bankruptcy','sherry','brand','favoritism','minor','journal-networks-raju','esg-retail-transactions'}
+          assert required.issubset(set(ids)), f'Missing expected research IDs: {required-set(ids)}'
           assert all(isinstance(p.get('snapshot'),dict) and isinstance(p.get('actions'),list) and isinstance(p.get('events'),list) for p in d['projects'])
           html=Path('academic-manager/index.html').read_text(encoding='utf-8')
           assert '<script src="./home.js?v=' in html
