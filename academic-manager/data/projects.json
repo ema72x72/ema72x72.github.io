@@ -1243,7 +1243,7 @@
       "id": "esg-retail-transactions",
       "title": "ESG & Retail Trading",
       "subtitle": "Exploratory research on ESG preferences and retail-investor transactions",
-      "coauthors": "Florian Berg · Lorenzo Danieli",
+      "coauthors": "Florian Berg · Lorenzo Danieli · Federico Piazza",
       "priority": 9,
       "profile": {
         "researchQuestion": "Could transaction-based evidence help answer new research questions about ESG preferences and individual-investor behavior?",
@@ -1254,14 +1254,14 @@
       "snapshot": {
         "stage": "Initial Ideas",
         "status": "Decision Pending",
-        "progress": "An exploratory discussion has begun around ESG preferences and individual-investor behavior. The team is reviewing the relevant literature and evaluating whether a feasible research question can be developed.",
-        "issue": "The scientific question and feasibility remain open; no study, empirical design or data access has been confirmed.",
-        "nextAction": "Evaluate the literature and feasibility and decide whether to proceed with a formal research paper.",
-        "owner": "Research team (exploratory assessment)",
-        "milestone": "Feasibility decision; no date confirmed.",
+        "progress": "At the November 24 research discussion, two exploratory directions were identified: investor-category trading around adverse ESG incidents, including buyers of ESG stocks or ETFs; and investment for minors, comparing parents' possible ESG orientation and responses to incidents. Feasibility analyses are planned, with no results established.",
+        "issue": "The questions remain exploratory: feasibility depends on classifying ESG incidents, identifying trading-side investor categories and distinguishing investments made on behalf of minors. No data-access or empirical outcome is confirmed.",
+        "nextAction": "Federico Piazza and Lorenzo Danieli to run preliminary feasibility analyses of ESG incident buyers/sellers and parents' ESG investing for minors, including possible reactions to ESG incidents; review progress at the upcoming research check-in.",
+        "owner": "Federico Piazza · Lorenzo Danieli (exploratory analyses)",
+        "milestone": "ESG/Transaction data catch-up scheduled for December 3, 2026, at 16:30 Europe/Rome; no analysis completion deadline confirmed.",
         "dueDate": null,
         "updatedAt": "2026-11-25",
-        "source": "Exploratory research planning, November 2026; portfolio registration authorized November 25."
+        "source": "Research ideas and task assignments reported directly by Emanuele on November 25 after the November 24 meeting; follow-up appointment verified in Outlook Calendar."
       },
       "actions": [
         {
@@ -1282,6 +1282,20 @@
           "id": "esg-retail-transactions-a3",
           "text": "Decide whether a formal paper should be initiated.",
           "owner": "Research team",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "esg-retail-transactions-a4",
+          "text": "Explore buying and selling activity by investor category in ESG stocks and ETFs after adverse ESG incidents, especially the composition of buyers.",
+          "owner": "Federico Piazza · Lorenzo Danieli",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "esg-retail-transactions-a5",
+          "text": "Assess parental investments on behalf of minors: investment horizon, possible ESG tilt, and trading responses to ESG incidents.",
+          "owner": "Federico Piazza · Lorenzo Danieli",
           "status": "unverified",
           "dueDate": null
         }
@@ -1310,6 +1324,22 @@
           "label": "Exploratory ESG research direction added to the portfolio",
           "summary": "The topic was included in Academic Manager as an exploratory research idea. The decision does not constitute a paper launch or a confirmed thesis project.",
           "source": "Portfolio registration authorized November 25, 2026."
+        },
+        {
+          "id": "esg-retail-transactions-nov24-esg-incident-flows",
+          "date": "2026-11-24",
+          "type": "research_proposal",
+          "label": "Exploratory idea: who buys after ESG incidents?",
+          "summary": "One proposed direction examines which investors sell ESG stocks or ESG-themed ETFs after adverse ESG incidents and, especially, which investor categories buy. Preliminary feasibility analyses were assigned to the research team; no findings are available.",
+          "source": "Research-team discussion, November 24, 2026."
+        },
+        {
+          "id": "esg-retail-transactions-nov24-parent-minor-investing",
+          "date": "2026-11-24",
+          "type": "research_proposal",
+          "label": "Exploratory idea: parental ESG investing for minors",
+          "summary": "A second proposed direction asks whether parents investing for their minor children choose longer-horizon and more ESG-oriented portfolios, and whether these decisions change following ESG incidents. Preliminary analyses are planned, not completed.",
+          "source": "Research-team discussion, November 24, 2026."
         }
       ]
     }
