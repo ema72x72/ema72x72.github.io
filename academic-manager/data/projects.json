@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24",
+  "generatedAt": "2026-11-25",
   "dataPolicy": "Public research project summaries. GPT-managed updates only.",
   "source": "Public allowlisted projection of the private Active Projects research registry.",
   "projects": [
@@ -514,14 +514,14 @@
       "snapshot": {
         "stage": "Data Analyses",
         "status": "On Track",
-        "progress": "Investor Day webcast and multimodal research continues. Two completed qualitative IR interviews have added insights into event organization and investor targeting; recent outreach has identified a possible issuer-side data collaboration, subject to feasibility and access.",
+        "progress": "The study combines ongoing Investor Day multimodal analysis with qualitative IR outreach. Recent discussions identified a possible research direction using issuer-side event participation information, subject to feasibility and research-access permission. No data partnership has been established.",
         "issue": "Validate the empirical measures and assess whether investor invitation, attendance and subsequent-interaction records can be obtained and matched to holdings. Address investor selection if a feasible dataset emerges.",
-        "nextAction": "Xinyue to pursue exploratory introductions through industry IR contacts and assess the availability and scope of issuer-side Investor Day invitation, attendance and follow-up interaction data; continue validation of multimodal features and investor-holdings analysis.",
+        "nextAction": "Xinyue to explore potential collaboration interests with Investor Relations contacts and assess whether suitable issuer-side Investor Day data could become available, while continuing the existing multimodal and holdings analyses.",
         "owner": "Xinyue (empirical analyses and follow-up IR interviews)",
         "milestone": "Next Study 1 update; date not confirmed.",
         "dueDate": null,
-        "updatedAt": "2026-11-24",
-        "source": "Investor Relations research outreach update, November 24, 2026; potential data access is not confirmed."
+        "updatedAt": "2026-11-25",
+        "source": "Research collaboration planning update, November 25, 2026."
       },
       "actions": [
         {
@@ -648,6 +648,14 @@
           "label": "IR interviews open potential issuer-side Investor Day data avenue",
           "summary": "Recent qualitative interviews with Investor Relations practitioners suggest a possible extension to issuer-side records on invited investors, event participation and subsequent engagement. Xinyue is encouraged to assess data-access feasibility before developing the empirical design further. No proprietary data access or partnership has been confirmed.",
           "source": "Research outreach and supervisory guidance, November 2026"
+        },
+        {
+          "id": "sherry-nov25-2026-open-industry-collaboration",
+          "date": "2026-11-25",
+          "type": "research_feedback",
+          "label": "Exploratory industry collaboration directions encouraged",
+          "summary": "Following additional outreach discussions, the research team was encouraged to consider research directions that potential Investor Relations partners may propose. No collaboration, introduction or access to proprietary records has been confirmed.",
+          "source": "Research guidance, November 25, 2026."
         }
       ]
     },
@@ -1096,28 +1104,36 @@
       },
       "snapshot": {
         "stage": "First Draft",
-        "status": "Waiting for Me",
-        "progress": "Raju sent a draft following the experiments, describing the computational work as reasonably mature. His email outlines a publication-propensity model and an aggregate latent-targeting-demand measure.",
-        "issue": "The study does not observe unsuccessful submissions or journals considered ex ante, so the measure does not identify submission volumes or acceptance probabilities. Its link to journal choice, academic incentives, journal competition, and scholarly publishing economics needs strengthening. The correlation with journal size requires careful interpretation.",
-        "nextAction": "Emanuele to review the first draft and provide Raju with feedback on literature, contribution and Q1-journal positioning by his self-imposed deadline in the week beginning November 16, 2026 (exact day not specified).",
-        "owner": "Emanuele",
-        "milestone": "Self-imposed feedback deadline: week beginning November 16, 2026; Raju expects comments later that week. Exact day not specified.",
+        "status": "Waiting for Coauthors",
+        "progress": "The first draft has been substantively reviewed. The team exchanged further journal-level diagnostics and author-level examples, with follow-up questions raised about how the probability outputs are interpreted and what the dataset covers. The new results are preliminary.",
+        "issue": "Clarify the economic interpretation of publication predictions and the coverage of manuscript-level and author-level data; prediction is not evidence of unobserved journal submissions or acceptance probabilities.",
+        "nextAction": "Raju to clarify manuscript–journal prediction outputs and missing historical publication records; Emanuele to review the corrected evidence when available.",
+        "owner": "Raju (data and prediction clarification); Emanuele (subsequent review)",
+        "milestone": "First substantive manuscript feedback completed November 19; follow-up clarification pending.",
         "dueDate": null,
-        "updatedAt": "2026-11-11",
-        "source": "November 10, 2026 coauthor exchange; November 11 user-confirmed personal deadline."
+        "updatedAt": "2026-11-25",
+        "source": "Research feedback and follow-up, November 19–25, 2026."
       },
       "actions": [
         {
           "id": "journal-networks-raju-a1",
           "text": "Review the draft and provide Raju with substantive feedback on literature, contribution and Q1-journal positioning within the self-imposed deadline in the week beginning November 16, 2026 (exact day unspecified).",
           "owner": "Emanuele",
-          "status": "unverified",
-          "dueDate": null
+          "status": "completed",
+          "dueDate": null,
+          "reportedAt": "2026-11-19"
         },
         {
           "id": "journal-networks-raju-a2",
           "text": "Explicitly assess latent targeting demand versus submission/acceptance, and rankings' dependence on journal size.",
           "owner": "Emanuele",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "journal-networks-raju-a3",
+          "text": "Clarify paper–journal probability outputs and the coverage of the illustrative author-level predictions.",
+          "owner": "Raju",
           "status": "unverified",
           "dueDate": null
         }
@@ -1188,6 +1204,112 @@
           "label": "Personal feedback deadline confirmed",
           "summary": "Emanuele confirmed a self-imposed deadline for substantive feedback to Raju during the week beginning November 16, 2026. The exact day was not specified; the review is not yet completed.",
           "source": "Research project update, November 11, 2026."
+        },
+        {
+          "id": "raju-nov19-2026-draft-reviewed",
+          "date": "2026-11-19",
+          "type": "research_feedback",
+          "label": "Substantive first-draft review completed",
+          "summary": "The initial manuscript review and substantive comments on the economic contribution, model interpretation and journal-level diagnostics have been communicated to the coauthors.",
+          "source": "Research feedback, November 19, 2026."
+        },
+        {
+          "id": "raju-nov23-2026-extended-results",
+          "date": "2026-11-23",
+          "type": "empirical_development",
+          "label": "Additional journal-level diagnostics shared",
+          "summary": "The coauthors shared further exploratory checks and illustrative outputs, including journal comparisons and dataset coverage questions. Results remain preliminary and require further interpretation.",
+          "source": "Research update, November 23, 2026."
+        },
+        {
+          "id": "raju-nov24-2026-model-followup",
+          "date": "2026-11-24",
+          "type": "research_feedback",
+          "label": "Author-level examples and model interpretation discussed",
+          "summary": "The collaborators discussed how to separate textual relevance from author-network effects and requested illustrative author-level outputs. A possible economically grounded extension was raised as a separate idea, not an approved paper.",
+          "source": "Research discussion, November 24–25, 2026."
+        },
+        {
+          "id": "raju-nov25-2026-coverage-questions",
+          "date": "2026-11-25",
+          "type": "research_feedback",
+          "label": "Paper–journal prediction and data coverage questions raised",
+          "summary": "Clarification was requested on interpreting manuscript-by-journal prediction outputs and reconciling the historical coverage of an illustrative author dataset. Further coauthor feedback is pending.",
+          "source": "Research correspondence, November 25, 2026."
+        }
+      ]
+    },
+    {
+      "id": "esg-retail-transactions",
+      "title": "ESG & Retail Trading",
+      "subtitle": "Exploratory research on ESG preferences and retail-investor transactions",
+      "coauthors": "Florian Berg · Lorenzo Danieli",
+      "priority": 9,
+      "profile": {
+        "researchQuestion": "Could transaction-based evidence help answer new research questions about ESG preferences and individual-investor behavior?",
+        "contribution": "Exploratory research direction. Research question, feasibility and potential contribution are not yet established.",
+        "methodology": "Preliminary literature mapping and feasibility assessment; no empirical strategy or findings have been agreed.",
+        "mainFindings": null
+      },
+      "snapshot": {
+        "stage": "Initial Ideas",
+        "status": "Decision Pending",
+        "progress": "An exploratory discussion has begun around ESG preferences and individual-investor behavior. The team is reviewing the relevant literature and evaluating whether a feasible research question can be developed.",
+        "issue": "The scientific question and feasibility remain open; no study, empirical design or data access has been confirmed.",
+        "nextAction": "Evaluate the literature and feasibility and decide whether to proceed with a formal research paper.",
+        "owner": "Research team (exploratory assessment)",
+        "milestone": "Feasibility decision; no date confirmed.",
+        "dueDate": null,
+        "updatedAt": "2026-11-25",
+        "source": "Exploratory research planning, November 2026; portfolio registration authorized November 25."
+      },
+      "actions": [
+        {
+          "id": "esg-retail-transactions-a1",
+          "text": "Review the relevant literature and identify promising testable research questions.",
+          "owner": "Research team",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "esg-retail-transactions-a2",
+          "text": "Evaluate the feasibility of a research study and appropriate research permissions.",
+          "owner": "Research team",
+          "status": "unverified",
+          "dueDate": null
+        },
+        {
+          "id": "esg-retail-transactions-a3",
+          "text": "Decide whether a formal paper should be initiated.",
+          "owner": "Research team",
+          "status": "unverified",
+          "dueDate": null
+        }
+      ],
+      "events": [
+        {
+          "id": "esg-retail-transactions-nov16-literature",
+          "date": "2026-11-16",
+          "type": "literature",
+          "label": "Initial ESG literature mapping began",
+          "summary": "A preliminary reading list was assembled to explore related research and possible directions.",
+          "source": "Research planning, November 16, 2026."
+        },
+        {
+          "id": "esg-retail-transactions-nov17-feasibility",
+          "date": "2026-11-17",
+          "type": "research_exploration",
+          "label": "Research feasibility discussions developed",
+          "summary": "The collaborators discussed the broad feasibility of ESG-related research using individual-investor behavior, without selecting a final design or committing to a paper.",
+          "source": "Research planning, November 17, 2026."
+        },
+        {
+          "id": "esg-retail-transactions-nov25-registration",
+          "date": "2026-11-25",
+          "type": "portfolio_decision",
+          "label": "Exploratory ESG research direction added to the portfolio",
+          "summary": "The topic was included in Academic Manager as an exploratory research idea. The decision does not constitute a paper launch or a confirmed thesis project.",
+          "source": "Portfolio registration authorized November 25, 2026."
         }
       ]
     }
