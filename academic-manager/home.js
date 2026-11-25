@@ -54,99 +54,12 @@
       a.addEventListener('click',event=>{event.preventDefault();openProject(a.dataset.openProject);});
     });
   }
-  const phaseGroups=[
-    {name:'Data collection',matcher:s=>/Data Collection/i.test(s)},
-    {name:'Data analysis',matcher:s=>/Data Analyses|Empirical Design/i.test(s)},
-    {name:'Writing',matcher:s=>/First Draft|Final Draft|Revision/i.test(s)},
-    {name:'Editorial process',matcher:s=>/Submitted|Under Review|R&R/i.test(s)}
-  ];
-  function renderPipeline(projects) {
-    const groups=phaseGroups.map(g=>({...g,items:projects.filter(p=>g.matcher(p.snapshot?.stage||''))}));
-    const known=new Set(groups.flatMap(g=>g.items.map(p=>p.id)));
-    const remaining=projects.filter(p=>!known.has(p.id));
-    if(remaining.length)groups.push({name:'Other stages',items:remaining});
-    q('hm-pipeline').innerHTML=groups.map((g,i)=>
-      '<button class="hm-phase" type="button" data-phase="'+i+'" aria-pressed="false"><span>'+E(g.name)+'</span><b>'+g.items.length+'</b><small>'+(g.items.length===1?'1 project':g.items.length+' projects')+'</small></button>'
-    ).join('');
-    const summary=q('hm-phase-summary');
-    summary.textContent='Select a phase to see its projects. Project phases come from the current Active Projects registry.';
-    q('hm-pipeline').querySelectorAll('[data-phase]').forEach(button=>{
-      button.addEventListener('click',()=>{
-        const active=button.getAttribute('aria-pressed')==='true';
-        q('hm-pipeline').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
-        if(active){summary.textContent='Select a phase to see its projects. Project phases come from the current Active Projects registry.';return;}
-        button.setAttribute('aria-pressed','true');
-        const group=groups[Number(button.dataset.phase)];
-        summary.innerHTML='<strong>'+E(group.name)+':</strong> '+(group.items.length?group.items.map(p=>'<a href="#projects" data-open-project="'+E(p.id)+'">'+E(p.title)+'</a>').join(' · '):'No projects recorded');
-        bindProjectClicks(summary);
-      });
-    });
-  }
-  function renderMatters(projects){
-    const today=baseToday();
-    const weight=p=>{
-      const s=p.snapshot||{},status=s.status||'';
-      if(/Waiting for Me/i.test(status))return 0;
-      if(/Decision Pending|At Risk|Stalling/i.test(status))return 1;
-      if(s.dueDate&&s.dueDate<today)return 0;
-      if(s.dueDate&&s.dueDate>=today)return 2;
-      if(/Waiting for Coauthors/i.test(status))return 3;
-      return 9;
-    };
-    const pick=[...projects].filter(p=>weight(p)<9).sort((a,b)=>weight(a)-weight(b)||(a.priority||99)-(b.priority||99)).slice(0,4);
-    q('hm-matters').innerHTML=pick.length?pick.map(p=>{
-      const s=p.snapshot||{},flag=/Decision Pending/i.test(s.status)?'decision':/Waiting|Risk/i.test(s.status)?'warn':'';
-      const symbol=/Decision Pending/i.test(s.status)?'⚑':/Waiting|Risk/i.test(s.status)?'!':'↗';
-      return projectLink(p,'<span class="hm-row-icon '+flag+'">'+symbol+'</span><span class="hm-row-inner"><strong>'+E(p.title)+'</strong><small>'+E(short(s.nextAction||s.milestone||s.status,132))+'</small></span><span class="hm-row-chevron">›</span>');
-    }).join(''):'<div class="hm-empty">No priority actions identified from documented status and deadlines.</div>';
-    bindProjectClicks(q('hm-matters'));
-  }
-  function renderActivity(projects){
-    const latest=[...projects].filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.snapshot?.updatedAt||''))
-      .sort((a,b)=>b.snapshot.updatedAt.localeCompare(a.snapshot.updatedAt)||(a.priority||99)-(b.priority||99)).slice(0,4);
-    q('hm-activity').innerHTML=latest.map(p=>{
-      const datedEvents=(p.events||[]).filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.date||'')&&e.date<=p.snapshot.updatedAt)
-        .sort((a,b)=>b.date.localeCompare(a.date));
-      const description=datedEvents[0]?.label||[p.snapshot?.stage,p.snapshot?.status].filter(Boolean).join(' · ');
-      return projectLink(p,
-        '<span class="hm-row-inner"><strong>'+E(p.title)+'</strong><small>'+E(short(description,105))+'</small></span><span class="hm-date">'+E(dateLabel(p.snapshot.updatedAt))+'</span>');
-    }).join('')||'<div class="hm-empty">No dated updates documented.</div>';
-    bindProjectClicks(q('hm-activity'));
-  }
-  function renderMilestones(projects){
-    const today=baseToday(),rows=[],months='January|February|March|April|May|June|July|August|September|October|November|December';
-    const pattern=new RegExp('\\b('+months+')\\s+(\\d{1,2}),?\\s+(20\\d{2})\\b','g');
-    const monthIdx=Object.fromEntries(months.split('|').map((m,i)=>[m,i+1]));
-    projects.forEach(p=>{
-      const s=p.snapshot||{},due=s.dueDate;
-      if(/^\d{4}-\d{2}-\d{2}$/.test(due||'')&&due>=today){
-        rows.push({id:p.id,title:p.title,date:due,tag:/tentative|indicative|expected/i.test(s.milestone||'')?'Indicative':/final deadline/i.test(s.milestone||'')?'Deadline':'Target date',note:s.milestone||'Recorded milestone'});
-      }
-      const message=String(s.milestone||'');
-      // Do not turn cancellation or rescheduling history into an upcoming appointment.
-      // The dueDate field is the only structured date guaranteed to remain actionable.
-      if (/\b(cancelled|canceled|postponed|rescheduled|called off)\b/i.test(message)) return;
-      for(const m of message.matchAll(pattern)){
-        const d=m[3]+'-'+String(monthIdx[m[1]]).padStart(2,'0')+'-'+String(m[2]).padStart(2,'0');
-        if(d<today||d===due)continue;
-        rows.push({id:p.id,title:p.title,date:d,tag:/call|meeting/i.test(message)?'Meeting':'Documented date',note:message});
-      }
-    });
-    rows.sort((a,b)=>a.date.localeCompare(b.date)||(a.title.localeCompare(b.title)));
-    const unique=[...new Map(rows.map(r=>[r.id+'|'+r.date,r])).values()].slice(0,6);
-    q('hm-milestones').innerHTML=unique.length?unique.map(x=>
-      '<a class="hm-milestone" style="text-decoration:none;color:inherit" href="#projects" data-open-project="'+E(x.id)+'"><span class="hm-date-box">'+E(dateLabel(x.date).replace(/ 2026$/,''))+'</span>'+
-      '<span><span class="hm-milestone-title">'+E(x.title)+'</span><span class="hm-milestone-small" style="display:block">'+E(short(x.note,155))+'</span></span>'+
-      '<span class="hm-tag '+(/Indicative|Planned/i.test(x.tag)?'warn':'')+'">'+E(x.tag)+'</span></a>').join('')
-      :'<div class="hm-empty">No upcoming dated milestones in the current source. Undated work remains in each project record.</div>';
-    bindProjectClicks(q('hm-milestones'));
-  }
   function loadProjects(){
     fetch('./data/projects.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(data=>{
       if(data.schemaVersion!==1||!Array.isArray(data.projects))throw Error('Unexpected source schema');
       source.projects=data;
-      q('hm-active-count').textContent=data.projects.length+' active projects';
-      renderPipeline(data.projects);renderMatters(data.projects);renderActivity(data.projects);renderMilestones(data.projects);
+      if(!window.AcademicOverview)throw Error('Home Overview component unavailable');
+      window.AcademicOverview.render(data,openProject);
       q('hm-overview-source').textContent='Active Projects: public GitHub JSON · Last generated '+(data.generatedAt||'date not specified')+' · Read-only.';
     }).catch(e=>{q('hm-pipeline').innerHTML='<div class="hm-error" role="alert">Active Projects source unavailable: '+E(e.message)+'</div>';});
   }

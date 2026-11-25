@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>Academic Manager | Research Portfolio</title>
-<link rel="stylesheet" href="./home.css?v=20261107-1">
+<link rel="stylesheet" href="./home.css?v=20261125-1">
 <link rel="stylesheet" href="./projects.css?v=20261107-1">
 <style>
 #projects .panel{background:#fff;border:1px solid #dbe5ef;border-radius:13px;padding:18px}
@@ -41,29 +41,40 @@
   </div>
   <section id="overview" class="hm-view" aria-label="Research portfolio overview">
    <div class="hm-header" style="margin-bottom:16px">
-    <div><div class="hm-eyebrow">Home / Overview</div><p>Priorities and dated commitments from the active project registry.</p></div>
+    <div><div class="hm-eyebrow">Home / Overview</div><p>Current research stages, documented next steps and important dates.</p></div>
     <div class="hm-header-pill" id="hm-active-count">Loading projects…</div>
    </div>
    <article class="hm-card">
-    <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▱</span><div><h2>Research Pipeline</h2><p class="hm-card-sub">Scientific stage distribution across active projects</p></div></div>
-    <div class="hm-pipeline" id="hm-pipeline" aria-label="Active project pipeline"><p class="hm-muted">Loading research pipeline…</p></div>
+    <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▱</span><div><h2>Research Pipeline</h2><p class="hm-card-sub">Scientific stage distribution across tracked projects</p></div></div>
+    <div class="hm-pipeline" id="hm-pipeline" aria-label="Research project stages"><p class="hm-muted">Loading research pipeline…</p></div>
     <div class="hm-phase-summary" id="hm-phase-summary" aria-live="polite"></div>
+    <details class="hm-timeline-disclosure" id="hm-timeline-details">
+     <summary><span class="hm-timeline-summary-text"><strong>Research Timeline</strong><span>Historical stage transitions and documented research activity</span></span><span class="hm-toggle-label" aria-hidden="true"></span></summary>
+     <div class="hm-timeline-content">
+      <div class="hm-history-legend">
+       <span><i class="hm-history-key initial"></i>Initial ideas</span>
+       <span><i class="hm-history-key collection"></i>Data collection</span>
+       <span><i class="hm-history-key analysis"></i>Data analyses</span>
+       <span><i class="hm-history-key writing"></i>Writing</span>
+       <span><i class="hm-history-key editorial"></i>Editorial</span>
+      </div>
+      <div id="hm-research-timeline" class="hm-research-timeline" aria-label="Publicly documented scientific-stage history"><p class="hm-muted">Loading historical transitions…</p></div>
+      <p class="hm-source" id="hm-research-timeline-note"></p>
+     </div>
+    </details>
    </article>
-   <div class="hm-grid2">
+   <div class="hm-overview-columns">
     <article class="hm-card">
-     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">◎</span><div><h2>What Matters Next</h2><p class="hm-card-sub">Pending decisions, actions and time-sensitive projects</p></div></div>
-     <div id="hm-matters"><div class="hm-muted">Loading documented next actions…</div></div>
+     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">◎</span><div><h2>Next Decisions &amp; Actions</h2><p class="hm-card-sub">Every documented next step, grouped by project</p></div></div>
+     <p class="hm-muted" id="hm-action-count"></p>
+     <div id="hm-matters"><p class="hm-muted">Loading documented actions…</p></div>
     </article>
-    <article class="hm-card">
-     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">⌁</span><div><h2>Recent Activity</h2><p class="hm-card-sub">Most recently updated project snapshots</p></div></div>
-     <div id="hm-activity"><div class="hm-muted">Loading source updates…</div></div>
+    <article class="hm-card hm-milestones">
+     <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▦</span><div><h2>Upcoming Milestones</h2><p class="hm-card-sub">Scheduled appointments, past targets to verify and undated plans</p></div></div>
+     <div id="hm-milestones"><p class="hm-muted">Loading milestones…</p></div>
     </article>
    </div>
-   <article class="hm-card hm-milestones">
-    <div class="hm-card-header"><span class="hm-icon" aria-hidden="true">▦</span><div><h2>Upcoming Milestones</h2><p class="hm-card-sub">Documented upcoming dates, targets and meetings. Indicative dates are labelled.</p></div></div>
-    <div id="hm-milestones"><div class="hm-muted">Loading milestones…</div></div>
-   </article>
-   <p class="hm-source" id="hm-overview-source">Data source: current approved public Active Projects projection.</p>
+   <p class="hm-source" id="hm-overview-source">Source: approved public Active Projects projection.</p>
   </section>
   <section id="insights" class="hm-view" aria-label="Publication Insights" hidden>
    <div class="hm-header" style="margin-bottom:16px">
@@ -138,7 +149,9 @@
  </main>
 </div>
 <script src="./coauthors.js?v=20261107-4" defer></script>
-<script src="./home.js?v=20261111-2" defer></script>
+<script src="./pipeline-timeline.js?v=20261125-1" defer></script>
+<script src="./home-overview.js?v=20261125-1" defer></script>
+<script src="./home.js?v=20261125-1" defer></script>
 <script src="./projects.js?v=20261107-1" defer></script>
 </body>
 </html>
