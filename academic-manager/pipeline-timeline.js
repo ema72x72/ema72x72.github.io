@@ -13,7 +13,7 @@ function classify(value){
  if(/Data Collection/i.test(s))return'data_collection';
  if(/Data Analyses|Empirical Design/i.test(s))return'data_analyses';
  if(/First Draft|Final Draft|Writing/i.test(s))return'writing';
- if(/Submitted|Under Review|Editorial/i.test(s))return'editorial_process';
+ if(/Submitted|Under Review|Editorial|Out for conference/i.test(s))return'editorial_process';
  return null;
 }
 function stageEvidence(event){
@@ -27,7 +27,7 @@ function stageEvidence(event){
  if(/(?:to|transition to|reclassified as)\s+Data Collection/i.test(label))phase='data_collection';
  else if(/(?:to|transition to|reclassified as)\s+Data Analyses/i.test(label))phase='data_analyses';
  else if(/first draft|final draft|(?:to|transition to)\s+writing/i.test(label))phase='writing';
- else if(/(?:to|transition to)\s+submitted|editorial process/i.test(label))phase='editorial_process';
+ else if(/(?:to|transition to)\s+(?:submitted|out for conference)|editorial process/i.test(label))phase='editorial_process';
  else if(/(?:to|transition to)\s+initial ideas/i.test(label))phase='idea';
  if(!phase)return null;
  return {phase,precision:/\breclassified\b/i.test(label)?'observed':'transition',label};

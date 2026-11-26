@@ -40,6 +40,14 @@
 #projects .rp-todo>div:last-child{border-bottom:0}
 #projects .rp-circle{display:block;width:15px;height:15px;border:2px solid #91a8b9;border-radius:50%;margin-top:4px;flex-shrink:0}
 #projects .rp-todo small{display:block;color:#647489;margin-top:4px}
+#projects .rp-action-group{margin-top:22px}
+#projects .rp-action-symbol{display:flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:50%;background:#eaf0f5;color:#40556a;font-weight:700;flex-shrink:0;margin-top:3px}
+#projects .rp-action-state{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;color:#566b7c;margin-bottom:4px}
+#projects .rp-action-completed .rp-action-symbol{background:#e1f3ea;color:#206b4b}
+#projects .rp-action-completed .rp-action-state{color:#206b4b}
+#projects .rp-action-unverified .rp-action-symbol{background:#fff2d6;color:#805d13}
+#projects .rp-action-archive{margin-top:20px;padding:14px;background:#f6f8fa;border-radius:10px}
+#projects .rp-action-archive summary{cursor:pointer;font-weight:600}
 #projects .rp-history{border-left:3px solid #8caac3;padding:6px 0 8px 14px;margin:10px 0}
 #projects .rp-history p{font-size:13px}
 #projects .rp-source{font-size:11px;color:#647489;border-top:1px solid #dde5ee;padding-top:13px;margin-top:20px}

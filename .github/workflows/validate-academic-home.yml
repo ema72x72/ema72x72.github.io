@@ -7,6 +7,10 @@ on:
       - 'academic-manager/index.html'
       - 'academic-manager/coauthors.js'
       - 'academic-manager/projects.js'
+      - 'academic-manager/action-state.js'
+      - 'academic-manager/home-overview.js'
+      - 'academic-manager/pipeline-timeline.js'
+      - 'tests/action-state.test.cjs'
       - 'academic-manager/data/projects.json'
       - '.github/workflows/validate-academic-home.yml'
   workflow_dispatch:
@@ -22,7 +26,11 @@ jobs:
         run: |
           node --check academic-manager/home.js
           node --check academic-manager/projects.js
+          node --check academic-manager/action-state.js
+          node --check academic-manager/home-overview.js
+          node --check academic-manager/pipeline-timeline.js
           node --check academic-manager/coauthors.js
+          node --test tests/action-state.test.cjs
       - name: Validate public project data and script reference
         run: |
           python3 - <<'PY'
@@ -35,8 +43,15 @@ jobs:
           required={'remote','neobrokers','bankruptcy','sherry','brand','favoritism','minor','journal-networks-raju','esg-retail-transactions'}
           assert required.issubset(set(ids)), f'Missing expected research IDs: {required-set(ids)}'
           assert all(isinstance(p.get('snapshot'),dict) and isinstance(p.get('actions'),list) and isinstance(p.get('events'),list) for p in d['projects'])
+          states={'open','in_progress','blocked','unverified','completed','superseded'}
+          for p in d['projects']:
+              for key in ('actions','events'):
+                  keys=[x['id'] for x in p[key]]
+                  assert len(keys)==len(set(keys)), f'Duplicate {key} IDs in {p["id"]}'
+              assert all(a.get('status') in states for a in p['actions'])
           html=Path('academic-manager/index.html').read_text(encoding='utf-8')
           assert '<script src="./home.js?v=' in html
           assert 'id="hm-pipeline"' in html
+          assert html.index('./action-state.js?') < html.index('./home-overview.js?') < html.index('./projects.js?')
           print('Home JS, public data, and script references validated.')
           PY

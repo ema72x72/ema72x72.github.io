@@ -9,6 +9,7 @@
   const display=value=>empty(value)?'<em>Not documented</em>':escapeHTML(value);
   const statusPill=value=>'<span class="rp-pill '+(/Risk|Stalling/i.test(value)?'rp-alert':/Waiting/i.test(value)?'rp-wait':'')+'">'+escapeHTML(value)+'</span>';
   const phasePill=value=>'<span class="rp-pill">'+escapeHTML(value)+'</span>';
+  const actionState=window.AcademicActions;
   const oldContent=section.innerHTML;
   let projects=[];
   let selectedId=null;
@@ -20,7 +21,17 @@
       return '<div class="rp-two"><div class="rp-field"><h4>Latest Results & Progress</h4><p>'+display(s.progress)+'</p></div><div class="rp-field"><h4>Issues & Open Questions</h4><p>'+display(s.issue)+'</p></div></div><div class="rp-field"><h4>Next Milestone</h4><p>'+display(s.milestone)+'</p>'+(s.dueDate?'<p class="rp-muted">Indicative deadline: '+dateText(s.dueDate)+'</p>':'')+'</div>';
     }
     if(key==='actions'){
-      return '<h4>Recorded To-dos</h4>'+(actions.length?'<div class="rp-todo">'+actions.map(a=>'<div><span class="rp-circle" aria-hidden="true"></span><div><div>'+display(a.text)+'</div><small>Owner: '+display(a.owner)+(a.dueDate?' · '+dateText(a.dueDate):'')+'</small></div></div>').join('')+'</div>':'<p>No immediate tasks recorded.</p>')+'<p class="rp-muted">The status of individual tasks has not yet been verified. The circle does not imply that a task is open or incomplete.</p>';
+      const renderActions=items=>'<div class="rp-todo">'+items.map(a=>{
+        const state=actionState.state(a);
+        return '<div class="rp-action rp-action-'+state.group+'"><span class="rp-action-symbol" aria-hidden="true">'+state.symbol+'</span><div><span class="rp-action-state">'+state.label+'</span><div>'+display(a.text)+'</div><small>Owner: '+display(a.owner)+(a.dueDate?' · Original target: '+dateText(a.dueDate):'')+(a.reportedAt?' · Reported: '+dateText(a.reportedAt):'')+'</small></div></div>';
+      }).join('')+'</div>';
+      const groups=[['active','To Do & In Progress'],['unverified','Status to Verify'],['completed','Completed'],['superseded','Superseded']];
+      return '<h4>Actions & Status</h4>'+(actions.length?groups.map(([key,label])=>{
+        const items=actionState.group(actions,key);
+        if(!items.length)return '';
+        if(key==='completed'||key==='superseded')return '<details class="rp-action-archive"><summary>'+label+' ('+items.length+')</summary>'+renderActions(items)+'</details>';
+        return '<section class="rp-action-group"><h4>'+label+' ('+items.length+')</h4>'+renderActions(items)+'</section>';
+      }).join(''):'<p>No actions recorded.</p>')+'<p class="rp-muted">Status to verify means completion has not been confirmed. These items are not counted as confirmed open tasks. Completed actions remain available in the collapsed history.</p>';
     }
     if(key==='history'){
       const sorted=[...events].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
@@ -41,9 +52,9 @@
     const p=projects.find(x=>x.id===id);if(!p)return;
     selectedId=id;selectedPanel=panel;
     const s=p.snapshot||{};
-    const tabs=[['snapshot','Status & Results'],['actions','To-do'],['history','Timeline'],['profile','Research Profile']];
+    const tabs=[['snapshot','Status & Results'],['actions','Actions'],['history','Timeline'],['profile','Research Profile']];
     const html='<div class="rp-heading"><div><div class="rp-overline">Research Project</div><h3>'+escapeHTML(p.title)+'</h3><p>'+display(p.coauthors)+'</p></div><div class="rp-heading-tags">'+phasePill(s.stage)+statusPill(s.status)+'</div></div>'
-      +'<div class="rp-info"><div><small>Scientific Stage</small><strong>'+display(s.stage)+'</strong></div><div><small>Operational Status</small><strong>'+display(s.status)+'</strong></div><div><small>Last Updated</small><strong>'+dateText(s.updatedAt)+'</strong></div></div>'
+      +'<div class="rp-info"><div><small>Scientific Stage</small><strong>'+display(s.stage)+'</strong></div><div><small>Operational Status</small><strong>'+display(s.status)+'</strong></div><div><small>Last Documented Update</small><strong>'+dateText(s.updatedAt)+'</strong></div></div>'
       +'<div class="rp-next"><strong>Next Action</strong><div>'+display(s.nextAction)+'</div><small>Owner: '+display(s.owner)+'</small></div>'
       +'<div class="rp-tabs" role="tablist" aria-label="Project sections">'+tabs.map(([key,name])=>'<button type="button" role="tab" aria-selected="'+String(panel===key)+'" data-rp-tab="'+key+'">'+name+'</button>').join('')+'</div>'
       +'<div class="rp-body" role="tabpanel">'+panelContent(p,panel)+'</div><div class="rp-source">Snapshot source: '+display(s.source)+'</div>';

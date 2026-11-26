@@ -3,6 +3,7 @@
 (function(){
 'use strict';
 const $=id=>document.getElementById(id);
+const actionState=window.AcademicActions;
 const e=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
 const valid=d=>/^\d{4}-\d{2}-\d{2}$/.test(String(d||''));
 const fmt=d=>valid(d)?new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric'}).format(new Date(d+'T12:00:00')):'Not scheduled';
@@ -12,7 +13,7 @@ const phases=[
  {name:'Data Collection',test:s=>/Data Collection/i.test(s)},
  {name:'Data Analyses',test:s=>/Data Analyses|Empirical Design/i.test(s)},
  {name:'Writing',test:s=>/First Draft|Final Draft|Writing|Revision/i.test(s)},
- {name:'Editorial',test:s=>/Submitted|Under Review|Editorial|R&R/i.test(s)}
+ {name:'Editorial',test:s=>/Submitted|Under Review|Editorial|R&R|Out for conference/i.test(s)}
 ];
 function links(root,open){
  root.querySelectorAll('[data-open-project]').forEach(node=>node.addEventListener('click',event=>{
@@ -42,12 +43,17 @@ function actionSection(label,projects,open){
  if(!projects.length)return '';
  const heading='<section class="hm-work-section"><h3>'+e(label)+' <span>'+projects.length+' projects</span></h3>';
  const rows=projects.map(p=>{
-   const actions=(p.actions||[]).filter(a=>a.status!=='completed'),s=p.snapshot||{};
-   const list=actions.length?'<ul class="hm-actions">'+actions.map(a=>{
+   const actions=actionState.current(p.actions),s=p.snapshot||{};
+   const renderList=items=>'<ul class="hm-actions">'+items.map(a=>{
+     const state=actionState.state(a);
      const d=valid(a.dueDate)?a.dueDate:null;
      const time=d?'<span class="hm-action-date'+(d<today()?' past':'')+'">'+e(fmt(d))+(d<today()?' · verify':'')+'</span>':'';
-     return '<li><div class="hm-action-text">'+e(a.text||'Description not recorded')+'</div><div class="hm-action-meta"><span>'+e(a.owner||'Owner not specified')+'</span>'+time+'</div></li>';
-   }).join('')+'</ul>':'<p class="hm-muted">No actions awaiting status confirmation; monitor for an editorial or project update.</p>';
+     return '<li><div class="hm-action-text">'+e(a.text||'Description not recorded')+'</div><div class="hm-action-meta"><strong>'+e(state.label)+'</strong><span>'+e(a.owner||'Owner not specified')+'</span>'+time+'</div></li>';
+   }).join('')+'</ul>';
+   const list=actions.length?[['active','To Do & In Progress'],['unverified','Status to Verify']].map(([key,label])=>{
+     const items=actionState.group(actions,key);
+     return items.length?'<h4>'+label+' ('+items.length+')</h4>'+renderList(items):'';
+   }).join(''):'<p class="hm-muted">No current actions or status checks recorded; monitor for an editorial or project update.</p>';
    return '<div class="hm-work-project"><div class="hm-work-title"><a href="#projects" data-open-project="'+e(p.id)+'">'+e(p.title)+' <span aria-hidden="true">›</span></a><span class="hm-work-count">'+(actions.length?actions.length+' actions':'Monitoring')+'</span></div>'+
      (s.nextAction?'<p class="hm-work-summary">'+e(s.nextAction)+'</p>':'')+list+'</div>';
  }).join('');
@@ -56,10 +62,11 @@ function actionSection(label,projects,open){
 function actions(projects,open){
  const decisions=projects.filter(p=>/Decision Pending/i.test(p.snapshot?.status||''));
  const other=projects.filter(p=>!/Decision Pending/i.test(p.snapshot?.status||''));
- const working=other.filter(p=>(p.actions||[]).some(a=>a.status!=='completed'));
- const monitor=other.filter(p=>!(p.actions||[]).some(a=>a.status!=='completed'));
- const count=projects.reduce((n,p)=>n+(p.actions||[]).filter(a=>a.status!=='completed').length,0);
- $('hm-action-count').textContent=count+' actions not marked completed across '+projects.length+' projects. Unverified status does not prove that a task is still pending.';
+ const working=other.filter(p=>actionState.current(p.actions).length);
+ const monitor=other.filter(p=>!actionState.current(p.actions).length);
+ const all=projects.flatMap(p=>p.actions||[]);
+ const active=actionState.group(all,'active').length,uncertain=actionState.group(all,'unverified').length,completed=actionState.group(all,'completed').length;
+ $('hm-action-count').textContent=active+' confirmed open/in-progress · '+uncertain+' statuses to verify · '+completed+' completed. Completed actions are available in each project’s Actions tab.';
  $('hm-matters').innerHTML=actionSection('Decisions to Make',decisions,open)+actionSection('Work & Follow-ups',working,open)+actionSection('Monitoring',monitor,open);
  links($('hm-matters'),open);
 }
@@ -102,7 +109,7 @@ function render(data,open){
    window.AcademicTimeline.render(projects,data.generatedAt,$('hm-research-timeline'),$('hm-research-timeline-note'));
    links($('hm-research-timeline'),open);
  }else $('hm-research-timeline').textContent='Historical timeline currently unavailable.';
- $('hm-overview-source').textContent='Source: public GitHub Active Projects · Snapshot '+(data.generatedAt||'undated')+' · Read-only; action completion is not inferred.';
+ $('hm-overview-source').textContent='Source: public GitHub Active Projects · Projection updated '+(data.generatedAt||'undated')+' · Individual project dates indicate the last documented change, not a complete review of all sources.';
 }
 window.AcademicOverview={render};
 })();
