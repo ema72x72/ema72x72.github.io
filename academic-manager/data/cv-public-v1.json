@@ -4,10 +4,10 @@
   "source": {
     "cvRepo": "ema72x72/curriculum",
     "cvTexSha": "ead1daa374713dbc1dfb539211e689b8e1ae7836",
-    "bibSha": "ce4342e527b4057057216ee4425296955608f0fe",
+    "bibSha": "5b8821df0fcd449b27da0a16352a2cc2507c5407",
     "websiteRepo": "ema72x72/ema72x72.github.io",
     "websiteCommit": "3be77d7a3326cde7b13d5ffc1204fbd0af8e5e98",
-    "cvSourceCommit": "97d983f11976c1c8ccf8cd1a14c67d1ac3fc464d"
+    "cvSourceCommit": "a09e78b85270532515b3c41d21b91c54c95fd99e"
   },
   "cv": {
     "date": "February 2026",
@@ -141,15 +141,15 @@
       "type": "article",
       "title": "Back From the Brink: State-Guaranteed Loans and Financial Recovery",
       "author": "Bajo, Emanuele and Barbi, Massimiliano and Bigelli, Marco",
-      "year": "2025",
+      "year": "2026",
       "journal": "European Financial Management",
       "booktitle": "",
       "publisher": "",
-      "volume": "",
-      "number": "",
-      "pages": "",
-      "note": "forthcoming",
-      "doi": "",
+      "volume": "32",
+      "number": "1",
+      "pages": "140--155",
+      "note": "",
+      "doi": "10.1111/eufm.70006",
       "url": "",
       "keywords": "finance"
     },
