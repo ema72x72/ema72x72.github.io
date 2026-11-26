@@ -201,3 +201,36 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #d5a
  .hm-timeline-summary-text strong{font-size:13px}
  .hm-timeline-summary-text span{font-size:11px}
 }
+
+/* Home compact focus cards: render current project highlights only, not the task database. */
+.hm-overview-columns{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}
+.hm-overview-columns .hm-card{padding:19px}
+.hm-overview-columns .hm-card-header{margin-bottom:7px}
+.hm-overview-columns .hm-card h2{font-size:17px}
+.hm-overview-columns #hm-action-count{font-size:11px;margin:0 0 8px}
+.hm-focus-list,.hm-compact-milestones{display:grid}
+.hm-focus-row,.hm-compact-milestone{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:11px;
+  border-top:1px solid #e7edf4;padding:12px 0;color:inherit;text-decoration:none;
+}
+.hm-focus-row:first-child,.hm-compact-milestone:first-child{border-top:0}
+.hm-focus-row:hover strong,.hm-compact-milestone:hover strong{color:#176ba8}
+.hm-focus-main,.hm-compact-what{display:grid;gap:3px;flex:1;min-width:0}
+.hm-focus-main strong,.hm-compact-what strong{font-size:13px;color:#244662}
+.hm-focus-detail,.hm-compact-what>span{
+  font-size:11.5px;line-height:1.5;color:#617a92;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;
+}
+.hm-focus-tag{font-size:10px;font-weight:760;line-height:1.15;padding:6px 7px;border-radius:7px;white-space:nowrap;color:#34627f;background:#edf3f9}
+.hm-focus-tag.decision{background:#f5edf9;color:#774f94}
+.hm-focus-tag.waiting{background:#f3f2e9;color:#847327}
+.hm-focus-tag.active{background:#e7f5eb;color:#2a855b}
+.hm-focus-tag.scheduled{background:#e5f1fd;color:#216b9c}
+.hm-focus-tag.tentative{background:#f8f0e5;color:#946d34}
+.hm-compact-milestone{display:grid;grid-template-columns:88px minmax(0,1fr);gap:8px 11px}
+.hm-compact-when{font-weight:760;color:#2b6a99;font-size:11px}
+.hm-compact-milestone .hm-focus-tag{grid-column:2;justify-self:start}
+.hm-overview-more{display:flex;gap:6px;align-items:center;justify-content:flex-end;font-size:11px;font-weight:730;padding:13px 0 0;margin-top:4px;border-top:1px solid #e8edf4;color:#1d669c;text-decoration:none}
+.hm-overview-more:hover{text-decoration:underline}
+@media(max-width:1050px){.hm-overview-columns{grid-template-columns:1fr}}
+@media(max-width:650px){.hm-overview-columns .hm-card{padding:15px}.hm-focus-row{padding:10px 0}.hm-focus-tag{font-size:9px}}

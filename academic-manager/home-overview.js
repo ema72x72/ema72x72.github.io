@@ -39,68 +39,81 @@ function pipeline(projects,open){
    links(summary,open);
  }));
 }
-function actionSection(label,projects,open){
- if(!projects.length)return '';
- const heading='<section class="hm-work-section"><h3>'+e(label)+' <span>'+projects.length+' projects</span></h3>';
+/* Only confirmed next actions or genuine decision/follow-up states belong here.
+   Full tasks and uncertain completion states remain in the project details. */
+function compactPhrase(text){
+ const value=String(text||'').trim();
+ const first=value.match(/^.*?[.!?](?:\s|$)/);
+ return first?first[0].trim():value;
+}
+function priorityItems(projects){
  const rows=projects.map(p=>{
-   const actions=actionState.current(p.actions),s=p.snapshot||{};
-   const renderList=items=>'<ul class="hm-actions">'+items.map(a=>{
-     const state=actionState.state(a);
-     const d=valid(a.dueDate)?a.dueDate:null;
-     const time=d?'<span class="hm-action-date'+(d<today()?' past':'')+'">'+e(fmt(d))+(d<today()?' · verify':'')+'</span>':'';
-     return '<li><div class="hm-action-text">'+e(a.text||'Description not recorded')+'</div><div class="hm-action-meta"><strong>'+e(state.label)+'</strong><span>'+e(a.owner||'Owner not specified')+'</span>'+time+'</div></li>';
-   }).join('')+'</ul>';
-   const list=actions.length?[['active','To Do & In Progress'],['unverified','Status to Verify']].map(([key,label])=>{
-     const items=actionState.group(actions,key);
-     return items.length?'<h4>'+label+' ('+items.length+')</h4>'+renderList(items):'';
-   }).join(''):'<p class="hm-muted">No current actions or status checks recorded; monitor for an editorial or project update.</p>';
-   return '<div class="hm-work-project"><div class="hm-work-title"><a href="#projects" data-open-project="'+e(p.id)+'">'+e(p.title)+' <span aria-hidden="true">›</span></a><span class="hm-work-count">'+(actions.length?actions.length+' actions':'Monitoring')+'</span></div>'+
-     (s.nextAction?'<p class="hm-work-summary">'+e(s.nextAction)+'</p>':'')+list+'</div>';
- }).join('');
- return heading+rows+'</section>';
+   const s=p.snapshot||{};
+   const status=String(s.status||'');
+   const active=actionState.group(p.actions,'active');
+   if(/Decision Pending/i.test(status))return {p,kind:'decision',tag:'Decision',weight:0};
+   if(/Waiting for Me|Waiting for Coauthors/i.test(status))return {p,kind:'waiting',tag:/Waiting for Me/i.test(status)?'Your follow-up':'Awaiting coauthors',weight:1};
+   if(active.length)return {p,kind:'active',tag:active.some(a=>a.status==='blocked')?'Blocked':'In progress',weight:2};
+   return null;
+ }).filter(Boolean);
+ rows.sort((a,b)=>a.weight-b.weight||(a.p.priority||99)-(b.p.priority||99));
+ return rows;
 }
 function actions(projects,open){
- const decisions=projects.filter(p=>/Decision Pending/i.test(p.snapshot?.status||''));
- const other=projects.filter(p=>!/Decision Pending/i.test(p.snapshot?.status||''));
- const working=other.filter(p=>actionState.current(p.actions).length);
- const monitor=other.filter(p=>!actionState.current(p.actions).length);
- const all=projects.flatMap(p=>p.actions||[]);
- const active=actionState.group(all,'active').length,uncertain=actionState.group(all,'unverified').length,completed=actionState.group(all,'completed').length;
- $('hm-action-count').textContent=active+' confirmed open/in-progress · '+uncertain+' statuses to verify · '+completed+' completed. Completed actions are available in each project’s Actions tab.';
- $('hm-matters').innerHTML=actionSection('Decisions to Make',decisions,open)+actionSection('Work & Follow-ups',working,open)+actionSection('Monitoring',monitor,open);
+ const rows=priorityItems(projects);
+ $('hm-action-count').textContent=rows.length+' projects needing a decision, follow-up or confirmed active work. Individual task histories remain in Active Projects.';
+ $('hm-matters').innerHTML='<div class="hm-focus-list">'+rows.map(({p,kind,tag})=>{
+   const next=compactPhrase(p.snapshot?.nextAction||'See the project’s current status.');
+   return '<a class="hm-focus-row" href="#projects" data-open-project="'+e(p.id)+'">'+
+    '<span class="hm-focus-main"><strong>'+e(p.title)+'</strong><span class="hm-focus-detail">'+e(next)+'</span></span>'+
+    '<span class="hm-focus-tag '+kind+'">'+e(tag)+'</span></a>';
+ }).join('')+'</div>'+
+ '<a class="hm-overview-more" href="#projects">Open Active Projects for detailed tasks and status checks <span aria-hidden="true">›</span></a>';
  links($('hm-matters'),open);
 }
-function milestoneDate(note,due){
- if(valid(due))return due;
- const dates=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b/gi;
- const months=['january','february','march','april','may','june','july','august','september','october','november','december'];
- for(const match of note.matchAll(dates)){
-   const before=note.slice(Math.max(0,match.index-100),match.index).split(/[.;\n]/).at(-1);
-   // A dated observation or completed event is not a due date.
-   if(/\b(?:as of|completed|recorded|sent|received|reported|updated)\b/i.test(before))continue;
-   if(!/\b(?:scheduled|due|deadline|target(?:ed)?|planned|meeting|catch-up)\b/i.test(before)&&!/\bby\s*$/i.test(before))continue;
-   const iso=match[3]+'-'+String(months.indexOf(match[1].toLowerCase())+1).padStart(2,'0')+'-'+String(match[2]).padStart(2,'0');
-   const date=new Date(iso+'T12:00:00Z');
-   if(!Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===iso)return iso;
+function meaningfulMilestones(projects){
+ const now=today(),months=['january','february','march','april','may','june','july','august','september','october','november','december'];
+ const rows=[];
+ for(const p of projects){
+   const s=p.snapshot||{},note=String(s.milestone||'').trim();
+   if(!note)continue;
+   const date=milestoneDate(note,s.dueDate);
+   if(date&&date>=now){
+     const isMeeting=/\b(meeting|scheduled|catch-up|call)\b/i.test(note);
+     let description=compactPhrase(note);
+     // A completed historical clause is not part of a future milestone.
+     if(/^\b(?:FIRS|earlier|original|completed|recorded)\b/i.test(description)){
+       const match=note.match(/(?:Next planned work|Next scheduled|Next target)\s*:\s*([^.;]+)/i);
+       if(match)description=match[1].trim();
+     }
+     rows.push({p,date,tag:isMeeting?'Meeting':'Dated target',description,weight:0});
+     continue;
+   }
+   // Explicit forward-looking month or year goals without a fixed day.
+   const plan=note.match(/\b(?:next planned work|next target|planned for)\s*:\s*([^;.]*)/i);
+   const target=note.match(/\b(?:targeted|due|expected|planned)\s+by\s+end[- ](?:of[- ])?(20\d{2})\b/i);
+   const month=plan&&plan[1].match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/i);
+   if(target&&Number(target[1])>=Number(now.slice(0,4))){
+     rows.push({p,date:null,tag:'Indicative target',description:compactPhrase(note),sortDate:target[1]+'-12-31',when:'End '+target[1],weight:1});
+   }else if(month){
+     const year=Number(now.slice(0,4));
+     const monthNumber=months.indexOf(month[1].toLowerCase())+1;
+     if(monthNumber>=Number(now.slice(5,7))){
+       rows.push({p,date:null,tag:'Planned · date TBD',description:plan[1].trim(),sortDate:year+'-'+String(monthNumber).padStart(2,'0')+'-99',when:month[1]+' '+year,weight:2});
+     }
+   }
  }
- return null;
+ return rows.sort((a,b)=>String(a.date||a.sortDate||'9999').localeCompare(String(b.date||b.sortDate||'9999'))||a.weight-b.weight||(a.p.priority||99)-(b.p.priority||99));
 }
 function milestones(projects,open){
- const now=today(),items=projects.map(p=>{
-   const note=String(p.snapshot?.milestone||'').trim()||'No milestone recorded';
-   const date=milestoneDate(note,p.snapshot?.dueDate);
-   const group=date?(date<now?1:0):2;
-   const meeting=group===0&&/\b(meeting|scheduled|catch-up|call)\b/i.test(note);
-   const label=group===1?'Past target · verify':group===0?(meeting?'Scheduled meeting':'Dated target'):(/\b(indicative|tentative|planned|targeted)\b/i.test(note)?'Indicative':'Date not confirmed');
-   return {p,note,date,group,label};
- });
- const labels=['Scheduled & Dated','Past Targets to Verify','Indicative or Undated'];
- $('hm-milestones').innerHTML=labels.map((label,i)=>{
-   const list=items.filter(x=>x.group===i).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||(a.p.priority||99)-(b.p.priority||99));
-   if(!list.length)return '';
-   return '<section class="hm-milestone-group"><h3>'+e(label)+' <span>'+list.length+'</span></h3>'+
-     list.map(x=>'<a class="hm-milestone-row" href="#projects" data-open-project="'+e(x.p.id)+'"><div class="hm-milestone-date'+(i===1?' past':'')+'">'+e(fmt(x.date))+'</div><div class="hm-milestone-copy"><strong>'+e(x.p.title)+'</strong><p>'+e(x.note)+'</p><span class="hm-milestone-label'+(i===1?' past':'')+'">'+e(x.label)+'</span></div></a>').join('')+'</section>';
- }).join('');
+ const rows=meaningfulMilestones(projects);
+ $('hm-milestones').innerHTML='<div class="hm-compact-milestones">'+(rows.length?rows.map(r=>
+   '<a class="hm-compact-milestone" href="#projects" data-open-project="'+e(r.p.id)+'">'+
+   '<span class="hm-compact-when">'+e(r.date?fmt(r.date):r.when||'To be scheduled')+'</span>'+
+   '<span class="hm-compact-what"><strong>'+e(r.p.title)+'</strong><span>'+e(r.description)+'</span></span>'+
+   '<span class="hm-focus-tag '+(r.tag==='Meeting'?'scheduled':'tentative')+'">'+e(r.tag)+'</span></a>'
+ ).join(''):'<p class="hm-empty">No upcoming dated or explicitly planned milestones in the current records.</p>')+'</div>'+
+ '<a class="hm-overview-more" href="#projects">Open Active Projects for all milestones and undated plans <span aria-hidden="true">›</span></a>';
  links($('hm-milestones'),open);
 }
 function render(data,open){
