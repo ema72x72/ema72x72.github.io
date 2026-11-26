@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07",
+  "generatedAt": "2026-11-26",
   "source": {
     "cvRepo": "ema72x72/curriculum",
     "cvTexSha": "ead1daa374713dbc1dfb539211e689b8e1ae7836",
-    "bibSha": "adf1ee12dc3ad5325277ab2c58842497609627d3",
+    "bibSha": "ce4342e527b4057057216ee4425296955608f0fe",
     "websiteRepo": "ema72x72/ema72x72.github.io",
     "websiteCommit": "3be77d7a3326cde7b13d5ffc1204fbd0af8e5e98",
-    "cvSourceCommit": "4355b873c44c0881aa8f6e87cec4cdaaf3014ffd"
+    "cvSourceCommit": "97d983f11976c1c8ccf8cd1a14c67d1ac3fc464d"
   },
   "cv": {
     "date": "February 2026",
@@ -275,7 +275,7 @@
     {
       "key": "BajoCrociMarinelli2020ConnectednessFirmValue",
       "type": "article",
-      "title": "Institutional Investor Connectedness and Firm Value",
+      "title": "Institutional investor networks and firm value",
       "author": "Bajo, Emanuele and Croci, Ettore and Marinelli, Nicoletta",
       "year": "2020",
       "journal": "Journal of Business Research",
@@ -317,9 +317,9 @@
       "publisher": "",
       "volume": "94",
       "number": "",
-      "pages": "279--286",
+      "pages": "279--296",
       "note": "",
-      "doi": "10.1016/j.jbankfin.2018.07.004",
+      "doi": "10.1016/j.jbankfin.2018.08.001",
       "url": "",
       "keywords": "finance"
     },
@@ -343,7 +343,7 @@
     {
       "key": "BajoBarbiPetrella2017Overallotment",
       "type": "article",
-      "title": "Do IPO Firms Get What They Pay For? A Second Thought on Granting the Over-allotment Option",
+      "title": "Do firms get what they pay for? A second thought on over-allotment option in {IPOs}",
       "author": "Bajo, Emanuele and Barbi, Massimiliano and Petrella, Giovanni",
       "year": "2017",
       "journal": "Quarterly Review of Economics and Finance",
@@ -361,7 +361,7 @@
       "key": "ChemmanurBajoSimonyanTehranian2016UnderwriterNetworks",
       "type": "article",
       "title": "Underwriter Networks, Investor Attention, and Initial Public Offerings",
-      "author": "Chemmanur, Thomas J. and Bajo, Emanuele and Simonyan, Karen and Tehranian, Hassan",
+      "author": "Bajo, Emanuele and Chemmanur, Thomas J. and Simonyan, Karen and Tehranian, Hassan",
       "year": "2016",
       "journal": "Journal of Financial Economics",
       "booktitle": "",
@@ -370,7 +370,7 @@
       "number": "",
       "pages": "376--408",
       "note": "",
-      "doi": "",
+      "doi": "10.1016/j.jfineco.2015.12.001",
       "url": "",
       "keywords": "finance"
     },
@@ -428,7 +428,7 @@
     {
       "key": "BajoBarbiBigelliHillier2013InstitutionalInvestorsPTP",
       "type": "article",
-      "title": "The Role of Institutional Investors in Controlling Shareholder Public-to-Private Transactions",
+      "title": "The role of institutional investors in public-to-private transactions",
       "author": "Bajo, Emanuele and Barbi, Massimiliano and Bigelli, Marco and Hillier, David",
       "year": "2013",
       "journal": "Journal of Banking \\& Finance",
@@ -513,7 +513,7 @@
     {
       "key": "BajoBigelliHillierPetracci2009InsiderTradingDisclosures",
       "type": "article",
-      "title": "The Determinants and Value Impact of Regulatory Compliance: An Analysis of Insider Trading Disclosures",
+      "title": "The Determinants of Regulatory Compliance: An Analysis of Insider Trading Disclosures in Italy",
       "author": "Bajo, Emanuele and Bigelli, Marco and Hillier, David and Petracci, Barbara",
       "year": "2009",
       "journal": "Journal of Business Ethics",
@@ -521,16 +521,16 @@
       "publisher": "",
       "volume": "90",
       "number": "3",
-      "pages": "",
+      "pages": "331--343",
       "note": "",
-      "doi": "",
+      "doi": "10.1007/s10551-009-0044-x",
       "url": "",
       "keywords": "finance"
     },
     {
       "key": "BajoPetracci2006DoWhatInsidersDo",
       "type": "article",
-      "title": "Do What Insiders Do: Abnormal Performance After the Release of Insider’s Transaction",
+      "title": "Do what insiders do: Abnormal performances after the release of insiders' relevant transactions",
       "author": "Bajo, Emanuele and Petracci, Barbara",
       "year": "2006",
       "journal": "Studies in Economics and Finance",
@@ -540,15 +540,15 @@
       "number": "2",
       "pages": "94--118",
       "note": "",
-      "doi": "",
+      "doi": "10.1108/10867370610683905",
       "url": "",
       "keywords": "finance"
     },
     {
       "key": "BajoBigelliSandri1998MarketMyopia",
       "type": "article",
-      "title": "New Investments e Market Myopia: Firm’s Value versus Private Benefits Maximization: Evidence from Italy",
-      "author": "Bajo, Emanuele and Bigelli, Marco and Sandri, Serena",
+      "title": "The Stock Market Reaction to Investment Decisions: Evidence from Italy",
+      "author": "Bajo, Emanuele and Bigelli, Marco and Sandri, Sandro",
       "year": "1998",
       "journal": "Journal of Management and Governance",
       "booktitle": "",
@@ -557,7 +557,7 @@
       "number": "1",
       "pages": "1--16",
       "note": "",
-      "doi": "",
+      "doi": "10.1023/A:1009945224561",
       "url": "",
       "keywords": "finance"
     },
