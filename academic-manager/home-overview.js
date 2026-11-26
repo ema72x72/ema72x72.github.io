@@ -71,6 +71,22 @@ function actions(projects,open){
  '<a class="hm-overview-more" href="#projects">Open Active Projects for detailed tasks and status checks <span aria-hidden="true">›</span></a>';
  links($('hm-matters'),open);
 }
+/* Only dates explicitly attached to future scheduling/targets qualify.
+   Past completed events and 'as of' observations are not milestones. */
+function milestoneDate(note,due){
+ if(valid(due))return due;
+ const dates=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b/gi;
+ const months=['january','february','march','april','may','june','july','august','september','october','november','december'];
+ for(const match of String(note||'').matchAll(dates)){
+   const before=note.slice(Math.max(0,match.index-100),match.index).split(/[.;\n]/).at(-1);
+   if(/\b(?:as of|completed|recorded|sent|received|reported|updated|requested)\b/i.test(before))continue;
+   if(!/\b(?:scheduled|due|deadline|target(?:ed)?|planned|meeting|catch-up)\b/i.test(before)&&!/\bby\s*$/i.test(before))continue;
+   const iso=match[3]+'-'+String(months.indexOf(match[1].toLowerCase())+1).padStart(2,'0')+'-'+String(match[2]).padStart(2,'0');
+   const date=new Date(iso+'T12:00:00Z');
+   if(!Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===iso)return iso;
+ }
+ return null;
+}
 function meaningfulMilestones(projects){
  const now=today(),months=['january','february','march','april','may','june','july','august','september','october','november','december'];
  const rows=[];
