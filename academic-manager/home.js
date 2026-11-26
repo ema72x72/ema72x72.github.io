@@ -60,7 +60,6 @@
       source.projects=data;
       if(!window.AcademicOverview)throw Error('Home Overview component unavailable');
       window.AcademicOverview.render(data,openProject);
-      q('hm-overview-source').textContent='Active Projects: public GitHub JSON · Last generated '+(data.generatedAt||'date not specified')+' · Read-only.';
     }).catch(e=>{q('hm-pipeline').innerHTML='<div class="hm-error" role="alert">Active Projects source unavailable: '+E(e.message)+'</div>';});
   }
   // Publication views use approved public archive records; no private author histories are transferred.

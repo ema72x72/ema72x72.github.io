@@ -74,3 +74,29 @@ test('project Actions panel separates completed history and uncertainty',async()
  assert.match(html,/Complete the figures and tables/);
  assert.ok(!html.includes('The status of individual tasks has not yet been verified.'));
 });
+test('historical observations are not presented as missed milestone targets',()=>{
+ const nodes=new Map();
+ const get=id=>{
+   if(!nodes.has(id))nodes.set(id,{style:{},textContent:'',innerHTML:'',querySelectorAll:()=>[]});
+   return nodes.get(id);
+ };
+ const window={AcademicActions:state};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'home-overview.js'),'utf8'),{window,document:{getElementById:get},Intl,Date});
+ const project=milestone=>({id:'example',title:'Example',actions:[],snapshot:{stage:'Data Analyses',milestone,dueDate:null}});
+ for(const note of [
+   'Future-paper topic decision pending; remains an option as of November 19, 2026.',
+   'Initial review completed November 19, 2026; clarification pending.',
+   'Data received November 19, 2026; next review date not confirmed.'
+ ]){
+   window.AcademicOverview.render({projects:[project(note)]},()=>{});
+   assert.ok(!get('hm-milestones').innerHTML.includes('Past Targets to Verify'));
+   assert.ok(get('hm-milestones').innerHTML.includes('Not scheduled'));
+ }
+ const meeting=project('Meeting scheduled for December 3, 2026. An earlier time requested on November 26, 2026 is unconfirmed.');
+ window.AcademicOverview.render({projects:[meeting]},()=>{});
+ assert.ok(get('hm-milestones').innerHTML.includes('3 Dec 2026'));
+ assert.ok(!get('hm-milestones').innerHTML.includes('Not scheduled'));
+ meeting.snapshot.dueDate='2026-11-19';
+ window.AcademicOverview.render({projects:[meeting]},()=>{});
+ assert.ok(get('hm-milestones').innerHTML.includes('19 Nov 2026'));
+});

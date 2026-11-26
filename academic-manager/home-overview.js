@@ -72,12 +72,18 @@ function actions(projects,open){
 }
 function milestoneDate(note,due){
  if(valid(due))return due;
- const match=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b/i.exec(note);
- if(!match)return null;
+ const dates=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(20\d{2})\b/gi;
  const months=['january','february','march','april','may','june','july','august','september','october','november','december'];
- const iso=match[3]+'-'+String(months.indexOf(match[1].toLowerCase())+1).padStart(2,'0')+'-'+String(match[2]).padStart(2,'0');
- const date=new Date(iso+'T12:00:00Z');
- return !Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===iso?iso:null;
+ for(const match of note.matchAll(dates)){
+   const before=note.slice(Math.max(0,match.index-100),match.index).split(/[.;\n]/).at(-1);
+   // A dated observation or completed event is not a due date.
+   if(/\b(?:as of|completed|recorded|sent|received|reported|updated)\b/i.test(before))continue;
+   if(!/\b(?:scheduled|due|deadline|target(?:ed)?|planned|meeting|catch-up)\b/i.test(before)&&!/\bby\s*$/i.test(before))continue;
+   const iso=match[3]+'-'+String(months.indexOf(match[1].toLowerCase())+1).padStart(2,'0')+'-'+String(match[2]).padStart(2,'0');
+   const date=new Date(iso+'T12:00:00Z');
+   if(!Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===iso)return iso;
+ }
+ return null;
 }
 function milestones(projects,open){
  const now=today(),items=projects.map(p=>{
