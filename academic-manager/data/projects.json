@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25",
+  "generatedAt": "2026-11-26",
   "dataPolicy": "Public research project summaries. GPT-managed updates only.",
   "source": "Public allowlisted projection of the private Active Projects research registry.",
   "projects": [
@@ -17,16 +17,16 @@
         "mainFindings": "In the November draft, managers moving into jobs with WFH experience a roughly 3% wage decrease, an effect not found as robustly at other hierarchical levels. Overall WFH is not significantly related to ROA, whereas managerial WFH penetration is positively associated with ROA, value added per employee, and retention. The paper reports an association of approximately +0.16 ROA percentage points for a 10-percentage-point increase in managerial WFH. These are evolving draft findings, not established causal effects; productivity and IV results still require caution."
       },
       "snapshot": {
-        "stage": "Final Draft",
+        "stage": "Out for conference",
         "status": "On Track",
-        "progress": "The team reviewed refined conference tables, including heterogeneity by parental status and commuting distance and summary statistics matched to the regression samples. Targeted manuscript revisions remain before conference submission.",
-        "issue": "Clarify the economic interpretation of managerial WFH without overclaiming supervisory-demand mechanisms; verify submission cutoffs and time zones.",
-        "nextAction": "Emanuele to revise the abstract and results narrative by November 14; Aleksi to add supervisory-demands framing by November 14; Matteo to finalize the manuscript and submit to WFA, FRS and Edinburgh on November 18, subject to verified deadlines.",
-        "owner": "Emanuele · Aleksi · Matteo",
-        "milestone": "Conference-ready draft targeted by November 17; WFA, FRS and Edinburgh submissions targeted November 18. Code review, selected external feedback and an updated SSRN version planned for December.",
-        "dueDate": "2026-11-18",
-        "updatedAt": "2026-11-10",
-        "source": "Coauthor meeting, November 10, 2026."
+        "progress": "The conference manuscript has been completed. FIRS 2027 and Edinburgh Corporate Finance Conference 2027 submission receipts are dated November 18. On the same day, Matteo sent the revised manuscript and abstract to the Paris December Finance Meeting organizers. These are submissions and a version update, not acceptance decisions.",
+        "issue": "WFA submission has not been verified. Earlier detailed writing and checking tasks still require individual status confirmation; completion of the manuscript does not establish that every requested refinement was implemented.",
+        "nextAction": "Verify the WFA submission status and any remaining manuscript refinements. Continue the planned December code review, external feedback and preparation of an updated SSRN version.",
+        "owner": "Emanuele · Matteo · Aleksi",
+        "milestone": "FIRS and Edinburgh submissions recorded November 18; Paris manuscript update sent. Next planned work: December code review, external feedback and SSRN revision; exact dates unconfirmed.",
+        "dueDate": null,
+        "updatedAt": "2026-11-26",
+        "source": "User confirmation, November 26, 2026; conference submission receipts and coauthor manuscript-update correspondence, November 18, 2026."
       },
       "actions": [
         {
@@ -54,8 +54,9 @@
           "id": "remote-a4",
           "text": "Complete the paper draft.",
           "owner": "Emanuele · Matteo",
-          "status": "unverified",
-          "dueDate": "2026-11-17"
+          "status": "completed",
+          "dueDate": "2026-11-17",
+          "reportedAt": "2026-11-26"
         },
         {
           "id": "remote-a5",
@@ -74,9 +75,9 @@
         },
         {
           "id": "remote-a7",
-          "text": "Verify conference cutoffs and time zones, then submit the paper to WFA, FRS and Edinburgh.",
+          "text": "FIRS and Edinburgh submissions are confirmed for November 18. Verify whether the WFA submission was completed; no WFA receipt has been verified.",
           "owner": "Matteo",
-          "status": "unverified",
+          "status": "in_progress",
           "dueDate": "2026-11-18"
         },
         {
@@ -193,6 +194,38 @@
           "label": "Conference submissions targeted for November 18",
           "summary": "The team targeted a conference-ready paper by November 17 and submissions to WFA, FRS and Edinburgh on November 18, led by Matteo. Exact cutoffs need confirmation. Code review, outside feedback and an updated SSRN draft are planned for December; submissions are not yet completed.",
           "source": "Coauthor meeting, November 10, 2026."
+        },
+        {
+          "id": "remote-nov18-conference-manuscript",
+          "date": "2026-11-18",
+          "type": "manuscript",
+          "label": "Conference manuscript completed and shared",
+          "summary": "A completed conference version and revised abstract were sent to the Paris meeting organizers. The user subsequently confirmed completion of the draft; the exact date of first completion is not established.",
+          "source": "Coauthor manuscript-update correspondence, November 18; user confirmation, November 26, 2026."
+        },
+        {
+          "id": "remote-nov18-firs-submission",
+          "date": "2026-11-18",
+          "type": "submission",
+          "label": "Submission to FIRS 2027 confirmed",
+          "summary": "The conference system acknowledged receipt of the manuscript. This confirms submission, not acceptance.",
+          "source": "Conference-system submission receipt, November 18, 2026."
+        },
+        {
+          "id": "remote-nov18-edinburgh-submission",
+          "date": "2026-11-18",
+          "type": "submission",
+          "label": "Submission to Edinburgh Corporate Finance Conference confirmed",
+          "summary": "The conference system acknowledged receipt of the manuscript for the 2027 conference. This confirms submission, not acceptance.",
+          "source": "Conference-system submission receipt, November 18, 2026."
+        },
+        {
+          "id": "remote-nov18-stage",
+          "date": "2026-11-18",
+          "type": "stage_transition",
+          "label": "From Final Draft to Out for conference",
+          "summary": "Conference submissions are documented for FIRS and Edinburgh. WFA remains unverified; no conference decision is inferred.",
+          "source": "Conference-system receipts, November 18, 2026."
         }
       ]
     },
@@ -244,9 +277,9 @@
         },
         {
           "id": "neobrokers-a6",
-          "text": "Review the outline and figures at the next meeting, expected the following week; date not yet confirmed.",
+          "text": "Original November follow-up scheduling item, superseded by the November 19 first-draft work plan. Completion of the proposed outline-and-figures review was not verified.",
           "owner": "Emanuele and Lorenzo",
-          "status": "unverified",
+          "status": "superseded",
           "dueDate": null
         },
         {
@@ -392,21 +425,21 @@
       "snapshot": {
         "stage": "Data Collection",
         "status": "On Track",
-        "progress": "Kickoff completed; Nicoletta selected ten cases for the debt–equity overlap pilot.",
+        "progress": "Nicoletta selected the ten-case pilot and shared the data on October 29; Wilson acknowledged the sharing and requested folder access. Completion of access setup, case reconstruction and pilot results has not been verified.",
         "issue": "Matching investors, investment vehicles, and ultimate creditors; LSEG covers only part of the sample.",
-        "nextAction": "Check data access and reconstruct ten cases: equity accumulation, debt, RSA/DIP financing, and claim treatment.",
+        "nextAction": "Verify access to the shared pilot materials and the current status of the ten-case analysis; confirm a new pilot-review date if needed.",
         "owner": "Nicoletta · Wilson",
-        "milestone": "Pilot review, tentatively November 18–25.",
-        "dueDate": "2026-11-21",
-        "updatedAt": "2026-10-29",
-        "source": "Kickoff on October 28 and selection of ten cases on October 29."
+        "milestone": "The original pilot-review window was November 18–25. Its outcome and any replacement date remain unverified.",
+        "dueDate": null,
+        "updatedAt": "2026-11-26",
+        "source": "Pilot-selection and data-sharing correspondence, October 29, 2026; operational reconciliation, November 26, 2026."
       },
       "actions": [
         {
           "id": "bankruptcy-a1",
-          "text": "Share the LSEG data and sample documents.",
+          "text": "Share the LSEG pilot data and sample documents: data sharing was acknowledged on October 29, while recipient folder access and document availability still require confirmation.",
           "owner": "Nicoletta",
-          "status": "unverified",
+          "status": "in_progress",
           "dueDate": null
         },
         {
@@ -496,6 +529,14 @@
           "label": "Ten bankruptcy cases selected",
           "summary": "Nicoletta selected ten filings to test the matching of equity ownership and debt holdings: five with hedge-fund ownership above 50% and five at or below 10%, also chosen to vary in LSEG coverage before and after filing. Wilson requested access to the working folder and offered to begin the pilot. Creditor, RSA/DIP, and claim data availability remains to be verified.",
           "source": "'10 cases - selection' thread, October 29, 2026"
+        },
+        {
+          "id": "bankruptcy-nov26-sharing-correction",
+          "date": "2026-11-26",
+          "type": "record_correction",
+          "label": "Pilot sharing distinguished from access and analysis completion",
+          "summary": "The record now distinguishes acknowledged data sharing from unverified folder access and pilot completion. The former November 21 day-level deadline was removed because only an indicative November 18–25 review window was documented.",
+          "source": "October 29 correspondence reviewed during the November 26, 2026 reconciliation."
         }
       ]
     },
@@ -873,8 +914,8 @@
         "owner": "Luca",
         "milestone": "Network dataset; delivery date not specified.",
         "dueDate": null,
-        "updatedAt": "2026-10-18",
-        "source": "Luca's October 18 email and the shared network."
+        "updatedAt": "2026-10-19",
+        "source": "Luca's October 18 network update and Emanuele's October 19 feedback; dataset delivery not confirmed."
       },
       "actions": [
         {
@@ -1258,10 +1299,10 @@
         "issue": "The questions remain exploratory: feasibility depends on classifying ESG incidents, identifying trading-side investor categories and distinguishing investments made on behalf of minors. No data-access or empirical outcome is confirmed.",
         "nextAction": "Federico Piazza and Lorenzo Danieli to run preliminary feasibility analyses of ESG incident buyers/sellers and parents' ESG investing for minors, including possible reactions to ESG incidents; review progress at the upcoming research check-in.",
         "owner": "Federico Piazza · Lorenzo Danieli (exploratory analyses)",
-        "milestone": "ESG/Transaction data catch-up scheduled for December 3, 2026, at 16:30 Europe/Rome; no analysis completion deadline confirmed.",
+        "milestone": "ESG/Transaction data catch-up remains scheduled for December 3, 2026, 16:30–17:00 Europe/Rome. An earlier 16:00 start was requested on November 26 but has not been confirmed; this is not an analysis-completion deadline.",
         "dueDate": null,
-        "updatedAt": "2026-11-25",
-        "source": "Research ideas and task assignments reported directly by Emanuele on November 25 after the November 24 meeting; follow-up appointment verified in Outlook Calendar."
+        "updatedAt": "2026-11-26",
+        "source": "User-confirmed November 24 research discussion; November 26 meeting-time request and Outlook Calendar checked on November 26, 2026."
       },
       "actions": [
         {
@@ -1340,6 +1381,14 @@
           "label": "Exploratory idea: parental ESG investing for minors",
           "summary": "A second proposed direction asks whether parents investing for their minor children choose longer-horizon and more ESG-oriented portfolios, and whether these decisions change following ESG incidents. Preliminary analyses are planned, not completed.",
           "source": "Research-team discussion, November 24, 2026."
+        },
+        {
+          "id": "esg-retail-transactions-nov26-time-request",
+          "date": "2026-11-26",
+          "type": "meeting_proposal",
+          "label": "Earlier follow-up time requested; calendar unchanged",
+          "summary": "An earlier start was requested for the December 3 follow-up. The calendar still shows 16:30–17:00 Europe/Rome; the proposed 16:00 time has not been confirmed.",
+          "source": "Meeting-time request and Outlook Calendar, November 26, 2026."
         }
       ]
     }
