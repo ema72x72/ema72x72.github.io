@@ -3,14 +3,14 @@
   "generatedAt": "2026-11-26",
   "source": {
     "cvRepo": "ema72x72/curriculum",
-    "cvTexSha": "ead1daa374713dbc1dfb539211e689b8e1ae7836",
+    "cvTexSha": "e11ff32068f399a86e2009b14feecf77cb05c3ea",
     "bibSha": "5b8821df0fcd449b27da0a16352a2cc2507c5407",
     "websiteRepo": "ema72x72/ema72x72.github.io",
     "websiteCommit": "3be77d7a3326cde7b13d5ffc1204fbd0af8e5e98",
-    "cvSourceCommit": "a09e78b85270532515b3c41d21b91c54c95fd99e"
+    "cvSourceCommit": "48d17e508aa878b956c8b58af36912005ab7442f"
   },
   "cv": {
-    "date": "February 2026",
+    "date": "November 2026",
     "sections": [
       {
         "id": "short-bio",
